@@ -2191,6 +2191,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\Embryo.dm"
 #include "code\modules\mob\living\carbon\xenomorph\emote.dm"
 #include "code\modules\mob\living\carbon\xenomorph\Evolution.dm"
+#include "code\modules\mob\living\carbon\xenomorph\evolve_queue.dm"
 #include "code\modules\mob\living\carbon\xenomorph\Facehuggers.dm"
 #include "code\modules\mob\living\carbon\xenomorph\hive_faction.dm"
 #include "code\modules\mob\living\carbon\xenomorph\hive_status.dm"
