@@ -382,6 +382,8 @@
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/hands_monkey.dmi')
 	blood_overlay_type = "hands"
 	var/gloves_blood_amt = 0 //taken from blood.dm
+	var/fingerprint_desc = "a gloved finger"
+	var/fingerprint_obfuscation = FINGERPRINT_GLOVES_MODERATE
 	var/hide_prints = FALSE
 
 /obj/item/clothing/gloves/update_clothing_icon()

@@ -41,6 +41,8 @@
 	icon_state = "insulated"
 	item_state = "insulated"
 	siemens_coefficient = 0
+	fingerprint_desc = "a gloved finger, covered in yellow insulative material"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/insulated/black
 	name = "marine insulated black gloves"
@@ -49,6 +51,7 @@
 	item_state = "black"
 	item_state_slots = list(WEAR_HANDS = "black")
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a gloved finger, covered in black insulative material"
 
 /obj/item/clothing/gloves/marine/black
 	name = "marine black combat gloves"
@@ -79,6 +82,8 @@
 	icon_state = "marine_fingerless"
 	item_state = "marine_fingerless"
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a bare finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_NONE
 
 /obj/item/clothing/gloves/marine/medical
 	name = "marine medical combat gloves"
@@ -86,6 +91,8 @@
 	icon_state = "latex"
 	item_state = "latex"
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a lightly gloved finger, covered in latex"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_LIGHT
 
 
 /obj/item/clothing/gloves/marine/officer
@@ -126,6 +133,8 @@
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"
@@ -141,6 +150,8 @@
 	unacidable = TRUE
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a heavily-plated finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/veteran
 	name = "armored gloves"
@@ -156,6 +167,8 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a gloved finger, covered in kevlon insulation"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/veteran/upp
 	icon_state = "brown"
@@ -172,12 +185,14 @@
 	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani Personal Protection division. They are insulated against electrical shock."
 	icon_state = "ppo"
 	item_state = "ppo"
+	fingerprint_desc = "a finger gloved in kevlon"
 
 /obj/item/clothing/gloves/marine/veteran/pmc
 	name = "\improper WY PMC gloves"
 	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division. They are insulated against electrical shock."
 	icon_state = "pmc"
 	item_state = "pmc"
+	fingerprint_desc = "a finger gloved in kevlon"
 
 /obj/item/clothing/gloves/marine/veteran/pmc/Initialize()
 	. = ..()
@@ -209,6 +224,8 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_VERYHIGH
 	unacidable = TRUE
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/veteran/pmc/combat_droid
 	name = "\improper M7X gauntlets"
@@ -225,6 +242,8 @@
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/dress
 	name = "dress gloves"
@@ -232,6 +251,8 @@
 	icon_state = "marine_white"
 	item_state = "marine_white"
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a finger gloved in thin white silk"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_LIGHT
 
 /obj/item/clothing/gloves/marine/veteran/souto
 	name = "\improper Souto Man gloves"
@@ -249,6 +270,8 @@
 	armor_internaldamage = CLOTHING_ARMOR_HARDCORE
 	unacidable = TRUE
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a finger absolutely drenched in souto"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/veteran/souto/Initialize()
 	. = ..()
@@ -272,6 +295,8 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	unacidable = TRUE
 	adopts_squad_color = FALSE
+	fingerprint_desc = "a finger gloved in antiradioactive material"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/marine/joe/Initialize()
 	. = ..()

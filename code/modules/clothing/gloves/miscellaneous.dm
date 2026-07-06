@@ -28,6 +28,9 @@
 	flags_heat_protection = BODY_FLAG_HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROT
 
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
+
 /obj/item/clothing/gloves/combat //Combined effect of SWAT gloves and insulated gloves
 	desc = "These tactical gloves are somewhat fire and impact resistant."
 	name = "combat gloves"
@@ -40,6 +43,9 @@
 	flags_heat_protection = BODY_FLAG_HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROT
 
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
+
 /obj/item/clothing/gloves/latex
 	name = "latex gloves"
 	desc = "Sterile latex gloves. Offers some biological protection."
@@ -48,6 +54,9 @@
 	siemens_coefficient = 0.30
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 
+	fingerprint_desc = "a lightly-gloved finger, covered in latex"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_LIGHT
+
 /obj/item/clothing/gloves/botanic_leather
 	desc = "These leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin."
 	name = "botanist's leather gloves"
@@ -55,11 +64,17 @@
 	item_state = "ggloves"
 	siemens_coefficient = 0.9
 
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
+
 /obj/item/clothing/gloves/black_leather
 	name = "stylish leather gloves"
 	desc = "Supple, black leather gloves crafted from the finest leather. Stylish, durable, and ready for work or play."
 	icon_state = "black_leather"
 	item_state = "black"
+
+	fingerprint_desc = "a thickly-gloved finger"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 /obj/item/clothing/gloves/boxing
 	name = "boxing gloves"
@@ -71,6 +86,9 @@
 	var/pain_dam = 20
 	var/box_sound = list('sound/weapons/punch1.ogg')//placeholder
 	var/knockout_sound = 'sound/effects/knockout.ogg'
+
+	fingerprint_desc = "a single, massive object"
+	fingerprint_obfuscation = FINGERPRINT_GLOVES_HEAVY
 
 
 /obj/item/clothing/gloves/boxing/Touch(atom/A, proximity)

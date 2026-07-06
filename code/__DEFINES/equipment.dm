@@ -191,6 +191,54 @@
 //VISION IMPAIRMENT LEVELS===========================================================================
 
 
+//FINGERPRINT OBFUSCATION LEVELS======================================================================
+
+/// A completely fresh fingerprint
+#define FINGERPRINT_TIME_FRESH 1.1
+/// A clear fingerprint, without fading
+#define FINGERPRINT_TIME_NORMAL 1.0
+/// A faded, but still recognizable fingerprint
+#define FINGERPRINT_TIME_FADED 0.8
+/// A fingerprint that has faded so much as to have lost important sections
+#define FINGERPRINT_TIME_OLD 0.5
+
+/// An exemplar fingerprint, not even smudged by the finger leaving the object
+#define FINGERPRINT_SMUDGE_CLEAR 1.1
+/// A standard fingerprint, unsmudged
+#define FINGERPRINT_SMUDGE_NONE 1
+/// A lightly smudged fingerprint, likely caused by brushing up against something
+#define FINGERPRINT_SMUDGE_LIGHT 0.8
+/// A decently smudged fingerprint, warped by continued contact
+#define FINGERPRINT_SMUDGE_MODERATE 0.6
+/// A heavily smudged fingerprint, with traces blurred over one another
+#define FINGERPRINT_SMUDGE_HEAVY 0.3
+/// A fingerprint smudged so much as to become unrecognizable
+#define FINGERPRINT_SMUDGE_UNRECOGNIZABLE 0.1
+
+/// A full set of fingerprints, thumbs and all!
+#define FINGERPRINT_QUALITY_FULL_SET 1.5
+/// A pair of fingertips, fully imprinted
+#define FINGERPRINT_QUALITY_PAIR 1.2
+/// A single, clear fingerprint
+#define FINGERPRINT_QUALITY_FULL_PRINT 1
+/// A decent capture of the fingertip's indents
+#define FINGERPRINT_QUALITY_DECENT 0.7
+/// A half-print, caused by the finger being half-turned away from the face of the object
+#define FINGERPRINT_QUALITY_HALF_FACED 0.4
+/// A small sliver of the side of a fingerprint, nearly useless
+#define FINGERPRINT_QUALITY_SLIVER 0.1
+
+/// No gloves were worn when this fingerprint was made
+#define FINGERPRINT_GLOVES_NONE 1
+/// Light gloves, like latex, were worn when this fingerprint was made
+#define FINGERPRINT_GLOVES_LIGHT 0.5
+/// Moderately thick gloves were worn when this fingerprint was made
+#define FINGERPRINT_GLOVES_MODERATE 0.1
+/// The gloves were too heavy to leave anything left of the fingerprint traces itself
+#define FINGERPRINT_GLOVES_HEAVY 0
+
+//FINGERPRINT OBFUSCATION LEVELS======================================================================
+
 //===========================================================================================
 //Uniform flags only, use for flags_jumpsuit. These are autodetected on init.
 
