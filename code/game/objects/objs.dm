@@ -34,6 +34,9 @@
 	/// lets us know if the item is an objective or not
 	var/is_objective = FALSE
 
+	/// List of clues attached to the object
+	var/list/clues = list()
+
 	vis_flags = VIS_INHERIT_PLANE
 
 
@@ -351,3 +354,120 @@
 /// override for subtypes that require extra behaviour when spawned from a vendor
 /obj/proc/post_vendor_spawn_hook(mob/living/carbon/human/user)
 	return
+
+/// Updates the fingerprints on an object with the user.
+/// Inherently runs all checks relating to gloves and fingerprint quality.
+/// **Will** smudge all other prints on an object, POTENTIALLY DELETING OTHER PRINTS.
+///
+/// If the user's fingerprints aren't on an object, or the new prints are made with better gloves,
+/// adds a new clue datum to the clues list.
+/// If the user's fingerprints are already on the object, instead upgrade the quality of said prints.
+/obj/item/proc/apply_prints(/mob/living/carbon/human/user)
+	if (!user)
+		return
+
+	var/upgraded = FALSE
+	for (var/datum/clue/clue in clues)
+		if (!istype(clue, /datum/clue/prints))
+			return
+		var/datum/clue/prints/existing = clue
+
+		// This user's fingerprints are already on the object, and the gloves they're wearing are of equal or lower obfuscation.
+		// If the prints are made with higher obfuscation gloves, then create a new set of prints and update them.
+		if (existing.clue_owner == user && existing.glove_obfuscation >= user.gloves.fingerprint_obfuscation)
+			// Update to the new obfuscation level
+			existing.glove_obfuscation = user.gloves.fingerprint_obfuscation
+
+			// Firmer grip on an item increases fingerprint quality
+			// This is reflected in an additional roll to upgrade any prints
+			var/firm_grip = user.a_intent == INTENT_HARM | INTENT_DISARM
+
+			// Upgrade the fingerprint level
+			switch (existing.imprint_quality)
+				if (FINGERPRINT_QUALITY_SLIVER)
+					if (prob(5) || (prob(5) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_PRINT
+					else if (prob(10) || (prob(10) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_DECENT
+					else if (prob(20) || (prob(20) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_HALF_FACED
+				if (FINGERPRINT_QUALITY_HALF_FACED)
+					if (prob(5) || (prob(5) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_DECENT
+					else if (prob(10) || (prob(10) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_PRINT
+					else if (prob(30) || (prob(30) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_PAIR
+				if (FINGERPRINT_QUALITY_DECENT)
+					if (prob(5) || (prob(5) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_PRINT
+					else if (prob(10) || (prob(10) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_PAIR
+					else if (prob(30) || (prob(30) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_SET
+				if (FINGERPRINT_QUALITY_FULL_PRINT)
+					if (prob(10) || (prob(10) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_PAIR
+					if (prob(30) || (prob(30) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_SET
+				if (FINGERPRINT_QUALITY_PAIR)
+					if (prob(30) || (prob(30) && firm_grip))
+						existing.imprint_quality = FINGERPRINT_QUALITY_FULL_SET
+
+			// Reset the smudging level slightly
+			// Will never create clear fingerprints
+			switch (existing.smudge_amount)
+				if (FINGERPRINT_SMUDGE_LIGHT)
+					if (prob(5))
+						existing.smudge_amount = FINGERPRINT_SMUDGE_NONE
+				if (FINGERPRINT_SMUDGE_MODERATE)
+					if (prob(10))
+						existing.smudge_amount = FINGERPRINT_SMUDGE_LIGHT
+				if (FINGERPRINT_SMUDGE_HEAVY)
+					if (prob(20))
+						existing.smudge_amount = FINGERPRINT_SMUDGE_MODERATE
+				if (FINGERPRINT_SMUDGE_UNRECOGNIZABLE)
+					if (prob(30))
+						existing.smudge_amount = FINGERPRINT_SMUDGE_HEAVY
+
+			upgraded = TRUE
+
+	// This user's fingerprints do not already exist on the object, or their gloves are better now.
+	if (!upgraded)
+		var/datum/clue/prints/new_prints = new/datum/clue/prints(owner = user, left_hand = user.hand)
+
+		clues += new_prints
+
+	// Smudjem
+	smudge_prints()
+
+/// Smudges all fingerprints on an object.
+/// CAN result in fingerprints being marked for cleanup and removed from the clues list!
+/obj/item/proc/smudge_prints()
+	for (var/datum/clue/clue in clues)
+		if (!istype(clue, /datum/clue/prints))
+			return
+		var/datum/clue/prints/prints = clue
+
+		switch (prints.smudge_amount)
+			if (FINGERPRINT_SMUDGE_UNRECOGNIZABLE)
+				// Fingerprint smudged so much as to become useless
+				// Mark it for cleanup so that it can cleanly handle reference deletion on the next garbage pass
+				if (prob(1))
+					prints.cleanup = TRUE
+					clues -= prints
+			if (FINGERPRINT_SMUDGE_HEAVY)
+				if (prob(1))
+					prints.smudge_amount = FINGERPRINT_SMUDGE_UNRECOGNIZABLE
+			if (FINGERPRINT_SMUDGE_MODERATE)
+				if (prob(2))
+					prints.smudge_amount = FINGERPRINT_SMUDGE_HEAVY
+			if (FINGERPRINT_SMUDGE_LIGHT)
+				if (prob(5))
+					prints.smudge_amount = FINGERPRINT_SMUDGE_MODERATE
+			if (FINGERPRINT_SMUDGE_NONE)
+				if (prob(10))
+					prints.smudge_amount = FINGERPRINT_SMUDGE_LIGHT
+			if (FINGERPRINT_SMUDGE_CLEAR)
+				if (prob(20))
+					prints.smudge_amount = FINGERPRINT_SMUDGE_NONE

@@ -2,8 +2,11 @@
 	/// Who created this clue?
 	var/clue_owner = null
 
+	/// The name of this type of clue.
+	var/name = "clue"
+
 	/// An optional description to accompany the clue.
-	var/description = null
+	var/desc = null
 
 	/// This clue has been marked for cleanup.
 	/// Do what you need to do before calling the parent process method.
@@ -14,7 +17,7 @@
 	clue_owner = owner
 
 	if (desc != "")
-		description = desc
+		src.desc = desc
 
 	SSclues.clues_list += src
 
@@ -27,6 +30,9 @@
 		return PROCESS_KILL
 
 /datum/clue/prints
+	name = "fingerprints"
+	desc = "a disturbance of dusts and oils on the surface of an object, tracing the shape of a fingerprint"
+
 	/// A description of the finger that was used to make this fingerprint.
 	///
 	/// Ex: "this fingerprint was made by **a gloved finger**"
@@ -41,7 +47,7 @@
 
 	/// How smudged the fingerprint is from further interactions with an item.
 	/// Can be decreased if the print is oily in nature and sprayed with forensic spray.
-	var/smudge_amount = FINGERPRINT_SMUDGE_NONE
+	var/smudge_amount = FINGERPRINT_SMUDGE_CLEAR
 
 	/// How much the fingerprint's quality has been affected by age
 	var/print_age = FINGERPRINT_TIME_FRESH
@@ -84,11 +90,6 @@
 				imprint_quality = FINGERPRINT_QUALITY_SLIVER
 		if (91 to 100)
 			imprint_quality = FINGERPRINT_QUALITY_SLIVER
-
-	if (prob(20))
-		smudge_amount = FINGERPRINT_SMUDGE_CLEAR
-	else
-		smudge_amount = FINGERPRINT_SMUDGE_NONE
 
 /datum/clue/prints/process()
 	var/age = world.timeofday - created_time
