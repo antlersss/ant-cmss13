@@ -1,3 +1,10 @@
+/**
+ * Parent type for police and forensics clues.
+ *
+ * This is attached to items and structures that are interacted with by human mobs.
+ * These are automatically added to the SSclues subsystem when created using their `New()`
+ * constructor. Can be destroyed by the subsystem's garbage collector at any time; check for null.
+ */
 /datum/clue
 	/// Who created this clue?
 	var/clue_owner = null

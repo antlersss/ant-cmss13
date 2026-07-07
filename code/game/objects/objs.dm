@@ -355,13 +355,17 @@
 /obj/proc/post_vendor_spawn_hook(mob/living/carbon/human/user)
 	return
 
-/// Updates the fingerprints on an object with the user.
-/// Inherently runs all checks relating to gloves and fingerprint quality.
-/// **Will** smudge all other prints on an object, POTENTIALLY DELETING OTHER PRINTS.
-///
-/// If the user's fingerprints aren't on an object, or the new prints are made with better gloves,
-/// adds a new clue datum to the clues list.
-/// If the user's fingerprints are already on the object, instead upgrade the quality of said prints.
+/**
+ * Updates the fingerprints on an object.
+ *
+ * Inherently runs all checks relating to gloves and fingerprint quality.
+ * **Will** smudge all other prints on an object, POTENTIALLY DELETING OTHER PRINTS.
+ * If the user's fingerprints aren't on an object, or the new prints are made with better gloves,
+ * adds a new clue datum to the clues list.
+ * If the user's fingerprints are already on the object, instead upgrade the quality of said prints.
+ * Arguments:
+ * * user - The human who created these fingerprints
+ */
 /obj/item/proc/apply_prints(/mob/living/carbon/human/user)
 	if (!user)
 		return
@@ -441,8 +445,11 @@
 	// Smudjem
 	smudge_prints()
 
-/// Smudges all fingerprints on an object.
-/// CAN result in fingerprints being marked for cleanup and removed from the clues list!
+/**
+ * Smudges all fingerprints on an object.
+ *
+ * CAN result in fingerprints being marked for cleanup and removed from the clues list!
+ */
 /obj/item/proc/smudge_prints()
 	for (var/datum/clue/clue in clues)
 		if (!istype(clue, /datum/clue/prints))

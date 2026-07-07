@@ -11,7 +11,7 @@ SUBSYSTEM_DEF(clues)
 	var/list/cleanup_targets = list()
 
 /datum/controller/subsystem/clues/stat_entry(msg)
-	msg = "C:[length(clues_list)]"
+	msg = "C:[length(clues_list)]G:[length(cleanup_targets)]"
 	return ..()
 
 /datum/controller/subsystem/clues/fire(resumed = FALSE)
@@ -61,6 +61,7 @@ SUBSYSTEM_DEF(clues)
 		if (MC_TICK_CHECK)
 			return
 
+/// TODO: Remove dead code
 /*
 /datum/controller/subsystem/clues/stat_entry(msg)
 	msg = "P:[length(prints_list)]"
