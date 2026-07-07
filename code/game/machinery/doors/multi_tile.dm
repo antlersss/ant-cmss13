@@ -140,7 +140,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/take_damage(taken_damage, mob/damaging_mob)
 	var/damage_check = max(0, damage + taken_damage)
 	if(damage_check >= damage_cap && damaging_mob && is_mainship_level(z))
-		SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
+		// TODO: Refactor with new clue system
+		// SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
 	..()
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/glass
@@ -259,7 +260,7 @@
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/maint/reinforced/colony/autoname
 	autoname = TRUE
- 
+
 //------Containment 3-tile Doors -----//
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/containment

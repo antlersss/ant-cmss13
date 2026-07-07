@@ -162,7 +162,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 	if(hacked)
 		to_chat(user, SPAN_WARNING("You have successfully removed access restrictions in [src]."))
 		if(user && is_mainship_level(z))
-			SSclues.create_print(get_turf(user), user, "A small piece of cut wire is found on the fingerprint.")
+			// TODO: Refactor with new clue system
+			// SSclues.create_print(get_turf(user), user, "A small piece of cut wire is found on the fingerprint.")
 	else
 		to_chat(user, SPAN_WARNING("You have restored access restrictions in [src]."))
 	return

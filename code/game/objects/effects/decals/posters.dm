@@ -111,7 +111,8 @@
 
 	to_chat(user, SPAN_NOTICE("You place the poster!"))
 
-	SSclues.create_print(get_turf(user), user, "The fingerprint contains paper pieces.")
+	// TODO: Refactor with new clue system
+	// SSclues.create_print(get_turf(user), user, "The fingerprint contains paper pieces.")
 	SEND_SIGNAL(P, COMSIG_POSTER_PLACED, user)
 
 /datum/poster

@@ -519,7 +519,8 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 
 				if(announce_hacked && is_mainship_level(z))
 					announce_hacked = FALSE
-					SSclues.create_print(get_turf(usr), usr, "The fingerprint contains oil and wire pieces.")
+					// TODO: Refactor with new clue system
+					// SSclues.create_print(get_turf(usr), usr, "The fingerprint contains oil and wire pieces.")
 				. = TRUE
 			if("pulse")
 				var/obj/item/held_item = usr.get_held_item()
