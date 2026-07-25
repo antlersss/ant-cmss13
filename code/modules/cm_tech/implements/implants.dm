@@ -182,7 +182,7 @@
 
 /obj/item/device/internal_implant/rejuv/proc/check_revive(mob/living/implantee, list/damagedata, damagetype)
 	SIGNAL_HANDLER
-	if((implantee.health - damagedata["damage"]) <= implantee.health_threshold_crit)
+	if((implantee.health - damagedata["damage"]) <= implantee.health_threshold_crit + implantee.reagent_crit_threshold_modifier)
 		UnregisterSignal(implantee, COMSIG_MOB_TAKE_DAMAGE)
 
 		INVOKE_ASYNC(src, PROC_REF(revive), implantee)

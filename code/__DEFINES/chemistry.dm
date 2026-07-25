@@ -155,6 +155,7 @@
 #define PROPERTY_NEUROTOXIC "neurotoxic"
 #define PROPERTY_HYPERMETABOLIC "hypermetabolic"
 #define PROPERTY_IGNITING "igniting"
+#define PROPERTY_HYPOTENSIFYING "hypotensifying"
 //Neutral
 #define PROPERTY_NUTRITIOUS "nutritious"
 #define PROPERTY_KETOGENIC "ketogenic"
@@ -213,6 +214,8 @@
 #define PROPERTY_ANTIADDICTIVE "anti-addictive"
 #define PROPERTY_ADDICTIVE "addictive"
 #define PROPERTY_ENCEPHALOPHRASIVE "encephalophrasive"
+#define PROPERTY_HYPERTENSIFYING "hypertensifying"
+#define PROPERTY_MAGNIFYING "magnifying"
 //Legendary, only in research hints. add this property to legendary list define if you're planning for it to be in normal research loop.
 #define PROPERTY_BOOSTING "boosting"
 #define PROPERTY_CIPHERING "ciphering"

@@ -578,6 +578,27 @@
 /datum/chem_property/negative/addictive/process_critical(mob/living/M, potency = 1, delta_time)
 	M.disabilities |= NERVOUS
 
+/datum/chem_property/negative/hypotensifying
+	name = PROPERTY_HYPOTENSIFYING
+	code = "HOT"
+	description = "Causes cell death in the muscles and tendons. While not painful, it reduces the overall capacity of the body to sustain damage."
+	rarity = PROPERTY_UNCOMMON
+	category = PROPERTY_TYPE_TOXICANT
+
+/datum/chem_property/negative/hypotensifying/process(mob/living/user, potency = 1, delta_time)
+	user.reagent_crit_threshold_modifier += POTENCY_MULTIPLIER_HIGH * CREATE_MAX_TIER_1 * potency
+
+	if (prob(2 * delta_time))
+		to_chat(user, SPAN_WARNING("Your body feels abnormally weak."))
+	else if (prob(2 * delta_time))
+		to_chat(user, SPAN_WARNING("You have to strain to use your muscles properly."))
+
+/datum/chem_property/negative/hypotensifying/process_overdose(mob/living/user, potency = 1, delta_time)
+	user.apply_damage(POTENCY_MULTIPLIER_MEDIUM * potency * delta_time, OXY)
+
+/datum/chem_property/negative/hypotensifying/process_critical(mob/living/user, potency, delta_time)
+	user.apply_internal_damage(POTENCY_MULTIPLIER_LOW * potency * delta_time, "heart")
+
 //PROPERTY_DISABLED (in generation)
 /datum/chem_property/negative/hemositic
 	name = PROPERTY_HEMOSITIC

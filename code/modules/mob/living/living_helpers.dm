@@ -36,6 +36,10 @@
 	shake_camera(src, steps = 10, strength = 1)
 	INVOKE_ASYNC(src, TYPE_PROC_REF(/atom/movable, throw_atom), target_turf, distance, SPEED_VERY_FAST, cause_atom, TRUE)
 
+/// Returns true if the mob's critical threshold is greater than their current health.
+/mob/living/proc/is_crit()
+	return health < health_threshold_crit + reagent_crit_threshold_modifier
+
 /**
  * 'Splats' src, killing them. Mouses override this proc with their own unique splat.
  */

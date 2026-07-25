@@ -79,6 +79,12 @@
 
 	var/reagent_move_delay_modifier = 0 //negative values increase movement speed
 
+	/// Modifies the threshold at which the mob is in critical condition. Negative values increase total amount of damage that can be taken.
+	var/reagent_crit_threshold_modifier = 0
+
+	/// Modifies the threshold at which the mob dies. Negative values increase total amount of damage that can be taken.
+	var/reagent_death_threshold_modifier = 0
+
 	var/blood_type = "X*"
 
 	//Flags for any active emotes the mob may be performing

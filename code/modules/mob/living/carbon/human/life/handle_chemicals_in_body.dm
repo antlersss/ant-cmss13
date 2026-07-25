@@ -3,6 +3,8 @@
 /mob/living/carbon/human/proc/handle_chemicals_in_body(delta_time)
 
 	reagent_move_delay_modifier = 0
+	reagent_crit_threshold_modifier = 0
+	reagent_death_threshold_modifier = 0
 
 	recalculate_move_delay = TRUE
 

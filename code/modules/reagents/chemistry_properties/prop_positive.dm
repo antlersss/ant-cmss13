@@ -1079,6 +1079,46 @@
 	for(var/obj/effect/xenomorph/acid/A in T)
 		qdel(A)
 
+/datum/chem_property/positive/hypertensifying
+	name = PROPERTY_HYPERTENSIFYING
+	code = "HET"
+	description = "Causes the muscle and tendon cells of the body to tensify, then replicate in the newly formed voids. This results in the human body becoming more robust, allowing it to absorb more damage before no longer being able to walk. Does not help alleviate the pain caused by said damage."
+	rarity = PROPERTY_RARE
+	category = PROPERTY_TYPE_STIMULANT
+	value = 2
+	max_level = 8
+
+/datum/chem_property/positive/hypertensifying/process(mob/living/user, potency = 1, delta_time)
+	user.reagent_crit_threshold_modifier -= POTENCY_MULTIPLIER_VHIGH * CREATE_MAX_TIER_1 * potency
+
+	if (prob(delta_time))
+		to_chat(user, SPAN_INFO("You feel tense."))
+
+	// Flavor stuff for humans feeling their bodies break down (fun!)
+	if (!ishuman(user))
+		return
+	if (prob(2 * delta_time) && user.health < user.health_threshold_crit && !user.is_crit() && user.pain.last_level < PAIN_LEVEL_HORRIBLE)
+		switch (user.pain.last_level)
+			if (PAIN_LEVEL_NONE to PAIN_LEVEL_MILD)
+				to_chat(user, SPAN_INFO("You can feel your body failing due to its damage, but you feel no pain. Freaky."))
+			if (PAIN_LEVEL_DISCOMFORTING to PAIN_LEVEL_MODERATE)
+				to_chat(user, SPAN_WARNING("You become keenly aware of every wound on your body. You shouldn't be able to function, and it hurts."))
+			if (PAIN_LEVEL_DISTRESSING to PAIN_LEVEL_SEVERE)
+				to_chat(user, SPAN_WARNING("Your body feels like a mangled mess. You should be dead, and you wish you were too."))
+
+/datum/chem_property/positive/hypertensifying/process_overdose(mob/living/user, potency = 1, delta_time)
+	user.apply_damage(POTENCY_MULTIPLIER_LOW * potency * delta_time, BRUTE)
+	user.apply_internal_damage(POTENCY_MULTIPLIER_VLOW * potency * delta_time, "heart")
+
+/datum/chem_property/positive/hypertensifying/process_critical(mob/living/user, potency = 1, delta_time)
+	user.reagent_crit_threshold_modifier += POTENCY_MULTIPLIER_HIGH * CREATE_MAX_TIER_1 * potency
+	user.apply_damage(POTENCY_MULTIPLIER_MEDIUM * potency * delta_time, BRUTE)
+	user.apply_internal_damage(POTENCY_MULTIPLIER_LOW * potency * delta_time, "heart")
+	user.apply_internal_damage(POTENCY_MULTIPLIER_LOW * potency * delta_time, "liver")
+
+	if (prob(2 * delta_time))
+		to_chat(user, SPAN_WARNING("Your body feels exceptionally weak!"))
+
 //PROPERTY_DISABLED (in random generation)
 /datum/chem_property/positive/cardiostabilizing
 	name = PROPERTY_CARDIOSTABILIZING
@@ -1190,8 +1230,6 @@
 
 /datum/chem_property/positive/anticarcinogenic/process_critical(mob/living/M, potency = 1)
 	M.take_limb_damage(POTENCY_MULTIPLIER_MEDIUM * potency)//Hyperactive apoptosis
-
-
 
 /datum/chem_property/positive/firepenetrating
 	name = PROPERTY_FIRE_PENETRATING
