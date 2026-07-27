@@ -174,14 +174,18 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 							REAGENT_PURGE = FALSE,
 							REAGENT_FORCE = FALSE,
 							REAGENT_CANCEL = FALSE,
-							REAGENT_CATALYST = FALSE)
+							REAGENT_CATALYST = list("names" = list(), 0))
 
 	for(var/datum/chem_property/P in properties)
 		var/list/A = P.pre_process(M)
 		if(!A)
 			continue
 		for(var/mod in A)
-			mods[mod] += A[mod]
+			if (mod == REAGENT_CATALYST)
+				mods[mod]["names"] += A[REAGENT_CATALYST]["names"]
+				mods[mod]["lvl"] += A[REAGENT_CATALYST]["lvl"]
+			else
+				mods[mod] += A[mod]
 
 	return mods
 
