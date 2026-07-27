@@ -1120,6 +1120,18 @@
 	if (prob(2 * delta_time))
 		to_chat(user, SPAN_WARNING("Your body feels exceptionally weak!"))
 
+/datum/chem_property/positive/catalytic/
+	name = PROPERTY_CATALYTIC
+	code = "CAT"
+	description = "Advanced hyperadaptive structures of this chemical cause it to act as a very potent catalyst for other reagents. Will boost the effective levels of all <i>other</i> reagents in a body. This chemical cannot receive benefits from other catalytic chemicals."
+	rarity = PROPERTY_RARE
+	category = PROPERTY_TYPE_CATALYST
+	value = 4
+	max_level = 3
+
+/datum/chem_property/positive/catalytic/pre_process(mob/living/user)
+	return list(REAGENT_CATALYST = list("name" = holder.name, "lvl" = level))
+
 //PROPERTY_DISABLED (in random generation)
 /datum/chem_property/positive/cardiostabilizing
 	name = PROPERTY_CARDIOSTABILIZING

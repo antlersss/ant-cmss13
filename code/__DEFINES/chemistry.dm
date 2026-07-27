@@ -66,6 +66,7 @@
 #define REAGENT_PURGE "purge"
 #define REAGENT_FORCE "force"
 #define REAGENT_CANCEL "cancel"
+#define REAGENT_CATALYST "catalyst"
 
 //Reagent generation classifications
 
@@ -215,6 +216,7 @@
 #define PROPERTY_ADDICTIVE "addictive"
 #define PROPERTY_ENCEPHALOPHRASIVE "encephalophrasive"
 #define PROPERTY_HYPERTENSIFYING "hypertensifying"
+#define PROPERTY_CATALYTIC "catalytic"
 #define PROPERTY_MAGNIFYING "magnifying"
 //Legendary, only in research hints. add this property to legendary list define if you're planning for it to be in normal research loop.
 #define PROPERTY_BOOSTING "boosting"

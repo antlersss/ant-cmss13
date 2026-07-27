@@ -173,7 +173,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 							REAGENT_BOOST = FALSE,
 							REAGENT_PURGE = FALSE,
 							REAGENT_FORCE = FALSE,
-							REAGENT_CANCEL = FALSE)
+							REAGENT_CANCEL = FALSE,
+							REAGENT_CATALYST = FALSE)
 
 	for(var/datum/chem_property/P in properties)
 		var/list/A = P.pre_process(M)
@@ -190,6 +191,10 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		//A level of 1 == 0.5 potency, which is equal to REM (0.2/0.4) in the old system
 		//That means the level of the property by default is the number of REMs the effect had in the old system
 		var/potency = mods[REAGENT_EFFECT] * ((P.level+mods[REAGENT_BOOST]) * LEVEL_TO_POTENCY_MULTIPLIER)
+		// Add additional levels of potency if a catalytic chemical is present (and is not the current chemical!)
+		if (mods[REAGENT_CATALYST] && mods[REAGENT_CATALYST]["name"] != name)
+			potency += mods[REAGENT_CATALYST]["lvl"] * LEVEL_TO_POTENCY_MULTIPLIER
+
 		if(potency <= 0)
 			continue
 		P.process(M, potency, delta_time)
