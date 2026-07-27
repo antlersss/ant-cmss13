@@ -184,6 +184,7 @@
 /datum/chem_property/positive/hemostatic/on_delete(mob/living/affected_mob)
 	var/mob/living/carbon/human/effected_human = affected_mob
 	effected_human.chem_effect_flags &= CHEM_EFFECT_NO_BLEEDING
+	return ..()
 
 /datum/chem_property/positive/hemostatic/process_overdose(mob/living/affected_mob, potency = 1)
 	affected_mob.apply_damage(potency, BRUTE)

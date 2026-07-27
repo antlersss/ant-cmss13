@@ -327,6 +327,7 @@
 /datum/chem_property/neutral/hypothermic/on_delete(mob/living/effected_mob)
 	var/mob/living/carbon/human/effected_human = effected_mob
 	effected_human.chem_effect_flags &= CHEM_EFFECT_NO_BLEEDING
+	return ..()
 
 /datum/chem_property/neutral/hypothermic/process_overdose(mob/living/M, potency = 1)
 	M.bodytemperature = max(0, M.bodytemperature - POTENCY_MULTIPLIER_VHIGH * potency)

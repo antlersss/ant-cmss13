@@ -27,6 +27,7 @@
 	return
 
 /datum/chem_property/proc/on_delete(mob/living/M) //used for properties that do something on delete
+	SHOULD_CALL_PARENT(TRUE)
 	qdel(src)
 	return
 
