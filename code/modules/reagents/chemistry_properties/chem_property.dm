@@ -23,10 +23,13 @@
 /datum/chem_property/proc/reagent_added(atom/A, datum/reagent/R, amount)
 	return
 
-/datum/chem_property/proc/pre_process(mob/living/M) //used for properties that need special checks before processing starts, such as cryometabolization
+/datum/chem_property/proc/pre_process(mob/living/M) //! Used for properties that need to modify things before other properties on a chemical
 	return
 
-/datum/chem_property/proc/on_delete(mob/living/M) //used for properties that do something on delete
+/datum/chem_property/proc/container_processing(mob/living/user) //! Used for properties that need to modify things before all other REAGENTS in a container
+	return
+
+/datum/chem_property/proc/on_delete(mob/living/M) //! Used for properties that do something on delete
 	SHOULD_CALL_PARENT(TRUE)
 	qdel(src)
 	return

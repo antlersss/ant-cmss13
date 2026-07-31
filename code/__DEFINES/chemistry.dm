@@ -66,7 +66,7 @@
 #define REAGENT_PURGE "purge"
 #define REAGENT_FORCE "force"
 #define REAGENT_CANCEL "cancel"
-#define REAGENT_CATALYST "catalyst"
+#define CONTAINER_CATALYST "catalyst"
 
 //Reagent generation classifications
 

@@ -231,9 +231,22 @@
 	return amount
 
 /datum/reagents/proc/metabolize(mob/M, alien, delta_time)
+	var/list/container_mods = list(
+		CONTAINER_CATALYST = list("catalysts" = list(), "boost" = 0)
+	)
+
+	// Container pre-processing
+	for (var/datum/reagent/reagent in reagent_list)
+		var/list/additions = reagent.handle_container_processing()
+
+		// Add catalyst mods if they exist
+		if (additions[CONTAINER_CATALYST])
+			container_mods[CONTAINER_CATALYST]["catalysts"] += additions[CONTAINER_CATALYST]["catalysts"]
+			container_mods[CONTAINER_CATALYST]["boost"] += additions[CONTAINER_CATALYST]["boost"]
+
 	for(var/datum/reagent/reagent in reagent_list)
 		if(M && reagent && !QDELETED(reagent))
-			reagent.on_mob_life(M, alien, delta_time)
+			reagent.on_mob_life(M, alien, container_mods, delta_time)
 	update_total()
 
 /datum/reagents/proc/handle_reactions()

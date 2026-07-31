@@ -49,6 +49,18 @@
 		if(!istype(cryo) || !cryo.on || cryo.inoperable())
 			has_cryo_medicine = FALSE
 
+	// Handle container pre-processing
+	var/list/container_mods = list(CONTAINER_CATALYST = list("catalysts" = list(), "boost" = 0))
+	for(var/datum/reagent/container_reagent in reagents.reagent_list)
+		if(!has_cryo_medicine && !istype(container_reagent, /datum/reagent/generated))
+			continue
+
+		var/list/additions = container_reagent.handle_container_processing()
+		// Add catalyst mods if they exist
+		if (additions[CONTAINER_CATALYST])
+			container_mods[CONTAINER_CATALYST]["catalysts"] += additions[CONTAINER_CATALYST]["catalysts"]
+			container_mods[CONTAINER_CATALYST]["boost"] += additions[CONTAINER_CATALYST]["boost"]
+
 	for(var/datum/reagent/cur_reagent in reagents.reagent_list)
 		if(!has_cryo_medicine && !istype(cur_reagent, /datum/reagent/generated))
 			continue
@@ -60,7 +72,7 @@
 								REAGENT_CANCEL = FALSE)
 
 		for(var/datum/chem_property/cur_prop in cur_reagent.properties)
-			var/list/results = cur_prop.pre_process(src)
+			var/list/results = cur_prop.pre_process(src, container_mods)
 			if(!results)
 				continue
 			for(var/mod in results)
@@ -70,7 +82,7 @@
 			return
 
 		if(mods[REAGENT_FORCE])
-			cur_reagent.handle_processing(src, mods, delta_time)
+			cur_reagent.handle_processing(src, mods, container_mods, delta_time)
 			cur_reagent.holder.remove_reagent(cur_reagent.id, cur_reagent.custom_metabolism * delta_time)
 
 		cur_reagent.handle_dead_processing(src, mods, delta_time)

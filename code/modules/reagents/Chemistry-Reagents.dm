@@ -138,11 +138,11 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		P.reaction_turf(T, volume, potency)
 	return
 
-/datum/reagent/proc/on_mob_life(mob/living/M, alien, delta_time)
+/datum/reagent/proc/on_mob_life(mob/living/M, alien, container_mods, delta_time)
 	if(alien == IS_HORROR || !holder)
 		return
 
-	var/list/mods = handle_pre_processing(M)
+	var/list/mods = handle_pre_processing(M, container_mods)
 
 	if(mods[REAGENT_CANCEL])
 		return
@@ -150,7 +150,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	if((!isliving(M) || alien == IS_YAUTJA) && !mods[REAGENT_FORCE])
 		return
 
-	handle_processing(M, mods, delta_time)
+	handle_processing(M, mods, container_mods, delta_time)
 	if(QDELETED(src)) //proc above could have deleted us
 		return
 	holder.remove_reagent(id, custom_metabolism * delta_time)
@@ -167,37 +167,52 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 
 	return TRUE
 
-//Pre-processing
-/datum/reagent/proc/handle_pre_processing(mob/living/M)
+/// Container processing: the first level of chemical pre-processing.
+///
+/// Runs before all other reagents perform their pre-processing and should be used to cause container-wide effects
+/datum/reagent/proc/handle_container_processing(mob/living/user)
+	var/list/mods = list(
+		CONTAINER_CATALYST = list("catalysts" = list(), "boost" = 0))
+
+	for (var/datum/chem_property/property in properties)
+		var/list/additions = property.container_processing(user)
+
+		// Adding catalyst mods to the mod list
+		if (additions[CONTAINER_CATALYST])
+			mods[CONTAINER_CATALYST]["catalysts"] += additions[CONTAINER_CATALYST]["catalysts"]
+			mods[CONTAINER_CATALYST]["boost"] += additions[CONTAINER_CATALYST]["boost"]
+
+	return mods
+
+/// Legacy pre-processing: the second level of chemical pre-processing.
+///
+/// Runs before all other *chem properties* in a certain reagent.
+/// Primarily used to boost this reagent's properties or to make processing conditional.
+/datum/reagent/proc/handle_pre_processing(mob/living/M, container_mods)
 	var/list/mods = list( REAGENT_EFFECT = TRUE,
 							REAGENT_BOOST = FALSE,
 							REAGENT_PURGE = FALSE,
 							REAGENT_FORCE = FALSE,
-							REAGENT_CANCEL = FALSE,
-							REAGENT_CATALYST = list("names" = list(), 0))
+							REAGENT_CANCEL = FALSE)
 
 	for(var/datum/chem_property/P in properties)
-		var/list/A = P.pre_process(M)
+		var/list/A = P.pre_process(M, container_mods)
 		if(!A)
 			continue
 		for(var/mod in A)
-			if (mod == REAGENT_CATALYST)
-				mods[mod]["names"] += A[REAGENT_CATALYST]["names"]
-				mods[mod]["lvl"] += A[REAGENT_CATALYST]["lvl"]
-			else
-				mods[mod] += A[mod]
+			mods[mod] += A[mod]
 
 	return mods
 
 //Main Processing
-/datum/reagent/proc/handle_processing(mob/living/M, list/mods, delta_time)
+/datum/reagent/proc/handle_processing(mob/living/M, list/mods, list/container_mods, delta_time)
 	for(var/datum/chem_property/P in properties)
 		//A level of 1 == 0.5 potency, which is equal to REM (0.2/0.4) in the old system
 		//That means the level of the property by default is the number of REMs the effect had in the old system
 		var/potency = mods[REAGENT_EFFECT] * ((P.level+mods[REAGENT_BOOST]) * LEVEL_TO_POTENCY_MULTIPLIER)
 		// Add additional levels of potency if a catalytic chemical is present (and is not the current chemical!)
-		if (mods[REAGENT_CATALYST] && mods[REAGENT_CATALYST]["name"] != name)
-			potency += mods[REAGENT_CATALYST]["lvl"] * LEVEL_TO_POTENCY_MULTIPLIER
+		if (!(name in mods[CONTAINER_CATALYST]["catalysts"]))
+			potency += mods[CONTAINER_CATALYST]["boost"] * LEVEL_TO_POTENCY_MULTIPLIER
 
 		if(potency <= 0)
 			continue
