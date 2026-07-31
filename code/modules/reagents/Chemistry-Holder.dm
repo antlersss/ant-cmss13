@@ -238,6 +238,8 @@
 	// Container pre-processing
 	for (var/datum/reagent/reagent in reagent_list)
 		var/list/additions = reagent.handle_container_processing()
+		if (!islist(additions))
+			continue
 
 		// Add catalyst mods if they exist
 		if (additions[CONTAINER_CATALYST])

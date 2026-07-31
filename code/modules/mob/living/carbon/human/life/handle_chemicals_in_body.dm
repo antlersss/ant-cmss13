@@ -56,6 +56,9 @@
 			continue
 
 		var/list/additions = container_reagent.handle_container_processing()
+		if (!islist(additions))
+			continue
+
 		// Add catalyst mods if they exist
 		if (additions[CONTAINER_CATALYST])
 			container_mods[CONTAINER_CATALYST]["catalysts"] += additions[CONTAINER_CATALYST]["catalysts"]

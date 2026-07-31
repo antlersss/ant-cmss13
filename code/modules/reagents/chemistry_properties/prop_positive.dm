@@ -1129,8 +1129,8 @@
 	value = 4
 	max_level = 3
 
-/datum/chem_property/positive/catalytic/pre_process(mob/living/user)
-	return list(REAGENT_CATALYST = list("names" = list(holder.name), "lvl" = level))
+/datum/chem_property/positive/catalytic/container_processing(mob/living/user)
+	return list(CONTAINER_CATALYST = list("catalysts" = list(holder.name), "boost" = level))
 
 //PROPERTY_DISABLED (in random generation)
 /datum/chem_property/positive/cardiostabilizing

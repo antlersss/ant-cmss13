@@ -176,6 +176,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 
 	for (var/datum/chem_property/property in properties)
 		var/list/additions = property.container_processing(user)
+		if (!islist(additions))
+			continue
 
 		// Adding catalyst mods to the mod list
 		if (additions[CONTAINER_CATALYST])
@@ -211,8 +213,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		//That means the level of the property by default is the number of REMs the effect had in the old system
 		var/potency = mods[REAGENT_EFFECT] * ((P.level+mods[REAGENT_BOOST]) * LEVEL_TO_POTENCY_MULTIPLIER)
 		// Add additional levels of potency if a catalytic chemical is present (and is not the current chemical!)
-		if (!(name in mods[CONTAINER_CATALYST]["catalysts"]))
-			potency += mods[CONTAINER_CATALYST]["boost"] * LEVEL_TO_POTENCY_MULTIPLIER
+		if (!(name in container_mods[CONTAINER_CATALYST]["catalysts"]))
+			potency += container_mods[CONTAINER_CATALYST]["boost"] * LEVEL_TO_POTENCY_MULTIPLIER
 
 		if(potency <= 0)
 			continue
