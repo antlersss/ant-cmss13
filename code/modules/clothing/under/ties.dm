@@ -429,24 +429,39 @@
 
 //Playtime Service Medals
 /obj/item/clothing/accessory/medal/bronze/service
-	name = "bronze service medal"
+	name = "\improper bronze service medal"
 	desc = "A bronze medal awarded for a marine's service within the USCM. It is a very common medal, and is typically the first medal a marine would receive."
 	icon_state = "bronze_service"
 
 /obj/item/clothing/accessory/medal/silver/service
-	name = "silver service medal"
+	name = "\improper silver service medal"
 	desc = "A shiny silver medal awarded for a marine's service within the USCM. It is a somewhat common medal which signifies the amount of time a marine has spent in the line of duty."
 	icon_state = "silver_service"
 
 /obj/item/clothing/accessory/medal/gold/service
-	name = "gold service medal"
+	name = "\improper gold service medal"
 	desc = "A prestigious gold medal awarded for a marine's service within the USCM. It is a rare medal which signifies the amount of time a marine has spent in the line of duty."
 	icon_state = "gold_service"
 
 /obj/item/clothing/accessory/medal/platinum/service
-	name = "platinum service medal"
-	desc = "The highest service medal that can be awarded to a marine; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
+	name = "\improper platinum service medal"
+	desc = "The highest service medal that can be awarded to a marine outside of special circumstances; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
 	icon_state = "platinum_service"
+
+/obj/item/clothing/accessory/medal/ranked/third
+	name = "\improper rose service bar"
+	desc = "The rose service medal line is the highest possible honor awarded for a marine's service, with only three ever being issued for any given role in the USCM. The rose bar is the third highest of the triplet, and is hand-given by the Vice President of the UA to the recipient."
+	icon_state = "3rd_service"
+
+/obj/item/clothing/accessory/medal/ranked/second
+	name = "\improper rose service medal"
+	desc = "The rose service medal line is the highest possible honor awarded for a marine's service, with only three ever being issued for any given role in the USCM. The rose medallion is the second highest of the triplet, and is hand-given by the Vice President of the UA to the recipient."
+	icon_state = "2nd_service"
+
+/obj/item/clothing/accessory/medal/ranked/first
+	name = "\improper The Rose Star"
+	desc = "The rose service medal line is the highest possible honor awarded for a marine's service, with only three ever being issued for any given role in the USCM. The Rose Star is the highest of the triplet, and is hand-given by the President of the United Americas to the recipient. Semper fi!"
+	icon_state = "1st_service"
 
 //Armbands
 /obj/item/clothing/accessory/armband
