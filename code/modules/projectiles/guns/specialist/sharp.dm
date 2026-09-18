@@ -27,7 +27,7 @@
 
 	var/explosion_delay_sharp = TRUE
 
-/obj/item/weapon/gun/rifle/sharp/tracker
+/obj/item/weapon/gun/rifle/sharp/bright
 	name = "\improper P9E1 BRIGHT rifle"
 	desc = "A modification of the standard SHARP platform, the BRIGHT further specializes into reconissance and tracking. The original arming and control circuitry have been replaced with an integrated motion sensor and remote tracking unit, which means it can only fire tracking darts."
 	icon_state = "brightrifle"

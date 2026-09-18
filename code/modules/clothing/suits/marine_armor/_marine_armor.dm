@@ -81,7 +81,8 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 		/obj/item/storage/belt/gun/m10,
-		/obj/item/storage/belt/gun/xm51,
+		/obj/item/storage/belt/gun/mixed_storage/xm51,
+		/obj/item/storage/belt/gun/mixed_storage/p9e1
 	)
 
 	light_power = 4
