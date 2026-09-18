@@ -34,6 +34,9 @@
 
 	current_mag = /obj/item/ammo_magazine/internal/rifle/bright
 
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WEAPON_DELAY_NORMAL
+
 	flags_gun_features = GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/rifle/sharp/Initialize()
