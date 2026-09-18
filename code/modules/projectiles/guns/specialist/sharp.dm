@@ -27,6 +27,15 @@
 
 	var/explosion_delay_sharp = TRUE
 
+/obj/item/weapon/gun/rifle/sharp/tracker
+	name = "\improper P9E1 BRIGHT rifle"
+	desc = "A modification of the standard SHARP platform, the BRIGHT further specializes into reconissance and tracking. The original arming and control circuitry have been replaced with an integrated motion sensor and remote tracking unit, which means it can only fire tracking darts."
+	icon_state = "brightrifle"
+
+	current_mag = /obj/item/ammo_magazine/internal/rifle/bright
+
+	flags_gun_features = GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+
 /obj/item/weapon/gun/rifle/sharp/Initialize()
 	. = ..()
 	AddElement(/datum/element/corp_label/armat)
@@ -67,8 +76,6 @@
 	playsound(user, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
 	to_chat(user, SPAN_NOTICE("[icon2html(src, user)] You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("5 seconds") : SPAN_BOLD("2.5 seconds")]."))
 	user.balloon_alert(user, "explosion delay [explosion_delay_sharp ? "5 seconds" : "2.5 seconds"].")
-
-
 
 /*
 //========
@@ -237,3 +244,6 @@
 	sharp_overlay.icon = 'icons/effects/explosion.dmi'
 	flick("grenade", sharp_overlay)
 	QDEL_IN(sharp_overlay, 7)
+
+/datum/ammo/rifle/sharp/tracking
+	name = "9XE1-T tracking dart"

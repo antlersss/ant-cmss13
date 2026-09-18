@@ -729,6 +729,13 @@
 	transfer_handful_amount = 5
 	description_ammo = "darts"
 
+/obj/item/ammo_magazine/internal/rifle/bright
+	name = "\improper BRIGHT rifle tube"
+	caliber = "Dart"
+	max_rounds = 5
+	chamber_closed = 0
+	default_ammo = /datum/ammo/rifle/sharp/tracking
+
 /obj/item/ammo_magazine/rifle/sharp/explosive
 	name = "\improper 9X-E sticky explosive dart magazine"
 	desc = "A specialized explosive sticky dart magazine for the SHARP rifle."
