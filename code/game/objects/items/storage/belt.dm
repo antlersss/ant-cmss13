@@ -2043,7 +2043,7 @@
 	max_w_class = 5
 
 	can_hold = list(
-		/obj/item/weapon/gun/rifle/sharp/tracker,
+		/obj/item/weapon/gun/rifle/sharp/bright,
 		/obj/item/ammo_magazine/rifle/sharp/,
 		/obj/item/ammo_magazine/handful/
 	)
