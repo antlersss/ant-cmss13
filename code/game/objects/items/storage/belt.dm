@@ -1954,59 +1954,66 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/m10/drum(src)
 
-#define MAXIMUM_MAGAZINE_COUNT 2
-
-/obj/item/storage/belt/gun/xm51
-	name = "\improper M276 pattern XM51 holster rig"
-	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
-	icon_state = "xm51_holster"
-	flags_atom = FPRINT // has gamemode skin
-	gun_has_gamemode_skin = TRUE
+/obj/item/storage/belt/gun/mixed_storage/
+	name = "\improper M276 pattern mixed storage holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This one shouldn't exist."
+	icon_state = "xm51_holster" // Placeholder icon_state
 	storage_slots = 8
 	max_w_class = 5
 	can_hold = list(
-		/obj/item/weapon/gun/rifle/xm51,
-		/obj/item/ammo_magazine/rifle/xm51,
-		/obj/item/ammo_magazine/handful,
+		/obj/item/weapon/gun/rifle,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/handful
 	)
 	holster_slots = list(
 		"1" = list(
 			"icon_x" = 10,
 			"icon_y" = -1))
 
-	//Keep a track of how many magazines are inside the belt.
+	var/max_magazines = 2
 	var/magazines = 0
 
-/obj/item/storage/belt/gun/xm51/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/shotgun/light/breaching))
-		var/obj/item/ammo_magazine/shotgun/light/breaching/ammo_box = item
+/obj/item/storage/belt/gun/mixed_storage/attackby(obj/item/item, mob/user)
+	if(istype(item, /obj/item/ammo_magazine/))
+		var/obj/item/ammo_magazine/ammo_box = item
 		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
 	else
 		return ..()
 
-/obj/item/storage/belt/gun/xm51/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+/obj/item/storage/belt/gun/mixed_storage/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()
-	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/rifle/xm51))
+	if(magazines >= max_magazines && istype(item, /obj/item/ammo_magazine/rifle))
 		if(!stop_messages)
 			to_chat(usr, SPAN_WARNING("[src] can't hold any more magazines."))
 		return FALSE
 
-/obj/item/storage/belt/gun/xm51/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+/obj/item/storage/belt/gun/mixed_storage/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
 	. = ..()
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
+	if(istype(item, /obj/item/ammo_magazine/rifle))
 		magazines++
 
-/obj/item/storage/belt/gun/xm51/remove_from_storage(obj/item/item as obj, atom/new_location)
+/obj/item/storage/belt/gun/mixed_storage/remove_from_storage(obj/item/item as obj, atom/new_location)
 	. = ..()
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
+	if(istype(item, /obj/item/ammo_magazine/rifle))
 		magazines--
 
 //If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
-/obj/item/storage/belt/gun/xm51/on_stored_atom_del(atom/movable/item)
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
+/obj/item/storage/belt/gun/mixed_storage/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/rifle))
 		magazines--
 
-/obj/item/storage/belt/gun/xm51/black
+/obj/item/storage/belt/gun/mixed_storage/xm51
+	name = "\improper M276 pattern XM51 holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
+	flags_atom = FPRINT // has gamemode skin
+	gun_has_gamemode_skin = TRUE
+	can_hold = list(
+		/obj/item/weapon/gun/rifle/xm51,
+		/obj/item/ammo_magazine/rifle/xm51,
+		/obj/item/ammo_magazine/handful,
+	)
+
+/obj/item/storage/belt/gun/mixed_storage/xm51/black
 	icon = 'icons/obj/items/clothing/belts/belts_by_map/snow.dmi'
 	item_icons = list(
 		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/snow.dmi',
@@ -2015,13 +2022,33 @@
 	)
 	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
-/obj/item/storage/belt/gun/xm51/black/cmb
+/obj/item/storage/belt/gun/mixed_storage/xm51/black/cmb
 	name = "\improper M276 pattern Model 1771 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the Office of the Colonial Marshals. It consists of a modular belt with various clips. This version is for the Model 1771 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
 	gun_has_gamemode_skin = FALSE
 
+/obj/item/storage/belt/gun/mixed_storage/p9e1
+	name = "\improper M276 pattern P9E1 holster rig"
+	desc= "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the P9E1 BRIGHT rifle, allowing easier storage of the weapon. It features pouches for storing two magazines, along with extra darts."
+	icon_state = "p9e1_holster"
+	flags_atom = NO_GAMEMODE_SKIN
 
-#undef MAXIMUM_MAGAZINE_COUNT
+	// TODO: Add gamemode skins
+	icon = 'icons/obj/items/clothing/belts/belts_by_map/classic.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/classic.dmi'
+	)
+
+	storage_slots = 9
+	max_w_class = 5
+
+	can_hold = list(
+		/obj/item/weapon/gun/rifle/sharp/tracker,
+		/obj/item/ammo_magazine/rifle/sharp/,
+		/obj/item/ammo_magazine/handful/
+	)
+
+	max_magazines = 3
 
 /obj/item/storage/belt/gun/m44
 	name = "\improper M276 pattern general revolver holster rig"

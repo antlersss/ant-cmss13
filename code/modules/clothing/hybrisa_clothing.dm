@@ -646,7 +646,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
-		/obj/item/storage/belt/gun/xm51,
+		/obj/item/storage/belt/gun/mixed_storage/xm51,
 	)
 	slowdown = 1
 	flags_inventory = NOPRESSUREDMAGE
@@ -774,7 +774,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
-		/obj/item/storage/belt/gun/xm51,
+		/obj/item/storage/belt/gun/mixed_storage/xm51,
 	)
 
 /obj/item/clothing/suit/storage/marine/light/vest/hybrisa_kelland/Initialize()
@@ -820,7 +820,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
-		/obj/item/storage/belt/gun/xm51,
+		/obj/item/storage/belt/gun/mixed_storage/xm51,
 	)
 
 /obj/item/clothing/suit/storage/marine/light/vest/hybrisa_kelland_alt/Initialize()
