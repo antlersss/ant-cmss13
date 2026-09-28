@@ -1973,13 +1973,6 @@
 	var/max_magazines = 2
 	var/magazines = 0
 
-/obj/item/storage/belt/gun/mixed_storage/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/))
-		var/obj/item/ammo_magazine/ammo_box = item
-		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
-	else
-		return ..()
-
 /obj/item/storage/belt/gun/mixed_storage/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()
 	if(magazines >= max_magazines && istype(item, /obj/item/ammo_magazine/rifle))
@@ -2029,7 +2022,7 @@
 
 /obj/item/storage/belt/gun/mixed_storage/p9e1
 	name = "\improper M276 pattern P9E1 holster rig"
-	desc= "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the P9E1 BRIGHT rifle, allowing easier storage of the weapon. It features pouches for storing two magazines, along with extra darts."
+	desc= "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the P9E1 BRIGHT rifle, allowing easier storage of the weapon. It features pouches for storing three magazines, along with extra darts."
 	icon_state = "p9e1_holster"
 	flags_atom = NO_GAMEMODE_SKIN
 
@@ -2047,6 +2040,10 @@
 		/obj/item/ammo_magazine/rifle/sharp/,
 		/obj/item/ammo_magazine/handful/
 	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = 8,
+			"icon_y" = 3))
 
 	max_magazines = 3
 
