@@ -1888,6 +1888,10 @@
 	},
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
+"ahn" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer/plate,
+/area/lv624/ground/colony/west_tcomms_road)
 "aho" = (
 /obj/structure/machinery/cm_vending/sorted/medical/marinemed,
 /turf/open/floor/almayer/cargo/no_build,
@@ -4626,8 +4630,8 @@
 /turf/open/floor/almayer/silver/southeast,
 /area/lv624/ground/jungle/south_west_jungle)
 "arX" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/overwatch{
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/overwatch/almayer{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -32118,8 +32122,8 @@ aAs
 aAs
 ahp
 arX
+ahn
 aiN
-ajn
 ajn
 ajn
 ajn
@@ -32342,8 +32346,8 @@ aAp
 aAs
 ash
 arY
+ahn
 aiN
-ajn
 ajn
 ajn
 rwK
@@ -32567,7 +32571,7 @@ aAs
 aAs
 rwK
 rwK
-ajn
+aiN
 rwK
 rwK
 rwK
