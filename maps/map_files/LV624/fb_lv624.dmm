@@ -2043,6 +2043,14 @@
 "ahZ" = (
 /turf/open/antre/plating/direction_west/west_south,
 /area/lv624/lazarus/secure_storage)
+"aia" = (
+/obj/structure/blocker/tent/full_tile,
+/turf/open/gm/dirt,
+/area/lv624/ground/jungle/west_jungle)
+"aib" = (
+/obj/structure/blocker/tent/full_tile,
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
 "aic" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/gm/grass/grass2,
@@ -7521,7 +7529,6 @@
 /obj/vehicle/powerloader{
 	dir = 4
 	},
-/obj/structure/blocker/tent,
 /turf/open/gm/dirt,
 /area/lv624/lazarus/landing_zones/lz2)
 "aCK" = (
@@ -7704,15 +7711,6 @@
 /obj/item/bananapeel,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
-"aDo" = (
-/obj/vehicle/powerloader{
-	dir = 4
-	},
-/obj/structure/blocker/tent{
-	dir = 1
-	},
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
 "aDp" = (
 /obj/structure/bed/chair/comfy/orange{
 	dir = 1
@@ -27889,7 +27887,7 @@ aAp
 aAp
 asw
 xKE
-aAl
+aia
 aDg
 aAM
 aCN
@@ -28113,10 +28111,10 @@ aAp
 aAp
 aAp
 tZD
-aAl
+aia
 aDh
-aDv
-aDv
+aDe
+aCX
 aDv
 aDv
 aDv
@@ -28337,9 +28335,9 @@ aAp
 nmO
 tZD
 tZD
-aDv
+aib
 aDk
-aDe
+aDf
 aCW
 aCH
 aDv
@@ -28561,10 +28559,10 @@ nmO
 aXX
 aXX
 xXB
-aDv
+aib
 aDm
-aDf
-aCX
+aDv
+aDv
 aCH
 aDv
 aDv
@@ -28786,7 +28784,7 @@ aRG
 uRE
 aqR
 aDv
-aDo
+aCJ
 aDv
 aDv
 aCJ
