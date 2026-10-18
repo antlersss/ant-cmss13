@@ -2100,6 +2100,9 @@
 /obj/structure/blocker/tent/full_tile,
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/jtac_tent)
+"aib" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/brig)
 "aic" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/gm/grass/grass2,
@@ -2176,6 +2179,10 @@
 "air" = (
 /turf/open/antre/plating/direction_west/east_north,
 /area/forward_base/lv624/hallways/east)
+"ais" = (
+/obj/effect/landmark/start/police,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/brig)
 "ait" = (
 /turf/closed/wall/almayer/outer/internal,
 /area/forward_base/lv624/preps/spec/cryo)
@@ -2258,6 +2265,13 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/plating/warnplate/east,
 /area/lv624/ground/barrens/east_barrens/ceiling)
+"aiK" = (
+/obj/structure/machinery/chem_dispenser,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile_green,
+/area/forward_base/lv624/medical/pharmacy)
 "aiL" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
 	name = "Water Filtration Plant";
@@ -2331,6 +2345,7 @@
 /area/forward_base/lv624/hallways/east)
 "aja" = (
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/machinery/light,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/lv624/ground/jungle/west_jungle)
 "ajb" = (
@@ -2446,6 +2461,10 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/northwest,
 /area/lv624/ground/river/central_river)
+"ajy" = (
+/obj/structure/machinery/light,
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
 "ajz" = (
 /obj/structure/machinery/door/airlock/almayer{
 	name = "Kitchen";
@@ -2748,6 +2767,13 @@
 /obj/structure/platform_decoration/metal/almayer/west,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/living/briefing)
+"akH" = (
+/obj/structure/tent/big{
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	},
+/obj/structure/tent_curtain,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "akI" = (
 /obj/structure/stairs{
 	dir = 8
@@ -2837,6 +2863,10 @@
 /obj/structure/platform,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/living/briefing)
+"akY" = (
+/obj/structure/tent_curtain,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "akZ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3058,6 +3088,11 @@
 /obj/structure/flora/jungle/vines/light_2,
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
+"alQ" = (
+/obj/structure/tent_curtain,
+/obj/structure/flora/bush/ausbushes/lavendergrass,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "alR" = (
 /obj/structure/disposalpipe/junction,
 /obj/structure/grille{
@@ -3086,6 +3121,10 @@
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/river/central_river)
+"alV" = (
+/obj/structure/flora/bush/ausbushes/genericbush,
+/turf/open/gm/dirtgrassborder/west,
+/area/forward_base/lv624/tent_camp)
 "alW" = (
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/south,
@@ -3106,6 +3145,32 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/southwest,
 /area/lv624/ground/river/central_river)
+"amb" = (
+/obj/structure/tent/cmd{
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/tent_curtain,
+/obj/structure/machinery/cm_vending/clothing/commanding_officer,
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
+"amc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/tent_curtain,
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
 "amd" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -3129,6 +3194,15 @@
 "ami" = (
 /turf/open/floor/prison/floor_plate,
 /area/lv624/lazarus/landing_zones/lz2)
+"amj" = (
+/obj/structure/machinery/light/blue{
+	invisibility = 101
+	},
+/obj/structure/prop/tyrargo/illuminator{
+	icon_state = "floodlight-on"
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
 "amk" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/caves/north_west_caves)
@@ -3137,11 +3211,45 @@
 /obj/structure/grille,
 /turf/open/floor/plating/warnplate/west,
 /area/lv624/ground/river/west_river)
+"amm" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/transmitter/rotary{
+	name = "Reporter Telephone";
+	phone_category = "Civilian";
+	phone_id = "Reporter";
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/device/taperecorder{
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/structure/machinery/computer/emails{
+	dir = 4;
+	pixel_y = 17
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
+"amn" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 12;
+	buckling_y = 12
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "amo" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/dirt,
 /area/lv624/ground/river/central_river)
+"amp" = (
+/obj/structure/machinery/cm_vending/gear/commanding_officer,
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
 "amq" = (
 /turf/open/antre/plating/corner_dir/north_east,
 /area/forward_base/lv624/hallways/west)
@@ -3347,6 +3455,13 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/ground/river/central_river)
+"ang" = (
+/obj/effect/landmark/start/captain,
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
 "anh" = (
 /turf/closed/wall/almayer/outer/internal,
 /area/sky)
@@ -3613,13 +3728,13 @@
 /obj/structure/stairs/multiz/down{
 	dir = 4
 	},
-/turf/open_space,
+/turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps)
 "anZ" = (
 /obj/structure/stairs/multiz/down{
 	dir = 8
 	},
-/turf/open_space,
+/turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps)
 "aoa" = (
 /obj/structure/machinery/medical_pod/sleeper,
@@ -3689,7 +3804,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 4
 	},
-/turf/open_space,
+/turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps)
 "aok" = (
 /obj/structure/machinery/cm_vending/gear/smartgun{
@@ -4328,6 +4443,9 @@
 /area/lv624/lazarus/hydroponics)
 "aqq" = (
 /obj/structure/flora/bush/ausbushes/pointybush,
+/obj/structure/machinery/light{
+	dir = 1
+	},
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
 /area/forward_base/lv624/tent_camp)
 "aqr" = (
@@ -4933,6 +5051,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "arZ" = (
@@ -4958,9 +5079,16 @@
 /turf/open/floor/almayer/silver/northeast,
 /area/forward_base/lv624/intel)
 "asg" = (
-/obj/structure/flora/bush/ausbushes/lavendergrass,
-/turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent_camp)
+/obj/structure/machinery/photocopier/wyphotocopier{
+	pixel_y = 5;
+	pixel_x = -3
+	},
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 16;
+	on = 1
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "ash" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 22;
@@ -5009,6 +5137,9 @@
 /obj/structure/machinery/camera/autoname/almayer{
 	name = "ship-grade camera"
 	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "asp" = (
@@ -5042,6 +5173,7 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/jungle/west_jungle)
 "asx" = (
+/obj/structure/machinery/light,
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
 /area/lv624/ground/jungle/west_jungle)
 "asy" = (
@@ -5279,10 +5411,6 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating,
 /area/lv624/lazarus/fitness)
-"atA" = (
-/obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent_camp)
 "atB" = (
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/forward_base/lv624/research/containment)
@@ -5961,12 +6089,6 @@
 /obj/structure/curtain/open/colorable,
 /turf/open/floor/plating,
 /area/forward_base/lv624/intel/prep)
-"awb" = (
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 6
-	},
-/turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
 "awc" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/river/west_river)
@@ -5976,7 +6098,7 @@
 "awe" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
+/area/forward_base/lv624/tent_camp)
 "awf" = (
 /turf/open/floor/almayer_hull/outerhull_dir/northeast,
 /area/sky)
@@ -6120,6 +6242,14 @@
 	},
 /turf/open/floor/almayer/emerald/east,
 /area/forward_base/lv624/command/cic)
+"awA" = (
+/obj/structure/prop/tyrargo/gen{
+	pixel_x = -5;
+	pixel_y = -10;
+	can_block_movement = 0
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
 "awB" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/sign/safety/terminal{
@@ -6338,6 +6468,15 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating/platebot,
 /area/lv624/lazarus/robotics)
+"axl" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine{
+	sub_name = "Combat Correspondent";
+	department = "USS Almayer";
+	pixel_y = 6
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "axm" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -6401,6 +6540,14 @@
 /obj/effect/landmark/start/bridge,
 /turf/open/floor/almayer/silver/south,
 /area/forward_base/lv624/command/cic)
+"axy" = (
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 11;
+	pixel_x = -8;
+	density = 0
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "axz" = (
 /obj/structure/closet/athletic_mixed,
 /obj/structure/machinery/light{
@@ -6504,6 +6651,10 @@
 /obj/effect/landmark/crap_item,
 /turf/open/floor/warnwhite/east,
 /area/lv624/lazarus/fitness)
+"axR" = (
+/obj/structure/machinery/cm_vending/clothing/combat_correspondent,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/correspondent_tent)
 "axS" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
 	pixel_x = 29
@@ -6511,6 +6662,18 @@
 /obj/structure/reagent_dispensers/tank/water,
 /turf/open/floor/whitepurplecorner/east,
 /area/lv624/lazarus/fitness)
+"axT" = (
+/obj/structure/machinery/cm_vending/clothing/dress{
+	req_access = list(1)
+	},
+/obj/structure/blocker/tent{
+	dir = 1
+	},
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
 "axU" = (
 /turf/open/floor/almayer,
 /area/forward_base/lv624/command/cic)
@@ -6525,7 +6688,7 @@
 "axX" = (
 /obj/structure/flora/bush/ausbushes/ausbush,
 /turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
+/area/forward_base/lv624/tent_camp)
 "axY" = (
 /obj/structure/tunnel{
 	id = "hole4"
@@ -6685,10 +6848,16 @@
 "ayB" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/sign/banners/colonial_marines_flag{
-	pixel_x = 4;
+	pixel_x = 8;
 	pixel_y = 31
 	},
-/obj/effect/landmark/start/captain,
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 26;
+	name = "CIC Armory Doors";
+	id = "cic_armory";
+	req_access = list(3);
+	pixel_x = -2
+	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/command/cic)
 "ayC" = (
@@ -6799,6 +6968,27 @@
 /obj/structure/barricade/wooden,
 /turf/open/gm/grass/grass1,
 /area/lv624/lazarus/quartstorage/outdoors)
+"ayT" = (
+/obj/item/bedsheet/hop,
+/obj/structure/bed,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent{
+	pixel_y = 25;
+	pixel_x = -28
+	},
+/obj/structure/transmitter/tent{
+	pixel_y = 29;
+	pixel_x = -7;
+	phone_category = "Command";
+	phone_id = "Commanding Officer's Tent"
+	},
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/obj/structure/blocker/tent{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
 "ayU" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirtgrassborder/south,
@@ -6862,7 +7052,7 @@
 	dir = 5
 	},
 /turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
+/area/forward_base/lv624/tent_camp)
 "azh" = (
 /obj/item/prop/alien/hugger,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -6963,10 +7153,9 @@
 /turf/open/floor/almayer/blue,
 /area/forward_base/lv624/command/cic)
 "azA" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 2;
-	id = "Final CIC Lockdown";
-	name = "\improper Internal Combat Information Center Blast Door"
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "cic_armory";
+	name = "Combat Information Center Armory Doors"
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/command/cic)
@@ -7386,6 +7575,16 @@
 /obj/item/storage/fancy/cigarettes/wypacket,
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
+"aAF" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"aAG" = (
+/obj/structure/machinery/light,
+/turf/open/gm/dirt,
+/area/lv624/ground/jungle/west_jungle)
 "aAH" = (
 /turf/open/antre/plating/direction_north/north_edge,
 /area/forward_base/lv624/hallways/east)
@@ -7832,6 +8031,13 @@
 	},
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
+"aCa" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/intel/prep)
 "aCb" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	dir = 1;
@@ -7894,8 +8100,8 @@
 /obj/structure/transmitter/tent{
 	pixel_y = 30;
 	pixel_x = 16;
-	phone_category = "Command";
-	phone_id = "Ground Requisitions"
+	phone_category = "Requisitions";
+	phone_id = "Requisitions Tent"
 	},
 /turf/open/gm/dirt/brown,
 /area/forward_base/lv624/tent/reqs_tent)
@@ -9733,7 +9939,7 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/turf/open/floor/almayer/sterile_green_side/north,
+/turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIg" = (
 /obj/structure/machinery/light/small{
@@ -9772,7 +9978,7 @@
 	pixel_y = -26;
 	pixel_x = 14
 	},
-/turf/open/floor/almayer/sterile_green_side/north,
+/turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIl" = (
 /obj/structure/bed/chair{
@@ -9781,7 +9987,7 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "aIm" = (
-/turf/open/floor/almayer/sterile_green_side/north,
+/turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIn" = (
 /obj/structure/closet/crate/medical{
@@ -9821,7 +10027,7 @@
 /obj/item/storage/syringe_case,
 /obj/item/storage/syringe_case,
 /obj/item/storage/syringe_case,
-/turf/open/floor/almayer/sterile_green_side/north,
+/turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIo" = (
 /turf/closed/wall/almayer,
@@ -10008,9 +10214,9 @@
 /turf/open/floor/plating/platebotc,
 /area/lv624/lazarus/yggdrasil)
 "aIN" = (
-/obj/structure/machinery/door/poddoor/almayer/open{
+/obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "Brig Armory Doors";
-	id = "brigarmory"
+	id = "brig_armory"
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/brig)
@@ -10766,6 +10972,9 @@
 /obj/structure/machinery/camera/autoname/almayer{
 	dir = 8;
 	name = "ship-grade camera"
+	},
+/obj/structure/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/medical/pharmacy)
@@ -12161,6 +12370,10 @@
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/intel)
 "aPG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/intel)
 "aPH" = (
@@ -13263,9 +13476,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/forward_base/lv624/tent/officer_tent)
-"aTo" = (
-/turf/open/floor/plating/asteroidwarning/south,
-/area/lv624/lazarus/landing_zones/lz2)
 "aTp" = (
 /turf/open/floor/plating/asteroidfloor,
 /area/lv624/lazarus/landing_zones/lz2)
@@ -13794,13 +14004,6 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/forward_base/lv624/tent/med_tent)
-"aUU" = (
-/obj/structure/prop/tyrargo/large_tents/small,
-/turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
-"aUV" = (
-/turf/open/gm/grass/grass1,
-/area/forward_base/lv624/tent/correspondent_tent)
 "aUW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -13990,9 +14193,6 @@
 /obj/item/ammo_magazine/shotgun/buckshot,
 /turf/open/floor/carpet/bcarpet02,
 /area/lv624/ground/caves/north_central_caves)
-"aVy" = (
-/turf/closed/wall/strata_ice/jungle,
-/area/forward_base/lv624/tent/correspondent_tent)
 "aVz" = (
 /obj/structure/blocker/tent{
 	dir = 1
@@ -14187,6 +14387,9 @@
 /area/forward_base/lv624/tent_camp)
 "aWb" = (
 /obj/structure/largecrate/empty/case/double,
+/obj/structure/machinery/light{
+	dir = 1
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aWc" = (
@@ -14434,6 +14637,9 @@
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner)
@@ -15643,6 +15849,9 @@
 /obj/structure/mirror{
 	pixel_y = 28
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner)
 "baD" = (
@@ -15654,6 +15863,9 @@
 	},
 /obj/structure/coatrack,
 /obj/item/clothing/head/bandana,
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner)
 "baF" = (
@@ -27566,16 +27778,16 @@ xKE
 aRS
 aRS
 aRS
-aVy
+aRS
 axX
-aUU
+aRO
 aRO
 aRO
 asZ
 aRS
 aRS
-aRO
-aRO
+ajg
+ajy
 rox
 amg
 aRW
@@ -27790,15 +28002,15 @@ xKE
 aRS
 aRS
 aRS
-awb
+aVT
 azg
-aUV
+aRO
 aIJ
-aRO
-aRO
-aRO
-atA
-aRO
+axl
+amm
+akH
+ajg
+ajg
 aRO
 rox
 amg
@@ -28018,11 +28230,11 @@ awe
 awe
 azg
 aRO
-aRO
-aRO
-aRO
-aRO
-aRO
+axy
+amn
+akY
+ajg
+ajg
 aRO
 ana
 ame
@@ -28242,12 +28454,12 @@ ayA
 ayA
 awV
 aRS
-aRO
+axR
 asg
-aRO
-aRO
+alQ
+ajg
+ajg
 aIJ
-aRO
 rox
 amV
 rox
@@ -28468,9 +28680,9 @@ aRQ
 aRQ
 aRQ
 aRQ
-aRQ
-aRY
-asc
+alV
+ajg
+ajg
 aRS
 aRS
 asc
@@ -28690,16 +28902,16 @@ aRQ
 aEe
 aSk
 aSk
-aSk
-aSk
-aSk
+axT
+amp
+amb
+ajg
+ajg
 aSh
 aRQ
 aRQ
-aRQ
-aRQ
 aRY
-aRO
+ajy
 aRy
 amd
 aRc
@@ -28901,7 +29113,7 @@ aAl
 aAl
 aAl
 aAl
-aAl
+aAG
 asa
 asa
 aBl
@@ -28914,12 +29126,12 @@ aSk
 aSk
 aSk
 aSk
-aSk
-aSk
-aSk
-aSk
-aSk
-aSk
+ayT
+ang
+amc
+ajg
+ajg
+ajg
 aSk
 aSk
 aSf
@@ -29135,15 +29347,15 @@ aSk
 aSk
 aSk
 aSk
+amj
 aSk
 aSk
 aSk
-aSk
-aTL
-aSk
-aSk
-aSk
-aSk
+awA
+amj
+ajg
+ajg
+ajg
 aSk
 aSk
 aSf
@@ -30245,7 +30457,7 @@ aAl
 aAl
 aAl
 aAl
-aAl
+aAG
 asa
 aBl
 aBl
@@ -31854,7 +32066,7 @@ aML
 aMA
 aLV
 aLy
-aKY
+aiK
 aKP
 arm
 aJp
@@ -32042,7 +32254,7 @@ asa
 asa
 asa
 xKE
-aSk
+aAF
 aSk
 aSk
 aSk
@@ -32499,9 +32711,9 @@ ajg
 ajg
 ajg
 ajg
-aTQ
-aTx
-aTl
+ajg
+ajg
+ajg
 aSk
 ajg
 anb
@@ -32723,9 +32935,9 @@ aSk
 aSk
 aSk
 aSk
-aTT
-aTz
-aTm
+aTQ
+aTx
+aTl
 aSk
 ajg
 anb
@@ -32947,9 +33159,9 @@ aSk
 aSk
 aSk
 aSk
-aTV
-aTA
-aTn
+aTT
+aTz
+aTm
 aSk
 ajg
 anb
@@ -33171,9 +33383,9 @@ aSk
 aSk
 aSk
 aSk
-aOB
-aRG
-aTo
+aTV
+aTA
+aTn
 aSk
 ajg
 ajg
@@ -33396,7 +33608,7 @@ uzH
 uzH
 uzH
 aTp
-aTp
+aRG
 aTp
 uzH
 uzH
@@ -35670,8 +35882,8 @@ aXG
 aIb
 aIb
 aHU
-aEL
-aEL
+aib
+aib
 aqT
 aqg
 aac
@@ -36342,8 +36554,8 @@ aUQ
 aIb
 aID
 aHW
-aEL
-aEM
+aib
+ais
 are
 aqg
 aac
@@ -75526,7 +75738,7 @@ qht
 awa
 avs
 avs
-avs
+aCa
 avs
 avk
 bcG
