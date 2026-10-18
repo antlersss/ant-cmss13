@@ -7,7 +7,6 @@
 	opacity = FALSE // Seems only the initial turf blocks light, not all of the multitile. Therefore, useless.
 	layer = INTERIOR_WALL_SOUTH_LAYER // This should be below FLY_LAYER but just thank chairs and other bs
 	health = 200
-	appearance_flags = TILE_BOUND
 
 	/// Turf dimensions along the X axis, beginning from left, at ground level
 	var/x_dim = 2
@@ -205,5 +204,26 @@
 /obj/structure/tent/mess
 	icon_state = "reqs_interior"
 	roof_state = "mess_top"
+	x_dim = 4
+	y_dim = 4
+
+/obj/structure/tent/forward_base/
+	icon = 'icons/obj/structures/tents_deployed_massive.dmi'
+
+/obj/structure/tent/forward_base/reqs
+	icon_state = "fb_reqs_interior"
+	roof_state = "fb_reqs_top"
+	x_dim = 7
+	y_dim = 6
+
+/obj/structure/tent/forward_base/med
+	icon_state = "fb_med_interior"
+	roof_state = "fb_med_top"
+	x_dim = 8
+	y_dim = 5
+
+/obj/structure/tent/forward_base/jtac
+	icon_state = "fb_jtac_interior"
+	roof_state = "fb_jtac_top"
 	x_dim = 4
 	y_dim = 4
