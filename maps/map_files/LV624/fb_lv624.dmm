@@ -10870,6 +10870,15 @@
 /area/forward_base/lv624/medical/pharmacy)
 "aKS" = (
 /obj/effect/landmark/start/field_doctor,
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/effect/landmark/start/field_doctor,
 /obj/structure/machinery/status_display{
 	pixel_x = 32
 	},
@@ -11023,10 +11032,6 @@
 /area/lv624/lazarus/main_hall)
 "aLo" = (
 /obj/effect/landmark/start/nurse,
-/obj/structure/machinery/camera/autoname/almayer{
-	dir = 8;
-	name = "ship-grade camera"
-	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -13866,7 +13871,9 @@
 "aUr" = (
 /obj/structure/blocker/tent,
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
-/obj/structure/tent_curtain,
+/obj/structure/tent_curtain{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -14044,7 +14051,9 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/south_east_jungle)
 "aUP" = (
-/obj/structure/tent_curtain,
+/obj/structure/tent_curtain{
+	dir = 8
+	},
 /obj/effect/decal/medical_decals{
 	icon_state = "docdecal2"
 	},
@@ -14110,7 +14119,9 @@
 /turf/open/floor/almayer/sterile,
 /area/forward_base/lv624/tent/med_tent)
 "aUZ" = (
-/obj/structure/tent_curtain,
+/obj/structure/tent_curtain{
+	dir = 8
+	},
 /obj/effect/decal/medical_decals{
 	icon_state = "docdecal1";
 	dir = 4
@@ -14355,7 +14366,9 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/obj/structure/tent_curtain,
+/obj/structure/tent_curtain{
+	dir = 8
+	},
 /obj/structure/machinery/cm_vending/sorted/medical,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -34742,9 +34755,9 @@ uzH
 uzH
 uzH
 uzH
-aTp
+uzH
 aRG
-aTp
+uzH
 uzH
 uzH
 uzH
