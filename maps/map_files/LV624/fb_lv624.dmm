@@ -1917,7 +1917,8 @@
 	phone_category = "Intel"
 	},
 /obj/structure/machinery/faxmachine/uscm/almayer{
-	sub_name = "Intel Office"
+	sub_name = "Intel Office";
+	department = "Firebase Charlie"
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
@@ -1995,7 +1996,7 @@
 /turf/open/floor/plating,
 /area/forward_base/lv624/preps/leader/cryo)
 "ahD" = (
-/turf/closed/wall/almayer,
+/turf/closed/wall/almayer/reinforced,
 /area/lv624/lazarus/secure_storage)
 "ahE" = (
 /obj/structure/closet/secure_closet/brig,
@@ -2414,6 +2415,9 @@
 /turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/living/briefing)
 "ajn" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_y = 0
+	},
 /turf/open/floor/wood/ship,
 /area/lv624/ground/colony/west_tcomms_road)
 "ajo" = (
@@ -3238,6 +3242,7 @@
 	pixel_y = 12;
 	buckling_y = 12
 	},
+/obj/effect/landmark/start/reporter,
 /turf/open/gm/dirt/brown,
 /area/forward_base/lv624/tent/correspondent_tent)
 "amo" = (
@@ -3700,7 +3705,8 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine/uscm/almayer{
 	sub_name = "SEA";
-	pixel_y = -4
+	pixel_y = -4;
+	department = "Firebase Charlie"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -4114,6 +4120,9 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/sign/poster/pinup{
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/blue/north,
 /area/forward_base/lv624/preps)
@@ -5437,13 +5446,6 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating,
 /area/lv624/lazarus/fitness)
-"atA" = (
-/obj/structure/stairs/multiz/up{
-	dir = 4
-	},
-/obj/effect/stairs/up,
-/turf/open/space/basic,
-/area/forward_base/lv624/preps/corpsman/cryo)
 "atB" = (
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/forward_base/lv624/research/containment)
@@ -6122,13 +6124,6 @@
 /obj/structure/curtain/open/colorable,
 /turf/open/floor/plating,
 /area/forward_base/lv624/intel/prep)
-"awb" = (
-/obj/structure/stairs/multiz/up{
-	dir = 8
-	},
-/obj/effect/stairs/up,
-/turf/open/space/basic,
-/area/forward_base/lv624/preps/comtech/cryo)
 "awc" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/river/west_river)
@@ -6551,7 +6546,8 @@
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "axq" = (
-/turf/open/floor/almayer/blue/northeast,
+/obj/structure/largecrate/black_market/confiscated_weaponry,
+/turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/south)
 "axr" = (
 /turf/open/antre/plating/west_corner_dir/north_east,
@@ -7409,7 +7405,8 @@
 	},
 /obj/structure/machinery/faxmachine/uscm/almayer/command{
 	sub_name = "CIC";
-	radio_alert_tag = ":v"
+	radio_alert_tag = ":v";
+	department = "Firebase Charlie"
 	},
 /obj/structure/machinery/computer/almayer_encryption/encoder{
 	density = 0;
@@ -8223,13 +8220,6 @@
 "aCw" = (
 /turf/open/floor/whitegreencorner,
 /area/lv624/lazarus/main_hall)
-"aCx" = (
-/obj/structure/stairs/multiz/up{
-	dir = 1
-	},
-/obj/effect/stairs/up,
-/turf/open/floor/plating,
-/area/forward_base/lv624/preps/leader/cryo)
 "aCy" = (
 /turf/open/floor/whitegreencorner/west,
 /area/lv624/lazarus/main_hall)
@@ -8307,13 +8297,6 @@
 "aCL" = (
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/robotics)
-"aCM" = (
-/obj/structure/stairs/multiz/up{
-	dir = 1
-	},
-/obj/effect/stairs/up,
-/turf/open/floor/plating,
-/area/forward_base/lv624/preps/spec/cryo)
 "aCN" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/pilot_officer,
 /obj/structure/blocker/tent{
@@ -10152,8 +10135,9 @@
 "aIx" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine/uscm/almayer/brig{
-	sub_name = "Processing";
-	pixel_y = 7
+	sub_name = "Brig Processing";
+	pixel_y = 7;
+	department = "Firebase Charlie"
 	},
 /obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/cleanable/dirt{
@@ -12663,6 +12647,10 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/sign/poster/propaganda{
+	pixel_y = 34;
+	pixel_x = 5
 	},
 /turf/open/floor/almayer/green/northwest,
 /area/forward_base/lv624/living/cafeteria)
@@ -16170,6 +16158,12 @@
 "bbk" = (
 /turf/open/floor/almayer/green/west,
 /area/forward_base/lv624/preps)
+"bbl" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/hallways/east)
 "bbm" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine{
 	name = "\improper Squad Preparations";
@@ -16252,6 +16246,20 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
+"bbA" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 1
+	},
+/turf/open/floor/prison/southwest,
+/area/lv624/ground/colony/west_tcomms_road)
+"bbB" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
 "bbC" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	req_access = null;
@@ -16342,6 +16350,20 @@
 "bbP" = (
 /turf/open/floor/almayer/green/east,
 /area/forward_base/lv624/preps)
+"bbQ" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_window{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/lv624/ground/colony/west_tcomms_road)
+"bbR" = (
+/obj/structure/machinery/door/airlock/almayer/glass{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_door,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/lv624/ground/colony/west_tcomms_road)
 "bbS" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/fancy/candle_box{
@@ -16705,18 +16727,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner)
-"bcY" = (
-/obj/effect/stairs/down,
-/turf/open_space,
-/area/forward_base/lv624/preps)
-"bcZ" = (
-/obj/effect/stairs/down,
-/turf/open_space,
-/area/forward_base/lv624/preps/leader)
-"bda" = (
-/obj/effect/stairs/down,
-/turf/open_space,
-/area/forward_base/lv624/preps/spec)
 "bdb" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
@@ -17389,13 +17399,334 @@
 /obj/effect/stairs/down,
 /turf/open_space,
 /area/forward_base/lv624/reqs)
+"beY" = (
+/obj/structure/machinery/computer/arcade{
+	layer = 3.3
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
+"beZ" = (
+/obj/structure/machinery/cm_vending/gear/corporate_security{
+	pixel_y = -16;
+	density = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/flooredge/north,
+/area/lv624/lazarus/secure_storage)
+"bfa" = (
+/obj/structure/machinery/cm_vending/clothing/corporate_security{
+	pixel_y = -16;
+	density = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/flooredge/north,
+/area/lv624/lazarus/secure_storage)
+"bfb" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light{
+	dir = 2
+	},
+/obj/structure/machinery/hybrisa/coffee_machine{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 11
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 11;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 11
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/lazarus/secure_storage)
 "bfc" = (
 /obj/effect/landmark/hunter_primary,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/containers)
+"bfd" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = 26
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/ground/colony/west_tcomms_road)
 "bfe" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/lv624/ground/jungle/north_east_jungle)
+"bff" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/purple/east,
+/area/forward_base/lv624/hallways/east)
+"bfg" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_window{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/lv624/lazarus/secure_storage)
+"bfh" = (
+/obj/effect/landmark/start/corp_sec,
+/turf/open/floor/wood/ship,
+/area/lv624/lazarus/secure_storage)
+"bfi" = (
+/obj/structure/machinery/flasher{
+	alpha = 50;
+	id = "CL_Security";
+	layer = 2.1;
+	name = "Ceiling Flash";
+	pixel_x = 8;
+	mouse_opacity = 0;
+	pixel_y = 8
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/lazarus/secure_storage)
+"bfj" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/lazarus/secure_storage)
+"bfk" = (
+/obj/structure/bed/chair/comfy/teal{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfl" = (
+/obj/structure/machinery/atm{
+	pixel_x = 30
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfm" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/faxmachine/corporate/liaison/almayer{
+	pixel_y = 2
+	},
+/turf/open/floor/carpet,
+/area/lv624/lazarus/secure_storage)
+"bfn" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/paper_bin/wy{
+	pixel_x = -11;
+	pixel_y = 10
+	},
+/obj/item/tool/stamp/weyyu{
+	name = "W-Y Corporate Liaison's stamp";
+	pixel_y = 10;
+	pixel_x = 1
+	},
+/obj/item/tool/pen/clicky{
+	pixel_y = -4;
+	pixel_x = -4
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = -8;
+	pixel_y = -4
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = -12;
+	pixel_y = -4
+	},
+/turf/open/floor/carpet,
+/area/lv624/lazarus/secure_storage)
+"bfo" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/transmitter/rotary{
+	name = "Corporate Office Telephone";
+	phone_category = "Civilian";
+	phone_id = "Liasion's Office";
+	pixel_x = 6
+	},
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = -3;
+	pixel_y = 15
+	},
+/obj/structure/machinery/door_control/cl/office/lobby_door{
+	pixel_x = -6;
+	pixel_y = -3
+	},
+/obj/structure/machinery/door_control/cl/office/lobby_window{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfp" = (
+/obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
+	pixel_y = 4;
+	dir = 8;
+	pixel_x = 16;
+	name = "Wall Television Set";
+	can_block_movement = 0
+	},
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfq" = (
+/obj/structure/closet/cabinet{
+	pixel_x = 1
+	},
+/obj/item/device/camera_film{
+	pixel_x = -6
+	},
+/obj/item/device/camera{
+	pixel_x = -7
+	},
+/obj/item/device/taperecorder{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/clipboard,
+/obj/item/storage/lockbox/loyalty,
+/obj/item/storage/box/wycaps,
+/obj/item/storage/briefcase,
+/obj/item/device/portable_vendor/corporate,
+/obj/item/reagent_container/spray/pepper,
+/obj/item/device/eftpos{
+	eftpos_name = "Weyland-Yutani EFTPOS scanner"
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/lazarus/secure_storage)
+"bfr" = (
+/obj/structure/machinery/photocopier/wyphotocopier,
+/obj/structure/sign/calendar/wy{
+	pixel_y = 32
+	},
+/turf/open/floor/carpet,
+/area/lv624/lazarus/secure_storage)
+"bfs" = (
+/obj/structure/bed/chair/comfy/orange,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/lv624/lazarus/secure_storage)
+"bft" = (
+/obj/structure/machinery/computer/wy_intranet{
+	can_block_movement = 0;
+	pixel_y = 20
+	},
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/structure/sign/poster/hero/voteno{
+	pixel_x = 26;
+	pixel_y = 8
+	},
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfv" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 2;
+	name = "\improper Corporate Liasion's Quarters";
+	req_access = list(207)
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfw" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/effect/landmark/start/liaison,
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfx" = (
+/obj/item/bedsheet/ce,
+/obj/structure/bed,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = 26
+	},
+/turf/open/floor/carpet,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfy" = (
+/obj/structure/barricade/handrail,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/stairwell/research)
+"bfz" = (
+/obj/structure/machinery/cm_vending/clothing/corporate_liaison{
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/calendar/wy{
+	pixel_x = -30
+	},
+/turf/open/floor/wood/ship,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfA" = (
+/obj/structure/safe/cl_office{
+	can_block_movement = 0
+	},
+/obj/item/spacecash/c1000/counterfeit,
+/obj/item/spacecash/c1000/counterfeit,
+/obj/item/book/codebook/wey_yu,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/wood/ship,
+/area/lv624/ground/colony/west_tcomms_road)
+"bfB" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
+"bfC" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
+"bfD" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 8;
+	pixel_y = 16
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv624/ground/jungle/west_jungle)
+"bfE" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv624/lazarus/landing_zones/lz2)
+"bfF" = (
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F";
+	dir = 1
+	},
+/turf/open/floor/prison/southwest,
+/area/lv624/ground/jungle/west_jungle)
 "bfY" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
@@ -24458,7 +24789,8 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/east_central_jungle)
 "qBW" = (
-/turf/open/floor/almayer/blue/east,
+/obj/structure/largecrate/empty/case/double,
+/turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/south)
 "qBX" = (
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -28620,7 +28952,7 @@ axs
 awX
 teR
 rQk
-aCx
+ahC
 ahw
 arl
 aKb
@@ -28816,7 +29148,7 @@ ajg
 ajg
 aRO
 rox
-amg
+bfF
 amg
 amg
 aRJ
@@ -30412,7 +30744,7 @@ aJn
 axq
 qBW
 ait
-aCM
+aHy
 aFi
 aDH
 aqo
@@ -32205,7 +32537,7 @@ aXB
 aWs
 aqv
 aqc
-atA
+aht
 aht
 aqc
 aqc
@@ -32853,7 +33185,7 @@ aSf
 aRO
 rox
 amg
-ame
+bfD
 ame
 aNg
 aRk
@@ -33549,7 +33881,7 @@ aig
 aIS
 aIo
 aqd
-awb
+exf
 exf
 aqd
 aqd
@@ -33749,7 +34081,7 @@ eiH
 jQV
 jQV
 jQV
-ami
+bfE
 sqw
 aNg
 aQZ
@@ -35999,13 +36331,13 @@ ayh
 aXE
 aXD
 aXD
+bff
 aXD
 aXD
 aXD
 aXD
 aXD
-aXD
-aXD
+bff
 ayh
 aXE
 axM
@@ -36667,19 +36999,19 @@ aRg
 wLz
 aly
 jQV
+bfC
 ajf
+ajf
+aVw
+bfB
 ajf
 ajf
 aVw
 ajf
 ajf
 ajf
-aVw
-ajf
-ajf
-ajf
-ajf
-ajf
+beY
+bbB
 ajf
 aXG
 aIb
@@ -36899,9 +37231,9 @@ aOe
 aMR
 aMR
 ahD
-ahD
-ahD
-ahD
+bfg
+bfg
+bfg
 ahD
 ahD
 aiZ
@@ -37123,10 +37455,10 @@ aOe
 arx
 arn
 ahD
+bfq
 aTf
-aTf
-aTf
-aTf
+bfh
+beZ
 ahD
 aiZ
 aUQ
@@ -37344,13 +37676,13 @@ asb
 arM
 arB
 aOe
-arx
+bfy
 ars
 ahD
-aTf
-aTf
-aTf
-aTf
+bfr
+bfm
+bfi
+bfa
 ahD
 aiZ
 aUQ
@@ -37570,13 +37902,13 @@ arC
 aOe
 ary
 aNa
-aiN
-aTf
-aTf
-aTf
-aTf
+aiX
+bfs
+bfn
+bfj
+bfb
 ahD
-aiZ
+bbl
 aUQ
 aIb
 aIF
@@ -37792,14 +38124,14 @@ asf
 arW
 aOe
 aOe
-rwK
-rwK
-aiN
+aiX
+aiX
+aiX
+bft
+bfo
+bfk
 ajn
-ajn
-ajn
-ajn
-aiN
+bbQ
 aiZ
 aUQ
 ari
@@ -38016,14 +38348,14 @@ aPG
 arX
 ahn
 aOe
-ajn
-ajn
-ajn
-ajn
-ajn
-ajn
-ajn
-ajj
+bfz
+bfw
+bfv
+bfu
+bfp
+bfl
+bfd
+bbR
 aiZ
 aUQ
 ari
@@ -38240,8 +38572,8 @@ ash
 arY
 aOp
 aOe
-ajn
-ajn
+bfA
+bfx
 rwK
 rwK
 rwK
@@ -38920,7 +39252,7 @@ ajk
 efp
 aiY
 aiX
-aiW
+bbA
 ahU
 ahU
 aIN
@@ -68045,7 +68377,7 @@ baF
 aZR
 aZR
 aYB
-bcZ
+aYe
 aXM
 anI
 anj
@@ -69389,7 +69721,7 @@ baJ
 aZS
 aZS
 aYK
-bda
+aYf
 aXQ
 aWW
 aWx
@@ -71407,7 +71739,7 @@ aZX
 aZl
 aYo
 aXb
-bcY
+aXb
 aWo
 aWo
 aac
@@ -72751,7 +73083,7 @@ bab
 aZu
 aYs
 aXb
-bcY
+aXb
 aWo
 aWo
 aac
