@@ -1502,7 +1502,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/lv624/lazarus/landing_zones/lz2)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "afN" = (
 /obj/item/ammo_casing,
 /turf/open/floor/plating,
@@ -1680,10 +1680,6 @@
 "agv" = (
 /turf/open/floor/plating/warnplate/east,
 /area/lv624/ground/barrens/central_barrens)
-"agw" = (
-/obj/structure/fence/overgrown,
-/turf/open/gm/dirtgrassborder/north,
-/area/lv624/lazarus/landing_zones/lz2)
 "agx" = (
 /obj/structure/fence/overgrown,
 /turf/open/gm/dirtgrassborder/north,
@@ -1883,6 +1879,7 @@
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = -6
 	},
+/obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/almayer/sterile_green,
 /area/forward_base/lv624/medical/icu)
 "ahk" = (
@@ -1909,23 +1906,25 @@
 /area/lv624/ground/barrens/central_barrens)
 "ahn" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/power/apc/power/west,
 /obj/structure/transmitter/rotary{
-	pixel_y = 17;
+	pixel_y = 44;
 	name = "Intelligence Center Telephone";
 	phone_id = "Intelligence Center";
-	phone_category = "Intel"
+	phone_category = "Intel";
+	pixel_x = -2
 	},
-/obj/structure/machinery/faxmachine/uscm/almayer{
-	sub_name = "Intel Office";
-	department = "Firebase Charlie"
+/obj/item/paper_bin/uscm{
+	pixel_x = 10;
+	pixel_y = 3
 	},
+/obj/item/tool/pen{
+	pixel_x = 9
+	},
+/obj/structure/machinery/power/apc/almayer/south,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "aho" = (
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
+/obj/structure/machinery/light/small,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -1953,7 +1952,7 @@
 /obj/structure/stairs/multiz/up{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/forward_base/lv624/preps/corpsman/cryo)
 "ahu" = (
 /turf/open/floor/almayer/cargo_arrow/west,
@@ -1982,9 +1981,6 @@
 /obj/structure/inflatable/door,
 /turf/open/floor/redyellowfull,
 /area/lv624/ground/barrens/west_barrens/ceiling)
-"ahA" = (
-/turf/closed/wall/almayer/reinforced,
-/area/lv624/ground/jungle/south_central_jungle)
 "ahB" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/sandstone/runed,
@@ -1997,7 +1993,7 @@
 /area/forward_base/lv624/preps/leader/cryo)
 "ahD" = (
 /turf/closed/wall/almayer/reinforced,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "ahE" = (
 /obj/structure/closet/secure_closet/brig,
 /obj/effect/decal/cleanable/dirt{
@@ -2048,8 +2044,14 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/containers)
 "ahP" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/south_central_jungle)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "ahQ" = (
 /obj/structure/surface/table/reinforced{
 	flipped = 1
@@ -2068,8 +2070,11 @@
 /turf/open/floor/plating/warnplate/southeast,
 /area/lv624/ground/barrens/central_barrens)
 "ahU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/ground/jungle/south_central_jungle)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "ahV" = (
 /obj/effect/landmark/crap_item,
 /turf/open/gm/dirt,
@@ -2086,7 +2091,8 @@
 /area/forward_base/lv624/hallways/south)
 "ahY" = (
 /obj/structure/machinery/light{
-	dir = 8
+	dir = 8;
+	pixel_y = 16
 	},
 /turf/open/antre/plating/west_corner_dir,
 /area/forward_base/lv624/hallways/west)
@@ -2106,9 +2112,13 @@
 /area/forward_base/lv624/brig)
 "aic" = (
 /obj/structure/flora/jungle/vines/light_2,
+/obj/structure/disposalpipe/segment,
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/south_central_jungle)
 "aid" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/antre/plating/west_corner_dir/north_west,
 /area/forward_base/lv624/hallways/south)
 "aie" = (
@@ -2120,6 +2130,9 @@
 /turf/open/floor/redyellowfull,
 /area/lv624/ground/barrens/west_barrens/ceiling)
 "aig" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/antre/plating/direction_west/east_north,
 /area/forward_base/lv624/hallways/south)
 "aih" = (
@@ -2178,6 +2191,9 @@
 /turf/open/floor/plating/warnplate/northeast,
 /area/lv624/ground/barrens/east_barrens/ceiling)
 "air" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/antre/plating/direction_west/east_north,
 /area/forward_base/lv624/hallways/east)
 "ais" = (
@@ -2284,9 +2300,6 @@
 "aiM" = (
 /turf/open/floor/plating/warnplate/southwest,
 /area/lv624/ground/barrens/east_barrens/ceiling)
-"aiN" = (
-/turf/closed/wall/almayer,
-/area/lv624/ground/colony/west_tcomms_road)
 "aiO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -2333,11 +2346,11 @@
 /turf/open/floor/plating/warnplate/southeast,
 /area/lv624/ground/barrens/east_barrens/ceiling)
 "aiW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/southwest,
-/area/lv624/ground/colony/west_tcomms_road)
-"aiX" = (
-/turf/closed/wall/almayer/reinforced,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aiY" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/grass/grass1,
@@ -2365,6 +2378,7 @@
 /turf/open/floor/vault2/west,
 /area/lv624/ground/barrens/north_east_barrens/ceiling)
 "aje" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/antre/plating/direction_north/east_edge,
 /area/forward_base/lv624/hallways/east)
 "ajf" = (
@@ -2395,8 +2409,11 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
 "ajj" = (
+/obj/structure/barricade/metal/plasteel{
+	dir = 1
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "ajk" = (
 /obj/structure/flora/jungle/vines/light_2,
 /turf/open/gm/grass/grass1,
@@ -2405,6 +2422,10 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/processor{
 	pixel_x = -2
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
 	},
 /turf/open/floor/prison/kitchen,
 /area/forward_base/lv624/living/kitchen)
@@ -2415,11 +2436,15 @@
 /turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/living/briefing)
 "ajn" = (
-/obj/structure/flora/pottedplant/random{
-	pixel_y = 0
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "ajo" = (
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/colony/west_tcomms_road)
@@ -2477,6 +2502,10 @@
 	req_one_access_txt = "30;19";
 	dir = 2
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/living/kitchen)
 "ajA" = (
@@ -2490,6 +2519,10 @@
 	layer = 3.33;
 	pixel_x = 1;
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
@@ -2532,9 +2565,6 @@
 /turf/open/floor/plating/warnplate/west,
 /area/lv624/ground/river/central_river)
 "ajK" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/almayer/silver/southwest,
 /area/forward_base/lv624/living/briefing)
 "ajL" = (
@@ -2705,6 +2735,9 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "aks" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer/silvercorner/north,
 /area/forward_base/lv624/living/briefing)
 "akt" = (
@@ -2878,7 +2911,7 @@
 	layer = 2.52
 	},
 /turf/open/floor/almayer/uscm/south_face/southeast,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "ala" = (
 /turf/open/gm/coast/south,
 /area/lv624/ground/river/east_river)
@@ -3054,6 +3087,10 @@
 /turf/open/floor/almayer/blue/northeast,
 /area/forward_base/lv624/hallways/west)
 "alH" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
 /turf/open/floor/almayer/blue/southwest,
 /area/forward_base/lv624/hallways/west)
 "alI" = (
@@ -3184,22 +3221,29 @@
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/west)
 "ame" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "amf" = (
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/southeast,
 /area/lv624/ground/river/east_river)
 "amg" = (
 /turf/open/floor/prison/southwest,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "amh" = (
 /obj/structure/flora/jungle/alienplant1,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
 "ami" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/lazarus/landing_zones/lz2)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "amj" = (
 /obj/structure/machinery/light/blue{
 	invisibility = 101
@@ -3271,6 +3315,9 @@
 /area/lv624/ground/river/central_river)
 "amt" = (
 /obj/structure/closet/firecloset,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/west)
 "amu" = (
@@ -3303,7 +3350,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/lv624/lazarus/landing_zones/lz2)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "amA" = (
 /obj/structure/disposalpipe/broken{
 	dir = 1
@@ -3327,9 +3374,6 @@
 /obj/structure/flora/jungle/plantbot1,
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/jungle/north_east_jungle)
-"amF" = (
-/turf/closed/wall/almayer/outer/internal,
-/area/lv624/ground/jungle/west_jungle)
 "amG" = (
 /obj/structure/flora/jungle/alienplant1,
 /turf/open/gm/river,
@@ -3360,6 +3404,7 @@
 "amM" = (
 /obj/structure/platform_decoration/metal/strata,
 /obj/structure/machinery/light,
+/obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "amN" = (
@@ -3372,17 +3417,13 @@
 /area/forward_base/lv624/tent_camp)
 "amP" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 16;
-	layer = 2.99
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/item/device/flashlight/lamp{
 	pixel_x = -10;
-	pixel_y = 9
+	pixel_y = 9;
+	layer = 5
 	},
 /obj/item/book/manual/marine_law{
 	pixel_x = 4;
@@ -3417,7 +3458,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northwest)
 "amW" = (
 /obj/effect/landmark/crap_item,
 /turf/open/gm/grass/grass2,
@@ -3439,7 +3480,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northwest)
 "anb" = (
 /turf/open/gm/dirt/brown/variant_5/west,
 /area/forward_base/lv624/tent_camp)
@@ -3542,6 +3583,16 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -27;
+	pixel_x = -8
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_x = 15;
+	pixel_y = -26
+	},
 /turf/open/floor/wood/ship,
 /area/forward_base/lv624/command/sea_office)
 "ant" = (
@@ -3587,6 +3638,16 @@
 	pixel_y = -8
 	},
 /obj/structure/closet/firecloset,
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -27;
+	pixel_x = -8
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_x = 15;
+	pixel_y = -26
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
 "anA" = (
@@ -3625,7 +3686,7 @@
 /area/lv624/lazarus/hydroponics)
 "anH" = (
 /obj/structure/machinery/cm_vending/clothing/leader/delta{
-	pixel_x = -24;
+	pixel_x = -16;
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -3943,7 +4004,7 @@
 	pixel_x = -17;
 	pixel_y = -8
 	},
-/turf/open_space,
+/turf/open/floor/almayer/mono,
 /area/forward_base/lv624/preps/leader)
 "aoE" = (
 /turf/open/floor/whiteblue/west,
@@ -4022,8 +4083,11 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "aoS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "aoT" = (
 /obj/structure/machinery/cm_vending/clothing/leader/alpha{
 	pixel_x = 16
@@ -4152,11 +4216,18 @@
 	id = "supply_elevator_gear"
 	},
 /obj/effect/decal/hybrisa/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/reqs)
 "aps" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "supply_elevator_railing"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/forward_base/lv624/reqs)
@@ -4169,6 +4240,9 @@
 "apv" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "supply_elevator_railing"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/cargo_arrow,
 /area/forward_base/lv624/reqs)
@@ -4193,6 +4267,9 @@
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/reqs)
 "apz" = (
@@ -4200,6 +4277,7 @@
 	dir = 4;
 	id = "supply_elevator_railing"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/forward_base/lv624/reqs)
 "apA" = (
@@ -4230,6 +4308,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/forward_base/lv624/reqs)
 "apF" = (
@@ -4243,6 +4322,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/forward_base/lv624/reqs)
 "apG" = (
@@ -4342,6 +4422,9 @@
 /area/lv624/lazarus/medbay)
 "apW" = (
 /obj/structure/platform_decoration/metal/almayer_smooth/north,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/blue/east,
 /area/forward_base/lv624/hallways/west)
 "apX" = (
@@ -4374,6 +4457,9 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/west,
 /area/forward_base/lv624/brig/reception)
 "aqb" = (
@@ -4383,6 +4469,10 @@
 	},
 /obj/structure/machinery/light{
 	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/brig/reception)
@@ -4419,6 +4509,10 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/west_jungle)
 "aqj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/silver/west,
 /area/forward_base/lv624/command/cic)
 "aqk" = (
@@ -4551,6 +4645,11 @@
 /turf/open/floor/whiteblue/west,
 /area/lv624/lazarus/medbay)
 "aqB" = (
+/obj/structure/window/reinforced{
+	pixel_y = -4;
+	layer = 2.99
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/brig/reception)
 "aqC" = (
@@ -4558,6 +4657,10 @@
 /turf/open/floor/almayer/sterile_green,
 /area/forward_base/lv624/medical/icu)
 "aqD" = (
+/obj/structure/window/reinforced{
+	pixel_y = -4;
+	layer = 2.99
+	},
 /turf/open/floor/almayer/red/east,
 /area/forward_base/lv624/brig/reception)
 "aqE" = (
@@ -4682,6 +4785,9 @@
 /turf/open/floor/almayer/red/northwest,
 /area/forward_base/lv624/brig/reception)
 "ara" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
 /turf/open/floor/almayer/red/north,
 /area/forward_base/lv624/brig/reception)
 "arb" = (
@@ -4700,6 +4806,9 @@
 /area/lv624/ground/river/west_river)
 "ard" = (
 /obj/structure/bed/chair,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/red/northeast,
 /area/forward_base/lv624/brig/reception)
 "are" = (
@@ -4798,7 +4907,7 @@
 /turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/preps/leader/cryo)
 "arm" = (
-/obj/structure/reagent_dispensers/tank/fuel/custom,
+/obj/structure/machinery/gel_refiller,
 /turf/open/floor/almayer/sterile_green,
 /area/forward_base/lv624/medical/pharmacy)
 "arn" = (
@@ -4872,10 +4981,24 @@
 /area/lv624/lazarus/quartstorage/outdoors)
 "arx" = (
 /obj/structure/barricade/handrail,
+/obj/structure/sign/safety/reduction{
+	pixel_y = 24
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/stairwell/research)
 "ary" = (
-/obj/structure/barricade/handrail,
+/obj/structure/barricade/handrail{
+	layer = 3
+	},
+/obj/structure/machinery/computer/arcade{
+	layer = 2.98\
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/stairwell/research)
 "arz" = (
@@ -4983,6 +5106,9 @@
 /obj/structure/platform/metal/almayer/east,
 /obj/structure/platform/metal/almayer/west,
 /obj/structure/ladder/multiz,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "arC" = (
@@ -5073,12 +5199,31 @@
 /area/lv624/ground/river/west_river)
 "arW" = (
 /obj/structure/platform_decoration/metal/almayer/north,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 8;
+	pixel_y = -26
+	},
 /turf/open/floor/almayer/silver/southeast,
 /area/forward_base/lv624/intel)
 "arX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	pixel_x = -6;
+	dir = 4;
+	pixel_y = -3
+	},
 /obj/structure/machinery/computer/overwatch/almayer{
-	dir = 8
+	dir = 8;
+	pixel_y = -20;
+	pixel_x = -6
+	},
+/obj/structure/machinery/computer/crew/alt{
+	dir = 4;
+	pixel_y = -35;
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/intel)
@@ -5089,15 +5234,24 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "arZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/silver/northwest,
 /area/forward_base/lv624/intel)
 "asa" = (
 /turf/closed/wall/r_wall/bunker,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "asb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/intel)
 "asc" = (
@@ -5111,6 +5265,13 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
 /area/lv624/ground/jungle/west_jungle)
 "asf" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/silver/northeast,
 /area/forward_base/lv624/intel)
 "asg" = (
@@ -5130,8 +5291,13 @@
 	pixel_x = 8;
 	density = 0
 	},
-/obj/structure/sign/calendar/ua{
-	pixel_y = 35
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = 26
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
@@ -5182,7 +5348,14 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "asq" = (
-/obj/structure/surface/rack,
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating/plating_catwalk,
 /turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/intel)
@@ -5290,12 +5463,11 @@
 "asQ" = (
 /turf/closed/wall/almayer/research/containment/wall/east,
 /area/forward_base/lv624/research/containment)
-"asR" = (
-/obj/structure/flora/bush/ausbushes/reedbush,
-/obj/effect/landmark/lv624/fog_blocker,
-/turf/open/gm/coast/south,
-/area/lv624/ground/river/west_river)
 "asS" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/test_floor5,
 /area/forward_base/lv624/research/botany)
 "asT" = (
@@ -5332,8 +5504,11 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/jungle/west_jungle)
 "asY" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/plating/asteroidfloor/north,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "asZ" = (
 /obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/gm/grass/grass1,
@@ -5382,6 +5557,11 @@
 /turf/open/floor/warning/east,
 /area/lv624/lazarus/landing_zones/lz1)
 "atl" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "W_Biohazard Storage";
+	name = "\improper Biohazard Storage Chamber";
+	dir = 2
+	},
 /turf/closed/wall/almayer/research/containment/wall/purple{
 	icon_state = "containment_window_small";
 	dir = 1
@@ -5402,8 +5582,17 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/research)
 "ato" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/door_display/research_cell{
+	id = "Biohazard Storage";
+	name = "Biohazard Storage Control";
+	layer = 3.125;
+	pixel_x = -3;
+	dir = 4;
+	pixel_y = 1
+	},
 /turf/open/floor/almayer/sterile_green_corner/west,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "atp" = (
 /turf/open/floor/white,
 /area/lv624/lazarus/research)
@@ -5412,14 +5601,34 @@
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "atr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/sterile_green_side,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "ats" = (
-/turf/open/floor/almayer/sterile_green_corner/east,
-/area/forward_base/lv624/research/containment)
+/obj/structure/closet/l3closet/scientist,
+/turf/open/floor/almayer/plating_striped/north,
+/area/forward_base/lv624/research)
 "att" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/paper_bin/wy{
+	pixel_x = -6
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/obj/item/storage/box/monkeycubes{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/item/storage/xeno_tag_case/full{
+	pixel_y = 12
+	},
 /turf/open/floor/almayer/sterile_green_side/west,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "atu" = (
 /turf/open/gm/dirtgrassborder/west,
 /area/lv624/ground/jungle/west_jungle)
@@ -5431,8 +5640,11 @@
 /turf/closed/wall,
 /area/lv624/lazarus/fitness)
 "atx" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
 /turf/open/floor/almayer/dark_sterile,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "aty" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
 	dir = 1;
@@ -5446,9 +5658,10 @@
 /obj/structure/window_frame/colony,
 /turf/open/floor/plating,
 /area/lv624/lazarus/fitness)
-"atB" = (
-/turf/open/floor/almayer/sterile_green_side/east,
-/area/forward_base/lv624/research/containment)
+"atA" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/preps/leader/cryo)
 "atC" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/gm/grass/grass1,
@@ -5482,15 +5695,16 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/quartstorage)
 "atJ" = (
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/lv624/ground/river/west_river)
 "atK" = (
+/obj/structure/machinery/cm_vending/clothing/medical_crew/researcher,
 /turf/open/floor/almayer/sterile_green_corner/north,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "atL" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_side/north,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "atM" = (
 /obj/structure/closet/crate,
 /obj/item/ammo_magazine/shotgun/buckshot,
@@ -5500,8 +5714,22 @@
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
 "atN" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/circular_saw{
+	pixel_x = -1;
+	pixel_y = 4
+	},
+/obj/item/tool/surgery/retractor{
+	pixel_y = 3;
+	pixel_x = -2
+	},
+/obj/item/tool/surgery/scalpel,
+/obj/item/tool/surgery/hemostat{
+	pixel_x = -2;
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/sterile_green_corner,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "atO" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -5566,7 +5794,10 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/medbay)
 "atW" = (
-/turf/open/floor/almayer/sterile_green_side/southeast,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side,
 /area/forward_base/lv624/research)
 "atX" = (
 /turf/open/floor/whitepurplecorner/east,
@@ -5577,7 +5808,25 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/fitness)
 "atZ" = (
-/obj/structure/machinery/autolathe,
+/obj/structure/closet/medical_wall{
+	pixel_x = 28
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = -6;
+	pixel_y = -2
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 8;
+	pixel_y = -2
+	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/research/fabrication)
 "aua" = (
@@ -5589,7 +5838,6 @@
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
 "auc" = (
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/beachcorner/south_west,
 /area/lv624/ground/river/west_river)
 "aud" = (
@@ -5608,12 +5856,6 @@
 	},
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
-"auh" = (
-/obj/structure/machinery/autolathe/medilathe/full{
-	dir = 8
-	},
-/turf/open/floor/almayer/mono,
-/area/forward_base/lv624/research/fabrication)
 "aui" = (
 /turf/open/floor/almayer/green/southwest,
 /area/forward_base/lv624/hallways/stairwell/research)
@@ -5628,6 +5870,10 @@
 /turf/open/floor/whitebluefull,
 /area/lv624/lazarus/medbay)
 "auk" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/green/southeast,
 /area/forward_base/lv624/hallways/stairwell/research)
 "aul" = (
@@ -5639,7 +5885,6 @@
 /area/lv624/lazarus/research)
 "aun" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "auo" = (
@@ -5655,10 +5900,6 @@
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "auq" = (
-/obj/structure/surface/rack,
-/turf/open/floor/almayer/test_floor5,
-/area/forward_base/lv624/research/fabrication)
-"aur" = (
 /obj/structure/machinery/chem_storage/medbay{
 	pixel_x = -2;
 	layer = 3.9
@@ -5669,10 +5910,16 @@
 	layer = 4;
 	density = 0
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/research/fabrication)
 "aus" = (
 /obj/structure/barricade/handrail,
+/obj/structure/sign/safety/maint{
+	pixel_y = 24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/green/north,
 /area/forward_base/lv624/hallways/stairwell/research)
 "aut" = (
@@ -5730,6 +5977,10 @@
 /turf/open/floor/green/northwest,
 /area/lv624/lazarus/hydroponics)
 "auC" = (
+/obj/structure/machinery/power/apc/power/north,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/green/northwest,
 /area/forward_base/lv624/hallways/stairwell/research)
 "auD" = (
@@ -5767,6 +6018,10 @@
 /turf/open/floor/plating/platebotc,
 /area/lv624/lazarus/quartstorage/outdoors)
 "auL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/green/northeast,
 /area/forward_base/lv624/hallways/stairwell/research)
 "auM" = (
@@ -5774,7 +6029,14 @@
 /turf/open/gm/dirtgrassborder/north,
 /area/lv624/ground/jungle/east_jungle)
 "auN" = (
-/turf/open/floor/almayer/green/north,
+/obj/structure/sign/safety/cryo{
+	pixel_x = 15;
+	pixel_y = -25
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/stairwell/research)
 "auO" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
@@ -5804,6 +6066,9 @@
 /area/forward_base/lv624/hallways/stairwell/research)
 "auT" = (
 /obj/structure/machinery/vending/coffee,
+/obj/structure/sign/safety/coffee{
+	pixel_x = 32
+	},
 /turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/hallways/stairwell/research)
 "auU" = (
@@ -5857,7 +6122,7 @@
 	dir = 1
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "avg" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/mask/gas,
@@ -5881,6 +6146,14 @@
 /area/lv624/lazarus/quartstorage)
 "avk" = (
 /obj/structure/ladder/multiz,
+/obj/structure/sign/safety/ladder{
+	pixel_x = -17;
+	pixel_y = 7
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = -17;
+	pixel_y = -7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/intel/prep)
 "avl" = (
@@ -5955,7 +6228,6 @@
 /area/lv624/lazarus/quartstorage/outdoors)
 "avy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/south,
 /area/lv624/ground/river/west_river)
 "avz" = (
@@ -6124,6 +6396,10 @@
 /obj/structure/curtain/open/colorable,
 /turf/open/floor/plating,
 /area/forward_base/lv624/intel/prep)
+"awb" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/preps/leader/cryo)
 "awc" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/river/west_river)
@@ -6333,6 +6609,13 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/research)
 "awJ" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/antre/plating/west_corner_dir/south_east,
 /area/forward_base/lv624/hallways/east)
 "awK" = (
@@ -6547,9 +6830,13 @@
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "axq" = (
 /obj/structure/largecrate/black_market/confiscated_weaponry,
+/obj/structure/platform/metal/almayer_smooth/west,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/south)
 "axr" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
 /turf/open/antre/plating/west_corner_dir/north_east,
 /area/forward_base/lv624/hallways/east)
 "axs" = (
@@ -6618,6 +6905,9 @@
 	id = "CIC Lockdown";
 	name = "\improper Internal Combat Information Center Blast Door"
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/command/cic)
 "axF" = (
@@ -6655,6 +6945,7 @@
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "axK" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/antre/plating/direction_north,
 /area/forward_base/lv624/hallways/west)
 "axL" = (
@@ -6680,6 +6971,9 @@
 "axP" = (
 /obj/item/device/radio/listening_bug/radio_linked/fax/uscm_hc{
 	nametag = "CIC"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/command/cic)
@@ -6792,6 +7086,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/silver/northwest,
 /area/forward_base/lv624/command/cic)
 "ayj" = (
@@ -6890,7 +7185,7 @@
 /obj/structure/machinery/door_control/brbutton{
 	pixel_y = 26;
 	name = "CIC Armory Doors";
-	id = "cic_armory";
+	id = "CIC Lockdown";
 	req_access = list(3);
 	pixel_x = -2
 	},
@@ -7030,8 +7325,11 @@
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/jungle/south_central_jungle)
 "ayV" = (
-/obj/structure/closet/secure_closet/cmdcabinet/marine{
-	pixel_x = 28
+/obj/structure/machinery/door_control{
+	pixel_x = 24;
+	pixel_y = 8;
+	id = "cic_armory";
+	name = "Armory Shutters"
 	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/command/cic)
@@ -7043,6 +7341,9 @@
 /turf/open/floor/plating/warnplate/west,
 /area/lv624/lazarus/robotics)
 "ayX" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/blue/southeast,
 /area/forward_base/lv624/hallways/west)
 "ayY" = (
@@ -7062,6 +7363,11 @@
 /area/lv624/lazarus/robotics)
 "azb" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/blue/north,
 /area/forward_base/lv624/command/cic)
 "azc" = (
@@ -7143,8 +7449,14 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "azs" = (
-/turf/open/floor/plating,
-/area/lv624/ground/jungle/west_jungle)
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/north_gate)
 "azt" = (
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
@@ -7221,6 +7533,11 @@
 	name = "\improper Robotics Dome";
 	req_access_txt = "100";
 	req_one_access = null
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "robo";
+	name = "Robotics Dome Blast Doors";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/lv624/lazarus/robotics)
@@ -7388,6 +7705,12 @@
 /turf/open/floor/almayer/silver/southwest,
 /area/forward_base/lv624/command/cic)
 "aAb" = (
+/obj/structure/machinery/door_control{
+	pixel_x = 24;
+	pixel_y = -8;
+	id = "cic_armory";
+	name = "Armory Shutters"
+	},
 /turf/open/floor/almayer/silver/southeast,
 /area/forward_base/lv624/command/cic)
 "aAc" = (
@@ -7524,9 +7847,6 @@
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/colony/north_tcomms_road)
-"aAs" = (
-/turf/closed/wall/almayer/outer/internal,
-/area/lv624/lazarus/landing_zones/lz2)
 "aAt" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/grass/grass1,
@@ -7813,7 +8133,7 @@
 /area/forward_base/lv624/tent_camp)
 "aBl" = (
 /turf/open/antre/plating/alt,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "aBm" = (
 /obj/structure/machinery/line_nexter{
 	dir = 1
@@ -7826,7 +8146,7 @@
 /area/lv624/ground/river/west_river)
 "aBo" = (
 /obj/docking_port/stationary/marine_dropship/lz2{
-	name = "LZ2: Robotics Landing Zone"
+	name = "LZ2: Forward Base Landing Pad"
 	},
 /turf/open/floor/plating,
 /area/lv624/lazarus/landing_zones/lz2)
@@ -8189,10 +8509,6 @@
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/bluecorner,
 /area/lv624/lazarus/sleep_male)
-"aCs" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
-/area/lv624/lazarus/landing_zones/lz2)
 "aCt" = (
 /obj/structure/closet,
 /obj/item/tool/crowbar,
@@ -8220,6 +8536,10 @@
 "aCw" = (
 /turf/open/floor/whitegreencorner,
 /area/lv624/lazarus/main_hall)
+"aCx" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/preps/spec/cryo)
 "aCy" = (
 /turf/open/floor/whitegreencorner/west,
 /area/lv624/lazarus/main_hall)
@@ -8282,7 +8602,7 @@
 /area/forward_base/lv624/tent/jtac_tent)
 "aCI" = (
 /obj/effect/landmark/survivor_spawner,
-/turf/open/gm/dirt,
+/turf/open/gm/grass/grass1,
 /area/lv624/lazarus/landing_zones/lz2)
 "aCJ" = (
 /obj/vehicle/powerloader{
@@ -8297,6 +8617,10 @@
 "aCL" = (
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/robotics)
+"aCM" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/preps/spec/cryo)
 "aCN" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/pilot_officer,
 /obj/structure/blocker/tent{
@@ -8442,7 +8766,7 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "aDj" = (
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "aDk" = (
 /obj/structure/blocker/tent{
 	dir = 1
@@ -8801,11 +9125,6 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "aEy" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 16;
-	layer = 2.99
-	},
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_y = -16
@@ -8820,7 +9139,8 @@
 	},
 /obj/item/prop/tableflag/uscm2{
 	pixel_x = 7;
-	pixel_y = 13
+	pixel_y = 13;
+	layer = 5
 	},
 /obj/structure/transmitter/rotary{
 	pixel_y = 3;
@@ -8829,17 +9149,14 @@
 	phone_category = "MP Dept.";
 	pixel_x = -3
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/brig/reception)
 "aEz" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/door/window/northright{
-	pixel_y = 16;
-	layer = 3
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/brig/reception)
 "aEA" = (
@@ -9174,6 +9491,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/corpsman/cryo)
 "aFA" = (
@@ -9312,7 +9632,6 @@
 "aFX" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/item/toy/plush/runner,
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/forward_base/lv624/medical/icu)
 "aFY" = (
@@ -9485,6 +9804,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/comtech/cryo)
 "aGE" = (
@@ -9543,19 +9865,19 @@
 /obj/structure/surface/table/almayer,
 /obj/item/paper_bin/uscm{
 	pixel_y = 7;
-	pixel_x = 8
+	pixel_x = 4
 	},
 /obj/item/tool/pen{
-	pixel_x = 7
+	pixel_x = 3
 	},
 /obj/item/storage/box/ids{
-	pixel_x = -5;
-	pixel_y = 8
+	pixel_x = -10;
+	pixel_y = 9
 	},
 /obj/structure/machinery/door_control{
 	id = "Cell Privacy Shutters";
 	name = "Cell Privacy Shutters";
-	pixel_x = -3;
+	pixel_x = -8;
 	pixel_y = -2;
 	req_access = list(3)
 	},
@@ -9603,6 +9925,11 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "aGV" = (
 /obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "Cell Privacy Shutters";
+	name = "\improper Cell Privacy  Shutters"
+	},
 /turf/open/floor/plating,
 /area/forward_base/lv624/brig/cells)
 "aGW" = (
@@ -9790,20 +10117,7 @@
 	},
 /turf/open/floor/plating,
 /area/forward_base/lv624/preps/spec/cryo)
-"aHz" = (
-/obj/structure/machinery/cryopod,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/cargo,
-/area/forward_base/lv624/preps/corpsman/cryo)
 "aHA" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /obj/structure/sign/safety/stairs{
 	pixel_x = 32;
 	pixel_y = -8
@@ -9823,7 +10137,7 @@
 "aHC" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Pharmacy Shutters";
-	id = "pharma"
+	id = "icu"
 	},
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 2;
@@ -9850,9 +10164,6 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "aHG" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
 /obj/structure/sign/safety/stairs{
 	pixel_x = -17;
 	pixel_y = -8
@@ -9900,16 +10211,6 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/lazarus/landing_zones/lz1)
-"aHO" = (
-/obj/structure/machinery/cryopod/right,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/almayer/cargo,
-/area/forward_base/lv624/preps/comtech/cryo)
 "aHP" = (
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/brig/reception)
@@ -9918,11 +10219,17 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/jungle/east_jungle)
 "aHR" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/uscm/south_face/northeast,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "aHS" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/red/northwest,
 /area/forward_base/lv624/brig)
@@ -9937,6 +10244,9 @@
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/open/floor/almayer/red/north,
 /area/forward_base/lv624/brig)
@@ -9989,6 +10299,9 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIg" = (
@@ -10025,8 +10338,11 @@
 /area/lv624/lazarus/main_hall)
 "aIk" = (
 /obj/structure/sign/safety/medical{
-	pixel_y = -26;
-	pixel_x = 14
+	pixel_y = -25;
+	pixel_x = 15
+	},
+/obj/structure/sign/safety/outpatient{
+	pixel_y = -25
 	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
@@ -10077,6 +10393,12 @@
 /obj/item/storage/syringe_case,
 /obj/item/storage/syringe_case,
 /obj/item/storage/syringe_case,
+/obj/structure/machinery/door_control{
+	pixel_y = -22;
+	pixel_x = -8;
+	id = "icu";
+	name = "Door Shutters"
+	},
 /turf/open/floor/almayer/silver/north,
 /area/forward_base/lv624/hallways/south)
 "aIo" = (
@@ -10092,6 +10414,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/glass{
 	name = "\improper Brig Reception"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/brig/reception)
 "aIr" = (
@@ -10270,7 +10593,7 @@
 	id = "brig_armory"
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/brig)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aIO" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall,
@@ -10308,14 +10631,28 @@
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -18
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/ground/jungle/south_central_jungle)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aIW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/south)
 "aIX" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	name = "Southeast Pillbox Blast Doors";
+	id = "se_pillbox"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/hallways/east)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aIY" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/strata_ice/jungle,
@@ -10381,9 +10718,13 @@
 /turf/open/floor/loadingarea/west,
 /area/lv624/lazarus/landing_zones/lz1)
 "aJm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/prison/floor_plate,
-/area/forward_base/lv624/hallways/east)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aJn" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/north,
 /turf/open/antre/plating/corner_dir,
 /area/forward_base/lv624/hallways/west)
 "aJo" = (
@@ -10401,13 +10742,6 @@
 "aJr" = (
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
-"aJs" = (
-/obj/structure/machinery/door/airlock/almayer/glass{
-	name = "\improper Briefing";
-	dir = 2
-	},
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/living/briefing)
 "aJt" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -10426,9 +10760,17 @@
 /turf/closed/wall/almayer,
 /area/forward_base/lv624/living/briefing)
 "aJx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/sentry_landmark/lz_2/top_left,
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/southwest,
-/area/forward_base/lv624/hallways/east)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "aJy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/command/cic)
 "aJz" = (
@@ -10473,10 +10815,6 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
 /area/lv624/lazarus/main_hall)
-"aJF" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/west,
-/area/lv624/lazarus/landing_zones/lz2)
 "aJG" = (
 /obj/item/tool/pickaxe/jackhammer{
 	desc = "Cracks rocks with sonic blasts, perfect for killing cave lizards. This one is dull and nearly useless.";
@@ -10653,14 +10991,16 @@
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/west)
 "aKd" = (
-/obj/structure/machinery/cm_vending/clothing/medical_crew{
-	pixel_y = -20;
-	can_block_movement = 0
+/obj/structure/machinery/status_display{
+	pixel_y = -32
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/medical/pharmacy)
 "aKe" = (
-/obj/structure/machinery/gel_refiller,
+/obj/structure/machinery/cm_vending/clothing/medical_crew{
+	can_block_movement = 0;
+	pixel_x = 24
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/medical/pharmacy)
 "aKf" = (
@@ -10831,12 +11171,18 @@
 /area/lv624/lazarus/main_hall)
 "aKN" = (
 /obj/effect/landmark/start/chef,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/prison/kitchen,
 /area/forward_base/lv624/living/kitchen)
 "aKO" = (
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/open/floor/prison/kitchen,
 /area/forward_base/lv624/living/kitchen)
@@ -10870,17 +11216,10 @@
 /area/forward_base/lv624/medical/pharmacy)
 "aKS" = (
 /obj/effect/landmark/start/field_doctor,
-/obj/structure/machinery/camera/autoname/almayer{
-	dir = 8;
-	name = "ship-grade camera"
-	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/effect/landmark/start/field_doctor,
-/obj/structure/machinery/status_display{
-	pixel_x = 32
+/obj/structure/machinery/cm_vending/clothing/medical_crew{
+	can_block_movement = 0;
+	pixel_x = 24
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/medical/pharmacy)
@@ -11066,6 +11405,9 @@
 /obj/item/clothing/head/chefhat{
 	pixel_x = 5
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/forward_base/lv624/living/kitchen)
 "aLv" = (
@@ -11073,6 +11415,9 @@
 /area/lv624/ground/jungle/central_jungle)
 "aLw" = (
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/forward_base/lv624/living/kitchen)
 "aLx" = (
@@ -11080,6 +11425,9 @@
 /obj/item/reagent_container/food/condiment/saltshaker,
 /obj/item/reagent_container/food/condiment/peppermill{
 	pixel_x = 5
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
 	},
 /turf/open/floor/plating,
 /area/forward_base/lv624/living/kitchen)
@@ -11422,6 +11770,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/up/almayer{
+	dir = 4
+	},
 /turf/open/floor/almayer/green/west,
 /area/forward_base/lv624/living/cafeteria)
 "aMw" = (
@@ -11527,6 +11878,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/platform/metal/almayer_smooth/west,
 /turf/open/floor/almayer/blue/east,
 /area/forward_base/lv624/hallways/west)
 "aMJ" = (
@@ -11721,6 +12073,10 @@
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
 "aNr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/silver/east,
 /area/forward_base/lv624/living/cafeteria)
 "aNs" = (
@@ -11733,6 +12089,9 @@
 	},
 /obj/structure/machinery/status_display{
 	pixel_y = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/living/cafeteria)
@@ -11765,9 +12124,16 @@
 	pixel_x = 11;
 	layer = 2.9
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/silver/east,
 /area/forward_base/lv624/living/cafeteria)
 "aNx" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/open/floor/almayer/silver/west,
 /area/forward_base/lv624/living/cafeteria)
 "aNy" = (
@@ -11892,9 +12258,6 @@
 /turf/open/floor,
 /area/lv624/lazarus/security)
 "aNU" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/almayer/silver/northwest,
 /area/forward_base/lv624/living/briefing)
 "aNV" = (
@@ -11990,6 +12353,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
 "aOj" = (
@@ -11998,6 +12362,10 @@
 	dir = 8;
 	pixel_y = 1
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/silver/east,
 /area/forward_base/lv624/living/cafeteria)
 "aOk" = (
@@ -12034,15 +12402,21 @@
 /area/lv624/lazarus/sleep_female)
 "aOp" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/faxmachine/uscm/almayer{
+	sub_name = "Intel Office";
+	department = "Firebase Charlie";
+	pixel_y = -4
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/intel)
 "aOq" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
 /obj/structure/largecrate/random/barrel/green,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/stairwell/preps)
@@ -12200,9 +12574,15 @@
 	pixel_x = 15;
 	pixel_y = 26
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
 "aOU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/greencorner/east,
 /area/forward_base/lv624/living/cafeteria)
 "aOV" = (
@@ -12231,6 +12611,9 @@
 /obj/structure/machinery/status_display{
 	pixel_y = 30
 	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/stairwell/preps)
 "aPa" = (
@@ -12246,6 +12629,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/green/west,
 /area/forward_base/lv624/living/cafeteria)
 "aPc" = (
@@ -12280,6 +12664,7 @@
 	pixel_y = 9;
 	pixel_x = 5
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
 "aPg" = (
@@ -12316,6 +12701,7 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/silver/west,
 /area/forward_base/lv624/living/cafeteria)
 "aPn" = (
@@ -12371,10 +12757,7 @@
 /turf/open/floor/red/north,
 /area/lv624/lazarus/security)
 "aPw" = (
-/obj/structure/machinery/power/apc/upgraded/power/north,
-/obj/structure/sign/safety/rewire{
-	pixel_x = 32
-	},
+/obj/structure/machinery/power/apc/upgraded/power/east,
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 1
@@ -12382,6 +12765,11 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/sign/safety/rewire{
+	pixel_x = 15;
+	pixel_y = 25
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/living/cafeteria)
 "aPx" = (
@@ -12429,12 +12817,22 @@
 /turf/open/floor/bar,
 /area/lv624/lazarus/canteen)
 "aPF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/intel)
 "aPG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
+	},
+/obj/structure/sign/calendar/ua{
+	pixel_y = 35;
+	pixel_x = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/intel)
@@ -12466,6 +12864,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/green/west,
 /area/forward_base/lv624/living/cafeteria)
 "aPM" = (
@@ -12657,6 +13056,7 @@
 	pixel_y = 34;
 	pixel_x = 5
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/green/northwest,
 /area/forward_base/lv624/living/cafeteria)
 "aQr" = (
@@ -12886,6 +13286,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/forward_base/lv624/living/cafeteria)
 "aQY" = (
@@ -13007,7 +13408,7 @@
 "aRt" = (
 /obj/structure/machinery/door/airlock/almayer/secure,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "aRu" = (
 /obj/structure/machinery/landinglight{
 	dir = 8
@@ -13093,6 +13494,9 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/west)
 "aRI" = (
@@ -13107,8 +13511,12 @@
 	dir = 2;
 	req_access = list(2)
 	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	name = "Northwest Pillbox Blast Doors";
+	id = "nw_pillbox"
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/hallways/west)
+/area/forward_base/lv624/hallways/pillbox/northwest)
 "aRK" = (
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/reqs)
@@ -13116,14 +13524,12 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/west_jungle)
-"aRM" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "ne_pillbox";
+	name = "Northeast Pillbox Blast Doors"
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/lazarus/landing_zones/lz2)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "aRN" = (
 /obj/structure/flora/bush,
 /obj/structure/pipes/standard/simple/hidden/cyan,
@@ -13171,8 +13577,11 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northwest)
 "aRX" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -13484,7 +13893,7 @@
 /area/lv624/lazarus/canteen)
 "aTf" = (
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "aTg" = (
 /turf/closed/wall,
 /area/lv624/lazarus/comms)
@@ -13517,30 +13926,16 @@
 /turf/open/floor/podhatchfloor,
 /area/lv624/lazarus/comms)
 "aTl" = (
-/obj/structure/tent/big{
-	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
-	},
-/obj/structure/tent_curtain,
-/obj/effect/landmark/start/engineering,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/almayer/plating,
+/obj/effect/landmark/start/executive,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTm" = (
-/obj/structure/tent_curtain,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/effect/landmark/start/professor,
-/turf/open/floor/almayer/plating,
+/obj/effect/landmark/start/warrant,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTn" = (
-/obj/structure/tent_curtain,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/almayer/plating,
+/obj/effect/landmark/start/auxiliary_officer,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTo" = (
 /obj/structure/machinery/cryopod/right,
@@ -13599,8 +13994,8 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/captain)
 "aTx" = (
-/obj/effect/landmark/start/executive,
-/turf/open/floor/almayer/plating,
+/obj/structure/bed/hybrisa/bunkbed3,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTy" = (
 /obj/effect/decal/grass_overlay/grass1{
@@ -13609,12 +14004,12 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "aTz" = (
-/obj/effect/landmark/start/warrant,
-/turf/open/floor/almayer/plating,
+/obj/structure/machinery/cm_vending/clothing/senior_officer,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTA" = (
-/obj/effect/landmark/start/auxiliary_officer,
-/turf/open/floor/almayer/plating,
+/obj/structure/machinery/cm_vending/gear/executive_officer,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/officer_tent)
 "aTB" = (
 /obj/structure/machinery/light/small,
@@ -13710,8 +14105,7 @@
 /turf/open/floor/platebot,
 /area/lv624/lazarus/engineering)
 "aTQ" = (
-/obj/structure/bed/hybrisa/bunkbed3,
-/turf/open/floor/almayer/plating,
+/turf/open/gm/dirt,
 /area/forward_base/lv624/tent/officer_tent)
 "aTR" = (
 /obj/structure/terminal{
@@ -13724,17 +14118,9 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/gm/dirt,
 /area/lv624/ground/colony/north_tcomms_road)
-"aTT" = (
-/obj/structure/machinery/cm_vending/clothing/senior_officer,
-/turf/open/floor/almayer/plating,
-/area/forward_base/lv624/tent/officer_tent)
 "aTU" = (
 /turf/open/floor/almayer/flooredge,
 /area/forward_base/lv624/hallways/stairwell/preps)
-"aTV" = (
-/obj/structure/machinery/cm_vending/gear/executive_officer,
-/turf/open/floor/almayer/plating,
-/area/forward_base/lv624/tent/officer_tent)
 "aTW" = (
 /obj/item/clothing/glasses/regular,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -13785,12 +14171,6 @@
 	},
 /turf/open/floor/freezerfloor,
 /area/lv624/lazarus/kitchen)
-"aUe" = (
-/obj/structure/barricade/plasteel/wired{
-	dir = 1
-	},
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/jungle/west_jungle)
 "aUf" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger,
@@ -14060,9 +14440,16 @@
 /turf/open/floor/almayer/sterile,
 /area/forward_base/lv624/tent/med_tent)
 "aUQ" = (
-/turf/open/floor/almayer/purple/south,
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/east)
 "aUR" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/almayer/silvercorner/west,
 /area/forward_base/lv624/living/briefing)
 "aUS" = (
@@ -14091,8 +14478,8 @@
 /turf/open/antre/plating/direction_west/west_south,
 /area/forward_base/lv624/hallways/south)
 "aUV" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/open/antre/plating/direction_west/east_north,
 /area/forward_base/lv624/hallways/south)
@@ -14502,7 +14889,7 @@
 /area/forward_base/lv624/tent_camp)
 "aWc" = (
 /turf/open/floor/almayer/uscm/south_face/southwest,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "aWd" = (
 /obj/item/shard,
 /turf/open/floor/podhatchfloor,
@@ -14541,8 +14928,9 @@
 /turf/closed/wall/almayer/outer/internal,
 /area/forward_base/lv624/preps/leader)
 "aWl" = (
-/obj/structure/machinery/light{
-	dir = 2
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
 	},
 /turf/open/antre/plating/corner_dir,
 /area/forward_base/lv624/hallways/south)
@@ -14661,16 +15049,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = -27;
-	pixel_x = -8
-	},
-/obj/structure/sign/safety/intercom{
-	pixel_x = 15;
-	pixel_y = -26
-	},
+/obj/structure/machinery/light,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
 "aWI" = (
@@ -14710,6 +15089,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner/cryo)
 "aWO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/antre/plating/direction_north/east_edge,
 /area/forward_base/lv624/hallways/south)
 "aWP" = (
@@ -14736,6 +15118,20 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = -27;
+	pixel_x = -8
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_x = 15;
+	pixel_y = -26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner)
 "aWS" = (
@@ -14749,13 +15145,26 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner)
 "aWT" = (
 /turf/closed/wall/almayer,
 /area/forward_base/lv624/preps/smartgunner)
 "aWU" = (
-/turf/open/floor/almayer/mono,
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/test_floor5,
 /area/forward_base/lv624/research/botany)
 "aWV" = (
 /turf/open/floor/almayer/cargo_arrow/west,
@@ -14783,7 +15192,7 @@
 	layer = 2.52
 	},
 /turf/open/floor/almayer/uscm/south_face/south,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "aXa" = (
 /turf/open/floor/wood/ship,
 /area/forward_base/lv624/command/sea_office)
@@ -14922,14 +15331,22 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner)
 "aXA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/antre/plating/direction_north/west_edge,
 /area/forward_base/lv624/hallways/south)
 "aXB" = (
-/obj/structure/machinery/light{
-	dir = 1
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/antre/plating/direction_west/east_north,
 /area/forward_base/lv624/hallways/south)
@@ -14953,9 +15370,17 @@
 /turf/open/antre/plating/corner_dir,
 /area/forward_base/lv624/hallways/east)
 "aXF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/antre/plating/corner_dir/south_east,
 /area/forward_base/lv624/hallways/east)
 "aXG" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
 /turf/open/floor/almayer/purple/southwest,
 /area/forward_base/lv624/hallways/east)
 "aXH" = (
@@ -14971,6 +15396,7 @@
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner)
 "aXI" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/research/botany)
 "aXJ" = (
@@ -15026,6 +15452,9 @@
 /turf/open/floor/almayer/flooredge/north,
 /area/forward_base/lv624/preps/spec)
 "aXR" = (
+/obj/structure/machinery/light{
+	dir = 2
+	},
 /turf/open/antre/plating/corner_dir/south_east,
 /area/forward_base/lv624/hallways/south)
 "aXS" = (
@@ -15082,6 +15511,7 @@
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/forward_base/lv624/preps/smartgunner)
 "aYb" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/forward_base/lv624/preps/smartgunner)
 "aYc" = (
@@ -15187,6 +15617,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/corpsman)
 "aYm" = (
@@ -15207,6 +15641,10 @@
 /obj/structure/sign/safety/medical{
 	pixel_x = -17;
 	pixel_y = 7
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
@@ -15240,6 +15678,10 @@
 /area/forward_base/lv624/preps/comtech)
 "aYv" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/comtech)
 "aYw" = (
@@ -15274,7 +15716,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 1
 	},
-/turf/open_space,
+/turf/open/floor/almayer/mono,
 /area/forward_base/lv624/preps/leader)
 "aYC" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -15329,7 +15771,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 1
 	},
-/turf/open_space,
+/turf/open/floor/almayer/mono,
 /area/forward_base/lv624/preps/spec)
 "aYL" = (
 /obj/structure/stairs/multiz/down{
@@ -15343,7 +15785,7 @@
 	pixel_x = 32;
 	pixel_y = -8
 	},
-/turf/open_space,
+/turf/open/floor/almayer/mono,
 /area/forward_base/lv624/preps/spec)
 "aYM" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -15410,26 +15852,19 @@
 /area/forward_base/lv624/preps/corpsman)
 "aYX" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/beachcorner/north_west,
 /area/lv624/ground/river/west_river)
 "aYY" = (
 /obj/effect/landmark/hunter_secondary,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/north,
 /area/lv624/ground/river/west_river)
 "aYZ" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/north,
 /area/lv624/ground/river/west_river)
 "aZa" = (
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/beachcorner/north_west,
-/area/lv624/ground/river/west_river)
-"aZb" = (
-/obj/effect/landmark/lv624/fog_blocker,
-/turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "aZc" = (
 /obj/effect/decal/warning_stripes{
@@ -15704,8 +16139,9 @@
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
 "aZN" = (
-/turf/open/floor/plating/plating_catwalk,
-/area/forward_base/lv624/research/containment)
+/obj/structure/machinery/telecomms/processor,
+/turf/open/floor/almayer/plating2,
+/area/forward_base/lv624/research)
 "aZO" = (
 /obj/effect/landmark/xeno_spawn,
 /turf/open/gm/dirt,
@@ -15773,6 +16209,10 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_west_jungle)
 "bab" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps/comtech)
 "bac" = (
@@ -15902,6 +16342,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/corpsman)
 "bat" = (
@@ -15926,6 +16367,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/comtech)
 "bax" = (
@@ -15977,6 +16419,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner)
 "baF" = (
@@ -16019,6 +16462,7 @@
 /obj/structure/machinery/door/airlock/almayer/maint/autoname{
 	dir = 2
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/preps)
 "baO" = (
@@ -16039,11 +16483,13 @@
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/preps/smartgunner)
 "baR" = (
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/preps/smartgunner)
 "baS" = (
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/research/botany)
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/forward_base/lv624/research)
 "baT" = (
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
@@ -16051,6 +16497,9 @@
 	},
 /obj/structure/machinery/light{
 	dir = 2
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
@@ -16083,6 +16532,10 @@
 	},
 /obj/structure/machinery/status_display{
 	pixel_y = -32
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
 	},
 /turf/open/floor/almayer/green,
 /area/forward_base/lv624/preps)
@@ -16138,20 +16591,39 @@
 /turf/closed/wall/almayer/white,
 /area/forward_base/lv624/research)
 "bbd" = (
-/turf/open/floor/almayer/sterile_green_corner/west,
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/research{
+	pixel_y = 7;
+	pixel_x = -5;
+	dir = 4
+	},
+/obj/structure/machinery/computer/med_data/laptop{
+	pixel_x = -5;
+	pixel_y = -7;
+	dir = 4
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 9;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
 /area/forward_base/lv624/research)
 "bbe" = (
 /turf/open/floor/almayer/sterile_green_side,
 /area/forward_base/lv624/research)
 "bbf" = (
-/turf/open/floor/almayer/sterile_green_corner/east,
+/obj/structure/closet/l3closet/scientist,
+/turf/open/floor/almayer/plating_stripedcorner/north,
 /area/forward_base/lv624/research)
-"bbg" = (
-/turf/closed/wall/almayer/white,
-/area/forward_base/lv624/research/containment)
 "bbh" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
+	name = "\improper Research Containment"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/research/containment)
+/area/forward_base/lv624/research)
 "bbi" = (
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_access = null;
@@ -16182,6 +16654,9 @@
 	name = "\improper Squad Preparations";
 	dir = 2
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/preps)
 "bbn" = (
@@ -16190,6 +16665,10 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps)
@@ -16206,6 +16685,13 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/west_central_jungle)
 "bbq" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_y = 0
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/forward_base/lv624/research)
 "bbr" = (
@@ -16264,14 +16750,17 @@
 	light_color = "#BB3F3F";
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/southwest,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/hallways/pillbox/southeast)
 "bbB" = (
-/obj/structure/machinery/vending/cigarette/wy,
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/almayer/purple/west,
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/hallways/east)
 "bbC" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
@@ -16289,6 +16778,7 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
 "bbE" = (
@@ -16369,14 +16859,16 @@
 	dir = 2
 	},
 /turf/open/floor/plating,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bbR" = (
 /obj/structure/machinery/door/airlock/almayer/glass{
 	dir = 2
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_door,
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bbS" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/fancy/candle_box{
@@ -16417,6 +16909,10 @@
 /turf/open/floor/almayer,
 /area/forward_base/lv624/research/fabrication)
 "bbY" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 8
+	},
+/obj/structure/machinery/door/airlock/almayer/research/glass/autoname,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/research/fabrication)
 "bbZ" = (
@@ -16424,7 +16920,12 @@
 /turf/open/gm/grass/grass2,
 /area/lv624/ground/jungle/west_central_jungle)
 "bca" = (
-/turf/open/floor/almayer/sterile_green_corner/north,
+/obj/structure/machinery/chem_simulator{
+	pixel_y = 24;
+	can_block_movement = 0;
+	density = 0
+	},
+/turf/open/floor/almayer/mono,
 /area/forward_base/lv624/research)
 "bcb" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
@@ -16437,6 +16938,11 @@
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/forward_base/lv624/research)
 "bcd" = (
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/sterile_green_corner,
 /area/forward_base/lv624/research)
 "bce" = (
@@ -16466,10 +16972,13 @@
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/research/fabrication)
 "bci" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/research{
+	name = "\improper Research Department"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/research)
-"bcj" = (
-/turf/open_space,
 /area/forward_base/lv624/research)
 "bck" = (
 /turf/open_space,
@@ -16509,7 +17018,10 @@
 /obj/structure/stairs/multiz/down{
 	dir = 4
 	},
-/turf/open_space,
+/obj/structure/sign/safety/stairs{
+	pixel_y = -25
+	},
+/turf/open/floor/almayer/green/south,
 /area/forward_base/lv624/hallways/stairwell/research)
 "bcr" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep{
@@ -16631,8 +17143,13 @@
 /turf/open/floor/almayer/blue/north,
 /area/forward_base/lv624/preps)
 "bcC" = (
+/obj/structure/machinery/door/airlock/almayer/maint/autoname{
+	dir = 2;
+	req_access = list(19);
+	req_one_access = null
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/hallways/stairwell/research)
+/area/forward_base/lv624/intel/prep)
 "bcD" = (
 /obj/structure/platform/metal/almayer_smooth/east,
 /turf/open_space,
@@ -16648,7 +17165,7 @@
 /area/forward_base/lv624/reqs)
 "bcG" = (
 /turf/closed/wall/almayer,
-/area/forward_base/lv624/hallways/stairwell/research)
+/area/forward_base/lv624/engineering/power_storage)
 "bcH" = (
 /obj/structure/platform/metal/almayer_smooth,
 /turf/open_space,
@@ -16661,6 +17178,9 @@
 /area/forward_base/lv624/intel/prep)
 "bcK" = (
 /obj/structure/machinery/door/airlock/almayer/maint/autoname,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/reqs)
 "bcL" = (
@@ -16674,6 +17194,7 @@
 /turf/open/floor/almayer,
 /area/forward_base/lv624/reqs)
 "bcO" = (
+/obj/structure/platform/metal/strata/west,
 /turf/open_space,
 /area/forward_base/lv624/reqs)
 "bcP" = (
@@ -16687,6 +17208,10 @@
 "bcQ" = (
 /obj/structure/machinery/status_display{
 	pixel_y = -32
+	},
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
 	},
 /turf/open/gm/grass/grass1,
 /area/forward_base/lv624/tent_camp)
@@ -16736,10 +17261,22 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/status_display{
-	pixel_y = -32
+	pixel_y = -32;
+	pixel_x = -2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps/smartgunner)
+"bcY" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/brig)
+"bcZ" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bda" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/preps/spec/cryo)
 "bdb" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
@@ -16755,6 +17292,9 @@
 	},
 /obj/structure/machinery/status_display{
 	pixel_y = 30
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/floor,
 /area/forward_base/lv624/preps)
@@ -16796,30 +17336,43 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light{
+	dir = 2
+	},
+/obj/structure/closet/firecloset,
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdi" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/belt/utility/full,
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/almayer/orange/east,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdj" = (
 /obj/effect/decal/heavy_cable/node_n_e,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/plating/plating_catwalk/no_build,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/east,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdl" = (
 /obj/structure/machinery/door/airlock/almayer/maint/autoname,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/forward_base/lv624/hallways/stairwell/research)
+/area/forward_base/lv624/engineering/power_storage)
 "bdm" = (
 /obj/structure/largecrate/supply/supplies/mre,
 /obj/effect/decal/hybrisa/dirt,
@@ -16837,8 +17390,9 @@
 /area/forward_base/lv624/preps)
 "bdo" = (
 /obj/effect/decal/heavy_cable/cable_horizontal,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/no_build,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdp" = (
 /turf/open/floor/almayer/plating_striped/north,
 /area/forward_base/lv624/reqs)
@@ -16875,6 +17429,9 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/reqs)
 "bdw" = (
@@ -16887,17 +17444,17 @@
 	},
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/plating_striped/south,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdx" = (
 /turf/open/floor/almayer/plating_striped/south,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdy" = (
 /obj/structure/machinery/computer/orbital_cannon_console{
 	name = "\improper Super-Heavy Artillery Cannon Console"
 	},
 /obj/structure/bed/chair/ob_chair,
 /turf/open/floor/almayer/plating_striped/south,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdz" = (
 /obj/structure/prop/almayer/cannon_cable_connector,
 /obj/structure/sign/safety/high_voltage{
@@ -16908,7 +17465,7 @@
 	pixel_y = -25
 	},
 /turf/open/floor/almayer/plating_striped/south,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -16917,48 +17474,57 @@
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/tool,
 /turf/open/floor/almayer/orange/southwest,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdB" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/toolbox,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
 /turf/open/floor/almayer/orange,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
 /turf/open/floor/almayer/orange,
-/area/sky)
-"bdD" = (
-/turf/closed/wall/almayer,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdF" = (
 /obj/effect/decal/heavy_cable/cable_vertical,
 /turf/open/floor/plating/plating_catwalk/no_build,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	layer = 3.3
 	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdI" = (
 /turf/open/floor/almayer/orange/east,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdJ" = (
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/mono,
@@ -16980,32 +17546,50 @@
 /turf/open/floor/almayer/plating_striped/east,
 /area/forward_base/lv624/reqs)
 "bdN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/tcomms,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdO" = (
 /obj/structure/prop/almayer/cannon_cables,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/tcomms,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/west,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bdR" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 4
 	},
 /obj/structure/machinery/door/airlock/almayer/engineering/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdS" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/north,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -17015,26 +17599,36 @@
 	dir = 1;
 	pixel_y = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/north,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdU" = (
 /obj/structure/barricade/handrail{
 	dir = 1;
 	pixel_y = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer/orange/north,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdV" = (
 /obj/effect/landmark/start/maint,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/almayer/orange/north,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdW" = (
 /obj/effect/landmark/start/maint,
 /obj/structure/machinery/status_display{
 	pixel_x = 32
 	},
 /turf/open/floor/almayer/orange/northeast,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bdX" = (
 /obj/structure/closet/crate/explosives,
 /obj/structure/barricade/handrail{
@@ -17060,22 +17654,22 @@
 "bdZ" = (
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/almayer/tcomms,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bea" = (
 /turf/open/floor/almayer/cargo_arrow/east,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "beb" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/warhead,
 /turf/open/floor/almayer/cargo,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bec" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bed" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -17083,7 +17677,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bee" = (
 /obj/structure/platform/metal/almayer_smooth{
 	layer = 2.97
@@ -17095,13 +17689,13 @@
 	layer = 2.96
 	},
 /turf/open_space,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bef" = (
 /obj/structure/platform/metal/almayer_smooth{
 	layer = 2.97
 	},
 /turf/open_space,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "beg" = (
 /obj/structure/platform/metal/almayer_smooth{
 	layer = 2.97
@@ -17113,7 +17707,7 @@
 	layer = 2.97
 	},
 /turf/open_space,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "beh" = (
 /obj/structure/terminal{
 	dir = 1
@@ -17122,7 +17716,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bei" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/effect/landmark/hunter_primary,
@@ -17134,7 +17728,7 @@
 	},
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/plating/plating_catwalk,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bek" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/metal/medium_stack{
@@ -17168,23 +17762,36 @@
 	layer = 3.1;
 	pixel_x = 1
 	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bep" = (
 /obj/structure/platform/metal/almayer_smooth/west,
 /turf/open_space,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "beq" = (
-/obj/structure/machinery/power/smes/buildable,
+/obj/structure/machinery/power/smes/buildable/charged,
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/structure/machinery/light/blue{
+	dir = 1
+	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "ber" = (
-/obj/structure/machinery/power/smes/buildable,
+/obj/structure/machinery/power/smes/buildable/charged,
+/obj/structure/sign/safety/high_voltage{
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_x = 15;
+	pixel_y = 24
+	},
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/power_storage)
 "bes" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -17201,7 +17808,7 @@
 /obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/orange/west,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "beu" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -17215,13 +17822,16 @@
 	},
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/mono,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bev" = (
 /obj/vehicle/powerloader{
 	dir = 8
 	},
+/obj/structure/machinery/light/blue{
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
-/area/sky)
+/area/forward_base/lv624/engineering/orbital_cannon)
 "bew" = (
 /obj/structure/window/framed/almayer/hull,
 /obj/structure/window/framed/almayer/hull,
@@ -17268,6 +17878,9 @@
 /obj/structure/machinery/disposal{
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/reqs)
@@ -17413,10 +18026,8 @@
 /turf/open_space,
 /area/forward_base/lv624/reqs)
 "beY" = (
-/obj/structure/machinery/computer/arcade{
-	layer = 3.3
-	},
-/turf/open/floor/almayer/purple/west,
+/obj/structure/reagent_dispensers/water_cooler/stacks,
+/turf/open/floor/almayer/cargo,
 /area/forward_base/lv624/hallways/east)
 "beZ" = (
 /obj/structure/machinery/cm_vending/gear/corporate_security{
@@ -17428,7 +18039,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer/flooredge/north,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfa" = (
 /obj/structure/machinery/cm_vending/clothing/corporate_security{
 	pixel_y = -16;
@@ -17439,7 +18050,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer/flooredge/north,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light{
@@ -17460,7 +18071,7 @@
 	pixel_x = 11
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfc" = (
 /obj/effect/landmark/hunter_primary,
 /turf/open/gm/dirt,
@@ -17471,8 +18082,12 @@
 	name = "General Listening Channel";
 	pixel_x = 26
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfe" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/lv624/ground/jungle/north_east_jungle)
@@ -17488,11 +18103,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfh" = (
 /obj/effect/landmark/start/corp_sec,
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfi" = (
 /obj/structure/machinery/flasher{
 	alpha = 50;
@@ -17504,32 +18119,26 @@
 	pixel_y = 8
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfj" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 1
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
-"bfk" = (
-/obj/structure/bed/chair/comfy/teal{
-	dir = 1
-	},
-/turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfl" = (
 /obj/structure/machinery/atm{
 	pixel_x = 30
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfm" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/faxmachine/corporate/liaison/almayer{
 	pixel_y = 2
 	},
 /turf/open/floor/carpet,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfn" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/paper_bin/wy{
@@ -17554,7 +18163,7 @@
 	pixel_y = -4
 	},
 /turf/open/floor/carpet,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfo" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/transmitter/rotary{
@@ -17576,7 +18185,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfp" = (
 /obj/structure/machinery/computer/cameras/wooden_tv/broadcast{
 	pixel_y = 4;
@@ -17586,7 +18195,7 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfq" = (
 /obj/structure/closet/cabinet{
 	pixel_x = 1
@@ -17611,28 +18220,28 @@
 	eftpos_name = "Weyland-Yutani EFTPOS scanner"
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfr" = (
 /obj/structure/machinery/photocopier/wyphotocopier,
 /obj/structure/sign/calendar/wy{
 	pixel_y = 32
 	},
 /turf/open/floor/carpet,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bfs" = (
 /obj/structure/bed/chair/comfy/orange,
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/lv624/lazarus/secure_storage)
+/area/forward_base/lv624/liasion)
 "bft" = (
 /obj/structure/machinery/computer/wy_intranet{
 	can_block_movement = 0;
 	pixel_y = 20
 	},
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning2";
@@ -17645,7 +18254,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfv" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	dir = 2;
@@ -17653,7 +18262,7 @@
 	req_access = list(207)
 	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfw" = (
 /obj/structure/machinery/status_display{
 	pixel_x = -32
@@ -17665,7 +18274,7 @@
 	},
 /obj/effect/landmark/start/liaison,
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfx" = (
 /obj/item/bedsheet/ce,
 /obj/structure/bed,
@@ -17675,11 +18284,14 @@
 	pixel_x = 26
 	},
 /turf/open/floor/carpet,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfy" = (
 /obj/structure/barricade/handrail,
 /obj/structure/machinery/light{
 	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/stairwell/research)
@@ -17688,11 +18300,11 @@
 	pixel_y = 16;
 	density = 0
 	},
-/obj/structure/sign/calendar/wy{
-	pixel_x = -30
+/obj/structure/closet/secure_closet/cmdcabinet/comms_cl{
+	pixel_x = -28
 	},
 /turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
+/area/forward_base/lv624/liasion)
 "bfA" = (
 /obj/structure/safe/cl_office{
 	can_block_movement = 0
@@ -17705,58 +18317,741 @@
 	},
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/wood/ship,
-/area/lv624/ground/colony/west_tcomms_road)
-"bfB" = (
+/area/forward_base/lv624/liasion)
+"bfC" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/almayer/purple/west,
-/area/forward_base/lv624/hallways/east)
-"bfC" = (
-/obj/structure/machinery/light{
-	dir = 1
+/obj/structure/machinery/door_control{
+	pixel_y = 24;
+	name = "Tarmac Blast Doors";
+	id = "tarmac"
 	},
 /turf/open/floor/almayer/purple/west,
 /area/forward_base/lv624/hallways/east)
 "bfD" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
-	dir = 8;
-	pixel_y = 16
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "bfE" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
 	dir = 1
 	},
 /turf/open/floor/prison/floor_plate,
-/area/lv624/lazarus/landing_zones/lz2)
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "bfF" = (
 /obj/structure/machinery/light/red{
 	light_color = "#BB3F3F";
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/prison/southwest,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bfG" = (
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfH" = (
+/obj/structure/machinery/conveyor{
+	id = "lower_garbage";
+	dir = 4
+	},
+/obj/structure/machinery/light/red{
+	light_color = "#BB3F3F"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfI" = (
+/obj/structure/machinery/recycler,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfJ" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/brig)
+"bfK" = (
+/obj/structure/machinery/conveyor_switch{
+	id = "lower_garbage"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfM" = (
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfN" = (
+/turf/closed/wall/almayer/reinforced,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfO" = (
+/obj/structure/machinery/door/window/northright{
+	pixel_y = -4;
+	layer = 3;
+	dir = 2
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/brig/reception)
+"bfP" = (
+/obj/structure/machinery/door/airlock/almayer/engineering{
+	name = "\improper Disposals";
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bfQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/red/north,
+/area/forward_base/lv624/brig/reception)
+"bfR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/brig/reception)
+"bfS" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/disposalpipe/segment,
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/jungle/south_central_jungle)
+"bfT" = (
+/obj/structure/reagent_dispensers/tank/fuel/custom,
+/turf/open/floor/almayer/silver/north,
+/area/forward_base/lv624/hallways/south)
+"bfU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/brig/cells)
+"bfV" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/antre/plating/direction_west/west_south,
+/area/forward_base/lv624/hallways/south)
+"bfW" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/turf/open/antre/plating/direction_west/west_south,
+/area/forward_base/lv624/hallways/south)
+"bfX" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/antre/plating/direction_west/east_north,
+/area/forward_base/lv624/hallways/south)
 "bfY" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_wall,
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
+"bfZ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/antre/plating/direction_west/east_north,
+/area/forward_base/lv624/hallways/south)
+"bga" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/antre/plating/direction_west/east_north,
+/area/forward_base/lv624/hallways/south)
+"bgb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/south,
+/area/forward_base/lv624/hallways/east)
+"bgc" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/south,
+/area/forward_base/lv624/hallways/east)
+"bgd" = (
+/obj/structure/machinery/door_control{
+	pixel_y = -22;
+	name = "Southeast Pillbox Blast Doors";
+	id = "se_pillbox"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/purple/south,
+/area/forward_base/lv624/hallways/east)
+"bge" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bgf" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/jungle/south_central_jungle)
+"bgg" = (
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/ground/jungle/south_central_jungle)
+"bgh" = (
+/obj/structure/machinery/door/airlock/almayer/glass{
+	name = "\improper Briefing";
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/living/briefing)
+"bgi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
+"bgj" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/east)
+"bgk" = (
+/obj/structure/machinery/door_control/cl/office/lobby_door{
+	pixel_x = 8;
+	pixel_y = 24
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/hallways/east)
+"bgl" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/hallways/east)
+"bgm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	name = "Southeast Pillbox Blast Doors";
+	id = "se_pillbox"
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/pillbox/southeast)
+"bgn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/command/cic)
+"bgo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/command/cic)
+"bgp" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	id = "CIC Lockdown";
+	name = "\improper Internal Combat Information Center Blast Door"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/command/cic)
+"bgq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/antre/plating/direction_north/west_edge,
+/area/forward_base/lv624/hallways/west)
+"bgr" = (
+/obj/structure/disposalpipe/junction,
+/turf/open/antre/plating/direction_north,
+/area/forward_base/lv624/hallways/west)
+"bgs" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/living/briefing)
+"bgt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/briefing)
+"bgu" = (
+/obj/structure/closet/secure_closet/cmdcabinet/marine{
+	pixel_x = -28
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/silver/west,
+/area/forward_base/lv624/command/cic)
+"bgv" = (
+/obj/structure/platform_decoration/metal/almayer_smooth/east,
+/turf/open/antre/plating/corner_dir/north_west,
+/area/forward_base/lv624/hallways/west)
+"bgw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/prison/kitchen,
+/area/forward_base/lv624/living/kitchen)
+"bgx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/prison/kitchen,
+/area/forward_base/lv624/living/kitchen)
+"bgy" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/liasion)
+"bgz" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/antre/plating/direction_north/west_edge,
+/area/forward_base/lv624/hallways/west)
+"bgA" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/prison/kitchen,
+/area/forward_base/lv624/living/kitchen)
+"bgB" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/platform/metal/almayer_smooth/west,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/west)
+"bgC" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/west)
+"bgD" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 8;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/forward_base/lv624/medical/pharmacy)
+"bgE" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/turf/open/floor/almayer/blue/east,
+/area/forward_base/lv624/hallways/west)
+"bgF" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/green/south,
+/area/forward_base/lv624/living/cafeteria)
+"bgG" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/purple/east,
+/area/forward_base/lv624/hallways/east)
+"bgH" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgI" = (
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/almayer/purple/east,
+/area/forward_base/lv624/hallways/east)
+"bgJ" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
 "bgL" = (
 /obj/structure/fence,
 /turf/open/gm/dirtgrassborder/west,
 /area/lv624/ground/colony/west_tcomms_road)
+"bgM" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/hallways/stairwell/research)
+"bgN" = (
+/obj/structure/bed/chair/comfy,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgO" = (
+/obj/structure/disposalpipe/up/almayer{
+	dir = 4
+	},
+/turf/open/antre/plating/direction_north/west_edge,
+/area/forward_base/lv624/hallways/east)
+"bgP" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2
+	},
+/turf/open/antre/plating/direction_north/east_edge,
+/area/forward_base/lv624/hallways/east)
 "bgQ" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/colony/south_medbay_road)
+"bgR" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/open/antre/plating/direction_north/west_edge,
+/area/forward_base/lv624/hallways/west)
+"bgS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/antre/plating/direction_north/east_edge,
+/area/forward_base/lv624/hallways/west)
+"bgT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/living/cafeteria)
+"bgU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/almayer/green/west,
+/area/forward_base/lv624/living/cafeteria)
+"bgV" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgW" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgX" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bgY" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/silver/east,
+/area/forward_base/lv624/living/cafeteria)
+"bgZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bha" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/green/north,
+/area/forward_base/lv624/living/cafeteria)
+"bhb" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/living/briefing)
+"bhc" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/living/briefing)
+"bhd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/antre/plating/direction_north/east_edge,
+/area/forward_base/lv624/hallways/east)
+"bhe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/purple/west,
+/area/forward_base/lv624/hallways/east)
+"bhf" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/west)
+"bhg" = (
+/obj/structure/bed/chair/comfy,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/living/cafeteria)
+"bhh" = (
+/obj/structure/platform/metal/almayer_smooth,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
+"bhi" = (
+/obj/structure/platform/metal/almayer_smooth,
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
+"bhj" = (
+/obj/structure/platform/metal/almayer_smooth,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/west)
+"bhk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/antre/plating/direction_north/west_edge,
+/area/forward_base/lv624/hallways/west)
+"bhl" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/green/north,
+/area/forward_base/lv624/living/cafeteria)
+"bhm" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/living/cafeteria)
+"bhn" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/intel)
+"bho" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/intel)
+"bhp" = (
+/obj/structure/machinery/floodlight/landing,
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/floor/mech_bay_recharge_floor/shuttle_landing_lights,
+/area/lv624/lazarus/landing_zones/lz2)
+"bhq" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/r_wall,
+/area/lv624/lazarus/landing_zones/lz2)
 "bhr" = (
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/jungle/south_east_jungle)
+"bhs" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/blue/north,
+/area/forward_base/lv624/hallways/west)
+"bht" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/hallways/west)
+"bhu" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/open/floor/almayer/blue/south,
+/area/forward_base/lv624/hallways/west)
+"bhv" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/turf/open/floor/plating/asteroidwarning,
+/area/lv624/lazarus/landing_zones/lz2)
+"bhw" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
+"bhx" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/closed/wall/r_wall,
+/area/lv624/lazarus/landing_zones/lz2)
+"bhy" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer{
+	name = "\improper Mess Hall"
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/living/cafeteria)
+"bhz" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/r_wall,
+/area/lv624/lazarus/landing_zones/lz2)
+"bhA" = (
+/obj/effect/sentry_landmark/lz_1/top_left,
+/turf/open/antre/plating/direction_west/east_north,
+/area/forward_base/lv624/hallways/west)
+"bhB" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/west)
+"bhC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/southwest,
+/area/forward_base/lv624/hallways/pillbox/northeast)
+"bhD" = (
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/hallways/pillbox/northeast)
+"bhE" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/open/floor/almayer/blue/south,
+/area/forward_base/lv624/hallways/west)
+"bhF" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/west)
+"bhG" = (
+/turf/open/floor/prison/floor_plate,
+/area/forward_base/lv624/hallways/pillbox/northeast)
+"bhH" = (
+/obj/structure/machinery/door_control{
+	name = "Northwest Pillbox Blast Doors";
+	id = "nw_pillbox";
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
+"bhI" = (
+/obj/structure/largecrate/empty/case/double,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
+"bhJ" = (
+/obj/structure/largecrate/random,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
+"bhK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/hallways/west)
 "bhL" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -17772,36 +19067,1463 @@
 /obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/sand_temple)
+"bhM" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/blue/east,
+/area/forward_base/lv624/hallways/west)
+"bhN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/blue/west,
+/area/forward_base/lv624/hallways/west)
+"bhO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/prison/southwest,
+/area/forward_base/lv624/hallways/pillbox/northeast)
+"bhP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/door_control{
+	name = "Northeast Pillbox Blast Doors";
+	id = "ne_pillbox";
+	pixel_x = 24
+	},
+/turf/open/floor/prison/southwest,
+/area/forward_base/lv624/hallways/pillbox/northeast)
+"bhQ" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhR" = (
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhS" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/west)
+"bhT" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/prison/floor_plate,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhU" = (
+/turf/open/floor/prison/southwest,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/prison/southwest,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhW" = (
+/turf/open/floor/prison/floor_plate,
+/area/forward_base/lv624/hallways/pillbox/northwest)
+"bhX" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bhY" = (
+/obj/structure/machinery/power/apc/upgraded/power/south,
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bhZ" = (
+/obj/structure/tent/big{
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	},
+/obj/structure/tent_curtain,
+/obj/effect/landmark/start/engineering,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
+"bia" = (
+/obj/structure/tent_curtain,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/landmark/start/professor,
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
+"bib" = (
+/obj/structure/tent_curtain,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent_camp)
+"bic" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_west,
+/area/lv624/lazarus/landing_zones/lz2)
+"bid" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bie" = (
+/obj/structure/fence,
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
+"bif" = (
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"big" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/reqs_tent)
+"bih" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/reqs_tent)
+"bii" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/door_control{
+	name = "Robotics Dome Blast Doors";
+	id = "robo"
+	},
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
+"bij" = (
+/obj/structure/prop/tyrargo/watchtower,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bik" = (
+/obj/structure/flora/bush/ausbushes/grassybush,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/lazarus/landing_zones/lz2)
+"bil" = (
+/obj/structure/flora/bush/ausbushes/reedbush,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bim" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/gm/grass/grass1,
+/area/lv624/lazarus/landing_zones/lz2)
+"bin" = (
+/obj/structure/window/framed/colony,
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "robo";
+	name = "Robotics Dome Blast Doors"
+	},
+/turf/open/floor/plating,
+/area/lv624/lazarus/robotics)
+"bio" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bip" = (
+/obj/structure/window/framed/colony,
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "robo";
+	name = "Robotics Dome Blast Doors";
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/lv624/lazarus/robotics)
+"biq" = (
+/obj/effect/sentry_landmark/lz_2/top_left,
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bir" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/forward_base/lv624/hallways/north_gate)
+"bis" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/north_gate)
 "bit" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_east_jungle)
+"biu" = (
+/turf/open/floor/plating/asteroidfloor/north,
+/area/forward_base/lv624/hallways/north_gate)
+"biv" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	pixel_y = -16
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/asteroidfloor/north,
+/area/forward_base/lv624/hallways/north_gate)
+"biw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/antre/plating/alt,
+/area/forward_base/lv624/hallways/north_gate)
+"bix" = (
+/obj/structure/barricade/plasteel/wired{
+	dir = 1
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/north_gate)
+"biy" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/hallways/north_gate)
+"biz" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/antre/plating/alt,
+/area/forward_base/lv624/hallways/north_gate)
+"biA" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	pixel_y = -16
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/asteroidfloor/north,
+/area/forward_base/lv624/hallways/north_gate)
+"biB" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/r_wall/bunker,
+/area/forward_base/lv624/hallways/north_gate)
+"biC" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/gm/dirtgrassborder/grassdirt_corner/north_west,
+/area/lv624/ground/jungle/west_jungle)
+"biD" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2,
+/area/lv624/ground/jungle/west_jungle)
+"biE" = (
+/turf/open/gm/coast/beachcorner/south_east,
+/area/lv624/ground/river/west_river)
+"biF" = (
+/turf/open/gm/coast/east,
+/area/lv624/ground/river/west_river)
+"biG" = (
+/turf/open/gm/coast/beachcorner2/north_west,
+/area/lv624/ground/river/west_river)
+"biH" = (
+/turf/open/gm/coast/beachcorner/north_west,
+/area/lv624/ground/river/west_river)
+"biI" = (
+/turf/open/gm/coast/north,
+/area/lv624/ground/river/west_river)
+"biJ" = (
+/obj/structure/flora/jungle/alienplant1,
+/obj/effect/landmark/lv624/fog_blocker,
+/turf/open/gm/river,
+/area/lv624/ground/river/west_river)
+"biK" = (
+/obj/structure/flora/jungle/vines,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/preps/smartgunner)
+"biL" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/kutjevo/interior/oob)
+"biM" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/status_display{
+	pixel_y = -32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"biN" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/hydroresearch,
+/obj/item/reagent_container/glass/watertank,
+/obj/item/reagent_container/glass/watertank,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"biO" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/forward_base/lv624/research/botany)
+"biP" = (
+/obj/structure/machinery/telecomms/relay/preset/tower/all,
+/turf/open/floor/almayer/mono,
+/area/forward_base)
+"biQ" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/almayer/test_floor5,
+/area/forward_base/lv624/research/botany)
+"biR" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"biS" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/open/floor/almayer/test_floor5,
+/area/forward_base/lv624/research/botany)
+"biT" = (
+/obj/structure/machinery/camera/autoname/almayer/containment{
+	dir = 4
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/forward_base/lv624/research/containment)
+"biU" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open_space,
+/area/forward_base/lv624/preps/leader)
+"biV" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 8
+	},
+/turf/open_space,
+/area/forward_base/lv624/preps/spec)
+"biW" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps/smartgunner)
+"biX" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/reagentgrinder{
+	pixel_y = 9
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"biY" = (
+/obj/effect/landmark/start/researcher,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"biZ" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/vending/hydroseeds{
+	density = 0;
+	pixel_x = 4;
+	req_access_txt = "28"
+	},
+/obj/item/storage/box/botanydisk{
+	pixel_y = 17;
+	pixel_x = 2
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"bja" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/reinforced{
+	id = "Biohazard Storage";
+	locked = 1;
+	name = "\improper Biohazard Storage Chamber";
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "Biohazard Storage";
+	name = "\improper Biohazard Storage Chamber";
+	dir = 2
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/research/containment)
+"bjb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps/corpsman)
+"bjc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/preps/corpsman)
+"bjd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/forward_base/lv624/preps)
 "bje" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 9
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
+"bjf" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-y"
+	},
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps)
+"bjg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/forward_base/lv624/preps)
+"bjh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/preps/comtech)
+"bji" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps/smartgunner)
+"bjj" = (
+/obj/structure/machinery/smartfridge/chemistry{
+	pixel_y = -1;
+	pixel_x = -17;
+	explo_proof = 1;
+	density = 0;
+	layer = 3.1
+	},
+/obj/structure/machinery/botany/editor{
+	density = 0;
+	pixel_x = -1;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"bjk" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 14
+	},
+/obj/structure/machinery/botany/extractor{
+	density = 0;
+	pixel_x = -4;
+	pixel_y = 14
+	},
+/obj/structure/machinery/seed_extractor{
+	density = 0;
+	pixel_y = 25;
+	pixel_x = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/botany)
+"bjl" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bjm" = (
+/obj/structure/machinery/xenoanalyzer,
+/turf/open/floor/almayer/plating_stripedcorner/north,
+/area/forward_base/lv624/research)
+"bjn" = (
+/turf/open/floor/almayer/plating_striped/north,
+/area/forward_base/lv624/research)
+"bjo" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps)
+"bjp" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/forward_base/lv624/preps/smartgunner)
+"bjq" = (
+/obj/structure/machinery/door/airlock/almayer/research/glass/autoname{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/research/botany)
+"bjr" = (
+/obj/effect/landmark/start/researcher,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/forward_base/lv624/research)
+"bjs" = (
+/obj/structure/sign/safety/ref_chem_storage{
+	pixel_y = -25
+	},
+/obj/structure/sign/safety/life_support{
+	pixel_x = 15;
+	pixel_y = -25
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/centrifuge{
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/item/storage/fancy/vials{
+	pixel_y = 14;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer/sterile_green_corner/west,
+/area/forward_base/lv624/research)
+"bjt" = (
+/obj/structure/closet/l3closet/scientist,
+/obj/structure/machinery/power/apc/upgraded/power/east,
+/turf/open/floor/almayer/plating_striped/west,
+/area/forward_base/lv624/research)
+"bju" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/forward_base/lv624/research)
+"bjv" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/forward_base/lv624/research)
+"bjw" = (
+/obj/structure/bed/roller/heavy,
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/forward_base/lv624/research)
+"bjx" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"bjy" = (
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bjz" = (
+/obj/structure/flora/jungle/vines,
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/preps)
+"bjA" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/forward_base/lv624/research)
+"bjB" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/research)
+"bjC" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/forward_base/lv624/living/cryogenics)
+"bjD" = (
+/obj/structure/machinery/cm_vending/sorted/attachments/squad{
+	req_access = null;
+	req_one_access = null;
+	vend_y_offset = 0;
+	density = 0;
+	pixel_x = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bjE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/west,
+/area/forward_base/lv624/preps)
+"bjF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bjG" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bjH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/flooredge/east,
+/area/forward_base/lv624/preps)
+"bjI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps)
+"bjJ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/floor,
+/area/forward_base/lv624/preps)
+"bjK" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/closed/wall/almayer,
+/area/forward_base/lv624/preps)
+"bjL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/sterile_green_side/southeast,
+/area/forward_base/lv624/research)
+"bjM" = (
+/obj/structure/machinery/faxmachine/corporate{
+	can_block_movement = 0;
+	density = 0;
+	pixel_y = -16;
+	department = "Firebase W-Y Research Department";
+	sub_name = "Main Laboratory"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bjN" = (
+/obj/structure/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bjO" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = 26
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/forward_base/lv624/research)
+"bjP" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/cryopod,
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/living/cryogenics)
+"bjQ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/cryogenics)
+"bjR" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/living/cryogenics)
+"bjS" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/living/cryogenics)
+"bjT" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/red/north,
+/area/forward_base/lv624/preps)
+"bjU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/forward_base/lv624/research)
+"bjV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/forward_base/lv624/research)
+"bjW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/filingcabinet/research{
+	density = 0;
+	pixel_y = 20;
+	pixel_x = -1;
+	explo_proof = 1
+	},
+/turf/open/floor/almayer/sterile_green_side/north,
+/area/forward_base/lv624/research)
+"bjX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/sterile_green_side/northwest,
+/area/forward_base/lv624/research)
+"bjY" = (
+/obj/structure/transmitter{
+	dir = 8;
+	pixel_x = 16;
+	phone_category = "Civilian";
+	phone_id = "Main Research Laboratory";
+	name = "Research Main Telephone"
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/forward_base/lv624/research)
+"bjZ" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/cargo_arrow,
+/area/forward_base/lv624/preps)
+"bka" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research)
+"bkb" = (
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research)
+"bkc" = (
+/obj/structure/machinery/autodispenser{
+	pixel_x = -1;
+	pixel_y = 2;
+	explo_proof = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research)
+"bkd" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/landmark/start/researcher,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research)
+"bke" = (
+/obj/structure/machinery/smartfridge/chemistry{
+	pixel_y = 2;
+	pixel_x = -1;
+	explo_proof = 1
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research)
+"bkf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/sterile_green_side/west,
+/area/forward_base/lv624/research)
+"bkg" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/forward_base/lv624/research)
+"bkh" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/cryogenics)
+"bki" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bkj" = (
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/storage/black_vest/acid_harness,
+/obj/item/clothing/accessory/storage/black_vest/acid_harness,
+/obj/item/clothing/accessory/storage/black_vest/acid_harness,
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research/fabrication)
+"bkk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = -14
+	},
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = -14
+	},
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = -14
+	},
+/obj/item/reagent_container/glass/beaker{
+	pixel_x = -14
+	},
+/obj/structure/machinery/reagentgrinder{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/stack/sheet/mineral/silver/small_stack{
+	amount = 5
+	},
+/obj/item/stack/sheet/mineral/phoron{
+	amount = 25;
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/research/fabrication)
+"bkl" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bkm" = (
+/obj/structure/medical_supply_link,
+/obj/structure/machinery/cm_vending/sorted/medical/chemistry{
+	pixel_x = -1;
+	pixel_y = 2;
+	explo_proof = 1
+	},
+/obj/item/storage/box/monkeycubes{
+	pixel_x = 2;
+	pixel_y = 22
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bkn" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/reagent_analyzer{
+	pixel_y = 10;
+	pixel_x = -2;
+	explo_proof = 1
+	},
+/obj/item/storage/box/beakers{
+	pixel_x = 5
+	},
+/obj/structure/sign/calendar/wy{
+	pixel_y = 26;
+	layer = 2.99
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bko" = (
+/obj/structure/machinery/chem_dispenser/research{
+	pixel_y = 2;
+	explo_proof = 1
+	},
+/obj/item/reagent_container/glass/beaker/bluespace{
+	pixel_x = 5;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research)
+"bkp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/sterile_green_corner/north,
+/area/forward_base/lv624/research)
+"bkq" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/forward_base/lv624/living/cryogenics)
+"bkr" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/forward_base/lv624/living/cryogenics)
+"bks" = (
+/obj/structure/disposalpipe/down/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"bkt" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/machinery/photocopier/wyphotocopier{
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/test_floor5,
+/area/forward_base/lv624/research/fabrication)
+"bku" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research/fabrication)
+"bkv" = (
+/obj/structure/platform_decoration/metal/almayer/west,
+/obj/structure/platform{
+	layer = 2.9;
+	dir = 8
+	},
+/obj/structure/platform_decoration/metal/almayer/east{
+	pixel_y = -22
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/effect/landmark/ert_spawns/distress_cryo,
+/obj/effect/landmark/late_join,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/cryogenics)
+"bkw" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/cryopod/right,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/cryogenics)
+"bkx" = (
+/obj/structure/machinery/autolathe/medilathe/full,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/fabrication)
+"bky" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_x = 6;
+	pixel_y = 18
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/research/fabrication)
+"bkz" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/engineering/power_storage)
+"bkA" = (
+/turf/closed/wall/almayer/white/reinforced,
+/area/forward_base/lv624/hallways/stairwell/research)
+"bkB" = (
+/obj/structure/stairs{
+	dir = 2;
+	icon_state = "ramptop"
+	},
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/cryogenics)
+"bkC" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/computer/working_joe{
+	dir = 8;
+	pixel_x = 16
+	},
+/obj/structure/barricade/handrail,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/cryogenics)
+"bkD" = (
+/obj/structure/platform/metal/almayer_smooth/west,
+/turf/open_space,
+/area/forward_base/lv624/hallways/stairwell/preps)
+"bkE" = (
+/obj/structure/machinery/autolathe,
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research/fabrication)
+"bkF" = (
+/obj/structure/barricade/handrail,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/green/north,
+/area/forward_base/lv624/hallways/stairwell/research)
 "bkG" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/lv624/ground/river/central_river)
+"bkH" = (
+/obj/structure/machinery/door/airlock/almayer{
+	name = "\improper Cryogenics Bay"
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/stairwell/research)
+"bkI" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/forward_base/lv624/living/cryogenics)
+"bkJ" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/cryogenics)
 "bkK" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 9
 	},
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_east_caves)
+"bkL" = (
+/obj/structure/platform/metal/almayer_smooth/east,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/hallways/stairwell/preps)
+"bkM" = (
+/obj/structure/surface/rack,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/ob_ammo/ob_fuel,
+/obj/structure/machinery/light{
+	dir = 2
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"bkN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/orange/east,
+/area/forward_base/lv624/engineering/power_storage)
+"bkO" = (
+/turf/closed/wall/almayer/reinforced,
+/area/forward_base/lv624/hallways/stairwell/research)
 "bkP" = (
 /obj/structure/flora/jungle/vines/light_3,
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/sand_temple)
+"bkQ" = (
+/turf/closed/wall/almayer/reinforced,
+/area/forward_base/lv624/living/synth_closet)
+"bkR" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	access_modified = 1;
+	dir = 1;
+	name = "\improper Security Vault";
+	req_access = null;
+	req_one_access_txt = "91;92"
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/living/synth_closet)
+"bkS" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/living/synth_closet)
+"bkT" = (
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 1
+	},
+/turf/open_space,
+/area/sky)
+"bkU" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/forward_base/lv624/reqs)
+"bkV" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/camera/autoname/almayer{
+	name = "ship-grade camera";
+	dir = 1
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/forward_base/lv624/reqs)
+"bkW" = (
+/obj/effect/decal/heavy_cable/cable_vertical,
+/obj/structure/disposalpipe/down/almayer{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk/no_build,
+/area/forward_base/lv624/engineering/power_storage)
+"bkX" = (
+/obj/structure/machinery/recharge_station/alt{
+	pixel_x = -5;
+	dir = 4
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"bkY" = (
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/synth_closet)
+"bkZ" = (
+/obj/structure/machinery/cm_vending/gear/synth{
+	layer = 3.01
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"bla" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/forward_base/lv624/reqs)
+"blb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/forward_base/lv624/reqs)
+"blc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/reqs)
+"bld" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/barricade/handrail{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-y"
+	},
+/turf/open/floor/almayer/orange/north,
+/area/forward_base/lv624/engineering/power_storage)
+"ble" = (
+/obj/effect/landmark/start/synthetic,
+/obj/effect/landmark/late_join/synthetic,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/closet/secure_closet/surgical{
+	pixel_x = -29;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blf" = (
+/obj/structure/machinery/cm_vending/clothing/synth,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/orange/west,
+/area/forward_base/lv624/engineering/orbital_cannon)
+"blh" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/largecrate/random/mini/wooden{
+	pixel_x = -5;
+	pixel_y = -3;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"bli" = (
+/obj/structure/platform_decoration/metal/almayer/east,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/living/synth_closet)
+"blj" = (
+/obj/structure/machinery/cm_vending/own_points/experimental_tools,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blk" = (
+/obj/structure/blocker/invisible_wall,
+/obj/structure/machinery/light/blue{
+	dir = 1
+	},
+/turf/open/floor/almayer/tcomms,
+/area/forward_base/lv624/engineering/orbital_cannon)
+"bll" = (
+/turf/open_space,
+/area/forward_base/lv624/engineering/power_storage)
+"blm" = (
+/obj/structure/platform/metal/almayer_smooth/east,
+/turf/open_space,
+/area/forward_base/lv624/engineering/power_storage)
+"bln" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/camera/autoname/almayer{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/intel/prep)
+"blo" = (
+/obj/structure/barricade/handrail,
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/door_control/cl/quarter/backdoor{
+	id = "ares";
+	name = "Inactive Button";
+	pixel_x = -24;
+	req_access_txt = null;
+	req_one_access_txt = "91;92";
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blp" = (
+/obj/structure/stairs{
+	dir = 2;
+	icon_state = "ramptop"
+	},
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blq" = (
+/obj/structure/largecrate/random/secure,
+/obj/effect/decal/hybrisa/dirt,
+/turf/open/floor/almayer/mono,
+/area/forward_base/lv624/living/synth_closet)
+"blr" = (
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/reqs)
+"bls" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/engineering/orbital_cannon)
+"blt" = (
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/engineering/orbital_cannon)
+"blu" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/liaison{
+	dir = 2;
+	id = "ares";
+	emp_proof = 1
+	},
+/turf/open/floor/almayer/no_build/plating,
+/area/forward_base/lv624/living/synth_closet)
+"blv" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/reqs)
+"blw" = (
+/obj/structure/machinery/ares/processor/interface,
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"bly" = (
+/turf/open/floor/almayer/no_build/plating,
+/area/forward_base/lv624/living/synth_closet)
+"blz" = (
+/obj/structure/machinery/door_control/cl/quarter/backdoor{
+	id = "ares";
+	name = "Inactive Button";
+	req_access_txt = null;
+	req_one_access_txt = "91;92";
+	pixel_y = -22
+	},
+/obj/effect/landmark/start/working_joe,
+/obj/effect/landmark/late_join/working_joe,
+/turf/open/floor/almayer/plating_striped,
+/area/forward_base/lv624/living/synth_closet)
+"blA" = (
+/obj/structure/machinery/cryopod/joe/seegson/alt{
+	dir = 8;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/forward_base/lv624/living/synth_closet)
+"blB" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "supply_elevator_railing"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer,
+/area/forward_base/lv624/reqs)
 "blC" = (
 /obj/item/stack/sheet/wood{
 	layer = 3.01
 	},
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
+"blD" = (
+/obj/structure/machinery/ares/processor/bioscan,
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"blG" = (
+/obj/structure/bed/chair/comfy/ares{
+	dir = 1;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/no_build/plating,
+/area/forward_base/lv624/living/synth_closet)
+"blH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/structure/machinery/computer/crew/alt{
+	dir = 8;
+	pixel_x = 13;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"blI" = (
+/obj/structure/machinery/ares/processor/apollo,
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blJ" = (
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"blK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin/uscm{
+	pixel_y = 6
+	},
+/obj/item/tool/pen,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blL" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/view_objectives{
+	pixel_x = -9
+	},
+/obj/structure/machinery/computer/ares_console{
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/no_build/plating,
+/area/forward_base/lv624/living/synth_closet)
+"blM" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/item/folder/white,
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blN" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/closed/wall/almayer/outer/internal,
+/area/forward_base/lv624/reqs)
+"blO" = (
+/obj/structure/machinery/ares/substrate,
+/obj/structure/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blP" = (
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
+/area/forward_base/lv624/living/synth_closet)
+"blS" = (
+/obj/structure/machinery/ares/cpu,
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"blT" = (
+/mob/living/silicon/decoy/ship_ai{
+	layer = 2.98;
+	pixel_y = -16
+	},
+/turf/open/floor/almayer/aicore/no_build,
+/area/forward_base/lv624/living/synth_closet)
+"blU" = (
+/obj/structure/platform/metal/strata/east,
+/turf/open_space,
+/area/forward_base/lv624/reqs)
 "bnz" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -17920,10 +20642,6 @@
 "bwk" = (
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/barrens/south_eastern_barrens)
-"bwq" = (
-/obj/effect/sentry_landmark/lz_2/bottom_right,
-/turf/open/gm/dirt,
-/area/lv624/lazarus/landing_zones/lz2)
 "bwR" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/gm/grass/grass1,
@@ -18582,6 +21300,9 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
 "cQJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/antre/plating/west_corner_dir/north_east,
 /area/forward_base/lv624/hallways/south)
 "cQU" = (
@@ -18825,10 +21546,6 @@
 	},
 /turf/open/floor/whiteyellow/southeast,
 /area/lv624/lazarus/corporate_dome)
-"dwt" = (
-/obj/structure/fence,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
-/area/lv624/lazarus/landing_zones/lz2)
 "dwN" = (
 /obj/structure/bed/sofa/vert/grey/bot,
 /turf/open/floor/whiteyellow/southeast,
@@ -19370,7 +22087,7 @@
 /obj/structure/stairs/multiz/up{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/forward_base/lv624/preps/comtech/cryo)
 "eyb" = (
 /obj/effect/decal/warning_stripes{
@@ -20041,10 +22758,6 @@
 "gby" = (
 /turf/open/gm/dirt/brown,
 /area/lv624/lazarus/landing_zones/lz2)
-"gbz" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/gm/dirt,
-/area/lv624/ground/river/west_river)
 "gch" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/folder,
@@ -20849,8 +23562,11 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/colony/west_nexus_road)
 "hSp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/uscm/south_face/north,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "hSE" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/gm/dirt,
@@ -21869,7 +24585,7 @@
 "knd" = (
 /obj/structure/sign/prop1,
 /turf/closed/wall/r_wall/bunker,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "knp" = (
 /obj/structure/flora/jungle/plantbot1,
 /turf/open/gm/grass/grass1,
@@ -22144,7 +24860,7 @@
 /area/lv624/lazarus/canteen)
 "kQY" = (
 /turf/open/floor/plating/plating_catwalk,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "kRg" = (
 /obj/effect/landmark/hunter_primary,
 /turf/open/gm/grass/grass1,
@@ -23229,7 +25945,7 @@
 /area/lv624/lazarus/engineering)
 "npf" = (
 /turf/open/floor/almayer/uscm/southface,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "npt" = (
 /obj/structure/platform/stone/runed_sandstone/north,
 /turf/open/gm/dirt,
@@ -23653,7 +26369,7 @@
 /area/lv624/ground/colony/south_medbay_road)
 "oek" = (
 /turf/open/floor/almayer/uscm/south_face/east,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "oeN" = (
 /turf/closed/wall,
 /area/lv624/ground/barrens/north_east_barrens/ceiling)
@@ -24106,7 +26822,7 @@
 /area/lv624/ground/jungle/north_east_jungle)
 "pbd" = (
 /obj/structure/flora/jungle/vines/light_1,
-/turf/open/gm/dirt,
+/turf/open/gm/dirtgrassborder/west,
 /area/lv624/ground/jungle/west_jungle)
 "pbn" = (
 /obj/structure/fence/overgrown,
@@ -24411,8 +27127,11 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/north_east_barrens)
 "pHx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /turf/open/floor/almayer/uscm/south_face/northwest,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "pHA" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/whiteblue/southeast,
@@ -24803,6 +27522,7 @@
 /area/lv624/ground/jungle/east_central_jungle)
 "qBW" = (
 /obj/structure/largecrate/empty/case/double,
+/obj/structure/platform/metal/almayer_smooth/west,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/south)
 "qBX" = (
@@ -25140,9 +27860,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/west_caves)
-"rox" = (
-/turf/closed/wall/almayer,
-/area/lv624/ground/jungle/west_jungle)
 "roQ" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -25597,8 +28314,16 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/north_west_jungle)
 "sqw" = (
-/turf/open/floor/prison/southwest,
-/area/lv624/lazarus/landing_zones/lz2)
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "ne_pillbox";
+	name = "Northeast Pillbox Blast Doors";
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 8
+	},
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/pillbox/northeast)
 "srn" = (
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 8
@@ -25981,7 +28706,6 @@
 /area/lv624/ground/caves/north_west_caves)
 "tgV" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/coast/north,
 /area/lv624/ground/river/west_river)
 "thk" = (
@@ -26233,6 +28957,13 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "tEn" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "tarmac";
+	name = "Tarmac Blast Doors"
+	},
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/lv624/lazarus/landing_zones/lz2)
 "tES" = (
@@ -27299,10 +30030,6 @@
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/brown/northwest,
 /area/lv624/lazarus/comms)
-"vRR" = (
-/obj/effect/sentry_landmark/lz_2/top_right,
-/turf/open/gm/grass/grass1,
-/area/lv624/lazarus/landing_zones/lz2)
 "vSG" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/grass/grass1,
@@ -27326,7 +30053,7 @@
 /area/lv624/ground/caves/east_caves)
 "vVD" = (
 /turf/open/floor/almayer/uscm/south_face,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "vVN" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
 /turf/open/floor/vault2/west,
@@ -27927,7 +30654,6 @@
 /area/lv624/ground/jungle/east_central_jungle)
 "xuK" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "xvN" = (
@@ -28064,7 +30790,7 @@
 /area/lv624/lazarus/quartstorage/outdoors)
 "xKE" = (
 /turf/closed/wall/r_wall,
-/area/lv624/ground/jungle/west_jungle)
+/area/forward_base/lv624/hallways/north_gate)
 "xKL" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 10
@@ -28695,10 +31421,10 @@ asw
 asw
 asw
 asw
-asw
-asw
-asw
-asw
+bir
+bir
+bir
+bir
 aRS
 aRS
 aRS
@@ -28712,11 +31438,11 @@ aRS
 aRS
 aRS
 aRS
-amF
-amF
-amF
-amF
-aQk
+bhQ
+bhQ
+bhQ
+bhQ
+bhQ
 aQk
 aQk
 aQk
@@ -28907,11 +31633,11 @@ ane
 ane
 oyx
 oyx
-aZb
 nsk
-gbz
 nsk
-aZb
+nsk
+nsk
+nsk
 aqS
 hJn
 atC
@@ -28934,18 +31660,18 @@ aRO
 asZ
 aRS
 aRS
-ajg
+aRO
 ajy
-rox
-amg
+bhR
+bhV
 aRW
-ame
-aRy
-aQV
-aRc
+bhT
+bhR
+bhH
+bhE
 ail
 ahY
-alB
+bhs
 aQU
 aQl
 aNf
@@ -28959,7 +31685,7 @@ aAc
 azC
 azb
 ayi
-aqj
+bgu
 aqj
 axs
 awX
@@ -29129,9 +31855,9 @@ ane
 ane
 oyx
 oyx
-fEU
 oyx
-aZb
+oyx
+nsk
 nsk
 nsk
 nsk
@@ -29139,12 +31865,12 @@ aun
 ase
 arE
 atC
-asK
+biC
 asd
 atu
 asx
 asa
-asY
+biv
 asY
 xKE
 aRS
@@ -29157,13 +31883,13 @@ aIJ
 axl
 amm
 akH
-ajg
-ajg
+bid
 aRO
-rox
+bhY
+bhR
 bfF
-amg
-amg
+bhU
+bhU
 aRJ
 aQV
 aRc
@@ -29359,19 +32085,19 @@ aYX
 alC
 alC
 auc
-aZb
-aAl
+nsk
+omu
 ase
 pbd
-aAl
+biD
 asK
 aAl
 ase
 asa
 asY
-asY
+biu
 xKE
-aRS
+aRO
 arP
 aVT
 awe
@@ -29381,15 +32107,15 @@ aRO
 axy
 amn
 akY
-ajg
-ajg
+aSp
+aRO
 aRO
 ana
-ame
-ame
-amg
-aRy
-aQV
+bhW
+bhW
+bhV
+bhR
+bhI
 aRc
 aRs
 aRn
@@ -29408,7 +32134,7 @@ azH
 azz
 ayo
 ayb
-axO
+bgn
 axx
 axd
 teR
@@ -29417,7 +32143,7 @@ aHt
 aFc
 aDo
 aqh
-rQk
+atA
 aac
 "}
 (6,1,1) = {"
@@ -29577,26 +32303,26 @@ ane
 oyx
 oyx
 oyx
-aZa
-aYR
-aYS
+biH
+alC
+biG
 aud
 aud
-auP
+wqz
 aAl
 aAl
 aAl
 aAl
 aAl
 aAl
+rWW
 aAl
-aAl
-aDj
+bix
 asY
-asY
+biu
 aDj
 aRO
-aRO
+biq
 ata
 ayA
 ayA
@@ -29606,14 +32332,14 @@ axR
 asg
 alQ
 ajg
-ajg
+aBk
 aIJ
-rox
+bhR
 amV
-rox
-rox
-aRy
-aQV
+bhR
+bhR
+bhR
+bhJ
 aRc
 aRs
 aRn
@@ -29641,7 +32367,7 @@ aHv
 aFd
 aDA
 afe
-rQk
+awb
 aac
 "}
 (7,1,1) = {"
@@ -29801,12 +32527,12 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 arV
 aud
 aud
-auP
+oym
 aAl
 aAl
 aAl
@@ -29817,7 +32543,7 @@ aAl
 aAl
 asa
 asY
-asY
+biu
 xKE
 aRY
 aRO
@@ -29830,20 +32556,20 @@ aRQ
 aRQ
 alV
 ajg
-ajg
-aRS
-aRS
+aRO
+aRO
+asc
 asc
 aBk
 aRS
 aRy
-aQV
+bhJ
 aRc
 aRs
 aRn
 alB
 aQU
-aQl
+bhh
 aNf
 all
 alf
@@ -29856,16 +32582,16 @@ azW
 aIR
 ayH
 ayd
-axO
+bgn
 axx
 axm
 teR
 aXy
 ahg
 ahg
-ahg
-ahg
-ait
+bda
+bda
+aCx
 aac
 "}
 (8,1,1) = {"
@@ -30023,25 +32749,25 @@ ane
 ane
 oyx
 oyx
-fEU
 oyx
-aYQ
+oyx
+biI
 aud
 aud
 amG
 bGb
-auP
+oym
 aAl
 aAl
+rWW
 aAl
 aAl
-aAl
-aAl
+aqi
 aAl
 aAl
 knd
 asY
-asY
+biu
 xKE
 aqq
 aRQ
@@ -30055,7 +32781,7 @@ amp
 amb
 ajg
 ajg
-aSh
+aRQ
 aRQ
 aRQ
 aRY
@@ -30089,7 +32815,7 @@ aHw
 aFe
 aql
 aql
-ait
+aCx
 aac
 "}
 (9,1,1) = {"
@@ -30249,12 +32975,12 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
 asp
-auP
+oym
 aAl
 aAl
 aAl
@@ -30264,14 +32990,14 @@ aAl
 aAG
 asa
 asa
-aBl
+biw
 aBl
 xKE
 aVY
 aSk
 aSk
 aSk
-aSk
+bil
 aSk
 aSk
 ayT
@@ -30287,11 +33013,11 @@ bcQ
 aRy
 aQV
 aRc
-aRs
+bhA
 aRn
 alB
 aQU
-aQl
+bhi
 aPK
 alm
 aOE
@@ -30304,7 +33030,7 @@ aAb
 azA
 ayV
 axU
-axU
+bgo
 axw
 axn
 awC
@@ -30313,7 +33039,7 @@ aHx
 aFf
 aDC
 aqm
-ait
+aCM
 aac
 "}
 (10,1,1) = {"
@@ -30472,26 +33198,26 @@ oyx
 oyx
 oyx
 oyx
-aZa
-aYS
+biH
+biG
 aud
 aud
 aud
 aud
-auP
+oym
 aAl
 aAl
-aAl
+aIz
 aAl
 aAl
 aAl
 aAl
 avf
-kQY
+biy
 kQY
 kQY
 azs
-aSk
+aAI
 aSk
 aSk
 aSk
@@ -30504,18 +33230,18 @@ amj
 ajg
 ajg
 ajg
-aSk
+bhX
 aSk
 aSf
 aRO
 aRy
-aQV
+bhK
 aRc
 aRs
 aRn
 alB
 aQV
-alt
+bhj
 aPK
 aln
 alh
@@ -30528,7 +33254,7 @@ aIR
 aIR
 aIR
 axE
-axE
+bgp
 axE
 aIR
 aIR
@@ -30696,27 +33422,27 @@ oyx
 oyx
 oyx
 pJr
-aYQ
+biI
 aud
 amG
 asF
 aud
 fQL
-aBn
+biE
 aAl
 aAl
 aAl
 aAl
+omu
 aAl
 aAl
-aAl
-aUe
+bix
 pHx
 vVD
 aWc
 azs
-ajg
-amY
+aAI
+aAI
 ajg
 ajg
 ajg
@@ -30732,27 +33458,27 @@ ajg
 amY
 ajg
 aAI
-aKc
-aLF
+bhS
+bhM
 ayX
 aRs
 aRn
 alG
 aLF
 apW
-alq
+bhf
 aLj
 alj
 aKf
 akB
-aLF
+bgE
 aMI
-aLF
-aLF
-aKc
-ayX
-ayf
-aJT
+bgE
+bgE
+bgB
+alq
+bgv
+bgq
 aJn
 axq
 qBW
@@ -30919,8 +33645,8 @@ ane
 fEU
 oyx
 oyx
-aZa
-aYS
+biH
+biG
 aud
 arU
 aud
@@ -30934,12 +33660,12 @@ aAl
 aAl
 aAl
 aAl
-aUe
+bix
 hSp
 npf
 aWZ
 azs
-ajg
+aAI
 ajg
 ajg
 amQ
@@ -30956,27 +33682,27 @@ ajg
 ajg
 ajg
 aAI
-aKc
+bhS
 ayf
 aJT
 aJT
 aJT
 aJT
 aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aJT
-aKc
-aJT
+bhk
+bgC
+bgz
+bgR
+bgz
+bgz
+bgz
+bgz
+bgz
+bgz
+bgC
+bgz
 axK
-axK
+bgr
 axK
 aXA
 aWl
@@ -31143,7 +33869,7 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
@@ -31158,12 +33884,12 @@ aAl
 aAl
 aAl
 aAl
-aUe
+bix
 aHR
 oek
 akZ
 azs
-ajg
+aAI
 ajg
 ajg
 ajg
@@ -31188,9 +33914,9 @@ aJo
 aJo
 aJo
 aJo
-aJo
+aKc
 aKU
-aJo
+bgS
 aJo
 aVy
 aKU
@@ -31205,7 +33931,7 @@ aJo
 aWO
 aXR
 aqv
-aHz
+aqw
 aFz
 aDN
 aqw
@@ -31372,8 +34098,8 @@ aud
 aud
 aud
 aud
-xJA
-xJA
+aud
+aud
 wqz
 aAl
 aAl
@@ -31386,8 +34112,8 @@ avf
 kQY
 kQY
 kQY
-azs
-ajg
+bis
+aAI
 ajg
 aUI
 aVh
@@ -31404,17 +34130,17 @@ aAO
 aSr
 aAI
 aAI
-aKc
-alJ
+bhS
+bhN
 alJ
 alJ
 alJ
 alH
 aNg
 aLG
-aLG
 aNg
-aOH
+aNg
+bgT
 aOg
 aNg
 aNg
@@ -31591,23 +34317,23 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 amG
 aud
-xJA
+aud
 jga
 dmf
 aAl
-aAl
+omu
 aAl
 aAl
 aAl
 aAl
 aAG
 asa
-aBl
+biz
 aBl
 xKE
 xKE
@@ -31638,7 +34364,7 @@ aNg
 aQq
 aPL
 aPb
-aOh
+bgU
 aOh
 aNv
 aNm
@@ -31815,12 +34541,12 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 amG
 aud
 aud
 aud
-xJA
+aud
 qMX
 dmf
 aAl
@@ -31832,7 +34558,7 @@ aAl
 aAl
 knd
 asY
-asY
+biu
 xKE
 aVZ
 ajg
@@ -31854,24 +34580,24 @@ aSh
 bcR
 aRy
 aRH
-aQU
+bhF
 aQU
 aRb
-aRb
+aRc
 aOY
 aOV
 aML
 aML
-aML
+bgV
 aOi
-aML
-aML
-aMK
+bgJ
+bgJ
+bgH
 ajB
-aLP
+bgF
 ajz
-aKA
-aKA
+bgA
+bgw
 aWQ
 aVS
 aig
@@ -32038,13 +34764,13 @@ ane
 oyx
 oyx
 oyx
-aZa
-aYS
+biH
+biG
 aud
 aud
 aud
 arV
-xJA
+aud
 jga
 dmf
 aAl
@@ -32056,7 +34782,7 @@ aAl
 aAl
 asa
 asY
-asY
+biu
 xKE
 aSk
 ajg
@@ -32081,12 +34807,12 @@ aRw
 aRw
 aQV
 aRb
-aRb
+aRc
 aOY
 aQv
 akF
 aPc
-aNu
+bgW
 aMw
 akF
 aVK
@@ -32262,13 +34988,13 @@ ane
 oyx
 fEU
 oyx
-aYQ
+biI
 aud
 aud
 aoZ
 aud
-aul
-avK
+fQL
+biF
 sTB
 erx
 aAl
@@ -32279,8 +35005,8 @@ aAl
 aAl
 aAl
 asa
-asa
 asY
+biu
 xKE
 aWa
 ajg
@@ -32303,26 +35029,26 @@ amO
 amH
 amu
 aRw
-aQU
+bhB
 aRb
-aRc
+aRb
 aQW
 aQv
 akF
 aPd
-aNu
+bgW
 aMw
-akF
+bgN
 aNn
 akd
 aMw
 aLP
 aLu
 aKA
-aKA
+bgx
 aJV
 aVS
-aig
+bfX
 aWs
 aqv
 aHA
@@ -32486,12 +35212,12 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 sFc
 aud
 aud
 aud
-auP
+oym
 aqi
 aAl
 aqi
@@ -32504,7 +35230,7 @@ aAl
 aAl
 asa
 asY
-asY
+biu
 xKE
 aWb
 ajg
@@ -32529,14 +35255,14 @@ amv
 aRw
 aQU
 aRb
-aRc
-aOH
-aQv
-akF
+bht
+bhm
+bhl
+bhg
 aPf
-aNu
+bgX
 aMw
-akF
+bgN
 aNq
 akd
 aMw
@@ -32710,12 +35436,12 @@ oyx
 gzW
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
 asF
-auP
+oym
 aAl
 aAl
 aAl
@@ -32726,7 +35452,7 @@ aAl
 aAl
 aAl
 aAl
-aUe
+bix
 asY
 asY
 xKE
@@ -32739,7 +35465,7 @@ aUS
 aUS
 aUS
 aUw
-aSR
+big
 aCp
 aSS
 aSS
@@ -32753,12 +35479,12 @@ amx
 aRw
 aQU
 aRp
-aRc
+bhu
 aNg
 aQz
 aML
 aPl
-aNr
+bgY
 aOj
 aNw
 aNr
@@ -32771,7 +35497,7 @@ aKO
 aJX
 aVS
 aUV
-aWs
+bfV
 aIf
 acr
 acr
@@ -32933,13 +35659,13 @@ oyx
 oyx
 oyx
 oyx
-aZa
-aYS
+biH
+biG
 amG
 aud
 aud
 bGb
-auP
+oym
 aAl
 aAl
 aAl
@@ -32950,11 +35676,11 @@ aAl
 aqi
 aAl
 aAl
-aUe
+bix
 asY
 asY
 aDj
-ajg
+aAI
 ajg
 ajg
 aVW
@@ -32963,7 +35689,7 @@ aUS
 aUS
 aUS
 aUy
-aSR
+bih
 aTr
 aBX
 aBN
@@ -33157,13 +35883,13 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
 asp
 aud
-auP
+oym
 aAl
 amK
 aAl
@@ -33175,7 +35901,7 @@ aiS
 aAl
 aAl
 asa
-asY
+biA
 asY
 xKE
 ajg
@@ -33187,24 +35913,24 @@ aVv
 aVc
 aUT
 aUC
-aSk
-aSk
-aSk
+bif
+bif
+bhX
 aSk
 aSk
 aSk
 aSk
 aSf
 aRO
-rox
-amg
+bhD
+bhO
 bfD
 ame
 aNg
 aRk
 aQX
-aQv
-aML
+bhl
+bgJ
 aPm
 aNx
 aOk
@@ -33381,13 +36107,13 @@ fEU
 oyx
 oyx
 aYX
-aYS
+biG
 aud
 aud
 aud
 aud
 aud
-auP
+oym
 aAl
 aFm
 aFm
@@ -33398,15 +36124,15 @@ aAl
 aAl
 aAl
 aja
-asa
+biB
 asa
 asa
 xKE
 aAF
 aSk
-aSk
-aSk
-aSk
+bhX
+bhX
+bio
 aSk
 aVd
 aTL
@@ -33421,16 +36147,16 @@ ajg
 ajg
 aAI
 aRL
+bhC
+bhG
 amg
-ame
-amg
-aQW
+bhy
 aMw
 aML
 aQC
 aPQ
 aNu
-aML
+bgZ
 aOl
 aNy
 aNu
@@ -33604,14 +36330,14 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 bGb
 aud
 aud
 aud
 amG
-auP
+oym
 aAl
 aFm
 aue
@@ -33624,7 +36350,7 @@ aAl
 asX
 aAp
 aAp
-asw
+bir
 xKE
 aia
 aDg
@@ -33644,17 +36370,17 @@ ajg
 amQ
 amQ
 amQ
-aRM
-sqw
-ami
-sqw
+aRL
+bhP
+bhG
+amg
 aOH
 aMw
 aML
 aQL
 aPW
 aNu
-aML
+bgZ
 aOl
 aNz
 aNu
@@ -33668,7 +36394,7 @@ aKa
 aJq
 aig
 aWs
-aIn
+bfT
 acr
 acr
 acr
@@ -33828,14 +36554,14 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
 aud
 aud
 aud
-asR
+wqz
 aAl
 aFm
 auf
@@ -33862,15 +36588,15 @@ ajg
 ajg
 ajg
 ajg
-aSk
+bhX
 ajg
 anb
 aSk
 aSf
 aRO
-jQV
-jQV
-ami
+bhD
+bhD
+sqw
 sqw
 aNg
 aRl
@@ -33878,7 +36604,7 @@ aML
 aQL
 aPX
 akd
-aML
+bgZ
 aOl
 aNF
 aNu
@@ -33888,7 +36614,7 @@ aLV
 aLA
 aLm
 aKR
-aKd
+aKa
 aJp
 aig
 aIS
@@ -34052,14 +36778,14 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
 amG
 aud
-aul
-aBn
+fQL
+biE
 aAl
 aFQ
 aug
@@ -34072,7 +36798,7 @@ aAl
 aAp
 aAp
 nmO
-tZD
+bhq
 tZD
 aia
 aDk
@@ -34080,22 +36806,22 @@ aDf
 aCW
 aCH
 aSk
-aSk
-aSk
-aSk
+ajg
+bij
+ajg
 aTQ
 aTx
 aTl
-aSk
+bhZ
 ajg
 anb
 aSk
 eiH
-jQV
-jQV
-jQV
+aRT
+bhD
+bhD
 bfE
-sqw
+bhC
 aNg
 aQZ
 aQZ
@@ -34276,13 +37002,13 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 amG
 aud
 aud
 bGb
-auP
+oym
 aqi
 aAl
 aFm
@@ -34304,13 +37030,13 @@ aVR
 aVR
 aCH
 aSk
-aSk
-aSk
-aSk
-aTT
+ajg
+ajg
+bhX
+aTQ
 aTz
 aTm
-aSk
+bia
 ajg
 anb
 aSk
@@ -34318,7 +37044,7 @@ aSf
 aRO
 aRO
 amz
-ami
+bhG
 ami
 aNg
 alu
@@ -34326,14 +37052,14 @@ alu
 alu
 aNg
 aPw
-aOV
+bha
 aML
 aML
 aML
 aML
 aME
 aJq
-aKa
+bgD
 aLo
 aKS
 aKe
@@ -34506,7 +37232,7 @@ aud
 aud
 aud
 aud
-auP
+oym
 aAl
 aAl
 aFm
@@ -34531,19 +37257,19 @@ aSk
 aSk
 aSk
 aSk
-aTV
+aTQ
 aTA
 aTn
-aSk
+bib
 ajg
 ajg
 aSk
 aSh
 aRQ
 aRQ
-jQV
+bhD
 afM
-jQV
+bhD
 aNg
 aNg
 aNg
@@ -34724,13 +37450,13 @@ oyx
 iJA
 oyx
 oyx
-aYQ
+biI
 amG
 aud
 sFc
 aud
 aud
-auP
+oym
 aAl
 aAl
 aFm
@@ -34773,19 +37499,19 @@ aDV
 aRG
 aJw
 aQi
-aMG
-aKt
+bhb
+aKu
 aKs
 aKs
 aKs
 aKs
 aMG
-aKs
-aKs
-aKt
-aKs
-aKs
-aJs
+aQi
+aQi
+aKu
+aQi
+bgs
+aJt
 aig
 aWs
 aIo
@@ -34948,7 +37674,7 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 aud
 aud
@@ -34997,7 +37723,7 @@ wLz
 aJw
 aJw
 aKt
-aki
+bhc
 aki
 aKt
 aMs
@@ -35008,10 +37734,10 @@ aMs
 aKt
 ajm
 ajm
-aKt
-aJt
-aig
-aWs
+bgt
+bgh
+bfZ
+bfW
 aIo
 aqO
 aGA
@@ -35172,13 +37898,13 @@ oyx
 oyx
 oyx
 oyx
-aYQ
+biI
 aud
 amG
 aud
 arU
 aud
-auP
+oym
 vOD
 oTJ
 azB
@@ -35221,7 +37947,7 @@ wLz
 aJw
 alv
 aKt
-aki
+bhc
 aki
 aKt
 aMt
@@ -35237,7 +37963,7 @@ aJw
 aig
 aUU
 aIo
-aHO
+aqO
 aGD
 aEr
 aqO
@@ -35402,7 +38128,7 @@ aud
 aud
 aud
 aud
-auP
+oym
 oTJ
 tRE
 jRJ
@@ -35458,7 +38184,7 @@ ajm
 ajm
 aKw
 aJw
-aXB
+bfX
 ahZ
 ale
 ale
@@ -35621,11 +38347,11 @@ oyx
 aZa
 aYR
 aYS
-aud
-aud
-aud
-aud
-amG
+xJA
+xJA
+xJA
+xJA
+biJ
 auP
 oTJ
 oTJ
@@ -35665,11 +38391,11 @@ aRg
 aRg
 byK
 aRg
-wLz
+bhv
 aJw
 aQT
 aKt
-aki
+bhc
 aki
 akX
 ajC
@@ -35906,8 +38632,8 @@ aLq
 aKs
 aKs
 aJw
-aig
-aWs
+bga
+bfV
 aIq
 ara
 aqB
@@ -36133,8 +38859,8 @@ aJw
 aig
 aWs
 aHP
-ara
-aqB
+bfQ
+bfO
 aEz
 hUs
 aqe
@@ -36344,10 +39070,10 @@ ayh
 aXE
 aXD
 aXD
+aXD
 bff
-aXD
-aXD
-aXD
+bgI
+bgG
 aXD
 aXD
 bff
@@ -36567,7 +39293,7 @@ tEn
 aAH
 axV
 ajb
-ajb
+bgO
 ajb
 ajb
 ajb
@@ -36581,7 +39307,7 @@ aXE
 air
 aIU
 aEC
-aHP
+bfR
 aiE
 aEC
 aii
@@ -36789,9 +39515,9 @@ wLz
 gef
 tEn
 xrI
+bhd
 aje
-aje
-aje
+bgP
 aje
 aje
 aje
@@ -37013,11 +39739,11 @@ wLz
 aly
 jQV
 bfC
-ajf
+bhe
 ajf
 aVw
-bfB
-ajf
+bgK
+bgK
 ajf
 aVw
 ajf
@@ -37025,7 +39751,7 @@ ajf
 ajf
 beY
 bbB
-ajf
+bgi
 aXG
 aIb
 aIb
@@ -37241,15 +39967,15 @@ aPF
 arD
 aOe
 aOe
+bgM
 aMR
-aMR
 ahD
 bfg
 bfg
 bfg
 ahD
 ahD
-aiZ
+bgj
 aUQ
 aIb
 aIx
@@ -37458,7 +40184,7 @@ aRg
 byK
 aRg
 wLz
-aOe
+bhn
 aOe
 alr
 arZ
@@ -37474,7 +40200,7 @@ bfh
 beZ
 ahD
 aiZ
-aUQ
+bgb
 aIb
 aIC
 aHV
@@ -37682,7 +40408,7 @@ aAJ
 aRg
 aRg
 wLz
-aOe
+bhn
 aOe
 asn
 asb
@@ -37697,8 +40423,8 @@ bfm
 bfi
 bfa
 ahD
-aiZ
-aUQ
+bbl
+bgb
 aIb
 aID
 aHW
@@ -37906,7 +40632,7 @@ niV
 niV
 niV
 itE
-aOe
+bho
 aOe
 aso
 asb
@@ -37915,14 +40641,14 @@ arC
 aOe
 ary
 aNa
-aiX
+ahD
 bfs
 bfn
 bfj
 bfb
 ahD
-bbl
-aUQ
+bgk
+bgc
 aIb
 aIF
 aHX
@@ -38115,7 +40841,7 @@ agC
 aJO
 aRG
 eCF
-aDv
+bii
 aDv
 aDv
 aDv
@@ -38129,24 +40855,24 @@ aDv
 aDv
 aDv
 aDv
-aDv
-aRG
+bhw
+bhp
 aOe
 asq
 asf
 arW
 aOe
 aOe
-aiX
-aiX
-aiX
+ahD
+ahD
+ahD
 bft
 bfo
-bfk
+bfj
 ajn
 bbQ
 aiZ
-aUQ
+bgb
 ari
 aIG
 aHY
@@ -38352,9 +41078,9 @@ wLz
 aDv
 tZD
 tZD
-tZD
-tZD
-tZD
+bhz
+bhx
+bhq
 aQj
 aQj
 aPG
@@ -38369,11 +41095,11 @@ bfp
 bfl
 bfd
 bbR
-aiZ
-aUQ
+bgl
+bgd
 ari
+bfU
 aIK
-aho
 aGV
 aEO
 aho
@@ -38564,7 +41290,7 @@ aXX
 aRx
 aDv
 aDv
-aDv
+oVR
 aDv
 aGh
 aJO
@@ -38580,22 +41306,22 @@ aRr
 aRm
 tZD
 tZD
-aAs
+aQj
 ash
 arY
 aOp
 aOe
 bfA
 bfx
-rwK
-rwK
-rwK
-rwK
-rwK
-aiX
+bgy
+bgy
+bgy
+bgy
+bgy
+bfN
+bgm
 aIX
-aIX
-ari
+bfN
 aqk
 aqk
 aGV
@@ -38782,14 +41508,14 @@ aDv
 aZP
 aXX
 aXX
-vRR
+aXX
 aXX
 aXX
 azD
 aEs
-bwq
-aDv
-aDv
+bie
+bie
+bie
 aZP
 anP
 aXX
@@ -38804,23 +41530,23 @@ kWH
 kWH
 xgE
 xgE
-aAs
-aAs
-rwK
-rwK
-aiN
-rwK
-rwK
-rwK
+aQj
+aQj
+aQj
+aQj
+aOe
+bgy
+bgy
+bgy
 gDu
 gDu
 gDu
 gDu
-aiX
+bfN
 aJx
 aJm
-ari
-ari
+bfN
+bfN
 ari
 ari
 ari
@@ -39000,21 +41726,21 @@ aAp
 aAp
 aAp
 nUy
-ado
+bip
 azE
-ado
-avH
+bip
+nEd
 aXX
 aXX
 wZc
+bim
 aXX
 aXX
 aXX
-aRx
-aDv
-aDv
-aDv
-agw
+aXX
+aXX
+aXX
+aXX
 vcY
 svh
 xgE
@@ -39042,7 +41768,7 @@ ajo
 aiY
 ajj
 aiW
-ahU
+aJm
 aIV
 aIN
 aHd
@@ -39227,18 +41953,18 @@ nUy
 ayW
 azF
 aAh
-avH
-ado
-ado
-ado
-avH
-svh
+nEd
+bip
+bip
+bip
+nEd
+bik
 aXX
-agy
-aDv
+aXX
+aXX
 aCI
-bwq
-agw
+aXX
+aXX
 twg
 aXX
 xgE
@@ -39264,9 +41990,9 @@ ajP
 ajk
 efp
 aiY
-aiX
+bfN
 bbA
-ahU
+bge
 ahU
 aIN
 aIa
@@ -39455,14 +42181,14 @@ avH
 aBp
 jIr
 aCk
-ado
+bin
 aXX
 aXX
-agy
-oVR
-aDv
-aDv
-agw
+aXX
+aXX
+aXX
+aXX
+aXX
 aXX
 aXX
 xgE
@@ -39488,16 +42214,16 @@ ajk
 ajO
 gDu
 gDu
-aiX
-aiX
+bfN
+bfN
 ahP
-ahA
+bfN
+bfN
 aIb
-aIb
-aqg
-aqg
-aqg
-aqg
+bfJ
+bfJ
+bcY
+bcY
 aac
 "}
 (51,1,1) = {"
@@ -39679,14 +42405,14 @@ ayF
 axe
 aLs
 aCk
-ado
+bin
 aXX
 aXX
-agy
-aDv
-aDv
-aDv
-agw
+aXX
+aXX
+aXX
+aXX
+aXX
 aXX
 svh
 xgE
@@ -39714,14 +42440,14 @@ efp
 efp
 ajk
 gDu
-ahI
+bgf
 ahG
 kxI
 ahG
-tsa
-tsa
-tsa
-tsa
+bfN
+bfK
+bfG
+bcZ
 aac
 "}
 (52,1,1) = {"
@@ -39903,15 +42629,15 @@ avH
 aBq
 axe
 aCl
-ado
+bin
 aXX
 aXX
-aRx
-aDv
-aDv
-aDv
-dwt
-aJF
+aXX
+aXX
+tZD
+tZD
+tZD
+tZD
 xgE
 xgE
 xgE
@@ -39938,14 +42664,14 @@ afB
 ose
 efp
 gDu
-ahG
+bgg
 aic
-ahI
-ahI
-kxI
-tsa
-tsa
-tsa
+bfS
+bfS
+bfP
+bfL
+bfH
+bcZ
 aac
 "}
 (53,1,1) = {"
@@ -40127,14 +42853,14 @@ avH
 avH
 axB
 avH
-avH
-avH
-aJF
-aCs
-aDv
-aEu
-aDv
-aDv
+nEd
+nEd
+tZD
+tZD
+tZD
+tZD
+uRE
+bic
 aDv
 xgE
 vvE
@@ -40166,10 +42892,10 @@ ahG
 kxI
 tsa
 ahI
-ooM
-tsa
-tsa
-tsa
+bfN
+bfM
+bfI
+bcZ
 aac
 "}
 (54,1,1) = {"
@@ -40390,10 +43116,10 @@ kxI
 ahG
 kxI
 kxI
-kxI
-kxI
-tsa
-tsa
+bfN
+bfN
+bcZ
+bcZ
 aac
 "}
 (55,1,1) = {"
@@ -67913,6 +70639,11 @@ qAb
 qAb
 qAb
 qAb
+awd
+avY
+avY
+avY
+anh
 qht
 qht
 qht
@@ -67920,18 +70651,13 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
-bck
-bck
-bck
-bck
-bck
-bck
-bck
+aNf
+aNf
+aNf
+aNf
+aNf
+aNf
+aNf
 aNf
 aWo
 aWo
@@ -68137,11 +70863,11 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
+awd
+avY
+avY
+avY
+anh
 qht
 qht
 qht
@@ -68153,20 +70879,20 @@ aPK
 bck
 bck
 bck
-aPK
+aNf
 aNf
 aNf
 aNf
 bbM
 bbz
 bbi
-bbi
+bjD
 baT
 ann
 baj
 aZQ
 aoD
-aYe
+biU
 aod
 anH
 ani
@@ -68361,11 +71087,11 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
+awd
+avY
+avY
+avY
+anh
 qht
 qht
 qht
@@ -68377,14 +71103,14 @@ aPK
 bck
 bck
 bck
-bck
 aNf
+bkD
 apk
 api
 bbk
 bbk
 bbk
-bbk
+bjE
 baU
 baF
 aZR
@@ -68585,11 +71311,11 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
+awd
+avY
+avY
+avY
+anh
 qht
 qht
 qht
@@ -68601,14 +71327,14 @@ aPK
 bck
 bck
 bck
-bck
 aNf
+bck
 apl
 bce
 aXj
 bat
 bbt
-bat
+bjF
 baV
 baG
 aZR
@@ -68809,11 +71535,11 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
+awf
+avZ
+avZ
+avZ
+anh
 qht
 qht
 qht
@@ -68825,14 +71551,14 @@ aPK
 bck
 bck
 auU
+bkL
 bcD
-aNf
 apm
 apj
 bdf
 bde
 aXU
-bat
+bjF
 baW
 ann
 baj
@@ -69037,7 +71763,7 @@ qht
 qht
 qht
 qAb
-qht
+anh
 qht
 qht
 qht
@@ -69049,14 +71775,14 @@ aPK
 bck
 bck
 bcH
-aPK
+aNf
 aNf
 aNf
 aNf
 aWo
 aWo
 aXU
-bat
+bjF
 baX
 ann
 ann
@@ -69261,7 +71987,7 @@ qht
 qht
 qht
 qht
-qht
+anh
 qht
 qht
 qht
@@ -69280,7 +72006,7 @@ bcf
 bbC
 bbC
 aXU
-bat
+bjF
 baW
 baH
 bal
@@ -69485,7 +72211,7 @@ qht
 qht
 qht
 qht
-qht
+anh
 qht
 qht
 qht
@@ -69504,7 +72230,7 @@ bbk
 bbk
 bbk
 aXU
-bat
+bjF
 baV
 baI
 aZS
@@ -69709,6 +72435,7 @@ qht
 qht
 qht
 qht
+anh
 qht
 qht
 qht
@@ -69716,8 +72443,7 @@ qht
 qht
 qht
 qht
-qht
-aPK
+bck
 bck
 bck
 bcH
@@ -69727,8 +72453,8 @@ bcn
 bcg
 bbS
 bbD
-aXU
-bat
+bjx
+bjG
 baV
 baJ
 aZS
@@ -69933,7 +72659,7 @@ qht
 qht
 qht
 qht
-qht
+anh
 qht
 qht
 qht
@@ -69952,13 +72678,13 @@ bbP
 bbP
 bbP
 bdc
-bdc
+bjH
 baY
 baH
 bam
 aZU
 aYL
-aYf
+biV
 aXT
 anO
 anr
@@ -70157,7 +72883,7 @@ qht
 qht
 qht
 qht
-qht
+anh
 qht
 qht
 qht
@@ -70176,7 +72902,7 @@ bdg
 bbE
 bbE
 aXj
-aXj
+bjI
 baZ
 aYg
 aYg
@@ -70381,7 +73107,7 @@ qht
 qht
 qht
 qht
-qht
+anh
 auQ
 auQ
 auQ
@@ -70624,7 +73350,7 @@ bbF
 bbV
 bbF
 apc
-aXj
+bjI
 bba
 aYg
 bao
@@ -70840,15 +73566,15 @@ aRw
 bek
 bdX
 bdJ
-bdp
+bkU
 aRw
 bcv
 aXU
-aXU
-bat
-aph
-apc
-aXj
+bks
+bki
+bjZ
+bjT
+bjf
 aXU
 baK
 bap
@@ -71058,7 +73784,7 @@ beW
 beP
 beH
 apL
-apz
+blB
 apz
 apF
 apE
@@ -71072,7 +73798,7 @@ bat
 aXU
 aph
 apc
-aZq
+bjd
 aXU
 aZY
 bap
@@ -71296,7 +74022,7 @@ bbG
 bbW
 bbG
 apc
-aXj
+bjI
 aoY
 aYg
 baq
@@ -71520,7 +74246,7 @@ baL
 baL
 baL
 apd
-aXj
+bjI
 apb
 aYg
 bar
@@ -71736,7 +74462,7 @@ apG
 apB
 apB
 apv
-bdr
+bkV
 aRw
 baL
 bco
@@ -71744,11 +74470,11 @@ bbF
 bbV
 bbF
 ape
-aXj
+bjI
 apb
 aYg
 bas
-aZX
+bjb
 aZl
 aYo
 aXb
@@ -71950,7 +74676,7 @@ qht
 qht
 qht
 bcM
-bcO
+blU
 apY
 beJ
 beF
@@ -71968,11 +74694,11 @@ bat
 aXU
 aph
 ape
-aXj
+bjI
 apb
 aYg
 aoW
-aZY
+bjc
 aZm
 aYo
 aoj
@@ -72192,11 +74918,11 @@ aXU
 bat
 aph
 ape
-aZq
+bjd
 aXU
 baL
 bat
-aZq
+bjd
 aZq
 aYp
 aXj
@@ -72416,11 +75142,11 @@ bbG
 bbW
 bbG
 ape
-aXj
-aXU
+bjJ
+bjx
 baN
-aXj
-aXj
+bjo
+bjf
 aXU
 aXU
 aXU
@@ -72631,7 +75357,7 @@ bdK
 bel
 bel
 bdK
-bdK
+bla
 bds
 bdm
 baL
@@ -72640,11 +75366,11 @@ baL
 baL
 baL
 apd
-aXj
+bjI
 aXU
 baL
 bdb
-aZr
+bjg
 aZr
 aYq
 aXY
@@ -72855,7 +75581,7 @@ bez
 bes
 bem
 bdM
-bdM
+blb
 bdt
 aRw
 baL
@@ -72864,11 +75590,11 @@ bbF
 bbV
 bbF
 apf
-aXj
+bjI
 apb
 baO
 bau
-aZZ
+bjh
 aZt
 aYs
 anZ
@@ -73079,7 +75805,7 @@ beA
 aRw
 ben
 bdY
-aRK
+blc
 bdv
 aRw
 bcz
@@ -73088,7 +75814,7 @@ aXU
 bat
 aph
 apf
-aXj
+bjI
 apb
 baO
 baw
@@ -73296,11 +76022,11 @@ awf
 bcM
 bcM
 bcM
-bcM
-bcM
-bcM
-bcM
-bcM
+blN
+blv
+blv
+blv
+blr
 aRw
 aRw
 bcK
@@ -73312,7 +76038,7 @@ bat
 aXU
 aph
 apf
-aZq
+bjd
 apb
 baO
 bax
@@ -73524,7 +76250,7 @@ avY
 avY
 avY
 avY
-anh
+bls
 bdZ
 bdZ
 bdN
@@ -73536,7 +76262,7 @@ bbG
 bbW
 bbG
 apf
-aXj
+bjI
 aoY
 baO
 bay
@@ -73748,8 +76474,8 @@ avZ
 avZ
 avZ
 avZ
-anh
-bdZ
+blt
+blk
 bdZ
 bdN
 bdx
@@ -73760,7 +76486,7 @@ baL
 baL
 baL
 apd
-aXj
+bjI
 aXU
 baP
 baz
@@ -73972,7 +76698,7 @@ qht
 qht
 qht
 qht
-anh
+blt
 bdZ
 bdZ
 bdN
@@ -73984,7 +76710,7 @@ bbF
 bbV
 bbF
 apg
-aXj
+bjI
 aXU
 aZZ
 baz
@@ -74195,8 +76921,8 @@ qht
 qht
 qht
 qht
-anh
-anh
+blt
+blt
 bdZ
 bdZ
 bdO
@@ -74208,7 +76934,7 @@ bat
 aXU
 aph
 apg
-aXj
+bjI
 aXU
 baO
 baA
@@ -74419,10 +77145,10 @@ qht
 qht
 qht
 qht
-anh
+blt
 bet
-bdP
-bdP
+blg
+blg
 bdP
 bdA
 baL
@@ -74432,8 +77158,8 @@ aXU
 bat
 aph
 apg
-aZq
-bat
+bjd
+bjy
 baO
 baB
 baf
@@ -74643,7 +77369,7 @@ qht
 qht
 qht
 qht
-anh
+blt
 beu
 bea
 bea
@@ -74656,7 +77382,7 @@ bbG
 bbW
 bbG
 bbv
-aXj
+bjI
 bat
 aWT
 aWT
@@ -74867,20 +77593,20 @@ qht
 qht
 qht
 qht
-anh
+blt
 bev
 beb
 beb
 bdQ
 bdC
-bdn
+bkM
 baL
 baL
 baL
 baL
 baL
 bbw
-aXj
+bjI
 bat
 aWT
 baC
@@ -75091,12 +77817,12 @@ qht
 qht
 qht
 qht
-anh
-anh
+bkz
+bkz
 bec
 bec
 bdR
-bdD
+bcG
 bbK
 bbK
 bbK
@@ -75315,26 +78041,26 @@ qht
 qht
 qht
 qht
-qht
-anh
+bll
+bkz
 beo
 bed
 bdS
 bdE
 bbK
 auq
-bbX
-bbX
-bbX
+bkx
+bkt
+bkj
 bbK
 baL
 bbn
-aXU
+bjx
 baR
-baD
-bah
+bjp
+bji
 aYb
-aXr
+biW
 aYb
 aXz
 aWR
@@ -75539,19 +78265,19 @@ qht
 qht
 qht
 qht
-qht
-anh
+bll
+bkz
 bep
 bee
 bdT
 bdF
 bbK
-aur
-auh
+bku
 bch
-bbX
+bku
+bkk
 bbK
-baL
+bjz
 bbo
 bbb
 aWT
@@ -75562,7 +78288,7 @@ aYA
 aom
 aXH
 aWS
-aWr
+biK
 aac
 "}
 (37,1,2) = {"
@@ -75763,21 +78489,21 @@ qht
 qht
 qht
 qht
-qht
-anh
-qht
+bll
+bkz
+bll
 bef
-bdT
-bdF
+bld
+bkW
 bbK
-bch
-bch
+bkE
+bky
 atZ
 bbX
 bbK
-baL
-baL
-baL
+bjK
+bjK
+bjz
 aWT
 aWT
 aWT
@@ -75786,7 +78512,7 @@ aWT
 aWT
 aWT
 aWT
-aWr
+biK
 aac
 "}
 (38,1,2) = {"
@@ -75987,9 +78713,9 @@ qht
 qht
 qht
 qht
-qht
-anh
-auQ
+bll
+bkz
+blm
 beg
 bdU
 bdG
@@ -76002,7 +78728,7 @@ bbK
 bbc
 bbc
 bbc
-asu
+bbc
 asu
 asu
 asu
@@ -76211,8 +78937,8 @@ qht
 qht
 qht
 qht
-qht
-anh
+bll
+bkz
 beq
 beh
 bdV
@@ -76222,17 +78948,17 @@ bdj
 bdh
 bbc
 bca
-bbq
-bbq
+bka
+bjU
 bbq
 bbd
+bjs
 asu
-aWU
+bjj
+biX
 asS
 asS
-asS
-asS
-aWU
+biQ
 aWU
 ass
 aac
@@ -76435,29 +79161,29 @@ qht
 qht
 qht
 qht
-anh
-anh
+bkz
+bkz
 ber
 bej
 bdW
 bdI
-bdk
+bkN
 bdk
 bdi
 bbc
-bcc
-bbr
-bbr
-bbr
-bbe
+bkl
+bkb
+bjV
+bjL
+bjA
 baS
+bjq
 aXI
-aWU
-aWU
-aWU
-aWU
+biY
+biR
+biR
 aXI
-aWU
+biM
 ass
 aac
 "}
@@ -76659,29 +79385,29 @@ qht
 qht
 qht
 qht
-bcJ
-bcI
-bcI
-bcI
-bcI
-bcI
+bkz
+bcG
+bcG
+bcG
+bcG
+bcG
 bcG
 bdl
-aNa
+bkz
 bbc
-bcc
-bbr
-bbr
+bkm
+bkc
+bjW
 atW
 bbf
+bjt
 asu
-aWU
-asS
-asS
-asS
-asS
-aWU
-aWU
+bjk
+biZ
+biQ
+biS
+biQ
+biN
 ass
 aac
 "}
@@ -76885,27 +79611,27 @@ qht
 qht
 awa
 avs
-avs
+bln
 aCa
 avs
 avk
-bcG
+bcI
 aus
 bcp
 bbc
-bcc
-bbr
-bbr
-bbe
-bbc
-asu
-asu
-asu
-asu
-asu
-asu
-asu
-asu
+bkn
+bkd
+bjV
+bjM
+bju
+bju
+biO
+biO
+biO
+biO
+biO
+biO
+biO
 ass
 aac
 "}
@@ -77114,14 +79840,14 @@ bcL
 bcL
 avl
 bcC
-aus
+bkF
 bcq
 bbc
-bcc
-bbr
-bbr
-bbe
-bbg
+bko
+bke
+bjV
+bjN
+bju
 atK
 att
 ato
@@ -77337,21 +80063,21 @@ avI
 avA
 avt
 bcI
-bcG
+bcI
 auC
 aui
 bci
-bcc
-bbr
-bbr
-bbe
+bkp
+bkf
+bjX
+atW
 bbh
-atL
+bcc
 atx
-atr
-atj
+bbe
+bja
 ate
-asW
+biT
 asE
 asB
 aWt
@@ -77551,12 +80277,12 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
-bcJ
+bkS
+bkS
+bkS
+bkS
+bkS
+bkQ
 avO
 avA
 avz
@@ -77564,14 +80290,14 @@ bcI
 auS
 auL
 auk
-bci
+bjB
 bcd
-bby
-bby
-bbf
-bbh
+bkg
+bjY
+bjO
+bjB
 atL
-atx
+bjr
 atr
 atl
 asG
@@ -77774,29 +80500,29 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
-qht
-bcJ
+bkS
+bkS
+blO
+blI
+blD
+blw
+bkQ
 avW
 avC
 avt
 bcI
 auT
 auN
-aNa
-bbs
-bbs
-bbs
-bbs
-bbs
-aWt
-atL
-atx
-atr
+bkA
+bjC
+bjC
+bjC
+bjC
+bjC
+bjC
+bjv
+bbr
+bjl
 atj
 asG
 atb
@@ -77998,29 +80724,29 @@ qht
 qht
 qht
 qht
-wMu
-mba
-mba
-mba
-mba
-mba
-bcJ
-bcJ
-bcJ
-bcJ
-bcJ
-aNa
-aNa
-aNa
-bcj
-qht
-qht
-qht
-qht
-aWt
-atL
-atx
-atr
+bkS
+blS
+blP
+blJ
+blE
+blx
+bkQ
+bkQ
+bkQ
+bkQ
+bkQ
+bkO
+bkH
+bkA
+bjC
+bkq
+bjP
+bjP
+bjP
+bjC
+bjw
+bbr
+bjm
 atj
 atf
 asW
@@ -78222,29 +80948,29 @@ wMu
 mba
 mba
 mba
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-mba
-mba
-drH
-bcJ
-aNa
-qAb
-qht
-qht
-qht
-qht
-qht
-qht
-aWt
-atL
-atx
-atr
+bkS
+blT
+blQ
+blK
+blF
+bly
+blu
+blo
+blh
+ble
+bkX
+bkQ
+bkI
+bkB
+bkv
+bkh
+bkh
+bjQ
+bjQ
+bjC
+bjw
+bbr
+bjn
 atm
 asQ
 asQ
@@ -78446,28 +81172,28 @@ baM
 nji
 nji
 nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-xTn
-qht
-qAb
-qAb
-qAb
-qht
-qht
-qht
-qht
-qht
-aWt
+bkS
+blJ
+bly
+blL
+blG
+blz
+bkQ
+blp
+bli
+bkY
+bkY
+bkR
+bkJ
+bkC
+bkw
+bkr
+bjR
+bjR
+bjR
+bjC
 atN
-atB
+bby
 ats
 aZN
 aWt
@@ -78670,35 +81396,35 @@ baM
 nji
 nji
 nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-xTn
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
+bkS
+blJ
+blR
+blM
+blH
+blA
+bkQ
+blq
+blj
+blf
+bkZ
+bkS
+bjS
+bjS
+bjS
+bjS
+bjS
+bjS
+bjS
+bjC
+bbs
+bbs
+bbs
+bbs
 aWt
 aWt
-aWt
-aWt
-aWt
-aWt
-aWt
-qAb
-qAb
-qAb
+biL
+biL
+biL
 aac
 "}
 (51,1,2) = {"
@@ -78894,35 +81620,35 @@ baM
 nji
 nji
 nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-nji
-xTn
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
-qht
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+bkS
+qAb
+qAb
+qAb
+qAb
+qAb
+qAb
+qAb
+qAb
+qAb
+qAb
 qht
 qht
 qht
 qht
 qAb
-qAb
-qAb
+biL
+biP
+biL
 aac
 "}
 (52,1,2) = {"
@@ -79138,15 +81864,15 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qht
-qht
 qAb
-qAb
-qAb
+qht
+qht
+qht
+qht
+qht
+biL
+biL
+biL
 aac
 "}
 (53,1,2) = {"
@@ -79577,7 +82303,7 @@ nji
 nji
 nji
 xTn
-qht
+bkT
 qht
 qht
 qht

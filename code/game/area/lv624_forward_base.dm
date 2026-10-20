@@ -16,6 +16,24 @@
 	name = "Senior Enlisted Advisor's Office"
 	icon_state = "airoom"
 
+// ========== Liasion's Office
+/area/forward_base/lv624/liasion
+	name = "Bunker W-Y Liasion's Office"
+	icon_state = "corporatespace"
+
+// ========== Engineering Areas ==========
+/area/forward_base/lv624/engineering/
+	icon_state = "engineering"
+	minimap_color = MINIMAP_AREA_ENGI
+
+/area/forward_base/lv624/engineering/power_storage
+	name = "Bunker Power Storage Bay"
+	icon_state = "coreroom"
+
+/area/forward_base/lv624/engineering/orbital_cannon
+	name = "Bunker Heavy Artillery Room"
+	icon_state = "weaponroom"
+
 // ========== Brig Areas ==========
 
 /area/forward_base/lv624/brig
@@ -48,6 +66,9 @@
 	name = "Southern Bunker Hallway"
 	icon_state = "port"
 
+/area/forward_base/lv624/hallways/north_gate
+	name = "Firebase Charlie Northern Gate"
+
 /area/forward_base/lv624/hallways/stairwell
 	icon_state = "stairs_lowerdeck"
 
@@ -56,6 +77,15 @@
 
 /area/forward_base/lv624/hallways/stairwell/research
 	name = "Bunker Research Stairwell"
+
+/area/forward_base/lv624/hallways/pillbox/southeast
+	name = "Southeast Bunker Pillbox"
+
+/area/forward_base/lv624/hallways/pillbox/northwest
+	name = "Northwest Bunker Pillbox"
+
+/area/forward_base/lv624/hallways/pillbox/northeast
+	name = "Northeast Bunker Pillbox"
 
 // ========== Living Space Areas ==========
 
@@ -73,6 +103,13 @@
 /area/forward_base/lv624/living/briefing
 	name = "Bunker Briefing Area"
 	icon_state = "briefing"
+
+/area/forward_base/lv624/living/cryogenics
+	name = "Bunker Backup Cryogenics Bay"
+	icon_state = "cryo"
+
+/area/forward_base/lv624/living/synth_closet
+	name = "Bunker Synthetic Storage Closet"
 
 // ========== Squad Prep Areas ==========
 
@@ -164,7 +201,13 @@
 	minimap_color = MINIMAP_AREA_CELL_LOW
 
 /area/forward_base/lv624/tent/officer_tent
-	name = "Officer's Tent"
+	name = "Senior Officer's Tent"
+	icon_state = "officerstudy"
+
+	minimap_color = MINIMAP_AREA_COMMAND
+
+/area/forward_base/lv624/tent/commander_tent
+	name = "Commanding OFficer's Tent"
 	icon_state = "officerstudy"
 
 	minimap_color = MINIMAP_AREA_COMMAND
