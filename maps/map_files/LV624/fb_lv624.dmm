@@ -2852,10 +2852,11 @@
 /area/forward_base/lv624/living/briefing)
 "akH" = (
 /obj/structure/tent/big{
-	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi';
+	name = "Combat Correspondent's Tent"
 	},
 /obj/structure/tent_curtain,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "akI" = (
 /obj/structure/stairs{
@@ -2952,7 +2953,7 @@
 /area/forward_base/lv624/living/briefing)
 "akY" = (
 /obj/structure/tent_curtain,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "akZ" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3197,7 +3198,7 @@
 "alQ" = (
 /obj/structure/tent_curtain,
 /obj/structure/flora/bush/ausbushes/lavendergrass,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "alR" = (
 /obj/structure/disposalpipe/junction,
@@ -3229,6 +3230,9 @@
 /area/lv624/ground/river/central_river)
 "alV" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
 /turf/open/gm/dirtgrassborder/west,
 /area/forward_base/lv624/tent_camp)
 "alW" = (
@@ -3253,7 +3257,8 @@
 /area/lv624/ground/river/central_river)
 "amb" = (
 /obj/structure/tent/cmd{
-	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi';
+	name = "Commanding Officer's Tent"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3314,6 +3319,9 @@
 /obj/structure/prop/tyrargo/illuminator{
 	icon_state = "floodlight-on"
 	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "amk" = (
@@ -3341,7 +3349,7 @@
 	dir = 4;
 	pixel_y = 17
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "amn" = (
 /obj/structure/bed/chair{
@@ -3350,7 +3358,7 @@
 	buckling_y = 12
 	},
 /obj/effect/landmark/start/reporter,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "amo" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -3452,6 +3460,7 @@
 /area/lv624/ground/river/west_river)
 "amH" = (
 /obj/structure/platform/metal/strata/west,
+/obj/effect/decal/strata_decals/mud_corner,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/reqs)
 "amI" = (
@@ -3463,6 +3472,7 @@
 /area/lv624/ground/caves/west_caves)
 "amJ" = (
 /obj/structure/platform/metal/strata/east,
+/obj/effect/decal/strata_decals/mud_corner,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/reqs)
 "amK" = (
@@ -3479,7 +3489,7 @@
 /obj/structure/platform_decoration/metal/strata,
 /obj/structure/machinery/light,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "amN" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -3487,7 +3497,7 @@
 /area/lv624/lazarus/landing_zones/lz1)
 "amO" = (
 /obj/structure/platform_decoration/metal/strata/north,
-/turf/open/gm/dirt/dark_brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent_camp)
 "amP" = (
 /obj/structure/surface/table/almayer,
@@ -3506,7 +3516,15 @@
 /turf/open/floor/almayer/red/east,
 /area/forward_base/lv624/brig/reception)
 "amQ" = (
-/turf/open/gm/dirt/brown/variant_5,
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 8;
+	pixel_y = -14
+	},
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 9;
+	pixel_y = 18
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent_camp)
 "amR" = (
 /obj/effect/landmark/lv624/fog_blocker,
@@ -3525,7 +3543,13 @@
 /area/lv624/ground/river/central_river)
 "amU" = (
 /obj/structure/machinery/light,
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
+/turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "amV" = (
 /obj/structure/barricade/metal/plasteel{
@@ -3541,9 +3565,6 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/floor/plating/warnplate/northwest,
 /area/lv624/ground/river/west_river)
-"amY" = (
-/turf/open/gm/dirt/brown/variant_3,
-/area/forward_base/lv624/tent_camp)
 "amZ" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /obj/effect/landmark/lv624/fog_blocker,
@@ -3555,9 +3576,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/forward_base/lv624/hallways/pillbox/northwest)
-"anb" = (
-/turf/open/gm/dirt/brown/variant_5/west,
-/area/forward_base/lv624/tent_camp)
 "anc" = (
 /obj/structure/flora/jungle/vines/light_1,
 /obj/effect/landmark/lv624/fog_blocker,
@@ -4239,6 +4257,8 @@
 /turf/open/floor/almayer/blue/north,
 /area/forward_base/lv624/preps)
 "aph" = (
+/obj/effect/landmark/start/marine/bravo,
+/obj/effect/landmark/late_join/bravo,
 /turf/open/floor/almayer/cargo_arrow,
 /area/forward_base/lv624/preps)
 "api" = (
@@ -4270,9 +4290,6 @@
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/sign/poster/pinup{
-	pixel_y = 32
 	},
 /turf/open/floor/almayer/blue/north,
 /area/forward_base/lv624/preps)
@@ -4674,7 +4691,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aqr" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -5405,7 +5422,7 @@
 	pixel_y = 16;
 	on = 1
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "ash" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -5528,8 +5545,9 @@
 /turf/closed/wall/almayer/research/containment/wall/west,
 /area/forward_base/lv624/research/containment)
 "asE" = (
-/turf/open/floor/almayer/research/containment/corner/east,
-/area/forward_base/lv624/research/containment)
+/obj/structure/pipes/vents/pump/on,
+/turf/open/floor/almayer/flooredge/west,
+/area/forward_base/lv624/research)
 "asF" = (
 /obj/structure/flora/bush/ausbushes/palebush,
 /obj/effect/landmark/lv624/fog_blocker/short,
@@ -5570,7 +5588,15 @@
 /turf/closed/wall,
 /area/lv624/lazarus/quartstorage)
 "asO" = (
-/turf/open/floor/almayer/research/containment/corner2,
+/obj/structure/machinery/camera/autoname/almayer/containment{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
 /area/forward_base/lv624/research/containment)
 "asP" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/colony{
@@ -5627,7 +5653,17 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/research)
 "asW" = (
-/turf/open/floor/almayer/research/containment/floor2/west,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 8;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/research/containment/corner_var1,
 /area/forward_base/lv624/research/containment)
 "asX" = (
 /obj/structure/flora/jungle/vines/light_3,
@@ -5660,12 +5696,6 @@
 /obj/structure/largecrate/random,
 /turf/open/floor/plating/platebotc,
 /area/lv624/lazarus/quartstorage/outdoors)
-"ate" = (
-/turf/open/floor/almayer/research/containment/corner_var1,
-/area/forward_base/lv624/research/containment)
-"atf" = (
-/turf/open/floor/almayer/research/containment/corner/west,
-/area/forward_base/lv624/research/containment)
 "atg" = (
 /turf/closed/wall/almayer/research/containment/wall/corner{
 	dir = 1
@@ -5713,15 +5743,13 @@
 /area/lv624/lazarus/research)
 "ato" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/door_display/research_cell{
-	id = "Biohazard Storage";
-	name = "Biohazard Storage Control";
-	layer = 3.125;
-	pixel_x = -3;
-	dir = 4;
-	pixel_y = 1
+/obj/structure/machinery/faxmachine/corporate{
+	department = "Firebase W-Y Research Department";
+	sub_name = "Main Laboratory";
+	pixel_x = -1;
+	pixel_y = 2
 	},
-/turf/open/floor/almayer/sterile_green_corner/west,
+/turf/open/floor/almayer/sterile_green_side/west,
 /area/forward_base/lv624/research)
 "atp" = (
 /turf/open/floor/white,
@@ -5731,28 +5759,38 @@
 /turf/open/floor/whitepurple/northeast,
 /area/lv624/lazarus/research)
 "atr" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/structure/bed/chair/comfy{
+	buckling_y = 2;
+	pixel_y = 2;
+	dir = 4
 	},
-/turf/open/floor/almayer/sterile_green_side,
+/turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/research)
 "ats" = (
-/obj/structure/closet/l3closet/scientist,
-/turf/open/floor/almayer/plating_striped/north,
-/area/forward_base/lv624/research)
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "Biohazard Storage_2";
+	name = "\improper Biohazard Storage Chamber";
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 4
+	},
+/area/forward_base/lv624/research/containment)
 "att" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin/wy{
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -7
 	},
 /obj/item/tool/pen/clicky{
 	pixel_x = -7;
-	pixel_y = -5
+	pixel_y = -11
 	},
 /obj/item/storage/box/monkeycubes{
 	pixel_x = 6;
-	pixel_y = 1
+	pixel_y = -6
 	},
 /obj/item/storage/xeno_tag_case/full{
 	pixel_y = 12
@@ -5854,23 +5892,6 @@
 /obj/item/ammo_magazine/shotgun/incendiary,
 /turf/open/floor/wood,
 /area/lv624/ground/caves/north_central_caves)
-"atN" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/surgery/circular_saw{
-	pixel_x = -1;
-	pixel_y = 4
-	},
-/obj/item/tool/surgery/retractor{
-	pixel_y = 3;
-	pixel_x = -2
-	},
-/obj/item/tool/surgery/scalpel,
-/obj/item/tool/surgery/hemostat{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/turf/open/floor/almayer/sterile_green_corner,
-/area/forward_base/lv624/research)
 "atO" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/almayer{
@@ -6732,6 +6753,9 @@
 	pixel_y = -10;
 	can_block_movement = 0
 	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "awB" = (
@@ -6972,7 +6996,7 @@
 	department = "USS Almayer";
 	pixel_y = 6
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "axm" = (
 /obj/structure/bed/chair/office/dark{
@@ -7049,7 +7073,7 @@
 	pixel_x = -8;
 	density = 0
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "axz" = (
 /obj/structure/closet/athletic_mixed,
@@ -7169,7 +7193,7 @@
 /area/lv624/lazarus/fitness)
 "axR" = (
 /obj/structure/machinery/cm_vending/clothing/combat_correspondent,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/correspondent_tent)
 "axS" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
@@ -8150,6 +8174,9 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aAG" = (
@@ -8160,7 +8187,10 @@
 /turf/open/antre/plating/direction_north/north_edge,
 /area/forward_base/lv624/hallways/east)
 "aAI" = (
-/turf/open/gm/dirt/dark_brown,
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/forward_base/lv624/tent_camp)
 "aAJ" = (
 /obj/structure/machinery/landinglight/delaytwo{
@@ -8170,7 +8200,7 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "aAK" = (
 /obj/structure/platform_decoration/metal/strata,
-/turf/open/gm/dirt/dark_brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent_camp)
 "aAL" = (
 /obj/structure/machinery/power/power_generator/port_gen,
@@ -8182,20 +8212,23 @@
 	},
 /obj/structure/tent_curtain,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAN" = (
 /obj/structure/blocker/tent{
 	dir = 4
 	},
 /obj/structure/tent_curtain,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAO" = (
 /obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAP" = (
 /obj/structure/surface/table,
@@ -8204,7 +8237,7 @@
 /area/lv624/lazarus/sleep_male)
 "aAQ" = (
 /obj/structure/blocker/tent,
-/turf/open/gm/dirt,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAR" = (
 /obj/structure/machinery/light/small{
@@ -8229,7 +8262,7 @@
 	dir = 8
 	},
 /obj/structure/surface/table/almayer,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAU" = (
 /turf/open/floor/bluecorner,
@@ -8237,7 +8270,7 @@
 "aAV" = (
 /obj/structure/blocker/tent,
 /obj/structure/surface/table/almayer,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aAW" = (
 /obj/structure/bed,
@@ -8339,10 +8372,16 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBk" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 9
+	},
 /turf/open/gm/grass/grass1,
 /area/forward_base/lv624/tent_camp)
 "aBl" = (
@@ -8352,7 +8391,7 @@
 /obj/structure/machinery/line_nexter{
 	dir = 1
 	},
-/turf/open/gm/dirt,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBn" = (
 /obj/effect/landmark/lv624/fog_blocker,
@@ -8407,7 +8446,7 @@
 /area/lv624/lazarus/robotics)
 "aBu" = (
 /obj/structure/surface/table/almayer,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBv" = (
 /obj/structure/surface/table,
@@ -8419,7 +8458,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBx" = (
 /obj/effect/landmark/hunter_secondary,
@@ -8499,28 +8538,33 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBK" = (
 /obj/structure/machinery/cm_vending/sorted/attachments,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBL" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/cargo{
 	vend_dir = 2;
-	vend_dir_whitelist = list(8,4)
+	vend_dir_whitelist = list(1, 2)
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBM" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/cargo{
-	vend_dir = 2;
-	vend_dir_whitelist = list(10,6)
+	vend_dir = 2
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBN" = (
 /obj/structure/largecrate/empty/secure,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBO" = (
@@ -8533,7 +8577,10 @@
 	dir = 4
 	},
 /obj/structure/barricade/sandbags/wired,
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBQ" = (
 /obj/structure/flora/bush/ausbushes/ywflowers,
@@ -8544,7 +8591,7 @@
 /obj/structure/machinery/line_nexter{
 	dir = 2
 	},
-/turf/open/gm/dirt,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aBS" = (
 /obj/structure/barricade/wooden{
@@ -8591,6 +8638,9 @@
 	},
 /obj/structure/machinery/light/blue{
 	invisibility = 101
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
 	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
@@ -8639,21 +8689,21 @@
 	dir = 8
 	},
 /obj/structure/surface/table/almayer,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aCf" = (
 /obj/structure/blocker/tent{
 	dir = 1
 	},
 /obj/structure/surface/table/almayer,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aCg" = (
 /obj/structure/blocker/tent{
 	dir = 1
 	},
 /obj/structure/filingcabinet,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aCh" = (
 /obj/structure/machinery/landinglight/delaytwo{
@@ -8678,7 +8728,7 @@
 	phone_category = "Requisitions";
 	phone_id = "Requisitions Tent"
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/wood_broken,
 /area/forward_base/lv624/tent/reqs_tent)
 "aCk" = (
 /obj/structure/largecrate/random,
@@ -8714,7 +8764,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/cm_vending/sorted/uniform_supply,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aCq" = (
 /obj/structure/surface/table,
@@ -8806,8 +8856,10 @@
 	dir = 8
 	},
 /obj/structure/blocker/tent,
-/obj/structure/tent/forward_base/jtac,
-/turf/open/gm/dirt/brown,
+/obj/structure/tent/forward_base/jtac{
+	name = "JTAC Tent"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aCE" = (
 /obj/structure/girder/displaced,
@@ -8825,7 +8877,7 @@
 "aCH" = (
 /obj/structure/surface/table,
 /obj/structure/blocker/tent,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aCI" = (
 /obj/effect/landmark/survivor_spawner,
@@ -8834,6 +8886,9 @@
 "aCJ" = (
 /obj/vehicle/powerloader{
 	dir = 4
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
 	},
 /turf/open/gm/dirt,
 /area/lv624/lazarus/landing_zones/lz2)
@@ -8855,7 +8910,7 @@
 /obj/structure/blocker/tent{
 	dir = 8
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aCO" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_west,
@@ -8915,11 +8970,11 @@
 "aCW" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark/start/crew_chief,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aCX" = (
 /obj/effect/landmark/start/crew_chief,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/forward_base/lv624/tent/jtac_tent)
 "aCY" = (
 /obj/structure/closet{
@@ -8966,11 +9021,11 @@
 /area/lv624/lazarus/quartstorage)
 "aDe" = (
 /obj/effect/landmark/start/pilot/cas_pilot,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDf" = (
 /obj/effect/landmark/start/pilot/dropship_pilot,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDg" = (
 /obj/structure/machinery/recharge_station/alt{
@@ -8982,14 +9037,14 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDh" = (
 /obj/structure/machinery/part_fabricator/dropship,
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDi" = (
 /turf/open/floor/warning/north,
@@ -9001,7 +9056,7 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDl" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -9014,7 +9069,7 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/jtac_tent)
 "aDn" = (
 /obj/item/bananapeel,
@@ -11465,6 +11520,11 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_x = 26
+	},
 /turf/open/floor/prison/kitchen,
 /area/forward_base/lv624/living/kitchen)
 "aKP" = (
@@ -13843,6 +13903,7 @@
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/pillbox/northwest)
 "aRK" = (
+/obj/effect/decal/strata_decals/mud_corner,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/reqs)
 "aRL" = (
@@ -13853,6 +13914,7 @@
 	id = "ne_pillbox";
 	name = "Northeast Pillbox Blast Doors"
 	},
+/obj/effect/decal/strata_decals/mud_corner,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/pillbox/northeast)
 "aRM" = (
@@ -13922,9 +13984,6 @@
 	},
 /turf/open/floor/bar,
 /area/lv624/lazarus/canteen)
-"aRY" = (
-/turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
-/area/forward_base/lv624/tent_camp)
 "aRZ" = (
 /obj/structure/machinery/landinglight/delaythree{
 	dir = 1
@@ -13995,17 +14054,21 @@
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aSl" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 10
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt/brown,
 /area/forward_base/lv624/tent_camp)
 "aSm" = (
 /obj/structure/foamed_metal,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/east_central_jungle)
-"aSn" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/dark_brown,
-/area/forward_base/lv624/tent_camp)
 "aSo" = (
 /obj/structure/stairs/perspective{
 	color = "#b6a38f";
@@ -14014,10 +14077,6 @@
 	},
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/caves/south_east_caves)
-"aSp" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
-/area/forward_base/lv624/tent_camp)
 "aSq" = (
 /obj/structure/machinery/power/apc/no_power/west,
 /turf/open/floor/grimy,
@@ -14026,7 +14085,7 @@
 /obj/structure/tent/forward_base/reqs,
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSs" = (
 /obj/structure/coatrack,
@@ -14039,7 +14098,7 @@
 "aSu" = (
 /obj/structure/tent_curtain,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSv" = (
 /obj/structure/window/framed/colony/reinforced,
@@ -14051,6 +14110,9 @@
 /area/lv624/lazarus/hop)
 "aSx" = (
 /obj/structure/largecrate/empty/case/double,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSy" = (
@@ -14127,7 +14189,7 @@
 /turf/closed/wall/r_wall,
 /area/lv624/lazarus/engineering)
 "aSM" = (
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/wood_broken4,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSN" = (
 /obj/structure/foamed_metal,
@@ -14136,11 +14198,11 @@
 /area/lv624/lazarus/engineering)
 "aSO" = (
 /obj/effect/landmark/start/cargo,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSP" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aSQ" = (
 /obj/structure/safe/floor{
@@ -14157,7 +14219,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aST" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -14203,7 +14265,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/alt_dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aTb" = (
 /turf/open/floor/plating,
@@ -14231,7 +14293,7 @@
 "aTh" = (
 /obj/effect/landmark/start/cargo,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt/brown,
+/turf/open/floor/wood/ship,
 /area/forward_base/lv624/tent/reqs_tent)
 "aTi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14290,6 +14352,9 @@
 	pixel_x = -5;
 	pixel_y = -10;
 	can_block_movement = 0
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
 	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
@@ -14411,6 +14476,9 @@
 /obj/structure/machinery/light/blue{
 	invisibility = 101
 	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aTM" = (
@@ -14425,6 +14493,9 @@
 /area/lv624/lazarus/engineering)
 "aTO" = (
 /obj/structure/barricade/sandbags/wired,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/reqs_tent)
 "aTP" = (
@@ -14524,6 +14595,9 @@
 "aUf" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/med_tent)
 "aUg" = (
@@ -14720,6 +14794,12 @@
 /area/lv624/lazarus/hop)
 "aUF" = (
 /obj/structure/largecrate/supply/medicine/medkits,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aUG" = (
@@ -14735,7 +14815,7 @@
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "aUI" = (
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent/med_tent)
 "aUJ" = (
 /obj/effect/decal/cleanable/dirt{
@@ -14897,6 +14977,9 @@
 	},
 /obj/item/tool/wrench,
 /obj/item/tool/crowbar,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "aVe" = (
@@ -14923,7 +15006,10 @@
 "aVh" = (
 /obj/structure/bed/roller,
 /obj/structure/machinery/iv_drip,
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/gm/dirt/brown,
 /area/forward_base/lv624/tent/med_tent)
 "aVi" = (
 /obj/effect/decal/warning_stripes{
@@ -15192,7 +15278,7 @@
 /turf/open/floor/almayer/sterile_green,
 /area/forward_base/lv624/tent/med_tent)
 "aVR" = (
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/forward_base/lv624/tent/jtac_tent)
 "aVS" = (
 /turf/closed/wall/almayer,
@@ -15212,17 +15298,20 @@
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/living/briefing)
 "aVW" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent/med_tent)
 "aVX" = (
 /obj/structure/blocker/tent{
 	dir = 8
 	},
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/forward_base/lv624/tent/jtac_tent)
 "aVY" = (
 /obj/structure/prop/tyrargo/traffic_signal/traffic_signal_4,
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aVZ" = (
 /obj/structure/lz_sign/tyrargo_sign{
@@ -15231,18 +15320,18 @@
 	light_power = 2;
 	light_range = 4
 	},
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aWa" = (
 /obj/structure/largecrate,
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aWb" = (
 /obj/structure/largecrate/empty/case/double,
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aWc" = (
 /turf/open/floor/almayer/uscm/south_face/southwest,
@@ -15267,7 +15356,7 @@
 /area/lv624/lazarus/engineering)
 "aWg" = (
 /obj/structure/largecrate/empty/case,
-/turf/open/gm/dirt,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "aWh" = (
 /obj/structure/fence,
@@ -15314,7 +15403,13 @@
 /turf/open/antre/plating/direction_west/west_south,
 /area/forward_base/lv624/hallways/south)
 "aWt" = (
-/turf/closed/wall/almayer/white/hull,
+/obj/structure/machinery/light/double/blue,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/research/containment/floor2,
 /area/forward_base/lv624/research/containment)
 "aWu" = (
 /obj/structure/machinery/light,
@@ -15618,9 +15713,13 @@
 /area/forward_base/lv624/hallways/stairwell/preps)
 "aXl" = (
 /obj/structure/machinery/power/apc/power/west,
+/obj/effect/landmark/start/marine/smartgunner/delta,
+/obj/effect/landmark/late_join/delta,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner/cryo)
 "aXm" = (
+/obj/effect/landmark/start/marine/smartgunner/charlie,
+/obj/effect/landmark/late_join/charlie,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner/cryo)
 "aXn" = (
@@ -15641,6 +15740,8 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
+/obj/effect/landmark/start/marine/smartgunner/bravo,
+/obj/effect/landmark/late_join/bravo,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps/smartgunner/cryo)
 "aXq" = (
@@ -16537,10 +16638,6 @@
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/dark,
 /area/lv624/lazarus/engineering)
-"aZN" = (
-/obj/structure/machinery/telecomms/processor,
-/turf/open/floor/almayer/plating2,
-/area/forward_base/lv624/research)
 "aZO" = (
 /obj/effect/landmark/xeno_spawn,
 /turf/open/gm/dirt,
@@ -17464,6 +17561,10 @@
 /obj/structure/sign/safety/stairs{
 	pixel_y = -25
 	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = 15;
+	pixel_y = -25
+	},
 /turf/open/floor/almayer/green/south,
 /area/forward_base/lv624/hallways/stairwell/research)
 "bcr" = (
@@ -17660,13 +17761,16 @@
 	name = "ship-grade camera";
 	dir = 1
 	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
 /turf/open/gm/grass/grass1,
 /area/forward_base/lv624/tent_camp)
 "bcR" = (
 /obj/structure/machinery/status_display{
 	pixel_y = -32
 	},
-/turf/open/gm/dirtgrassborder/west,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "bcS" = (
 /obj/structure/dropship_equipment/fuel/fuel_enhancer,
@@ -17952,7 +18056,8 @@
 	icon_state = "door_warning"
 	},
 /obj/structure/pipes/multiz/down{
-	dir = 1
+	dir = 1;
+	layer = 1.9
 	},
 /turf/open/floor/almayer/orange,
 /area/forward_base/lv624/engineering/orbital_cannon)
@@ -17998,6 +18103,11 @@
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/engineering/power_storage)
 "bdI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/orange/east,
 /area/forward_base/lv624/engineering/power_storage)
 "bdJ" = (
@@ -18353,6 +18463,10 @@
 	},
 /obj/effect/decal/hybrisa/dirt,
 /obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = -7;
+	pixel_y = -14
+	},
 /turf/open/floor/almayer,
 /area/forward_base/lv624/reqs)
 "bez" = (
@@ -19724,6 +19838,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/strata_decals/mud_corner,
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/west)
 "bhT" = (
@@ -19747,15 +19862,22 @@
 /area/forward_base/lv624/hallways/pillbox/northwest)
 "bhX" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
-/turf/open/gm/dirt,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
+/turf/open/gm/dirt/brown,
 /area/forward_base/lv624/tent_camp)
 "bhY" = (
 /obj/structure/machinery/power/apc/upgraded/power/south,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
 /turf/open/gm/grass/grass1,
 /area/forward_base/lv624/tent_camp)
 "bhZ" = (
 /obj/structure/tent/big{
-	icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+	icon = 'icons/obj/structures/tents_deployed_jungle.dmi';
+	name = "Senior Officer's Tent"
 	},
 /obj/structure/tent_curtain,
 /obj/effect/landmark/start/engineering,
@@ -19785,7 +19907,7 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "bid" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/grass/grass1,
+/turf/open/auto_turf/strata_grass/layer1,
 /area/forward_base/lv624/tent_camp)
 "bie" = (
 /obj/structure/fence,
@@ -19793,6 +19915,9 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "bif" = (
 /obj/structure/flora/bush/ausbushes/var3/ppflowers,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "big" = (
@@ -19813,7 +19938,7 @@
 /area/lv624/lazarus/landing_zones/lz2)
 "bij" = (
 /obj/structure/prop/tyrargo/watchtower,
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/forward_base/lv624/tent_camp)
 "bik" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -19842,6 +19967,9 @@
 /area/lv624/lazarus/robotics)
 "bio" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
 /turf/open/gm/dirt,
 /area/forward_base/lv624/tent_camp)
 "bip" = (
@@ -20003,11 +20131,11 @@
 /turf/open/floor/almayer/test_floor5,
 /area/forward_base/lv624/research/botany)
 "biT" = (
-/obj/structure/machinery/camera/autoname/almayer/containment{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/almayer/research/containment/floor2/west,
-/area/forward_base/lv624/research/containment)
+/turf/open/floor/almayer/flooredge/west,
+/area/forward_base/lv624/research)
 "biU" = (
 /obj/structure/machinery/camera/autoname/almayer{
 	dir = 4;
@@ -20151,21 +20279,25 @@
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/research/botany)
 "bjl" = (
-/obj/structure/machinery/disposal{
-	pixel_x = -1;
-	pixel_y = 1
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/door_display/research_cell{
+	id = "Biohazard Storage";
+	name = "Biohazard Storage Control";
+	layer = 3.125;
+	pixel_x = 1;
+	dir = 8;
+	pixel_y = 3
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
+/obj/item/reagent_container/glass/beaker/cryoxadone{
+	pixel_x = 6;
+	pixel_y = -11;
+	layer = 3.01
 	},
-/turf/open/floor/almayer/sterile_green_side,
-/area/forward_base/lv624/research)
-"bjm" = (
-/obj/structure/machinery/xenoanalyzer,
-/turf/open/floor/almayer/plating_stripedcorner/north,
-/area/forward_base/lv624/research)
-"bjn" = (
-/turf/open/floor/almayer/plating_striped/north,
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = -7;
+	pixel_y = -14
+	},
+/turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/research)
 "bjo" = (
 /obj/structure/disposalpipe/segment,
@@ -20186,7 +20318,9 @@
 "bjr" = (
 /obj/effect/landmark/start/researcher,
 /obj/structure/disposalpipe/segment,
-/obj/structure/pipes/vents/pump/on,
+/obj/structure/pipes/standard/manifold/hidden/cyan{
+	dir = 1
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/forward_base/lv624/research)
 "bjs" = (
@@ -20217,14 +20351,15 @@
 /turf/closed/wall/almayer/white/reinforced,
 /area/forward_base/lv624/research)
 "bjv" = (
-/obj/structure/machinery/iv_drip,
-/obj/structure/extinguisher_cabinet{
+/obj/structure/machinery/status_display{
 	pixel_y = 30
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/forward_base/lv624/research)
 "bjw" = (
-/obj/structure/bed/roller/heavy,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/forward_base/lv624/research)
 "bjx" = (
@@ -20329,34 +20464,33 @@
 /turf/open/floor/almayer/sterile_green_side/southeast,
 /area/forward_base/lv624/research)
 "bjM" = (
-/obj/structure/machinery/faxmachine/corporate{
-	can_block_movement = 0;
-	density = 0;
-	pixel_y = -16;
-	department = "Firebase W-Y Research Department";
-	sub_name = "Main Laboratory"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/machinery/light,
 /turf/open/floor/almayer/sterile_green_side,
 /area/forward_base/lv624/research)
 "bjN" = (
-/obj/structure/machinery/light,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/sign/safety/ref_bio_storage{
+	pixel_x = 15;
+	pixel_y = -25
 	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/forward_base/lv624/research)
 "bjO" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_x = 26
-	},
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
+	},
+/obj/structure/transmitter{
+	dir = 8;
+	pixel_x = 16;
+	phone_category = "Civilian";
+	phone_id = "Main Research Laboratory";
+	name = "Research Main Telephone"
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/forward_base/lv624/research)
@@ -20426,13 +20560,6 @@
 /turf/open/floor/almayer/sterile_green_side/northwest,
 /area/forward_base/lv624/research)
 "bjY" = (
-/obj/structure/transmitter{
-	dir = 8;
-	pixel_x = 16;
-	phone_category = "Civilian";
-	phone_id = "Main Research Laboratory";
-	name = "Research Main Telephone"
-	},
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -20441,6 +20568,8 @@
 /area/forward_base/lv624/research)
 "bjZ" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
 /turf/open/floor/almayer/cargo_arrow,
 /area/forward_base/lv624/preps)
 "bka" = (
@@ -20500,6 +20629,8 @@
 /area/forward_base/lv624/living/cryogenics)
 "bki" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
 "bkj" = (
@@ -20507,6 +20638,9 @@
 /obj/item/clothing/accessory/storage/black_vest/acid_harness,
 /obj/item/clothing/accessory/storage/black_vest/acid_harness,
 /obj/item/clothing/accessory/storage/black_vest/acid_harness,
+/obj/structure/sign/safety/ref_chem_storage{
+	pixel_x = -17
+	},
 /turf/open/floor/almayer,
 /area/forward_base/lv624/research/fabrication)
 "bkk" = (
@@ -20606,9 +20740,6 @@
 /obj/effect/decal/hybrisa/dirt,
 /obj/effect/landmark/ert_spawns/distress_cryo,
 /obj/effect/landmark/late_join,
-/obj/structure/machinery/light{
-	dir = 8
-	},
 /turf/open/floor/almayer/cargo_arrow/east,
 /area/forward_base/lv624/living/cryogenics)
 "bkr" = (
@@ -20620,6 +20751,8 @@
 /area/forward_base/lv624/living/cryogenics)
 "bks" = (
 /obj/structure/disposalpipe/down/almayer,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/preps)
 "bkt" = (
@@ -20999,15 +21132,6 @@
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/living/synth_closet)
-"blr" = (
-/obj/structure/flora/jungle/vines/light_1,
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/almayer/outer/internal,
-/area/forward_base/lv624/reqs)
-"bls" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/almayer/outer/internal,
-/area/forward_base/lv624/engineering/orbital_cannon)
 "blt" = (
 /turf/closed/wall/almayer/outer/internal,
 /area/forward_base/lv624/engineering/orbital_cannon)
@@ -21019,10 +21143,6 @@
 	},
 /turf/open/floor/almayer/no_build/plating,
 /area/forward_base/lv624/living/synth_closet)
-"blv" = (
-/obj/structure/flora/jungle/vines/light_2,
-/turf/closed/wall/almayer/outer/internal,
-/area/forward_base/lv624/reqs)
 "blw" = (
 /obj/structure/machinery/ares/processor/interface,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
@@ -21154,10 +21274,6 @@
 /obj/item/folder/white,
 /turf/open/floor/almayer/aicore/glowing/no_build/ai_floor3,
 /area/forward_base/lv624/living/synth_closet)
-"blN" = (
-/obj/structure/flora/jungle/vines/light_1,
-/turf/closed/wall/almayer/outer/internal,
-/area/forward_base/lv624/reqs)
 "blO" = (
 /obj/structure/machinery/ares/substrate,
 /obj/structure/machinery/status_display{
@@ -21545,6 +21661,8 @@
 /area/forward_base/lv624/preps)
 "bnc" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
 /turf/open/floor/almayer/cargo_arrow,
 /area/forward_base/lv624/preps)
 "bnd" = (
@@ -21554,6 +21672,8 @@
 /area/forward_base/lv624/living/cryogenics)
 "bne" = (
 /obj/structure/pipes/multiz/down,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
 /turf/open/floor/almayer/plate,
 /area/forward_base/lv624/preps)
 "bnf" = (
@@ -22169,6 +22289,217 @@
 /obj/effect/landmark/lv624/fog_blocker,
 /turf/open/gm/river,
 /area/lv624/ground/river/west_river)
+"bpx" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/effect/decal/strata_decals/mud_corner,
+/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/area/forward_base/lv624/hallways/west)
+"bpy" = (
+/obj/structure/machinery/light,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bpz" = (
+/turf/open/auto_turf/strata_grass/layer1,
+/area/forward_base/lv624/tent_camp)
+"bpA" = (
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpB" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/forward_base/lv624/tent_camp)
+"bpC" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpD" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 4;
+	pixel_y = -14
+	},
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 5;
+	pixel_y = 17
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpE" = (
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 9;
+	pixel_y = 18
+	},
+/obj/effect/decal/grass_overlay/grass1{
+	dir = 8;
+	pixel_y = -14
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpF" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpG" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpH" = (
+/obj/structure/surface/rack,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/reqs_tent)
+"bpI" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bpJ" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bpK" = (
+/obj/effect/decal/strata_decals/mud_corner,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bpL" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/gm/grass/grass2,
+/area/forward_base/lv624/tent_camp)
+"bpM" = (
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent/reqs_tent)
+"bpN" = (
+/obj/structure/blocker/tent,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/reqs_tent)
+"bpO" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroidwarning/west,
+/area/lv624/lazarus/landing_zones/lz2)
+"bpP" = (
+/obj/structure/flora/bush/ausbushes/grassybush,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bpQ" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/mud_corner,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpR" = (
+/obj/effect/decal/strata_decals/mud_corner,
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpS" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 10
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpT" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bpU" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpV" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bpW" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent/reqs_tent)
+"bpX" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bpY" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bpZ" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bqa" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent/reqs_tent)
+"bqb" = (
+/obj/structure/blocker/tent{
+	dir = 1
+	},
+/turf/open/floor/wood/ship,
+/area/forward_base/lv624/tent/reqs_tent)
+"bqc" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bqd" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bqe" = (
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 10
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
 "bqf" = (
 /obj/structure/surface/rack,
 /obj/item/explosive/grenade/smokebomb{
@@ -22185,11 +22516,569 @@
 	},
 /turf/open/floor/vault,
 /area/lv624/lazarus/quartstorage)
+"bqg" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bqh" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 10
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bqi" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqj" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 9
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent_camp)
+"bqk" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bql" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 4
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqm" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqn" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent_camp)
+"bqo" = (
+/obj/structure/machinery/light/blue{
+	invisibility = 101
+	},
+/obj/structure/prop/tyrargo/illuminator{
+	icon_state = "floodlight-on"
+	},
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqp" = (
+/obj/effect/decal/strata_decals/mud_corner,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqq" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 8
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqr" = (
+/obj/structure/bed/roller,
+/obj/structure/machinery/iv_drip,
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 6
+	},
+/turf/open/gm/dirt/brown,
+/area/forward_base/lv624/tent/med_tent)
+"bqs" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 8
+	},
+/turf/open/gm/grass/grass1,
+/area/forward_base/lv624/tent_camp)
+"bqt" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/gm/dirtgrassborder/west,
+/area/forward_base/lv624/tent_camp)
+"bqu" = (
+/obj/effect/decal/strata_decals/mud_corner,
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/med_tent)
+"bqv" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 10
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent/med_tent)
+"bqw" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/forward_base/lv624/tent_camp)
+"bqx" = (
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/forward_base/lv624/tent/jtac_tent)
+"bqy" = (
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqz" = (
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 10
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqA" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
+/turf/open/gm/dirt,
+/area/forward_base/lv624/tent_camp)
+"bqB" = (
+/obj/vehicle/powerloader{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/mud_corner{
+	dir = 5
+	},
+/turf/open/gm/dirt,
+/area/lv624/lazarus/landing_zones/lz2)
+"bqC" = (
+/obj/structure/machinery/xenoanalyzer,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/research)
+"bqD" = (
+/turf/open/floor/almayer/flooredge/west,
+/area/forward_base/lv624/research)
+"bqE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/surgery/circular_saw{
+	pixel_x = -1;
+	pixel_y = 4
+	},
+/obj/item/tool/surgery/retractor{
+	pixel_y = 3;
+	pixel_x = -2
+	},
+/obj/item/tool/surgery/scalpel,
+/obj/item/tool/surgery/hemostat{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/research)
+"bqF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/corner/east,
+/area/forward_base/lv624/research/containment)
+"bqG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/research/containment/floor2,
+/area/forward_base/lv624/research/containment)
+"bqH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/corner2,
+/area/forward_base/lv624/research/containment)
+"bqI" = (
+/obj/effect/landmark/start/marine/smartgunner/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps/smartgunner/cryo)
+"bqJ" = (
+/obj/structure/bed/roller/heavy,
+/obj/item/organ/xeno/drone,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bqK" = (
+/obj/structure/machinery/iv_drip,
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 9
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bqL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/forward_base/lv624/research/containment)
+"bqM" = (
+/obj/structure/bed/roller/heavy,
+/obj/item/chem_extractor,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bqN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/research)
+"bqO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2,
+/area/forward_base/lv624/research/containment)
+"bqP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2_red";
+	dir = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/research/containment/floor2,
+/area/forward_base/lv624/research/containment)
+"bqQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2_red";
+	dir = 1;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/research/containment/corner/west,
+/area/forward_base/lv624/research/containment)
+"bqR" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/open/floor/almayer/test_floor5,
+/area/forward_base/lv624/research)
+"bqS" = (
+/obj/structure/closet/l3closet/scientist{
+	pixel_x = 8;
+	can_block_movement = 0;
+	density = 0;
+	pixel_y = -2
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/research)
+"bqT" = (
+/turf/closed/wall/almayer/research/containment/wall/divide{
+	remote_id = "W_Containment_Cell_Umbilical_1"
+	},
+/area/forward_base/lv624/research/containment)
+"bqU" = (
+/turf/closed/wall/almayer/research/containment/wall/connect_e,
+/area/forward_base/lv624/research/containment)
+"bqV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/bookcase/manuals/research_and_development{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/sterile_green_corner/west,
+/area/forward_base/lv624/research)
+"bqW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bqX" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bqY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/binoculars{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/structure/machinery/door_control{
+	id = "Biohazard Storage_2";
+	name = "Biohazard Storage Windows";
+	req_one_access_txt = "19;28";
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/sterile_green_side,
+/area/forward_base/lv624/research)
+"bqZ" = (
+/obj/structure/machinery/door_control{
+	id = "W_Containment_Cell_Umbilical_1";
+	name = "Umbilical Containment Connection Port";
+	pixel_y = -6;
+	req_one_access_txt = "19;28";
+	normaldoorcontrol = 4;
+	pixel_x = 26
+	},
+/obj/structure/machinery/door_control{
+	id = "Biohazard Storage_2";
+	name = "Biohazard Storage Windows";
+	req_one_access_txt = "19;28";
+	pixel_x = 26;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/sterile_green_corner/east,
+/area/forward_base/lv624/research)
+"bra" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2_red";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning3";
+	dir = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/research/containment/corner3,
+/area/forward_base/lv624/research/containment)
+"brb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2_red";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning3";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/research/containment/corner/north,
+/area/forward_base/lv624/research/containment)
+"brc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/forward_base/lv624/research/containment)
+"brd" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#a7dbc7";
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/floor2/west,
+/area/forward_base/lv624/research/containment)
+"bre" = (
+/obj/structure/pipes/standard/simple/hidden/cyan{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/forward_base/lv624/research)
+"brf" = (
+/obj/structure/pipes/vents/pump/on,
+/turf/open/floor/almayer/dark_sterile,
+/area/forward_base/lv624/research)
+"brg" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment{
+	id = "Biohazard Storage_2";
+	name = "\improper Biohazard Storage Chamber";
+	dir = 4
+	},
+/turf/closed/wall/almayer/research/containment/wall/purple{
+	dir = 8
+	},
+/area/forward_base/lv624/research/containment)
 "brh" = (
 /obj/structure/flora/jungle/plantbot1,
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_west_jungle)
+"bri" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 8;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/research/containment/corner,
+/area/forward_base/lv624/research/containment)
+"brj" = (
+/obj/structure/machinery/camera/autoname/almayer/containment,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning2";
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research/containment/corner/west,
+/area/forward_base/lv624/research/containment)
+"brk" = (
+/obj/structure/flora/pottedplant/random{
+	pixel_y = 0
+	},
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/forward_base/lv624/research)
+"brl" = (
+/turf/closed/wall/almayer/white/hull,
+/area/forward_base/lv624/living/cryogenics)
+"brm" = (
+/obj/effect/landmark/start/marine/charlie,
+/obj/effect/landmark/late_join/charlie,
+/turf/open/floor/almayer/cargo_arrow,
+/area/forward_base/lv624/preps)
+"brn" = (
+/obj/effect/landmark/start/marine/delta,
+/obj/effect/landmark/late_join/delta,
+/turf/open/floor/almayer/cargo_arrow,
+/area/forward_base/lv624/preps)
+"bro" = (
+/obj/effect/decal/hybrisa/dirt,
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/living/cryogenics)
+"brp" = (
+/obj/structure/pipes/standard/simple/hidden/cyan,
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"brq" = (
+/obj/effect/landmark/start/marine/bravo,
+/obj/effect/landmark/late_join/bravo,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"brr" = (
+/obj/effect/landmark/start/marine/bravo,
+/obj/effect/landmark/late_join/bravo,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"brs" = (
+/obj/effect/landmark/start/marine/charlie,
+/obj/effect/landmark/late_join/charlie,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"brt" = (
+/obj/effect/landmark/start/marine/charlie,
+/obj/effect/landmark/late_join/charlie,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"bru" = (
+/obj/effect/landmark/start/marine/delta,
+/obj/effect/landmark/late_join/delta,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"brv" = (
+/obj/effect/landmark/start/marine/delta,
+/obj/effect/landmark/late_join/delta,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"brw" = (
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/forward_base/lv624/preps)
+"brx" = (
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/turf/open/floor/almayer/plate,
+/area/forward_base/lv624/preps)
+"bry" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/sign/poster/pinup{
+	pixel_y = 32;
+	pixel_x = -2
+	},
+/turf/open/floor/almayer/cargo,
+/area/forward_base/lv624/preps)
+"brz" = (
+/turf/closed/wall/almayer/white/hull,
+/area/forward_base/lv624/engineering/power_storage)
 "brC" = (
 /obj/effect/landmark/objective_landmark/close,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -23576,6 +24465,9 @@
 /area/lv624/ground/jungle/east_jungle)
 "eiH" = (
 /obj/structure/machinery/light,
+/obj/effect/decal/grass_overlay/grass1/inner{
+	dir = 5
+	},
 /turf/open/gm/dirtgrassborder/north,
 /area/forward_base/lv624/tent_camp)
 "eiP" = (
@@ -24407,7 +25299,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/lazarus/quartstorage/outdoors)
 "gby" = (
-/turf/open/gm/dirt/brown,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/lv624/lazarus/landing_zones/lz2)
 "gch" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -33406,7 +34298,7 @@ aRO
 asZ
 aRS
 aRS
-aRO
+bpT
 ajy
 bhR
 bhV
@@ -33630,7 +34522,7 @@ axl
 amm
 akH
 bid
-aRO
+bpz
 bhY
 bhR
 bfF
@@ -33853,9 +34745,9 @@ aRO
 axy
 amn
 akY
-aSp
-aRO
-aRO
+bpA
+bpU
+bpz
 ana
 bhW
 bhW
@@ -34067,7 +34959,7 @@ bix
 asY
 biu
 aDj
-aRO
+bpT
 biq
 ata
 ayA
@@ -34077,9 +34969,9 @@ aRS
 axR
 asg
 alQ
-ajg
-aBk
-aIJ
+bpA
+bpV
+bpP
 bhR
 amV
 bhR
@@ -34291,9 +35183,9 @@ asa
 asY
 biu
 xKE
-aRY
-aRO
-aRO
+bpz
+bpT
+bqs
 aRO
 aCO
 aRQ
@@ -34301,10 +35193,10 @@ aRQ
 aRQ
 aRQ
 alV
-ajg
-aRO
-aRO
-asc
+bpB
+bpV
+bpz
+bpL
 asc
 aBk
 aRS
@@ -34516,8 +35408,8 @@ bmy
 biu
 xKE
 aqq
-aRQ
-aRQ
+bpz
+bqt
 aRQ
 aEe
 aSk
@@ -34525,13 +35417,13 @@ aSk
 axT
 amp
 amb
-ajg
-ajg
-aRQ
-aRQ
-aRQ
-aRY
-ajy
+bpA
+bpA
+bpQ
+bpz
+bpz
+bpz
+bpy
 aRy
 amd
 aRc
@@ -34740,7 +35632,7 @@ biw
 aBl
 xKE
 aVY
-aSk
+bqy
 aSk
 aSk
 bil
@@ -34749,12 +35641,12 @@ aSk
 ayT
 ang
 amc
+bpB
+bpA
+bpR
 ajg
-ajg
-ajg
-aSk
-aSk
-aSf
+bpF
+bpz
 bcQ
 aRy
 aQV
@@ -34963,23 +35855,23 @@ biy
 kQY
 kQY
 azs
-aAI
-aSk
-aSk
-aSk
-amj
-aSk
-aSk
-aSk
+bpA
+bqz
+bqq
+bqq
+bqo
+bqm
+bpI
+bpI
 awA
 amj
-ajg
-ajg
-ajg
+bpB
+bpA
+bpS
 bhX
-aSk
-aSf
-aRO
+bpG
+bpz
+bpz
 aRy
 bhK
 aRc
@@ -35187,22 +36079,22 @@ pHx
 vVD
 aWc
 azs
-aAI
-aAI
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-amY
-ajg
+bpA
+bpA
+bpU
+bpz
+bpz
+bqn
+bpA
+bpA
+bpA
+bpA
+bpA
+bpB
+bpB
+bpA
+bpA
+bpD
 aAI
 bhS
 bhM
@@ -35411,23 +36303,23 @@ hSp
 npf
 aWZ
 azs
-aAI
-ajg
-ajg
-amQ
-amQ
-amQ
-amQ
-amQ
-amQ
-amQ
-amQ
-ajg
-ajg
-ajg
-ajg
-ajg
-aAI
+bpA
+bpB
+bpB
+bpB
+bpA
+bpA
+bpA
+bpB
+bpB
+bpB
+bpB
+bpA
+bpA
+bpB
+bpB
+bpB
+bpA
 bhS
 ayf
 aJT
@@ -35635,24 +36527,24 @@ aHR
 oek
 akZ
 azs
-aAI
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-aSp
-aSp
-aSp
-ajg
-aAI
-aKc
+bpA
+bpB
+bpA
+bpA
+bpB
+bpB
+bpB
+bqd
+bqd
+bpB
+bpA
+bpA
+bpB
+bpB
+bpA
+bpA
+bpB
+bpx
 amq
 aJo
 aJo
@@ -35859,23 +36751,23 @@ kQY
 kQY
 kQY
 bis
-aAI
-ajg
+bpB
+bpA
 aUI
-aVh
+bqr
 aVh
 aUI
 aUI
 aUf
 aTO
-aAO
+bqa
 aBP
-aSR
+bpW
 aBj
 aAO
 aSr
-aAI
-aAI
+bpE
+bpC
 bhS
 bhN
 alJ
@@ -36083,8 +36975,8 @@ biz
 aBl
 xKE
 xKE
-ajg
-ajg
+bpA
+bpA
 aVW
 aVz
 aVi
@@ -36092,14 +36984,14 @@ aUW
 aUJ
 aUg
 aSR
-aBJ
+bqb
 aBR
-aSR
+bpM
 aBm
 aAQ
-aSt
-aSf
-asc
+bpH
+bpz
+bpz
 aRy
 amt
 aRb
@@ -36307,9 +37199,9 @@ bmy
 biu
 xKE
 aVZ
-ajg
-ajg
-aVW
+bpA
+bpA
+bqu
 aVA
 aVj
 aUX
@@ -36322,7 +37214,7 @@ aBK
 aBu
 aAT
 aSt
-aSh
+bpz
 bcR
 aRy
 aRH
@@ -36530,10 +37422,10 @@ asa
 asY
 biu
 xKE
-aSk
-ajg
-ajg
-aVW
+bpz
+bpA
+bpA
+bqu
 aVD
 aVj
 aUX
@@ -36546,7 +37438,7 @@ aBL
 aBw
 aAV
 aAL
-aSk
+bpz
 amM
 aRw
 aRw
@@ -36755,9 +37647,9 @@ asY
 biu
 xKE
 aWa
-ajg
-ajg
-aVW
+bpA
+bpA
+bqu
 aVE
 aVl
 aUY
@@ -36979,9 +37871,9 @@ asY
 biu
 xKE
 aWb
-ajg
-ajg
-aVW
+bpA
+bpA
+bqu
 aVG
 aUZ
 aUZ
@@ -36989,13 +37881,13 @@ aUP
 aUr
 aSR
 aCj
-aSM
-aSM
-aSM
-aSM
+bpM
+bpM
+bpM
+bpM
 aSu
-aSn
-aAI
+bpB
+bpB
 aRK
 amv
 aRw
@@ -37203,9 +38095,9 @@ asY
 asY
 xKE
 aWg
-ajg
-ajg
-aVW
+bpA
+bpA
+bqu
 aVJ
 aUS
 aUS
@@ -37216,9 +38108,9 @@ aCp
 aSS
 aSS
 aSP
-aSM
+bpM
 aAN
-aAI
+bpB
 aAK
 amJ
 amx
@@ -37426,10 +38318,10 @@ bix
 asY
 asY
 aDj
-aAI
-ajg
-ajg
-aVW
+bpA
+bpA
+bpA
+bqu
 aVJ
 aUS
 aUS
@@ -37440,7 +38332,7 @@ aTr
 aBX
 aBN
 aBJ
-aAQ
+bpN
 aSx
 amU
 aRT
@@ -37650,24 +38542,24 @@ asa
 biA
 asY
 xKE
-ajg
-ajg
-aSk
-aVW
+bpA
+bpA
+bpz
+bqv
 aVQ
 aVv
 aVc
 aUT
 aUC
+bqe
 bif
-bif
-bhX
-aSk
-aSk
-aSk
-aSk
-aSf
-aRO
+bpY
+bpI
+bpI
+bpI
+bpI
+bpz
+bpz
 bhD
 bhO
 bfD
@@ -37875,23 +38767,23 @@ asa
 asa
 xKE
 aAF
-aSk
-bhX
-bhX
+bql
+bqA
+bqw
 bio
-aSk
+bpI
 aVd
 aTL
 aUF
-aSk
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-aAI
+bqg
+bpA
+bpA
+bpA
+bpA
+bpA
+bpA
+bpA
+bpA
 aRL
 bhC
 bmw
@@ -38103,19 +38995,19 @@ aDg
 aVX
 aCN
 aCD
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
+bpA
+bpA
+bpA
+bpA
+bpB
+bpB
+bpB
+bpB
+bpA
+bpA
+bpB
 amQ
-amQ
-amQ
+bpC
 aRL
 bhP
 bhG
@@ -38327,19 +39219,19 @@ aDh
 aDe
 aCX
 aVR
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-ajg
-bhX
-ajg
-anb
-aSk
-aSf
-aRO
+bpA
+bpB
+bpB
+bpB
+bqh
+bqc
+bpZ
+bpX
+bpB
+bpA
+bpJ
+bpz
+bpz
 bhD
 bhD
 sqw
@@ -38551,17 +39443,17 @@ aDk
 aDf
 aCW
 aCH
-aSk
+bqp
 ajg
 bij
-ajg
-aSk
+bqj
+bqi
 aTx
 aTl
 bhZ
-ajg
-anb
-aSk
+bpB
+bpA
+bpK
 eiH
 aRT
 bhD
@@ -38772,20 +39664,20 @@ aXX
 xXB
 aia
 aDm
-aVR
-aVR
+bqx
+bqx
 aCH
-aSk
+bpK
 ajg
-ajg
-bhX
+bpA
+bqk
 aSk
 aTz
 aTm
 bia
-ajg
-anb
-aSk
+bpB
+bpA
+bpK
 aSf
 aRO
 aRO
@@ -38995,21 +39887,21 @@ aRG
 uRE
 aqR
 aDv
-aCJ
+bqB
 gby
 gby
 aCJ
 aSk
-aSk
-aSk
+bql
+bql
 aSk
 aSk
 aTA
 aTn
 bib
-ajg
-ajg
-aSk
+bpA
+bpA
+bpK
 aSh
 aRQ
 aRQ
@@ -39220,8 +40112,8 @@ uzH
 uzH
 uzH
 uzH
-uzH
-uzH
+bpO
+bpO
 uzH
 uzH
 uzH
@@ -39231,8 +40123,8 @@ uzH
 aRG
 uzH
 uzH
-uzH
-uzH
+bpO
+bpO
 uzH
 uzH
 uzH
@@ -72385,18 +73277,18 @@ qAb
 qAb
 qAb
 qAb
-awd
-avY
-avY
-avY
+qAb
+qAb
+qAb
+qAb
 anh
-qht
-qht
-qht
-qht
-qht
-qht
-qht
+anh
+anh
+anh
+anh
+anh
+anh
+anh
 aNf
 aNf
 aNf
@@ -75315,7 +76207,7 @@ bdJ
 bkU
 aRw
 bcv
-aXU
+brw
 bks
 bki
 bjZ
@@ -75539,9 +76431,9 @@ apr
 bdq
 aRw
 bcw
-bat
+brx
 bne
-bmA
+brp
 bnc
 bna
 bmR
@@ -76435,9 +77327,9 @@ aps
 bdp
 aRw
 bcx
-bat
-bat
-aXU
+brr
+brr
+brq
 aph
 ape
 bjI
@@ -76659,9 +77551,9 @@ aps
 bdp
 aRw
 bcy
-aXU
-aXU
-bat
+brq
+brq
+brr
 aph
 ape
 bjd
@@ -77555,10 +78447,10 @@ blc
 bdv
 aRw
 bcz
-aXU
-aXU
-bat
-aph
+brt
+brt
+brs
+brm
 apf
 bjI
 apb
@@ -77768,21 +78660,21 @@ awf
 bcM
 bcM
 bcM
-blN
-blv
-blv
-blv
-blr
+bcM
+bcM
+bcM
+bcM
+bcM
 aRw
 aRw
 bcK
 aRw
 aRw
 bcA
-bat
-bat
-aXU
-aph
+brs
+brs
+brt
+brm
 apf
 bjd
 apb
@@ -77996,7 +78888,7 @@ avY
 avY
 avY
 avY
-bls
+blt
 bdZ
 bdZ
 bdN
@@ -78451,7 +79343,7 @@ bdN
 bdy
 baL
 baL
-bbF
+bry
 bbF
 bbV
 bbF
@@ -78675,10 +79567,10 @@ bdO
 bdz
 baL
 apn
-bat
-bat
-aXU
-aph
+brv
+brv
+bru
+brn
 apg
 bjI
 bmK
@@ -78688,7 +79580,7 @@ bae
 aZH
 aYy
 aWP
-aXm
+bqI
 anC
 aWp
 aac
@@ -78899,10 +79791,10 @@ bdP
 bdA
 baL
 bcB
-aXU
-aXU
-bat
-aph
+bru
+bru
+brv
+brn
 apg
 bjd
 bjy
@@ -81139,7 +82031,7 @@ bcG
 bcG
 bcG
 bdl
-bkz
+brz
 bbc
 bkm
 bkc
@@ -81597,12 +82489,12 @@ bju
 atK
 att
 ato
-atg
-asD
-asD
-asD
-asv
-aWt
+bqV
+bqR
+bqM
+bqJ
+bqC
+bbs
 aac
 "}
 (44,1,2) = {"
@@ -81820,13 +82712,13 @@ bmU
 bbh
 bcc
 atx
-bbe
-bja
-ate
+bbr
+bqW
+bqD
 biT
 asE
-asB
-aWt
+bqD
+bbs
 aac
 "}
 (45,1,2) = {"
@@ -82045,12 +82937,12 @@ bjB
 atL
 bjr
 atr
-atl
-asG
-atb
-asG
-asB
-aWt
+bqX
+bqS
+bqN
+bqK
+bqE
+bbs
 aac
 "}
 (46,1,2) = {"
@@ -82267,14 +83159,14 @@ bjC
 bjC
 bjC
 bjv
-bbr
+bre
 bjl
-atj
-asG
-atb
-asG
-asB
-aWt
+bqY
+atg
+asD
+asD
+asD
+asv
 aac
 "}
 (47,1,2) = {"
@@ -82486,19 +83378,19 @@ bkH
 bkA
 bjC
 bkq
-bjP
+bro
 bjP
 bjP
 bjC
 bjw
+brf
 bbr
-bjm
-atj
-atf
+bbe
+atl
 asW
 asO
+bqF
 asB
-aWt
 aac
 "}
 (48,1,2) = {"
@@ -82714,15 +83606,15 @@ bkh
 bjQ
 bjQ
 bjC
-bjw
-bbr
-bjn
-atm
-asQ
-asQ
-asQ
-asC
-aWt
+brk
+bby
+bby
+bqZ
+bja
+asG
+atb
+bqG
+asB
 aac
 "}
 (49,1,2) = {"
@@ -82937,16 +83829,16 @@ bkr
 bjR
 bjR
 bjR
-bjC
-atN
-bby
+brl
+atg
+brg
 ats
-aZN
+asD
+atj
+bqO
+atb
 aWt
-aWt
-aWt
-aWt
-aWt
+asB
 aac
 "}
 (50,1,2) = {"
@@ -83161,16 +84053,16 @@ bjS
 bjS
 bjS
 bjS
-bjC
-bbs
-bbs
-bbs
-bbs
-aWt
-aWt
-biL
-biL
-biL
+brl
+atj
+bri
+brc
+bra
+bqT
+bqP
+atb
+bqG
+asB
 aac
 "}
 (51,1,2) = {"
@@ -83377,6 +84269,7 @@ bkS
 bkS
 bkS
 bkS
+anh
 qAb
 qAb
 qAb
@@ -83385,16 +84278,15 @@ qAb
 qAb
 qAb
 qAb
-qAb
-qAb
-qht
-qht
-qht
-qht
-qAb
-biL
-biP
-biL
+atj
+brj
+brd
+brb
+bqT
+bqQ
+bqL
+bqH
+asB
 aac
 "}
 (52,1,2) = {"
@@ -83609,16 +84501,16 @@ qht
 qht
 qht
 qht
-qht
 qAb
-qht
-qht
-qht
-qht
-qht
-biL
-biL
-biL
+atm
+asQ
+asQ
+asQ
+bqU
+asQ
+asQ
+asQ
+asC
 aac
 "}
 (53,1,2) = {"
@@ -83833,16 +84725,16 @@ qht
 qht
 qht
 qht
-qht
-qht
-qht
-qht
-qAb
-qht
-qht
 qAb
 qAb
 qAb
+qAb
+qAb
+qAb
+qAb
+biL
+biP
+biL
 aac
 "}
 (54,1,2) = {"
@@ -84063,10 +84955,10 @@ qht
 qht
 qht
 qht
-qht
-qht
 qAb
-qAb
+biL
+biL
+biL
 aac
 "}
 (55,1,2) = {"
@@ -84287,8 +85179,8 @@ qht
 qht
 qht
 qht
-qht
-qht
+qAb
+qAb
 qAb
 qAb
 aac
@@ -84511,7 +85403,7 @@ qht
 qht
 qht
 qht
-qht
+qAb
 qAb
 qAb
 qAb
