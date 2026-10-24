@@ -208,21 +208,43 @@
 	y_dim = 4
 
 /obj/structure/tent/forward_base/
+	name = "Semi-permanent Tent"
+	health = 400
 	icon = 'icons/obj/structures/tents_deployed_massive.dmi'
 
+/obj/structure/tent/forward_base/Initialize(...)
+	. = ..()
+
+	desc += "\nDue to its semi-permanent nature, it cannot be deconstructed by hand."
+
+/obj/structure/tent/forward_base/attackby(obj/item/item, mob/user)
+	var/obj/item/tool/shovel/shovel = item
+	if(istype(shovel) && !shovel.folded && !user.action_busy)
+		to_chat(user, SPAN_WARNING("This tent cannot be deconstructed!"))
+		return
+
+	. = ..()
+
 /obj/structure/tent/forward_base/reqs
+	desc = "A massive USCM Requisitions tent, designed for semi-permanent firebases. It is equipped with all the necessities the standard requisitions line would need. Entrances on the west, south, and eastern sides.\nWhile slightly stronger than its smaller cousins, its not going to hold up against anything determined to take it down."
+
 	icon_state = "fb_reqs_interior"
 	roof_state = "fb_reqs_top"
 	x_dim = 7
 	y_dim = 6
 
 /obj/structure/tent/forward_base/med
+	desc = "A massive USCM Medical tent, designed for semi-permanent firebases. It is equipped with advanced field surgery equipment as well as automated medical machines and storage. Entrance on the western side.\nWhile slightly stronger than its smaller cousins, its not going to hold up against anything determined to take it down."
+
 	icon_state = "fb_med_interior"
 	roof_state = "fb_med_top"
 	x_dim = 8
 	y_dim = 5
 
 /obj/structure/tent/forward_base/jtac
+	desc = "A very large USCM JTAC tent, designed for semi-permanent firebases. It is equipped with a dropship part printer and is tall enough to allow powerloaders underneath the cover of the tarp. Entrances on the south and eastern side."
+	health = 300
+
 	icon_state = "fb_jtac_interior"
 	roof_state = "fb_jtac_top"
 	x_dim = 4
