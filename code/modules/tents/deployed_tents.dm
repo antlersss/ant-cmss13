@@ -30,15 +30,16 @@
 	RegisterSignal(src, COMSIG_MOVABLE_TURF_ENTERED, PROC_REF(register_turf_signals))
 	register_turf_signals()
 
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("jungle")
-			icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
-		if("desert")
-			icon = 'icons/obj/structures/tents_deployed_desert.dmi'
-		if("snow")
-			icon = 'icons/obj/structures/tents_deployed_snow.dmi'
-		if("urban")
-			icon = 'icons/obj/structures/tents_deployed_urban.dmi'
+	if(icon == 'icons/obj/structures/tents_deployed_classic.dmi')
+		switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+			if("jungle")
+				icon = 'icons/obj/structures/tents_deployed_jungle.dmi'
+			if("desert")
+				icon = 'icons/obj/structures/tents_deployed_desert.dmi'
+			if("snow")
+				icon = 'icons/obj/structures/tents_deployed_snow.dmi'
+			if("urban")
+				icon = 'icons/obj/structures/tents_deployed_urban.dmi'
 
 	if(roof_state)
 		roof_image = image(icon, src, roof_state)
