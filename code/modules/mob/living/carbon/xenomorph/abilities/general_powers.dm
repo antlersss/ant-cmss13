@@ -412,6 +412,13 @@
 		to_chat(xeno, SPAN_XENOWARNING("Our psychic link is gone, the Queen is either dead or too far away!"))
 		return
 
+	var/turf/view_origin = get_turf(xeno.client ? xeno.client.get_eye() : xeno)
+	var/fog_z = min(view_origin.z, target_turf.z)
+	for(var/turf/path_turf as anything in get_line(view_origin, target_turf, include_start_atom = FALSE))
+		if(IS_OPAQUE_TURF(path_turf) || (locate(/obj/structure/blocker/fog) in locate(path_turf.x, path_turf.y, fog_z)))
+			to_chat(xeno, SPAN_XENOWARNING("We cannot see that location clearly enough to mark it."))
+			return FALSE
+
 	var/tally = 0
 
 	for(var/obj/effect/alien/resin/marker/MRK in xeno.hive.resin_marks)
@@ -654,6 +661,7 @@
 	xeno.visible_message(SPAN_XENOWARNING("[xeno] [action_text][findtext(action_text, "e", -1) || findtext(action_text, "p", -1) ? "s" : "es"] at [target]!"), SPAN_XENOWARNING("We [action_text] at [target]!"))
 
 	pre_pounce_effects()
+	SEND_SIGNAL(owner, COMSIG_XENO_POUNCE_STARTED, target)
 
 	xeno.pounce_distance = get_dist(xeno, target)
 	if(xeno.z != target.z)
@@ -727,14 +735,21 @@
 		to_chat(xeno, SPAN_NOTICE("We are now hiding."))
 		button.icon_state = "template_active"
 		RegisterSignal(xeno, COMSIG_MOB_STATCHANGE, PROC_REF(unhide_on_stat))
+		RegisterSignal(xeno, COMSIG_LIVING_PRE_DOAFTER, PROC_REF(unhide_on_action))
 	else
 		xeno.layer = initial(xeno.layer)
 		to_chat(xeno, SPAN_NOTICE("We have stopped hiding."))
 		button.icon_state = "template_xeno"
-		UnregisterSignal(xeno, COMSIG_MOB_STATCHANGE)
+		UnregisterSignal(xeno, list(COMSIG_MOB_STATCHANGE, COMSIG_LIVING_PRE_DOAFTER))
 	xeno.update_wounds()
 	apply_cooldown()
 	return ..()
+
+/// SIGNAL_HANDLER for COMSIG_LIVING_PRE_DOAFTER
+/datum/action/xeno_action/onclick/xenohide/proc/unhide_on_action(source, delay)
+	SIGNAL_HANDLER
+	if(delay > 0)
+		post_attack()
 
 /datum/action/xeno_action/onclick/xenohide/proc/unhide_on_stat(mob/living/carbon/xenomorph/source, new_stat, old_stat)
 	SIGNAL_HANDLER

@@ -87,6 +87,10 @@
 /area/forward_base/lv624/hallways/pillbox/northeast
 	name = "Northeast Bunker Pillbox"
 
+/area/forward_base/lv624/hallways/disposals
+	name = "Bunker Exterior Disposals"
+	xeno_alert_enabled = FALSE
+
 // ========== Living Space Areas ==========
 
 /area/forward_base/lv624/living/
@@ -191,12 +195,15 @@
 /area/forward_base/lv624/tent_camp
 	name = "Bunker Exterior Tent Camp"
 	icon_state = "invi"
+	ceiling = CEILING_NONE
+	xeno_alert_enabled = FALSE
 
 /area/forward_base/lv624/tent
 	name = "Tent"
 	icon_state = "livingspace"
 
 	ceiling = CEILING_NONE
+	xeno_alert_enabled = FALSE
 	sound_environment = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	minimap_color = MINIMAP_AREA_CELL_LOW
 
@@ -234,3 +241,12 @@
 
 /area/forward_base/lv624/tent/correspondent_tent
 	name = "Combat Correspondent's Tent"
+
+/area/forward_base/lv624/landing_zones/lz2
+	name = "\improper Normandy Landing Zone"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "green"
+	ceiling = CEILING_NONE
+	xeno_alert_enabled = FALSE
+	is_landing_zone = TRUE
+	linked_lz = DROPSHIP_LZ2

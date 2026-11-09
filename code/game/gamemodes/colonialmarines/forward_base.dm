@@ -10,9 +10,10 @@
 	name = GAMEMODE_FORWARD_BASE
 	config_tag = GAMEMODE_FORWARD_BASE
 	votable = TRUE
-	max_players = 85
+	max_players = 70
 	var/hive_pylon_timer
 	var/hive_pylons_charged = FALSE
+	var/base_empty_since
 
 /datum/game_mode/colonialmarines/forward_base/proc/update_hive_surge(datum/hive_status/hive)
 	if(hive.hivenumber != XENO_HIVE_NORMAL)
@@ -53,14 +54,12 @@
 
 /datum/game_mode/colonialmarines/forward_base/pre_setup()
 	. = ..()
-	SSradio.ground_to_reserved = TRUE
+	SSradio.include_reserved_in_available = TRUE
 	SSradio.update_cache()
 	for(var/obj/structure/machinery/computer/shuttle/dropship/flight/console in GLOB.machines)
 		if(console.linked_lz && istype(get_area(console), /area/forward_base))
 			active_lz = console
 			break
-	for(var/area/forward_base/bunker_area in GLOB.all_areas)
-		bunker_area.flags_area |= AREA_NOBURROW
 	for(var/obj/effect/landmark/lv624/fog_blocker/fog in GLOB.landmarks_list)
 		fog.time_to_dispel = FORWARD_BASE_FOG_DURATION
 
@@ -76,7 +75,6 @@
 		arc_tech.announce_message = "Replacement components for the base's ARC have been authorized and will be delivered through ASRS."
 	if(GLOB.almayer_orbital_cannon)
 		COOLDOWN_START(GLOB.almayer_orbital_cannon, ob_firing_cooldown, FORWARD_BASE_FOG_DURATION - ROUND_TIME)
-	addtimer(CALLBACK(src, PROC_REF(allow_base_burrowing)), FORWARD_BASE_FOG_DURATION - ROUND_TIME)
 	addtimer(CALLBACK(src, PROC_REF(disable_base_comms)), FORWARD_BASE_FOG_DURATION + FORWARD_BASE_COMMS_FAILURE - ROUND_TIME)
 	addtimer(CALLBACK(src, PROC_REF(warn_resin_clear)), FORWARD_BASE_FOG_DURATION - ROUND_TIME)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_announcement), "The mist is almost gone. In one minute, the tallhosts will be exposed. Gather yourselves and prepare to tear their nest apart.", "everything", QUEEN_MOTHER_ANNOUNCE), FORWARD_BASE_FOG_DURATION - FORWARD_BASE_FOG_WARNING - ROUND_TIME)
@@ -85,11 +83,6 @@
 	SSshuttle.action_load(SSmapping.all_shuttle_templates[/datum/map_template/shuttle/normandy], landing_zone)
 	for(var/obj/structure/machinery/computer/shuttle/dropship/flight/console in GLOB.machines)
 		console.time_lock = FORWARD_BASE_FOG_DURATION
-
-/datum/game_mode/colonialmarines/forward_base/proc/allow_base_burrowing()
-	for(var/area/forward_base/bunker_area in GLOB.all_areas)
-		if(!(initial(bunker_area.flags_area) & AREA_NOBURROW))
-			bunker_area.flags_area &= ~AREA_NOBURROW
 
 /datum/game_mode/colonialmarines/forward_base/proc/disable_base_comms()
 	marine_announcement("WARNING. BASE RELAY BACKUP BATTERY DEPLETED. Military radio coverage is offline. Recommended action: activate a civilian communications tower to restore communications through the colony network.", "BASE COMMUNICATIONS ALERT", 'sound/AI/commandreport.ogg')
@@ -105,13 +98,19 @@
 	marine_announcement("WARNING. PERIMETER DECONTAMINATION ACTIVE. C10-W weedkiller is being dispersed around the base perimiter.", "BASE PERIMETER ALERT", 'sound/effects/rocketpod_fire.ogg')
 
 /datum/game_mode/colonialmarines/forward_base/spawn_lz_sentry(turf/target, list/structures_to_break)
-	new /obj/structure/machinery/defenses/sentry/premade/deployable/colony/landing_zone/forward_base(target)
+	var/obj/structure/machinery/sentry_holder/landing_zone/forward_base/holder = new(target)
+	holder.deploy_sentry()
 
 /datum/game_mode/colonialmarines/forward_base/check_win()
-	if(SSticker.current_state != GAME_STATE_PLAYING || round_started > 0 || round_finished)
+	if(SSticker.current_state != GAME_STATE_PLAYING || round_finished)
+		return
+	if(ROUND_TIME < 10 MINUTES)
 		return
 	if(!count_marines(SSmapping.levels_by_trait(ZTRAIT_GROUND)))
 		round_finished = MODE_INFESTATION_X_MAJOR
+		return
+	. = ..()
+	if(round_finished)
 		return
 	var/datum/hive_status/main_hive = GLOB.hive_datum[XENO_HIVE_NORMAL]
 	if(!main_hive.see_humans_on_tacmap)
@@ -126,16 +125,20 @@
 			main_hive.tacmap_requires_queen_ovi = FALSE
 			SEND_SIGNAL(main_hive, COMSIG_XENO_REVEAL_TACMAP)
 			xeno_announcement("There is only a handful of tallhosts left, they are now visible on our hive mind map.", XENO_HIVE_NORMAL, SPAN_ANNOUNCEMENT_HEADER_BLUE("[QUEEN_MOTHER_ANNOUNCE]"))
-	if(main_hive.see_humans_on_tacmap)
-		for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
-			if(isturf(human.loc) && !istype(human.buckled, /obj/structure/bed/nest) && istype(get_area(human), /area/forward_base))
-				return ..()
-		round_finished = MODE_INFESTATION_X_MAJOR
-		return
-	return ..()
+	for(var/mob/living/carbon/human/human as anything in GLOB.human_mob_list)
+		if(human.stat != DEAD && !HAS_TRAIT(human, TRAIT_NESTED) && istype(get_area(human), /area/forward_base))
+			base_empty_since = null
+			return
+	if(isnull(base_empty_since))
+		base_empty_since = world.time
+	if(world.time >= base_empty_since + 5 MINUTES)
+		round_finished = MODE_INFESTATION_X_MINOR
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony/landing_zone/forward_base
 	battery_duration = FORWARD_BASE_TURRET_BATTERY_DURATION
+
+/obj/structure/machinery/sentry_holder/landing_zone/forward_base
+	turret_path = /obj/structure/machinery/defenses/sentry/premade/deployable/colony/landing_zone/forward_base
 
 #undef FORWARD_BASE_FOG_DURATION
 #undef FORWARD_BASE_FOG_WARNING
