@@ -2462,10 +2462,10 @@
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = -22;
-	name = "Southeast Pillbox Blast Doors";
-	id = "se_pillbox"
+	name = "Brig Armory Doors";
+	id = "brig_armory"
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/plating/plating_catwalk,
 /area/forward_base/lv624/hallways/pillbox/southeast)
 "ajk" = (
 /obj/structure/flora/jungle/vines/light_2,
@@ -10976,15 +10976,10 @@
 /turf/open/floor/hybrisa/metal/yellow_warning_floor,
 /area/forward_base/lv624/hallways/south)
 "aIX" = (
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	dir = 4;
-	name = "Southeast Pillbox Blast Doors";
-	id = "se_pillbox"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/turf/open/floor/almayer/purple/southeast,
 /area/forward_base/lv624/hallways/pillbox/southeast)
 "aIY" = (
 /obj/structure/flora/jungle/vines/light_1,
@@ -11103,9 +11098,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/effect/sentry_landmark/lz_2/top_left,
 /obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison/southwest,
+/turf/open/floor/almayer/plate,
 /area/forward_base/lv624/hallways/pillbox/southeast)
 "aJy" = (
 /obj/structure/disposalpipe/segment{
@@ -18934,11 +18928,6 @@
 /turf/open/floor/almayer/purple/south,
 /area/forward_base/lv624/hallways/east)
 "bgd" = (
-/obj/structure/machinery/door_control{
-	pixel_y = -22;
-	name = "Southeast Pillbox Blast Doors";
-	id = "se_pillbox"
-	},
 /obj/structure/disposalpipe/junction{
 	dir = 4;
 	icon_state = "pipe-j2"
@@ -19008,15 +18997,7 @@
 /turf/open/floor/almayer,
 /area/forward_base/lv624/hallways/east)
 "bgm" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/door/poddoor/almayer/closed{
-	dir = 4;
-	name = "Southeast Pillbox Blast Doors";
-	id = "se_pillbox"
-	},
-/turf/open/floor/hybrisa/metal/yellow_warning_floor,
+/turf/open/floor/almayer/purple/east,
 /area/forward_base/lv624/hallways/pillbox/southeast)
 "bgn" = (
 /obj/structure/disposalpipe/segment{
@@ -20498,8 +20479,17 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/bookcase/manuals/research_and_development{
-	pixel_y = 10
+/obj/structure/closet{
+	name = "Material Closet"
+	},
+/obj/item/stack/sheet/metal{
+	amount = 20
+	},
+/obj/item/stack/sheet/mineral/plastic{
+	amount = 15
+	},
+/obj/item/stack/sheet/glass{
+	amount = 30
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/forward_base/lv624/research/fabrication)
@@ -20542,18 +20532,6 @@
 	pixel_y = 18
 	},
 /obj/structure/pipes/vents/pump/on,
-/obj/item/stack/sheet/mineral/plastic{
-	amount = 15;
-	pixel_x = -1
-	},
-/obj/item/stack/sheet/metal{
-	amount = 20
-	},
-/obj/item/stack/sheet/glass{
-	amount = 20;
-	pixel_x = 2;
-	pixel_y = 3
-	},
 /turf/open/floor/almayer/mono,
 /area/forward_base/lv624/research/fabrication)
 "bkz" = (
