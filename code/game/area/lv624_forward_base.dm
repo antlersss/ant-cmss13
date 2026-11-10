@@ -196,6 +196,7 @@
 	name = "Bunker Exterior Tent Camp"
 	icon_state = "invi"
 	ceiling = CEILING_NONE
+	weather_enabled = TRUE
 	xeno_alert_enabled = FALSE
 
 /area/forward_base/lv624/tent
@@ -203,6 +204,7 @@
 	icon_state = "livingspace"
 
 	ceiling = CEILING_NONE
+	weather_enabled = FALSE
 	xeno_alert_enabled = FALSE
 	sound_environment = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	minimap_color = MINIMAP_AREA_CELL_LOW
