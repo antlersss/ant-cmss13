@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(clever_mobs)
 		current_run = registered_clever_mobs.Copy()
 
 	while (length(current_run))
-		var/mob/living/target = current_run[length(current_run)]
+		var/mob/living/clever/target = current_run[length(current_run)]
 		current_run.len--
 
 		if (!target || QDELETED(target))
