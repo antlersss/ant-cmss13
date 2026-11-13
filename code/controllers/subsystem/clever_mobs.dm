@@ -29,111 +29,156 @@ SUBSYSTEM_DEF(clever_mobs)
 		if (MC_TICK_CHECK)
 			return
 
-/datum/nav_mesh
-	var/z_level
-	var/hive = XENO_HIVE_NORMAL
-
+/datum/navmesh/
+	/// The next unique ID to be assigned to a created node.
 	var/next_id = 0
 
+	/// The hivenumber associated with this navmesh.
+	/// TODO: Update this in the future to be more flexible with nav ownership by factions!
+	var/hive_number = XENO_HIVE_NORMAL
+
+	/// List holding all nodes in the navmesh, indexed by their associated turfs.
 	var/list/datum/nav_node/nodes = list()
-	var/list/datum/nav_node/nodeid_by_turf = list()
 
-/// Generates a navmesh node for a given turf.
-/// Does not check if such a node exists already! If you're looking to regenerate a node, use poke_node.
-/datum/nav_mesh/generate_node(turf/loc)
-	var/datum/nav_node/node = new /datum/nav_node(next_id, loc)
-
-	// Update node vector and map
-	if (nodes.len == next_id)
-		nodes.Add(node)
-	else if (nodes.len > next_id)
-		nodes[next_id] = node
+/// Creates a new navmesh node at the given location and automatically links it to adjacent NORTH, SOUTH, EAST, and WEST nodes if they exist.
+/// Does NOT check if a node already exists at this location.
+/datum/navmesh/create_node(turf/loc)
+	// Initialize the node and increment the next node id
+	var/datum/nav_node/new_node = new (next_id, loc)
 	next_id++
-	nodeid_by_turf[loc] = node
 
-/// Returns a value indicating the cost to move from start turf to end turf.
-/// Should only be used on adjactent turfs.
-/datum/nav_mesh/get_travel_cost(turf/start, turf/end)
-	var/delta_x = end.x - start.x
-	var/delta_y = end.y - start.y
+	// Insert it into the navmesh's node list
+	nodes[loc] = new_node
 
-	if (abs(delta_x) + abs(delta_y) > 1)
-		CRASH("Attempted to find the travel cost between two turfs that are not adjacent: [start], [end]")
-	if (abs(delta_x) + abs(delta_y) == 0)
-		return 0
+	for (var/dir in CARDINAL_DIRS)
+		var/turf/adjacent_turf = step(loc, dir)
+		var/datum/nav_node/adjacent_node = nodes[adjacent_turf]
 
-	var/move_dir
-	if (delta_x > 0)
-		move_dir = EAST
-	else if (delta_x < 0)
-		move_dir = WEST
-	else if (delta_y > 0)
-		move_dir = NORTH
-	else if (delta_y < 0)
-		move_dir = SOUTH
+		if (adjacent_node == null)
+			new_node.node_links[dir] = null
+			continue
 
-	var/travel_cost = 1
+/datum/nav_node/
+	var/datum/weakref/navmesh_weakref //! Weak reference to the nav mesh that owns this node.
 
-	// TODO: More advanced travel cost calculation, like barricades and destructable walls
-	if (end.weeds != null)
-		var/obj/effect/alien/weeds/weeds = end.weeds
+	var/id //! Unique ID used for identifying nodes when converting to the rustg call. Never null.
+	var/turf/loc //! Unique turf that this nav node is associated with. Never null.
 
-		if (weeds.hivenumber != hive)
-			travel_cost += weeds.weed_strength
-		else
-			travel_cost -= 0.1
+	/// List of links to other nodes, indexed by their relative direction.
+	var/list/datum/node_links = list()
 
-	return travel_cost
-
-/datum/nav_mesh/get_node_at_turf(turf/loc)
-	var/node_id = nodeid_by_turf[loc]
-
-	if (node_id == null)
-		return null
-
-	return nodes[node_id]
-
-/datum/nav_node
-	var/id
-	var/turf/loc
-
-	var/south_cost
-	var/south_nodeid
-
-	var/east_cost
-	var/east_nodeid
-
-	var/north_cost
-	var/north_nodeid
-
-	var/west_cost
-	var/west_nodeid
-
-/datum/nav_node/New(id, turf/loc)
+/datum/nav_node/New(datum/navmesh/mesh, id, turf/loc)
 	. = ..()
 
+	navmesh_weakref = WEAKREF(mesh)
 	id = id
 	loc = loc
 
-/datum/nav_node/get_dir_cost(dir)
-	switch (dir)
-		if (SOUTH)
-			return south_cost
-		if (EAST)
-			return east_cost
-		if (NORTH)
-			return north_cost
-		if (WEST)
-			return west_cost
+/// A directional link between two nodes in a navmesh.
+/datum/node_link/
+	var/datum/weakref/source_node_weakref //! A weakref to the start node of this link.
+	var/datum/weakref/dest_node_weakref //! A weakref to the destination node of this link.
 
-/datum/nav_node/get_dir_nodeid(dir)
-	switch (dir)
-		if (SOUTH)
-			return south_nodeid
-		if (EAST)
-			return east_nodeid
-		if (NORTH)
-			return north_nodeid
-		if (WEST)
-			return west_nodeid
+	/// Cost associated with how long it takes to move from the source node to the destination node.
+	var/move_cost = INFINITY
 
+	/// Cost associated with how much damage would need to be done to obstacles to move from the source node to destination node.
+	var/damage_cost = INFINITY
+	var/minimum_claws = CLAW_TYPE_VERY_SHARP
+
+/datum/node_link/New(datum/nav_node/source_node, datum/nav_node/dest_node)
+	. = ..()
+
+	source_node_weakref = WEAKREF(source_node)
+	dest_node_weakref = WEAKREF(dest_node)
+
+/datum/node_link/evaluate_costs()
+	// Dereferencing weakrefs
+	var/datum/nav_node/source_node = source_node_weakref.resolve()
+	var/datum/nav_node/dest_node = dest_node_weakref.resolve()
+
+	// If these weakrefs have expired, then we don't have a node to work with anymore and this link shouldn't exist.
+	if (source_node == null || dest_node == null)
+		CRASH("Attempted to evaluate costs for a link between one or more null nav nodes: source [source_node], dest [dest_node]")
+
+	// A node's loc will never be null, so this is okay to directly assign.
+	var/turf/source_turf = source_node.loc
+	var/turf/dest_turf = dest_node.loc
+
+	// Determining the direction we're moving in (including composite directions like north-up but not diagonals)
+	var/delta_x = dest_turf.x - source_turf.x
+	var/delta_y = dest_turf.y - source_turf.y
+	var/delta_z = dest_turf.z - source_turf.z
+	var/move_dir = 0
+	if (abs(delta_x) + abs(delta_y) > 1)
+		CRASH("Attempted to evaluate costs for a link between nonadjacent nav nodes: source: ([source_turf.x], [source_turf.y]), dest: ([dest_turf.x], [dest_turf.y])")
+	if (delta_x < 0)
+		move_dir |= WEST
+	else if (delta_x > 0)
+		move_dir |= EAST
+	else if (delta_y < 0)
+		move_dir |= NORTH
+	else if (delta_y > 0)
+		move_dir |= SOUTH
+	if (delta_z > 0)
+		move_dir |= UP
+	else if (delta_z < 0)
+		move_dir |= DOWN
+
+	// ===== HEALTH COST CALCULATIONS =====
+
+	// Turf is hull; can't break, infinite damage cost
+	if (dest_turf.turf_flags | TURF_HULL)
+		damage_cost = INFINITY
+
+	// Turf is a wall; mark its remaining health and required claws
+	else if (istype(/turf/closed/wall, dest_turf))
+		var/turf/closed/wall/wall_dest = dest_turf
+
+		damage_cost = wall_dest.damage_cap - wall_dest.damage
+		minimum_claws = wall_dest.claws_minimum
+
+	// Turf is open; free to move into (not counting objects) and requires no claws
+	else if (istype(/turf/open, dest_turf))
+		damage_cost = 0
+		minimum_claws = CLAW_TYPE_NORMAL
+
+	// Fallback option; if we don't know what we're moving into then we probably shouldn't
+	else
+		damage_cost = INFINITY
+
+	// Adding health of potential blocking structures in the way
+	// TODO: Account for cades and other directional blockers
+	for (var/obj/structure/blocking in dest_turf)
+		if (!blocking.can_block_movement)
+			continue
+		if (!blocking.density)
+			continue
+		if (!blocking.anchored)
+			continue
+		if (blocking.unslashable)
+			damage_cost = INFINITY
+			break
+		if (!blocking.breakable)
+			damage_cost = INFINITY
+			break
+
+		damage_cost += blocking.health
+
+	// ===== MOVE COST CALCULATIONS =====
+	// Move cost is independent of the speed of the entity following the path.
+	// For this reason, it can be thought of as a sort of "distance", as its units would purely be tiles.
+	// For example, crossing a slowing resin would be like crossing over two tiles of normal resin.
+
+	move_cost = 1
+
+	if (source_turf.weeds != null)
+		var/obj/effect/alien/weeds/weeds = source_turf.weeds
+		var/datum/navmesh/mesh = source_node.navmesh_weakref.resolve()
+
+		if (weeds.hivenumber != mesh?.hive_number)
+			move_cost *= weeds.weed_strength
+
+	// TODO: Account for vaultable cades
+	for (var/atom/thing in source_turf)
+		var/effect/effect
