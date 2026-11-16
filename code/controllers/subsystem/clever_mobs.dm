@@ -4,6 +4,7 @@ SUBSYSTEM_DEF(clever_mobs)
 	flags = SS_KEEP_TIMING || SS_NO_INIT
 	priority = SS_PRIORITY_MOB
 
+	var/datum/rustg_cached_navmesh = null
 	var/list/datum/nav_meshes = list()
 
 	var/list/current_run = list()
@@ -44,7 +45,7 @@ SUBSYSTEM_DEF(clever_mobs)
 /// Does NOT check if a node already exists at this location.
 /datum/navmesh/create_node(turf/loc)
 	// Initialize the node and increment the next node id
-	var/datum/nav_node/new_node = new (next_id, loc)
+	var/datum/nav_node/new_node = new (src, next_id, loc)
 	next_id++
 
 	// Insert it into the navmesh's node list
@@ -57,6 +58,9 @@ SUBSYSTEM_DEF(clever_mobs)
 		if (adjacent_node == null)
 			new_node.node_links[dir] = null
 			continue
+
+		new_node.node_links[dir] = new (new_node, adjacent_node)
+		adjacent_node.node_links[REVERSE_DIR(dir)] = new (adjacent_node, new_node)
 
 /datum/nav_node/
 	var/datum/weakref/navmesh_weakref //! Weak reference to the nav mesh that owns this node.
@@ -91,6 +95,8 @@ SUBSYSTEM_DEF(clever_mobs)
 
 	source_node_weakref = WEAKREF(source_node)
 	dest_node_weakref = WEAKREF(dest_node)
+
+	evaluate_costs()
 
 /datum/node_link/evaluate_costs()
 	// Dereferencing weakrefs
@@ -172,13 +178,25 @@ SUBSYSTEM_DEF(clever_mobs)
 
 	move_cost = 1
 
+	// Need parent navmesh for hive number things
+	var/datum/navmesh/mesh = source_node.navmesh_weakref.resolve()
+
 	if (source_turf.weeds != null)
 		var/obj/effect/alien/weeds/weeds = source_turf.weeds
-		var/datum/navmesh/mesh = source_node.navmesh_weakref.resolve()
 
 		if (weeds.hivenumber != mesh?.hive_number)
 			move_cost *= weeds.weed_strength
 
 	// TODO: Account for vaultable cades
 	for (var/atom/thing in source_turf)
-		var/effect/effect
+		// Sticky resin move cost
+		if (istypestrict(thing, /obj/effect/alien/resin/sticky))
+			var/obj/effect/alien/resin/sticky/sticky_resin = thing
+			if (sticky_resin.hivenumber != mesh?.hive_number)
+				move_cost += sticky_resin.slow_amt
+
+		// Fast resin move discount
+		if (istype(thing, /obj/effect/alien/resin/sticky/fast))
+			var/obj/effect/alien/resin/sticky/fast/fast_resin = thing
+			if (fast_resin.hivenumber == mesh?.hive_number)
+				move_cost *= fast_resin.speed_amt
