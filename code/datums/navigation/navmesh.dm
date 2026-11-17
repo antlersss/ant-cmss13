@@ -57,6 +57,39 @@
 		new_node.node_links[dir] = new (new_node, adjacent_node)
 		adjacent_node.node_links[REVERSE_DIR(dir)] = new (adjacent_node, new_node)
 
+/// Creates a new node on the target turf if said turf both:
+///  - Is navigable (not an unbreakable closed turf) or force_unnavigable = TRUE
+///  - Does not already have an associated nav node
+///
+/// Automatically links the created node to neighboring turf's nodes if they exist and autolink = TRUE.
+/datum/navmesh/poke_node(turf/loc, autolink = TRUE, force_unnavigable = FALSE)
+	// Node already exists here
+	if (nodes[loc] != null)
+		continue
+
+	// Turf is unnavigable
+	if (istype(loc, /turf/closed/) && !force_unnavigable)
+		if (istype(loc, /turf/closed/wall))
+			var/turf/closed/wall/wall = loc
+			if (loc & TURF_HULL)
+				continue
+		else
+			continue
+
+	create_node(loc)
+
+/// Extends the navmesh over a rectangle bounded by southwest and northeast.
+/datum/navmesh/generate_over_rect(turf/southwest, turf/northeast)
+	var/list/turf/turfs = block(southwest, northeast)
+	for (var/turf/turf as anything in turfs)
+		poke_node(turf)
+
+/// Extends the navmesh over the given area.
+/datum/navmesh/generate_over_area(area/room)
+	var/list/turf/turfs = get_area_turfs(room)
+	for (var/turf/turf as anything in turfs)
+		poke_node(turf)
+
 /// Removes a nav node from the navmesh cleanly, removing any associated links and references.
 /datum/navmesh/remove_node(datum/nav_node/node)
 	nodes.Remove(node) // Clear from node hashmap
@@ -113,9 +146,9 @@
 		remove_node(node_at_loc)
 		return
 	else
-		// Ditto for hull or unbreakable walls
+		// Ditto for hull walls
 		var/turf/closed/wall/wall = loc
-		if (wall.turf_flags & TURF_HULL || !(wall.turf_flags & TURF_BREAKABLE))
+		if (wall.turf_flags & TURF_HULL)
 			remove_node(node_at_loc)
 			return
 
