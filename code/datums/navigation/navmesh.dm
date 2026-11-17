@@ -61,11 +61,7 @@
 /datum/navmesh/remove_node(datum/nav_node/node)
 	nodes.Remove(node) // Clear from node hashmap
 
-	var/list/datum/nav_node/hanging_nodes = list()
-	for (var/datum/node_link/link as anything in node.node_links)
-		hanging_nodes += link.dest_node_weakref.resolve() // Should always resolve
-		qdel(link)
-
+	var/list/datum/nav_node/hanging_nodes = node.get_neighbor_nodes()
 	for (var/datum/nav_node/hanging_node as anything in hanging_nodes)
 		for (var/datum/node_link/link as anything in hanging_node.node_links)
 			if (link.dest_node_weakref.resolve() != node) // Should always resolve
@@ -78,6 +74,37 @@
 /datum/navmesh/turf_closed(turf/loc)
 	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
 		return
+
+	var/datum/nav_node/node_at_loc = nodes[loc]
+	if (node_at_loc == null)
+		return
+
+	// Closed turfs that are not walls cannot be pathed into, as they cannot be broken. Just remove the node.
+	if (!istype(loc, /turf/closed/wall))
+		remove_node(node_at_loc)
+		return
+	else
+		// Ditto for hull or unbreakable walls
+		var/turf/closed/wall/wall = loc
+		if (wall.turf_flags & TURF_HULL || !(wall.turf_flags & TURF_BREAKABLE))
+			remove_node(node_at_loc)
+			return
+
+	// Collect all node_links that could potentially need to be updated
+	var/list/datum/node_link/outdated_links = node_at_loc.node_links.Copy()
+	for (var/datum/nav_node/neighbor_node as anything in node_at_loc.get_neighbor_nodes())
+		outdated_links += neighbor_node.node_links
+
+	for (var/datum/node_link/link as anything in outdated_links)
+		var/datum/nav_node/source_node = link.source_node_weakref.resolve()
+		var/datum/nav_node/dest_node = link.dest_node_weakref.resolve()
+
+		// This link is not associated with the updated node, ignore it.
+		if (source_node != node_at_loc && dest_node != node_at_loc)
+			continue
+
+		// Recalculate the link's costs.
+		link.calculate_costs()
 
 /// Called when a turf is converted to an open turf.
 /datum/navmesh/turf_opened(turf/loc)
@@ -113,6 +140,18 @@
 	navmesh_weakref = WEAKREF(mesh)
 	id = id
 	loc = loc
+
+/// Returns a list of nodes that are linked to this node.
+/datum/nav_node/get_neighbor_nodes()
+	var/list/datum/nav_node/linked_nodes = list()
+	for (var/datum/node_link/link as anything in node_links)
+		var/datum/nav_node/linked_node = link.dest_node_weakref.resolve()
+		if (linked_node == null)
+			continue
+
+		linked_nodes += linked_node
+
+	return linked_nodes
 
 /// A directional link between two nodes in a navmesh.
 /datum/node_link/
