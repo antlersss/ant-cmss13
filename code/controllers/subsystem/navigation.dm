@@ -23,6 +23,14 @@ SUBSYSTEM_DEF(navigation)
 	for (var/datum/navmesh/navmesh as anything in navmeshes)
 		navmesh.blocker_created(blocker)
 
+/datum/controller/subsystem/navigation/blocker_anchored(obj/structure/blocker)
+	// Can't block movement, no possible effect on navigation.
+	if (!blocker.can_block_movement)
+		return
+
+	for (var/datum/navmesh/navmesh as anything in navmeshes)
+		navmesh.blocker_anchored(blocker)
+
 /datum/controller/subsystem/navigation/blocker_removed(obj/structure/blocker)
 	// Can't block movement, no possible effect on navigation.
 	if (!blocker.can_block_movement)
@@ -30,4 +38,12 @@ SUBSYSTEM_DEF(navigation)
 
 	for (var/datum/navmesh/navmesh as anything in navmeshes)
 		navmesh.blocker_removed(blocker)
+
+/datum/controller/subsystem/navigation/blocker_unanchored(obj/structure/blocker)
+	// Can't block movement, no possible effect on navigation.
+	if (!blocker.can_block_movement)
+		return
+
+	for (var/datum/navmesh/navmesh as anything in navmeshes)
+		navmesh.blocker_unanchored(blocker)
 
