@@ -71,6 +71,16 @@
 			qdel(link)
 
 /// Called when a turf is converted to a closed turf.
+///
+/// If the turf is outside of the navmesh or the turf does not already have an associated nav node, nothing
+/// happens and the function early returns.
+///
+/// If an associated nav node is found then the base implementation removes the node if the turf was replaced by either:
+///  - A turf that is not a subtype of /turf/closed/wall
+///  - A turf that has the flag TURF_HULL or lacks the flag TURF_BREAKABLE
+///
+/// All neighboring nodes's links to the target node as well as all outgoing links from the target
+/// node are updated by calling calculate_costs() with no arguments.
 /datum/navmesh/turf_closed(turf/loc)
 	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
 		return
