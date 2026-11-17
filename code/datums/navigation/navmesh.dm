@@ -1,49 +1,32 @@
-SUBSYSTEM_DEF(clever_mobs)
-	name = "Clever Mobs"
-	wait = 0.5
-	flags = SS_KEEP_TIMING || SS_NO_INIT
-	priority = SS_PRIORITY_MOB
-
-	var/datum/rustg_cached_navmesh = null
-	var/list/datum/nav_meshes = list()
-
-	var/list/current_run = list()
-	var/list/registered_clever_mobs = list()
-
-/datum/controller/subsystem/clever_mobs/stat_entry(msg)
-	msg = "P:[length(registered_clever_mobs)]"
-	return ..()
-
-/datum/controller/subsystem/clever_mobs/fire(resumed = FALSE)
-	if (!resumed)
-		current_run = registered_clever_mobs.Copy()
-
-	while (length(current_run))
-		var/mob/living/clever/target = current_run[length(current_run)]
-		current_run.len--
-
-		if (!target || QDELETED(target))
-			continue
-
-		target.Life(wait * 0.1)
-
-		if (MC_TICK_CHECK)
-			return
-
+/// Navmeshes, or navigation meshes, are planar graphs of individual nav_node datums.
+/// They are lazily created, which means:
+///  - Only evaluated when needed by AI's
+///  - Only updated when turfs and structures inside them are modified, created, or destroyed
+///
+/// Navmeshes are automatically registered in the SSnavigation subsystem.
 /datum/navmesh/
 	/// The next unique ID to be assigned to a created node.
 	var/next_id = 0
 
-	/// The hivenumber associated with this navmesh.
-	/// TODO: Update this in the future to be more flexible with nav ownership by factions!
-	var/hive_number = XENO_HIVE_NORMAL
+	var/lower_x_bound //! The X value of the furthest west node.
+	var/upper_x_bound //! The X value of the furthest east node.
+	var/lower_y_bound //! The Y value of the furthest south node.
+	var/upper_y_bound //! The Y value of the furthest north node.
+
+	var/list/z_levels = list() //! List of all z-levels the navmesh is in.
 
 	/// List holding all nodes in the navmesh, indexed by their associated turfs.
 	var/list/datum/nav_node/nodes = list()
 
+/datum/navmesh/New()
+	SHOULD_CALL_PARENT(TRUE)
+	. = ..()
+
+	SSnavigation.register_navmesh(src)
+
 /// Creates a new navmesh node at the given location and automatically links it to adjacent NORTH, SOUTH, EAST, and WEST nodes if they exist.
 /// Does NOT check if a node already exists at this location.
-/datum/navmesh/create_node(turf/loc)
+/datum/navmesh/create_node(turf/loc, autolink = TRUE)
 	// Initialize the node and increment the next node id
 	var/datum/nav_node/new_node = new (src, next_id, loc)
 	next_id++
@@ -51,6 +34,18 @@ SUBSYSTEM_DEF(clever_mobs)
 	// Insert it into the navmesh's node list
 	nodes[loc] = new_node
 
+	// Update navmesh bounds
+	lower_x_bound = min(lower_x_bound, loc.x)
+	upper_x_bound = max(upper_x_bound, loc.x)
+	lower_y_bound = min(lower_y_bound, loc.y)
+	upper_y_bound = max(upper_y_bound, loc.y)
+
+	if (!z_levels.Find(loc.z) == 0)
+		z_levels += loc.z
+
+	// Auto linking
+	if (!autolink)
+		return
 	for (var/dir in CARDINAL_DIRS)
 		var/turf/adjacent_turf = step(loc, dir)
 		var/datum/nav_node/adjacent_node = nodes[adjacent_turf]
@@ -61,6 +56,47 @@ SUBSYSTEM_DEF(clever_mobs)
 
 		new_node.node_links[dir] = new (new_node, adjacent_node)
 		adjacent_node.node_links[REVERSE_DIR(dir)] = new (adjacent_node, new_node)
+
+/// Removes a nav node from the navmesh cleanly, removing any associated links and references.
+/datum/navmesh/remove_node(datum/nav_node/node)
+	nodes.Remove(node) // Clear from node hashmap
+
+	var/list/datum/nav_node/hanging_nodes = list()
+	for (var/datum/node_link/link as anything in node.node_links)
+		hanging_nodes += link.dest_node_weakref.resolve() // Should always resolve
+		qdel(link)
+
+	for (var/datum/nav_node/hanging_node as anything in hanging_nodes)
+		for (var/datum/node_link/link as anything in hanging_node.node_links)
+			if (link.dest_node_weakref.resolve() != node) // Should always resolve
+				continue
+
+			hanging_node.node_links.Remove(link)
+			qdel(link)
+
+/// Called when a turf is converted to a closed turf.
+/datum/navmesh/turf_closed(turf/loc)
+	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
+		return
+
+/// Called when a turf is converted to an open turf.
+/datum/navmesh/turf_opened(turf/loc)
+	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
+		return
+
+/// Called when a blocking structure is created OR anchored.
+/datum/navmesh/blocker_created(obj/structure/blocker)
+	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
+		return
+
+/// Called when a blocking structure is removed OR unanchored.
+/datum/navmesh/blocker_removed(obj/structure/blocker)
+	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
+		return
+
+/// Returns true if the turf is within the x-y bounds of the navmesh.
+/datum/navmesh/turf_within_bounds(turf/loc)
+	return loc.x >= lower_x_bound && loc.x <= upper_x_bound && loc.y >= lower_y_bound && loc.y <= upper_y_bound
 
 /datum/nav_node/
 	var/datum/weakref/navmesh_weakref //! Weak reference to the nav mesh that owns this node.
@@ -86,19 +122,20 @@ SUBSYSTEM_DEF(clever_mobs)
 	/// Cost associated with how long it takes to move from the source node to the destination node.
 	var/move_cost = INFINITY
 
-	/// Cost associated with how much damage would need to be done to obstacles to move from the source node to destination node.
-	var/damage_cost = INFINITY
-	var/minimum_claws = CLAW_TYPE_VERY_SHARP
-
 /datum/node_link/New(datum/nav_node/source_node, datum/nav_node/dest_node)
 	. = ..()
 
 	source_node_weakref = WEAKREF(source_node)
 	dest_node_weakref = WEAKREF(dest_node)
 
-	evaluate_costs()
+	calculate_costs()
 
-/datum/node_link/evaluate_costs()
+/// Function used by pathfinding to get the objective scalar value of the cost of traversing this node.
+/// Typically overriden, otherwise its just a getter function.
+/datum/node_link/get_total_cost()
+	return move_cost
+
+/datum/node_link/calculate_costs()
 	// Dereferencing weakrefs
 	var/datum/nav_node/source_node = source_node_weakref.resolve()
 	var/datum/nav_node/dest_node = dest_node_weakref.resolve()
@@ -131,46 +168,6 @@ SUBSYSTEM_DEF(clever_mobs)
 	else if (delta_z < 0)
 		move_dir |= DOWN
 
-	// ===== HEALTH COST CALCULATIONS =====
-
-	// Turf is hull; can't break, infinite damage cost
-	if (dest_turf.turf_flags | TURF_HULL)
-		damage_cost = INFINITY
-
-	// Turf is a wall; mark its remaining health and required claws
-	else if (istype(/turf/closed/wall, dest_turf))
-		var/turf/closed/wall/wall_dest = dest_turf
-
-		damage_cost = wall_dest.damage_cap - wall_dest.damage
-		minimum_claws = wall_dest.claws_minimum
-
-	// Turf is open; free to move into (not counting objects) and requires no claws
-	else if (istype(/turf/open, dest_turf))
-		damage_cost = 0
-		minimum_claws = CLAW_TYPE_NORMAL
-
-	// Fallback option; if we don't know what we're moving into then we probably shouldn't
-	else
-		damage_cost = INFINITY
-
-	// Adding health of potential blocking structures in the way
-	// TODO: Account for cades and other directional blockers
-	for (var/obj/structure/blocking in dest_turf)
-		if (!blocking.can_block_movement)
-			continue
-		if (!blocking.density)
-			continue
-		if (!blocking.anchored)
-			continue
-		if (blocking.unslashable)
-			damage_cost = INFINITY
-			break
-		if (!blocking.breakable)
-			damage_cost = INFINITY
-			break
-
-		damage_cost += blocking.health
-
 	// ===== MOVE COST CALCULATIONS =====
 	// Move cost is independent of the speed of the entity following the path.
 	// For this reason, it can be thought of as a sort of "distance", as its units would purely be tiles.
@@ -178,25 +175,6 @@ SUBSYSTEM_DEF(clever_mobs)
 
 	move_cost = 1
 
-	// Need parent navmesh for hive number things
-	var/datum/navmesh/mesh = source_node.navmesh_weakref.resolve()
-
-	if (source_turf.weeds != null)
-		var/obj/effect/alien/weeds/weeds = source_turf.weeds
-
-		if (weeds.hivenumber != mesh?.hive_number)
-			move_cost *= weeds.weed_strength
-
 	// TODO: Account for vaultable cades
 	for (var/atom/thing in source_turf)
-		// Sticky resin move cost
-		if (istypestrict(thing, /obj/effect/alien/resin/sticky))
-			var/obj/effect/alien/resin/sticky/sticky_resin = thing
-			if (sticky_resin.hivenumber != mesh?.hive_number)
-				move_cost += sticky_resin.slow_amt
 
-		// Fast resin move discount
-		if (istype(thing, /obj/effect/alien/resin/sticky/fast))
-			var/obj/effect/alien/resin/sticky/fast/fast_resin = thing
-			if (fast_resin.hivenumber == mesh?.hive_number)
-				move_cost *= fast_resin.speed_amt
