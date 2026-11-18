@@ -26,7 +26,7 @@
 
 /// Creates a new navmesh node at the given location and automatically links it to adjacent NORTH, SOUTH, EAST, and WEST nodes if they exist.
 /// Does NOT check if a node already exists at this location.
-/datum/navmesh/create_node(turf/loc, autolink = TRUE)
+/datum/navmesh/proc/create_node(turf/loc, autolink = TRUE)
 	// Initialize the node and increment the next node id
 	var/datum/nav_node/new_node = new (src, next_id, loc)
 	next_id++
@@ -62,7 +62,7 @@
 ///  - Does not already have an associated nav node
 ///
 /// Automatically links the created node to neighboring turf's nodes if they exist and autolink = TRUE.
-/datum/navmesh/poke_node(turf/loc, autolink = TRUE, force_unnavigable = FALSE)
+/datum/navmesh/proc/poke_node(turf/loc, autolink = TRUE, force_unnavigable = FALSE)
 	// Node already exists here
 	if (nodes[loc] != null)
 		continue
@@ -79,19 +79,19 @@
 	create_node(loc)
 
 /// Extends the navmesh over a rectangle bounded by southwest and northeast.
-/datum/navmesh/generate_over_rect(turf/southwest, turf/northeast)
+/datum/navmesh/proc/generate_over_rect(turf/southwest, turf/northeast)
 	var/list/turf/turfs = block(southwest, northeast)
 	for (var/turf/turf as anything in turfs)
 		poke_node(turf)
 
 /// Extends the navmesh over the given area.
-/datum/navmesh/generate_over_area(area/room)
+/datum/navmesh/proc/generate_over_area(area/room)
 	var/list/turf/turfs = get_area_turfs(room)
 	for (var/turf/turf as anything in turfs)
 		poke_node(turf)
 
 /// Removes a nav node from the navmesh cleanly, removing any associated links and references.
-/datum/navmesh/remove_node(datum/nav_node/node)
+/datum/navmesh/proc/remove_node(datum/nav_node/node)
 	nodes.Remove(node) // Clear from node hashmap
 
 	var/list/datum/nav_node/hanging_nodes = node.get_neighbor_nodes()
@@ -105,7 +105,7 @@
 
 /// Updates all node_links that have the target node as a source or destination by calling
 /// calculate_costs() on them with no arguments.
-/datum/navmesh/update_associated_links(datum/nav_node/node)
+/datum/navmesh/proc/update_associated_links(datum/nav_node/node)
 	// Collect all node_links that could potentially need to be updated
 	var/list/datum/node_link/outdated_links = node.node_links.Copy()
 	for (var/datum/nav_node/neighbor_node as anything in node.get_neighbor_nodes())
@@ -133,7 +133,7 @@
 ///
 /// Otherwise, all neighboring nodes's links to the target node as well as all outgoing links from the target
 /// node are updated by calling calculate_costs() with no arguments.
-/datum/navmesh/turf_closed(turf/loc)
+/datum/navmesh/proc/turf_closed(turf/loc)
 	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
 		return
 
@@ -161,7 +161,7 @@
 ///  - If the turf is within the bounds of the navmesh and there is not already an associated node with said turf,
 /// but it is bordering turfs that DO have nodes, then create a new node at the target turf.
 ///  - If there's already a node associated with the target turf, simply update all associated links.
-/datum/navmesh/turf_opened(turf/loc)
+/datum/navmesh/proc/turf_opened(turf/loc)
 	if (!turf_within_bounds(loc) || z_levels.Find(loc.z) == 0)
 		return
 
@@ -183,27 +183,27 @@
 		return
 
 /// Called when a blocking structure is created.
-/datum/navmesh/blocker_created(obj/structure/blocker)
+/datum/navmesh/proc/blocker_created(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
 /// Called when a blocking structure is anchored.
-/datum/navmesh/blocker_anchored(obj/structure/blocker)
+/datum/navmesh/proc/blocker_anchored(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
 /// Called when a blocking structure is removed.
-/datum/navmesh/blocker_removed(obj/structure/blocker)
+/datum/navmesh/proc/blocker_removed(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
 /// Called when a blocking structure is unanchored.
-/datum/navmesh/blocker_unanchored(obj/structure/blocker)
+/datum/navmesh/proc/blocker_unanchored(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
 /// Returns true if the turf is within the x-y bounds of the navmesh.
-/datum/navmesh/turf_within_bounds(turf/loc)
+/datum/navmesh/proc/turf_within_bounds(turf/loc)
 	return loc.x >= lower_x_bound && loc.x <= upper_x_bound && loc.y >= lower_y_bound && loc.y <= upper_y_bound
 
 /datum/nav_node/
@@ -224,7 +224,7 @@
 
 /// Returns a list of nodes that are linked to this node.
 /// Such nodes are considered the "neighbors" of this node.
-/datum/nav_node/get_neighbor_nodes()
+/datum/nav_node/proc/get_neighbor_nodes()
 	var/list/datum/nav_node/linked_nodes = list()
 	for (var/datum/node_link/link as anything in node_links)
 		var/datum/nav_node/linked_node = link.dest_node_weakref.resolve()
@@ -252,7 +252,7 @@
 	calculate_costs()
 
 /// Function used by pathfinding to get the objective scalar value of the cost of traversing this node.
-/datum/node_link/get_total_cost()
+/datum/node_link/proc/get_total_cost()
 	return move_cost
 
 /// Used to actually run the evaluation functions for the various costs associated with moving along the navmesh.
@@ -260,7 +260,7 @@
 ///
 /// Should not be used to calculate costs that vary per-entity, like hive number and claw sharpness.
 /// Modify get_total_cost() and pass an argument to it with the entity instead.
-/datum/node_link/calculate_costs()
+/datum/node_link/proc/calculate_costs()
 	// Dereferencing weakrefs
 	var/datum/nav_node/source_node = source_node_weakref.resolve()
 	var/datum/nav_node/dest_node = dest_node_weakref.resolve()

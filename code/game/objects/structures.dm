@@ -17,9 +17,13 @@
 	can_block_movement = TRUE
 
 /obj/structure/Initialize(mapload, ...)
+	SHOULD_CALL_PARENT(TRUE)
+
 	. = ..()
 	if(climbable)
 		verbs += /obj/structure/proc/climb_on
+
+	SSnavigation.register_structure(src)
 
 /obj/structure/Destroy()
 	//before ..() because the parent does loc = null
@@ -231,6 +235,14 @@
 				for(var/obj/medlink in loc)
 					SEND_SIGNAL(medlink, COMSIG_STRUCTURE_UNWRENCHED, src)
 			return TRUE
+
+/obj/structure/proc/set_anchored(anchored)
+	src.anchored = anchored
+
+	if (anchored)
+		SEND_SIGNAL(src, COMSIG_STRUCTURE_WRENCHED)
+	else
+		SEND_SIGNAL(src, COMSIG_STRUCTURE_UNWRENCHED)
 
 /obj/structure/get_applying_acid_time()
 	if(unacidable)
