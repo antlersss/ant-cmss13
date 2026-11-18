@@ -198,20 +198,47 @@
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
+	var/turf/blocker_turf = get_turf(blocker)
+	var/datum/nav_node/node_at_loc = nodes[blocker_turf]
+	if (node_at_loc == null)
+		return
+
+	if (blocker.climbable)
+		update_associated_links(node_at_loc)
+	else
+		turf_closed(blocker_turf) // TODO: Seperate this behavior out to its own function instead of turf_closed
+
 /// Called when a blocking structure is anchored.
 /datum/navmesh/proc/blocker_anchored(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
+
+	var/turf/blocker_turf = get_turf(blocker)
+	var/datum/nav_node/node_at_loc = nodes[blocker_turf]
+	if (node_at_loc == null)
+		return
+
+	if (blocker.climbable)
+		update_associated_links(node_at_loc)
+	else
+		turf_closed(blocker_turf) // TODO: Seperate this behavior out to its own function instead of turf_closed
 
 /// Called when a blocking structure is removed.
 /datum/navmesh/proc/blocker_removed(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
 
+	var/turf/blocker_turf = get_turf(blocker)
+	turf_opened(blocker_turf) // TODO: Seperate this behavior out to its own function instead of turf_opened
+
 /// Called when a blocking structure is unanchored.
+/// TODO: Implement unique behavior for unanchored blocking structures instead of ignoring them
 /datum/navmesh/proc/blocker_unanchored(obj/structure/blocker)
 	if (!turf_within_bounds(get_turf(blocker)) || z_levels.Find(blocker.z) == 0)
 		return
+
+	var/turf/blocker_turf = get_turf(blocker)
+	turf_opened(blocker_turf) // TODO: Seperate this behavior out to its own function instead of turf_opened
 
 /// Returns true if the turf is within the x-y bounds of the navmesh.
 /datum/navmesh/proc/turf_within_bounds(turf/loc)
@@ -311,6 +338,41 @@
 
 	move_cost = 1
 
-	// TODO: Account for vaultable cades
-	for (var/atom/thing in source_turf)
+	for (var/obj/thing in source_turf)
+		// Can't block movement, ignore
+		if (!thing.can_block_movement)
+			continue
 
+		// Directional blocker that is not aligned with movement, ignore
+		if (thing.flags_atom & ON_BORDER && move_dir != thing.dir)
+			continue
+
+		// Climbable; since we don't know how fast the entity moves this move_cost
+		// is innacurate but close enough.
+		var/obj/structure/struct = thing
+		if (struct != null && struct.climbable)
+			move_cost += struct.climb_delay
+
+		if (thing.anchored)
+			move_cost = INFINITY
+
+	for (var/obj/thing in dest_turf)
+		if (!thing.can_block_movement)
+			continue
+
+		// Can't block movement, ignore
+		if (!thing.can_block_movement)
+			continue
+
+		// Directional blocker that is not aligned with movement, ignore
+		if (thing.flags_atom & ON_BORDER && move_dir != REVERSE_DIR(thing.dir))
+			continue
+
+		// Climbable; since we don't know how fast the entity moves this move_cost
+		// is innacurate but close enough.
+		var/obj/structure/struct = thing
+		if (struct != null && struct.climbable)
+			move_cost += struct.climb_delay
+
+		if (thing.anchored)
+			move_cost = INFINITY
