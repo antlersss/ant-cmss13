@@ -4076,7 +4076,7 @@ Defined in conflicts.dm of the #defines folder.
 		gun.remove_firemode(GUN_FIREMODE_AUTOMATIC)
 
 	if(heavy_bipod)
-		user.anchored = FALSE
+		user.set_anchored(FALSE)
 
 	if(!QDELETED(gun))
 		playsound(user,'sound/items/m56dauto_rotate.ogg', 55, 1)
@@ -4118,7 +4118,7 @@ Defined in conflicts.dm of the #defines folder.
 					gun.add_firemode(GUN_FIREMODE_AUTOMATIC)
 
 				if(heavy_bipod)
-					user.anchored = TRUE
+					user.set_anchored(TRUE)
 
 				old_firemode = gun.gun_firemode
 				if(full_auto_switch && gun.gun_firemode != GUN_FIREMODE_AUTOMATIC)

@@ -599,7 +599,7 @@
 			return ..()
 
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-		anchored = !anchored
+		set_anchored(!anchored)
 		to_chat(user, "You [anchored ? "wrench" : "unwrench"] \the [src].")
 	else if(istype(O, /obj/item/research_upgrades/autoharvest))
 		if(!autoharvest)

@@ -1127,7 +1127,7 @@ GLOBAL_VAR_INIT(youngblood_timer_yautja, 0)
 		if(!do_after(user, wait_time, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			return
 		armed = TRUE
-		anchored = TRUE
+		set_anchored(TRUE)
 		icon_state = "yauttrap[armed]"
 		to_chat(user, SPAN_NOTICE("[src] is now armed."))
 		if(isspeciesyautja(user))
@@ -1151,7 +1151,7 @@ GLOBAL_VAR_INIT(youngblood_timer_yautja, 0)
 		return
 
 	armed = FALSE
-	anchored = TRUE
+	set_anchored(TRUE)
 
 	var/list/tether_effects = apply_tether(src, C, range = tether_range, resistible = TRUE)
 	tether_effect = tether_effects["tetherer_tether"]
@@ -1214,7 +1214,7 @@ GLOBAL_VAR_INIT(youngblood_timer_yautja, 0)
 	if(disarm_timer)
 		deltimer(disarm_timer)
 	armed = FALSE
-	anchored = FALSE
+	set_anchored(FALSE)
 	icon_state = "yauttrap[armed]"
 	if (user)
 		to_chat(user, SPAN_NOTICE("[src] is now disarmed."))

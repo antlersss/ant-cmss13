@@ -113,7 +113,7 @@
 	else if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && istype(loc, /turf/open))
 		if(!shock(user, 90))
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
-			anchored = !anchored
+			set_anchored(!anchored)
 			user.visible_message(SPAN_NOTICE("[user] [anchored ? "fastens" : "unfastens"] the grille."),
 								SPAN_NOTICE("You have [anchored ? "fastened the grille to" : "unfastened the grill from"] the floor."))
 			return

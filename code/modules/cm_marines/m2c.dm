@@ -163,7 +163,7 @@
 	var/obj/structure/machinery/m56d_hmg/auto/HMG = new(user.loc)
 	transfer_label_component(HMG)
 	HMG.setDir(user.dir) // Make sure we face the right direction
-	HMG.anchored = TRUE
+	HMG.set_anchored(TRUE)
 	playsound(HMG, 'sound/items/m56dauto_setup.ogg', 75, TRUE)
 	to_chat(user, SPAN_NOTICE("You deploy [HMG]."))
 	HMG.rounds = rounds

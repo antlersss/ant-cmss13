@@ -216,7 +216,7 @@ GLOBAL_DATUM_INIT(fax_network, /datum/fax_network, new)
 
 	if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-		anchored = !anchored
+		set_anchored(!anchored)
 		to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
 
 /obj/structure/machinery/faxmachine/verb/eject_id()

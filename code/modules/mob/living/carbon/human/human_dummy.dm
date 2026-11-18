@@ -81,7 +81,7 @@ GLOBAL_LIST_EMPTY(dummy_mob_list)
 	. = ..()
 	status_flags = GODMODE
 	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
-	anchored = TRUE
+	set_anchored(TRUE)
 
 /mob/living/carbon/human/realistic_dummy/Initialize() // Now comes pre-fitted with Marine gear!! Tutorial realism increased by 400%!!!
 	. = ..()

@@ -69,7 +69,7 @@
 						user.visible_message(SPAN_NOTICE("[user] adds cables to [src]."),
 						SPAN_NOTICE("You add cables to [src]."))
 						state = CONSTRUCTION_STATE_PROGRESS
-						anchored = TRUE
+						set_anchored(TRUE)
 						update_desc()
 			else if(HAS_TRAIT(P, TRAIT_TOOL_WRENCH))
 				if(!skillcheck(user, SKILL_ENGINEER, required_dismantle_skill))

@@ -70,7 +70,7 @@
 	animate(src, pixel_x = (rand_swing * -1), time = 3 SECONDS, loop = -1, easing = SINE_EASING|EASE_OUT)
 	animate(pixel_x = rand_swing, time = 3 SECONDS,  easing = SINE_EASING|EASE_OUT)
 
-	anchored = TRUE
+	set_anchored(TRUE)
 	RegisterSignal(src, COMSIG_ATTEMPT_MOB_PULL, PROC_REF(deny_pull))
 	RegisterSignal(src, list(
 		COMSIG_ITEM_ATTEMPT_ATTACK,
@@ -102,7 +102,7 @@
 			COMSIG_HUMAN_REVIVED
 		))
 	animate(src) //remove the anims
-	anchored = FALSE
+	set_anchored(FALSE)
 	var/matrix/A = matrix()
 	A.Turn(90)
 	apply_transform(A)

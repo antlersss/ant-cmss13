@@ -188,7 +188,7 @@
 
 	wrenchable = FALSE
 	density = FALSE
-	anchored = TRUE
+	set_anchored(TRUE)
 
 	var/pixels_to_take = 32*tiles_to_take
 	animate(src, pixel_y = pixels_to_take, time = dropping_time, easing = QUAD_EASING)

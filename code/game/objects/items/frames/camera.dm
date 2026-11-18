@@ -30,7 +30,7 @@
 			if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH) && isturf(src.loc))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 				to_chat(user, "You wrench the assembly into place.")
-				anchored = TRUE
+				set_anchored(TRUE)
 				state = 1
 				update_icon()
 				auto_turn()
@@ -44,14 +44,14 @@
 					return
 				if(weld(W, user))
 					to_chat(user, "You weld the assembly securely into place.")
-					anchored = TRUE
+					set_anchored(TRUE)
 					state = 2
 				return
 
 			else if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 				to_chat(user, "You unattach the assembly from its place.")
-				anchored = FALSE
+				set_anchored(FALSE)
 				update_icon()
 				state = 0
 				return
@@ -74,7 +74,7 @@
 				if(weld(W, user))
 					to_chat(user, "You unweld the assembly from its place.")
 					state = 1
-					anchored = TRUE
+					set_anchored(TRUE)
 				return
 
 

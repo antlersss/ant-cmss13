@@ -124,7 +124,7 @@
 
 	msg_admin_attack("[key_name(user)] has deployed \a [name] in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z])", src.loc.x, src.loc.y, src.loc.z)
 	cause_data = create_cause_data(initial(name), user, src)
-	anchored = TRUE
+	set_anchored(TRUE)
 	playsound(loc, 'sound/weapons/mine_armed.ogg', 25, 1)
 	if(user)
 		user.drop_inv_item_on_ground(src)
@@ -178,7 +178,7 @@
 /obj/item/explosive/mine/proc/disarm()
 	if(customizable)
 		activate_sensors()
-	anchored = FALSE
+	set_anchored(FALSE)
 	active = FALSE
 	triggered = FALSE
 	update_icon()
@@ -488,7 +488,7 @@
 	qdel(src)
 
 /obj/item/explosive/mine/sharp/disarm()
-	anchored = FALSE
+	set_anchored(FALSE)
 	active = FALSE
 	triggered = FALSE
 	icon_state = "sharp_mine_disarmed"

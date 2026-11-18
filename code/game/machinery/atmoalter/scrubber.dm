@@ -76,7 +76,7 @@
 			to_chat(user, SPAN_NOTICE("Turn it off first!"))
 			return
 
-		anchored = !anchored
+		set_anchored(!anchored)
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 		to_chat(user, SPAN_NOTICE("You [anchored ? "wrench" : "unwrench"] \the [src]."))
 

@@ -207,7 +207,7 @@
 
 	if(HAS_TRAIT(I, TRAIT_TOOL_WRENCH))
 		if(anchored)
-			anchored = FALSE
+			set_anchored(FALSE)
 			if(ispipe)
 				level = 2
 				density = FALSE
@@ -233,7 +233,7 @@
 						to_chat(user, "There is already a [nicetype] at that location.")
 						return
 
-			anchored = TRUE
+			set_anchored(TRUE)
 			if(ispipe)
 				level = 1 // We don't want disposal bins to disappear under the floors
 				density = FALSE

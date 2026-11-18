@@ -317,11 +317,11 @@ GLOBAL_LIST_EMPTY_TYPED(total_vending_machines, /obj/structure/machinery/vending
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 			switch (anchored)
 				if (0)
-					anchored = TRUE
+					set_anchored(TRUE)
 					user.visible_message("[user] tightens the bolts securing [src] to the floor.", "You tighten the bolts securing [src] to the floor.")
 				if (1)
 					user.visible_message("[user] unfastens the bolts securing [src] to the floor.", "You unfasten the bolts securing [src] to the floor.")
-					anchored = FALSE
+					set_anchored(FALSE)
 		return
 	else if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL) || HAS_TRAIT(item, TRAIT_TOOL_WIRECUTTERS))
 		if(panel_open)

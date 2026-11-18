@@ -143,7 +143,7 @@
 	if(signal_explosion)
 		INVOKE_ASYNC(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, prime), shooter)
 	else
-		dart.anchored = TRUE
+		dart.set_anchored(TRUE)
 		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, deploy_mine), shooter), 3 SECONDS, TIMER_DELETE_ME)
 		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, disarm)), 5 MINUTES, TIMER_DELETE_ME)
 
@@ -185,7 +185,7 @@
 	if(signal_explosion)
 		INVOKE_ASYNC(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp/incendiary, prime), shooter)
 	else
-		dart.anchored = TRUE
+		dart.set_anchored(TRUE)
 		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, deploy_mine), shooter), 3 SECONDS, TIMER_DELETE_ME)
 		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, disarm)), 5 MINUTES, TIMER_DELETE_ME)
 

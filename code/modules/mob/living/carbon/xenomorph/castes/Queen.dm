@@ -862,7 +862,7 @@
 
 	extra_build_dist = IGNORE_BUILD_DISTANCE
 	egg_planting_range = 3
-	anchored = TRUE
+	set_anchored(TRUE)
 	resting = FALSE
 	update_icons()
 	bubble_icon_x_offset = 32
@@ -925,7 +925,7 @@
 			var/datum/action/xeno_action/onclick/grow_ovipositor/ovi_ability = action
 			ovi_ability.apply_cooldown()
 			break
-	anchored = FALSE
+	set_anchored(FALSE)
 
 	for(var/mob/living/carbon/xenomorph/L in hive.xeno_leader_list)
 		L.handle_xeno_leader_pheromones()

@@ -50,7 +50,7 @@
 		if(charging)
 			to_chat(user, SPAN_DANGER("Remove \the [charging] first!"))
 			return
-		anchored = !anchored
+		set_anchored(!anchored)
 		to_chat(user, "You [anchored ? "attached" : "detached"] the recharger.")
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 

@@ -186,7 +186,7 @@
 	post.gun_rounds = rounds
 	post.gun_mounted = TRUE
 	post.gun_health = health // retain damage
-	post.anchored = TRUE
+	post.set_anchored(TRUE)
 	post.update_icon()
 	transfer_label_component(post)
 	to_chat(user, SPAN_NOTICE("You deploy [src]."))
@@ -510,7 +510,7 @@
 
 			var/old_anchored = anchored
 			if(do_after(user, 20 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD) && anchored == old_anchored)
-				anchored = !anchored
+				set_anchored(!anchored)
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 25, 1)
 				if(anchored)
 					user.visible_message(SPAN_NOTICE("[user] anchors [src] into place."),SPAN_NOTICE("You anchor [src] into place."))

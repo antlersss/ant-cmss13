@@ -200,7 +200,7 @@
 /obj/item/mortar_shell/proc/handle_fire(cause_data)
 	if(can_explode())
 		visible_message(SPAN_WARNING("[src] catches on fire and starts cooking off! It's gonna blow!"))
-		anchored = TRUE // don't want other explosions launching it elsewhere
+		set_anchored(TRUE) // don't want other explosions launching it elsewhere
 		var/datum/effect_system/spark_spread/sparks = new()
 		sparks.setup_and_start(particle_count = 10, target = loc)
 		new /obj/effect/warning/explosive(loc, 5 SECONDS)

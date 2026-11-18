@@ -289,7 +289,7 @@
 		xeno.visible_message(SPAN_XENODANGER("[xeno] begins digging in for a strike!"), SPAN_XENOHIGHDANGER("We begin digging in for a strike!"))
 
 	ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Eviscerate"))
-	xeno.anchored = TRUE
+	xeno.set_anchored(TRUE)
 
 	if(do_after(xeno, (activation_delay - windup_reduction), INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 		xeno.emote("roar")
@@ -336,7 +336,7 @@
 		xeno.gain_health(clamp(valid_count * lifesteal_per_marine, 0, max_lifesteal))
 
 	REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Eviscerate"))
-	xeno.anchored = FALSE
+	xeno.set_anchored(FALSE)
 
 	return ..()
 

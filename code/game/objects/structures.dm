@@ -224,7 +224,7 @@
 		// Wrenching is faster if we are better at engineering
 		var/timer = max(10, 40 - user.skills.get_skill_level(SKILL_ENGINEER) * 10)
 		if(do_after(usr, timer, INTERRUPT_ALL, BUSY_ICON_BUILD))
-			anchored = !anchored
+			set_anchored(!anchored)
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 			if(anchored)
 				user.visible_message(SPAN_NOTICE("[user] anchors [src] into place."),SPAN_NOTICE("You anchor [src] into place."))
@@ -236,10 +236,11 @@
 					SEND_SIGNAL(medlink, COMSIG_STRUCTURE_UNWRENCHED, src)
 			return TRUE
 
-/obj/structure/proc/set_anchored(anchored)
-	src.anchored = anchored
+/obj/structure/set_anchored(anchor)
+	SHOULD_CALL_PARENT(TRUE)
+	. = ..(anchor)
 
-	if (anchored)
+	if (anchor)
 		SEND_SIGNAL(src, COMSIG_STRUCTURE_WRENCHED)
 	else
 		SEND_SIGNAL(src, COMSIG_STRUCTURE_UNWRENCHED)

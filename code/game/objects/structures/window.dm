@@ -53,7 +53,7 @@
 
 /obj/structure/window/proc/set_constructed_window(start_dir)
 	state = 0
-	anchored = FALSE
+	set_anchored(FALSE)
 
 	if(start_dir)
 		setDir(start_dir)
@@ -179,7 +179,7 @@
 	if(!not_damageable) //Impossible to destroy
 		health = max(0, health - tforce)
 		if(health <= 7 && !reinf && !static_frame)
-			anchored = FALSE
+			set_anchored(FALSE)
 			update_nearby_icons()
 			step(src, get_dir(AM, src))
 	healthcheck(user = AM.launch_metadata?.thrower)
@@ -284,12 +284,12 @@
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 			to_chat(user, (state == 1 ? SPAN_NOTICE("You have unfastened the window from the frame.") : SPAN_NOTICE("You have fastened the window to the frame.")))
 		else if(reinf && state == 0 && !static_frame)
-			anchored = !anchored
+			set_anchored(!anchored)
 			update_nearby_icons()
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 			to_chat(user, (anchored ? SPAN_NOTICE("You have fastened the frame to the floor.") : SPAN_NOTICE("You have unfastened the frame from the floor.")))
 		else if(!reinf && !static_frame)
-			anchored = !anchored
+			set_anchored(!anchored)
 			update_nearby_icons()
 			playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 			to_chat(user, (anchored ? SPAN_NOTICE("You have fastened the window to the floor.") : SPAN_NOTICE("You have unfastened the window.")))
@@ -304,7 +304,7 @@
 		if(!not_damageable) //Impossible to destroy
 			health -= W.force * W.demolition_mod
 			if(health <= 7  && !reinf && !static_frame && !not_deconstructable)
-				anchored = FALSE
+				set_anchored(FALSE)
 				update_nearby_icons()
 				step(src, get_dir(user, src))
 		healthcheck(1, 1, 1, user, W)

@@ -211,7 +211,7 @@
 
 /mob/living/carbon/human/proc/disable_special_flags()
 	status_flags |= CANPUSH
-	anchored = FALSE
+	set_anchored(FALSE)
 
 /mob/living/carbon/human/proc/disable_special_items()
 	set waitfor = FALSE // Scout decloak animation uses sleep(), which is problematic for taser gun

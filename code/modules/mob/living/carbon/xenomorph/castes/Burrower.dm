@@ -158,7 +158,7 @@
 	QDEL_NULL(observed_atom)
 	invisibility = 101
 	alpha = 100
-	anchored = TRUE
+	set_anchored(TRUE)
 
 	var/mob/living/carbon/human/hauled = hauled_mob?.resolve()
 
@@ -189,7 +189,7 @@
 	remove_traits(list(TRAIT_ABILITY_BURROWED, TRAIT_UNDENSE, TRAIT_IMMOBILIZED), TRAIT_SOURCE_ABILITY("Burrow"))
 	invisibility = FALSE
 	alpha = initial(alpha)
-	anchored = FALSE
+	set_anchored(FALSE)
 
 	var/mob/living/carbon/human/hauled = hauled_mob?.resolve()
 	if(hauled)
@@ -280,7 +280,7 @@
 
 /mob/living/carbon/xenomorph/proc/do_tunnel(turf/target)
 	to_chat(src, SPAN_NOTICE("We tunnel to the destination."))
-	anchored = FALSE
+	set_anchored(FALSE)
 	forceMove(target)
 	burrow_off()
 

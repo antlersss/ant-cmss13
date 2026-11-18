@@ -200,7 +200,7 @@
 			return
 
 		user.visible_message("\blue[user.name] planted \the [L] into [src].")
-		L.anchored = TRUE
+		L.set_anchored(TRUE)
 		L.icon_state = "lightstick_[L.s_color][L.anchored]"
 		user.drop_held_item()
 		L.forceMove(src)

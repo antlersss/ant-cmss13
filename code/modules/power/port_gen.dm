@@ -130,7 +130,7 @@ display floor(lastgen) and phorontank amount
 		return XENO_NONCOMBAT_ACTION
 
 	if(anchored)
-		anchored = FALSE
+		set_anchored(FALSE)
 		visible_message(SPAN_NOTICE("[src]'s bolts are dislodged!"))
 		return XENO_NONCOMBAT_ACTION
 
@@ -269,7 +269,7 @@ display floor(lastgen) and phorontank amount
 				to_chat(user, SPAN_NOTICE("You unsecure the generator from the floor."))
 
 			playsound(src.loc, 'sound/items/Deconstruct.ogg', 25, 1)
-			anchored = !anchored
+			set_anchored(!anchored)
 
 		else if(HAS_TRAIT(O, TRAIT_TOOL_SCREWDRIVER))
 			open = !open

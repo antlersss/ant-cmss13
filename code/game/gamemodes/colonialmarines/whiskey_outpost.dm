@@ -507,7 +507,7 @@
 				if(I && istype(I,/obj/item/stack/sheet/mineral/phoron) || istype(I,/obj/item/stack/rods) || istype(I,/obj/item/stack/sheet/glass) || istype(I,/obj/item/stack/sheet/metal) || istype(I,/obj/item/stack/sheet/plasteel) || istype(I,/obj/item/stack/sheet/wood))
 					I:amount = rand(30,50) //Give them more building materials.
 				if(I && istype(I,/obj/structure/machinery/floodlight))
-					I.anchored = FALSE
+					I.set_anchored(FALSE)
 
 
 	else
@@ -677,7 +677,7 @@
 		return
 
 	activated = 1
-	anchored = TRUE
+	set_anchored(TRUE)
 	w_class = 10
 	icon_state = "[icon_activated]"
 	playsound(src, 'sound/machines/twobeep.ogg', 15, 1)

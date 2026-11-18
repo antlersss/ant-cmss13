@@ -461,7 +461,7 @@
 				var/obj/structure/disposalconstruct/C = new (src.loc)
 				C.ptype = 8 // 8 =  Delivery chute
 				C.update()
-				C.anchored = TRUE
+				C.set_anchored(TRUE)
 				C.density = TRUE
 				qdel(src)
 			return

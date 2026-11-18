@@ -31,7 +31,7 @@
 	if (istype(W, /obj/item/card/id/))
 		if (src.allowed(user))
 			src.locked = !src.locked
-			src.anchored = !src.anchored
+			src.set_anchored(!src.anchored)
 			src.icon_state = "barrier[src.locked]"
 			if (src.locked == 1.0)
 				to_chat(user, "Barrier lock toggled on.")
@@ -69,7 +69,7 @@
 		return
 	if(prob(50/severity))
 		locked = !locked
-		anchored = !anchored
+		set_anchored(!anchored)
 		icon_state = "barrier[src.locked]"
 
 /obj/structure/machinery/deployable/barrier/proc/explode()

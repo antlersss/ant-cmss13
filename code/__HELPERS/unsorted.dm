@@ -1079,7 +1079,7 @@ GLOBAL_DATUM(action_purple_power_up, /image)
 						var/obj/corner = new()
 						corner.forceMove(X)
 						corner.density = TRUE
-						corner.anchored = TRUE
+						corner.set_anchored(TRUE)
 						corner.icon = X.icon
 						corner.icon_state = replacetext(X.icon_state, "_s", "_f")
 						corner.tag = "delete me"

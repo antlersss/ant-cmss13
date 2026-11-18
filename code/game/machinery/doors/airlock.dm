@@ -691,7 +691,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 					doors_assembly.setDir(dir)
 					doors_assembly.update_collision_box()
 
-				doors_assembly.anchored = TRUE
+				doors_assembly.set_anchored(TRUE)
 				if(mineral)
 					doors_assembly.glass = mineral
 				//else if(glass)

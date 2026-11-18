@@ -146,7 +146,7 @@
 					return
 				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 				to_chat(user, SPAN_NOTICE("You [anchored? "un" : ""]secured the airlock assembly!"))
-				anchored = !anchored
+				set_anchored(!anchored)
 				return
 
 			if(!anchored)

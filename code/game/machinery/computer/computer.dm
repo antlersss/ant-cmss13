@@ -105,7 +105,7 @@
 			var/obj/structure/computerframe/frame = new /obj/structure/computerframe(loc)
 			var/obj/item/circuitboard/computer/board = new circuit(frame)
 			frame.circuit = board
-			frame.anchored = TRUE
+			frame.set_anchored(TRUE)
 			for (var/obj/C in src)
 				C.forceMove(loc)
 			if (stat & BROKEN)

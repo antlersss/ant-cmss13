@@ -233,7 +233,7 @@
 					var/obj/structure/disposalconstruct/construct = new(loc)
 					transfer_fingerprints_to(construct)
 					construct.ptype = 6 //6 = disposal unit
-					construct.anchored = TRUE
+					construct.set_anchored(TRUE)
 					construct.density = TRUE
 					construct.update()
 					qdel(src)
@@ -871,7 +871,7 @@
 	transfer_fingerprints_to(C)
 	C.setDir(dir)
 	C.density = FALSE
-	C.anchored = TRUE
+	C.set_anchored(TRUE)
 	C.update()
 	qdel(src)
 
@@ -1443,7 +1443,7 @@
 				transfer_fingerprints_to(C)
 				C.ptype = 7 //7 =  outlet
 				C.update()
-				C.anchored = TRUE
+				C.set_anchored(TRUE)
 				C.density = TRUE
 				qdel(src)
 		else

@@ -76,7 +76,7 @@
 			if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 				return FALSE
 			user.visible_message(SPAN_NOTICE("[user] [anchored ? "un" : ""]secures [src]."), SPAN_NOTICE("You [anchored ? "un" : ""]secure [src]."))
-			anchored = !anchored
+			set_anchored(!anchored)
 			return TRUE
 
 

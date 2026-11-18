@@ -60,7 +60,7 @@
 			to_chat(user, SPAN_DANGER("Remove the cell first!"))
 			return
 
-		anchored = !anchored
+		set_anchored(!anchored)
 		to_chat(user, "You [anchored ? "attach" : "detach"] the cell charger [anchored ? "to" : "from"] the ground.")
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 

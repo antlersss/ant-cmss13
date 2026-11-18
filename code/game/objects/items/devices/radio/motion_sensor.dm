@@ -144,12 +144,12 @@
 		if(!do_after(user, delay_time, INTERRUPT_ALL, BUSY_ICON_BUILD))
 			return FALSE
 		if(anchored)
-			anchored = FALSE
+			set_anchored(FALSE)
 			pixel_y = 0
 			pixel_x = 0
 			update_icon()
 		else
-			anchored = TRUE
+			set_anchored(TRUE)
 			update_icon()
 			var/chosen_dir = tgui_input_list(user, "Which corner do you wish to place the sensor?", "Location", list("North-West", "North-East", "South-West", "South-East"), 5 SECONDS, default = "North-West")
 			switch(chosen_dir)

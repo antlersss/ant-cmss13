@@ -327,7 +327,7 @@
 	else
 		to_chat(xeno, SPAN_XENOWARNING("We resume our normal stance."))
 		REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Fortify"))
-		xeno.anchored = FALSE
+		xeno.set_anchored(FALSE)
 		UnregisterSignal(owner, COMSIG_XENO_PRE_CALCULATE_ARMOURED_DAMAGE_PROJECTILE)
 		xeno.mob_size = MOB_SIZE_XENO //no longer knockback immune
 		xeno.mob_flags |= SQUEEZE_UNDER_VEHICLES
@@ -341,7 +341,7 @@
 		xeno.armor_deflection_buff += 30
 		xeno.armor_explosive_buff += 60
 		ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Fortify"))
-		xeno.anchored = TRUE
+		xeno.set_anchored(TRUE)
 		xeno.small_explosives_stun = FALSE
 	else
 		xeno.armor_deflection_buff -= 30

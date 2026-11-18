@@ -17,7 +17,7 @@
 		return
 
 	var/obj/item/device/flashlight/flashlight = new(loc_from_corner(2, 3))
-	flashlight.anchored = TRUE
+	flashlight.set_anchored(TRUE)
 	flashlight.set_light_power(4)
 	flashlight.set_light_range(12)
 	flashlight.icon = null

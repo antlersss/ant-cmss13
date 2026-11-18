@@ -383,7 +383,7 @@
 	O.desc = "Looks hot."
 	O.icon = 'icons/effects/fire.dmi'
 	O.icon_state = "red_3"
-	O.anchored = TRUE
+	O.set_anchored(TRUE)
 	O.density = TRUE
 	O.layer = FLY_LAYER
 

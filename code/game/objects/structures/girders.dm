@@ -196,7 +196,7 @@
 				if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					return TRUE
 				to_chat(user, SPAN_NOTICE("You secured the girder!"))
-				anchored = TRUE
+				set_anchored(TRUE)
 				state = STATE_STANDARD
 				step_state = STATE_STANDARD
 				update_icon()
@@ -222,7 +222,7 @@
 		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You dislodged the girder!"))
-		anchored = FALSE
+		set_anchored(FALSE)
 		state = STATE_DISPLACED
 		step_state = STATE_STANDARD
 		update_icon()

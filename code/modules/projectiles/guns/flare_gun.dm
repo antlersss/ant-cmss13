@@ -132,7 +132,7 @@
 	fired_flare.invisibility = INVISIBILITY_MAXIMUM
 	fired_flare.mouse_opacity = FALSE
 	fired_flare.explo_proof = TRUE
-	fired_flare.anchored = TRUE
+	fired_flare.set_anchored(TRUE)
 	fired_flare.fuel = 3 MINUTES
 	fired_flare.light_range = 6
 	fired_flare.light_power = 3

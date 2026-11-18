@@ -103,7 +103,7 @@
 /obj/structure/machinery/flasher/portable/attackby(obj/item/W as obj, mob/user as mob)
 	if (HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		add_fingerprint(user)
-		src.anchored = !src.anchored
+		src.set_anchored(!src.anchored)
 
 		if (!src.anchored)
 			user.show_message(text(SPAN_DANGER("[src] can now be moved.")), SHOW_MESSAGE_VISIBLE)

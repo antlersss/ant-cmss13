@@ -35,7 +35,7 @@
 	..()
 	if(constructed)
 		state = WINDOOR_STATE_01
-		anchored = FALSE
+		set_anchored(FALSE)
 	switch(start_dir)
 		if(NORTH, SOUTH, EAST, WEST)
 			setDir(start_dir)
@@ -98,7 +98,7 @@
 					if(QDELETED(src))
 						return
 					to_chat(user, SPAN_NOTICE("You've secured the windoor assembly!"))
-					anchored = TRUE
+					set_anchored(TRUE)
 					if(secure)
 						name = "Secure Anchored Windoor Assembly"
 					else
@@ -116,7 +116,7 @@
 					if(QDELETED(src))
 						return
 					to_chat(user, SPAN_NOTICE("You've unsecured the windoor assembly!"))
-					anchored = FALSE
+					set_anchored(FALSE)
 					if(secure)
 						name = "Secure Windoor Assembly"
 					else

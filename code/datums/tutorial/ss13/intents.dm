@@ -53,7 +53,7 @@
 	TUTORIAL_ATOM_FROM_TRACKING(/mob/living/carbon/human/dummy/tutorial, tutorial_dummy)
 	tutorial_dummy.status_flags = DEFAULT_MOB_STATUS_FLAGS
 	REMOVE_TRAIT(tutorial_dummy, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
-	tutorial_dummy.anchored = FALSE
+	tutorial_dummy.set_anchored(FALSE)
 
 	message_to_player("The second intent is <b>disarm</b>, selectable with <b>[retrieve_bind("select_disarm_intent")]</b>. Disarm is used to shove people, which can make them drop items or fall to the ground. Shove the <b>Test Dummy</b> until it falls over.")
 	update_objective("Switch to disarm intent by pressing [retrieve_bind("select_disarm_intent")] and shove the dummy to the ground.")

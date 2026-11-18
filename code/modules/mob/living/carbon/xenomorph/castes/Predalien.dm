@@ -215,7 +215,7 @@ You must still listen to the queen.
 	if(targeting == AOETARGETGUT)
 		xeno.visible_message(SPAN_XENOHIGHDANGER("[xeno] begins digging in for a massive strike!"), SPAN_XENOHIGHDANGER("We begin digging in for a massive strike!"))
 		ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Eviscerate"))
-		xeno.anchored = TRUE
+		xeno.set_anchored(TRUE)
 		if(do_after(xeno, (activation_delay_aoe), INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 			xeno.emote("roar")
 			xeno.spin_circle()
@@ -241,7 +241,7 @@ You must still listen to the queen.
 				target_carbon.apply_armoured_damage(get_xeno_damage_slash(target_carbon, base_damage_aoe + damage_scale_aoe * predalienbehavior.kills), ARMOR_MELEE, BRUTE, "chest", 20)
 			playsound(owner, 'sound/voice/predalien_death.ogg', 75, 0, status = 0)
 		REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Eviscerate"))
-		xeno.anchored = FALSE
+		xeno.set_anchored(FALSE)
 		apply_cooldown()
 		return ..()
 
@@ -267,7 +267,7 @@ You must still listen to the queen.
 		apply_cooldown()
 
 		ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Devastate"))
-		xeno.anchored = TRUE
+		xeno.set_anchored(TRUE)
 
 		if(do_after(xeno, activation_delay, INTERRUPT_ALL | BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE))
 			xeno.visible_message(SPAN_XENOHIGHDANGER("[xeno] rips open the guts of [target_carbon]!"), SPAN_XENOHIGHDANGER("We rapidly slice into [target_carbon]!"))
@@ -283,7 +283,7 @@ You must still listen to the queen.
 		playsound(owner, 'sound/voice/predalien_growl.ogg', 60, 0, status = 0)
 
 		REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Devastate"))
-		xeno.anchored = FALSE
+		xeno.set_anchored(FALSE)
 		unroot_human(target_carbon, TRAIT_SOURCE_ABILITY("Devastate"))
 
 	return ..()

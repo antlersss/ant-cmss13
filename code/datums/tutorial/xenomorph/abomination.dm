@@ -98,7 +98,7 @@
 	update_objective("Use your Feral Smash ability on the marine.")
 
 	xeno.forceMove(loc_from_corner(0, 2))
-	xeno.anchored = TRUE
+	xeno.set_anchored(TRUE)
 	ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
 
 	var/mob/living/carbon/human/marine = new(loc_from_corner(4, 2))
@@ -108,7 +108,7 @@
 /datum/tutorial/xenomorph/abomination/proc/frenzy_tutorial_1(datum/action/source, mob/owner)
 	SIGNAL_HANDLER
 
-	xeno.anchored = FALSE
+	xeno.set_anchored(FALSE)
 	REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
 	RegisterSignal(source, COMSIG_XENO_ACTION_USED, PROC_REF(frenzy_tutorial_2))
 	RegisterSignal(source, COMSIG_XENO_FAILED_ACTION_USED, PROC_REF(frenzy_tutorial_1_fail))
@@ -116,7 +116,7 @@
 /datum/tutorial/xenomorph/abomination/proc/frenzy_tutorial_1_fail(datum/action/source, mob/owner)
 	SIGNAL_HANDLER
 
-	xeno.anchored = TRUE
+	xeno.set_anchored(TRUE)
 	ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
 	UnregisterSignal(source, list(COMSIG_XENO_FAILED_ACTION_USED, COMSIG_XENO_ACTION_USED))
 
@@ -124,7 +124,7 @@
 	SIGNAL_HANDLER
 
 	if(get_turf(xeno) == loc_from_corner(0, 2)) // xeno didn't lunge at the mob
-		xeno.anchored = TRUE
+		xeno.set_anchored(TRUE)
 		UnregisterSignal(source, COMSIG_XENO_ACTION_USED)
 		ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
 		return

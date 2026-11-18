@@ -219,7 +219,7 @@
 					return
 				user.visible_message(SPAN_NOTICE("[user] loosens [src]'s anchor bolts."),
 				SPAN_NOTICE("You loosen [src]'s anchor bolts."))
-				anchored = FALSE
+				set_anchored(FALSE)
 				build_state = BARRICADE_BSTATE_MOVABLE
 				update_icon() //unanchored changes layer
 				return
@@ -252,7 +252,7 @@
 				user.visible_message(SPAN_NOTICE("[user] secures [src]'s anchor bolts."),
 				SPAN_NOTICE("You secure [src]'s anchor bolts."))
 				build_state = BARRICADE_BSTATE_UNSECURED
-				anchored = TRUE
+				set_anchored(TRUE)
 				update_icon() //unanchored changes layer
 				return
 

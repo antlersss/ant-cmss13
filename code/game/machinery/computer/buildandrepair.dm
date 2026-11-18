@@ -24,7 +24,7 @@
 				busy = TRUE
 				if(do_after(user, 20, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					to_chat(user, SPAN_NOTICE("You wrench the frame into place."))
-					anchored = TRUE
+					set_anchored(TRUE)
 					build_state = COMPUTERFRAME_STATE_NO_BOARD
 				busy = FALSE
 				return
@@ -52,7 +52,7 @@
 				busy = TRUE
 				if(do_after(user, 20, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					to_chat(user, SPAN_NOTICE("You unfasten the frame."))
-					anchored = FALSE
+					set_anchored(FALSE)
 					build_state = COMPUTERFRAME_STATE_FRAME_UNSECURE
 				busy = FALSE
 				return

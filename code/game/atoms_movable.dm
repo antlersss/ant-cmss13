@@ -342,7 +342,7 @@
 	//Translate clone position by projection factor
 	//This is done first to reduce movement latency
 
-	clone.anchored = anchored //Some of these may be suitable for Init
+	clone.set_anchored(anchored) //Some of these may be suitable for Init
 	clone.appearance = appearance
 	clone.dir = dir
 	clone.flags_atom = flags_atom
@@ -505,12 +505,15 @@
 /atom/movable/proc/handle_rotation()
 	return
 
+/atom/movable/proc/set_anchored(anchor)
+	src.anchored = anchor
+
 /atom/movable/proc/unbuckle()
 	SIGNAL_HANDLER
 	if(buckled_mob && buckled_mob.buckled == src)
 		buckled_mob.clear_alert(ALERT_BUCKLED)
 		buckled_mob.set_buckled(null)
-		buckled_mob.anchored = initial(buckled_mob.anchored)
+		buckled_mob.set_anchored(initial(buckled_mob.anchored))
 
 		var/mob/living/mob = buckled_mob
 		buckled_mob = null

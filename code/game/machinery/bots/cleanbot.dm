@@ -282,7 +282,7 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 		target_types += /obj/effect/decal/cleanable/blood
 
 /obj/structure/machinery/bot/cleanbot/proc/clean(obj/effect/decal/cleanable/target)
-	anchored = TRUE
+	set_anchored(TRUE)
 	icon_state = "cleanbot-c"
 	visible_message(SPAN_DANGER("[src] begins to clean up the [target]"))
 	cleaning = 1
@@ -293,7 +293,7 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 		cleaning = 0
 		qdel(target)
 		icon_state = "cleanbot[on]"
-		anchored = FALSE
+		set_anchored(FALSE)
 		target = null
 
 /obj/structure/machinery/bot/cleanbot/explode()

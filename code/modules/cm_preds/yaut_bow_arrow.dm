@@ -250,7 +250,7 @@
 	return
 
 /obj/item/arrow/snare/proc/trigger_snare(mob/living/carbon/target)
-	anchored = TRUE
+	set_anchored(TRUE)
 
 	var/list/tether_effects = apply_tether(src, target, range = 5, resistible = TRUE)
 	tether_effect = tether_effects["tetherer_tether"]
@@ -278,7 +278,7 @@
 /obj/item/arrow/snare/proc/disarm(mob/user)
 	if(disarm_timer)
 		deltimer(disarm_timer)
-	anchored = FALSE
+	set_anchored(FALSE)
 	icon_state = "arrow_trap"
 	if(user)
 		to_chat(user, SPAN_NOTICE("[src] is now disarmed."))

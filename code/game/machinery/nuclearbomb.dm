@@ -290,7 +290,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 				else
 					visible_message(SPAN_INFO("The anchoring bolts slide back into the depths of [src]."))
 				playsound(loc, 'sound/items/Deconstruct.ogg', 100, 1)
-				anchored = !anchored
+				set_anchored(!anchored)
 			being_used = FALSE
 			. = TRUE
 
@@ -319,10 +319,10 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	if(do_after(usr, 50, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 		if(deployable)
 			deployable = FALSE
-			anchored = FALSE
+			set_anchored(FALSE)
 		else
 			deployable = TRUE
-			anchored = TRUE
+			set_anchored(TRUE)
 		playsound(loc, 'sound/items/Deconstruct.ogg', 100, 1)
 	being_used = FALSE
 	update_icon()

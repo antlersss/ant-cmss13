@@ -134,7 +134,7 @@
 					return
 				user.visible_message(SPAN_NOTICE("[user] loosens [src]'s anchor bolts."),
 				SPAN_NOTICE("You loosen [src]'s anchor bolts."))
-				anchored = FALSE
+				set_anchored(FALSE)
 				build_state = BARRICADE_BSTATE_UNSECURED
 				update_icon()
 				return
@@ -169,7 +169,7 @@
 					return
 				user.visible_message(SPAN_NOTICE("[user] tightens [src]'s anchor bolts."),
 				SPAN_NOTICE("You tighten [src]'s anchor bolts."))
-				anchored = TRUE
+				set_anchored(TRUE)
 				build_state = BARRICADE_BSTATE_SECURED
 				update_icon()
 				return

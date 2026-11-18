@@ -23,7 +23,7 @@
 	. = ..()
 	user.visible_message(SPAN_NOTICE("[user] sets up \the [src] for use!"), SPAN_NOTICE("You set up \the [src] for use."))
 	user.drop_inv_item_on_ground(src)
-	anchored = TRUE
+	set_anchored(TRUE)
 	update_icon()
 
 /obj/item/cpr_dummy/MouseDrop(obj/over_object as obj)
@@ -43,7 +43,7 @@
 						success = TRUE
 		if(success)
 			if(anchored)
-				anchored = FALSE
+				set_anchored(FALSE)
 				update_icon()
 			add_fingerprint(usr)
 

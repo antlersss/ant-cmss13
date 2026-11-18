@@ -29,13 +29,13 @@
 				if(prob(40))
 					deconstruct(FALSE)
 				else
-					anchored = FALSE
+					set_anchored(FALSE)
 					icon_state = "lightstick_[s_color][anchored]"
 					set_light_range(0)
 					pixel_x = 0
 					pixel_y = 0
 			else
-				anchored = FALSE
+				set_anchored(FALSE)
 				icon_state = "lightstick_[s_color][anchored]"
 				set_light_range(0)
 				pixel_x = 0
@@ -51,7 +51,7 @@
 	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		return
 
-	anchored = FALSE
+	set_anchored(FALSE)
 	user.visible_message("[user.name] removes [src] from the ground.", "You remove [src] from the ground.")
 	icon_state = "lightstick_[s_color][anchored]"
 	set_light(0)

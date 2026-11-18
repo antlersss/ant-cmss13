@@ -667,7 +667,7 @@
 		signal.name = name
 		signal.linked_cam = new(loc, name)
 		GLOB.cas_groups[user.faction].add_signal(signal)
-		anchored = TRUE
+		set_anchored(TRUE)
 		if(activate_message)
 			visible_message(SPAN_DANGER("[src]'s flame reaches full strength. It's fully active now."), null, 5)
 		var/turf/target_turf = get_turf(src)
@@ -691,7 +691,7 @@
 	return ..()
 
 /obj/item/device/flashlight/flare/signal/turn_off()
-	anchored = FALSE
+	set_anchored(FALSE)
 	if(signal)
 		GLOB.cas_groups[faction].remove_signal(signal)
 		qdel(signal)
@@ -727,4 +727,4 @@
 	signal.name = name
 	signal.linked_cam = new(loc, name)
 	GLOB.cas_groups[FACTION_MARINE].add_signal(signal)
-	anchored = TRUE
+	set_anchored(TRUE)

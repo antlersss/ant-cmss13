@@ -635,20 +635,20 @@
 		xeno.set_face_dir(get_cardinal_dir(xeno, target))
 		if (!windup_interruptable)
 			ADD_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Pounce"))
-			xeno.anchored = TRUE
+			xeno.set_anchored(TRUE)
 		pre_windup_effects()
 
 		if (!do_after(xeno, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 			to_chat(xeno, SPAN_XENODANGER("We cancel our [action_text]!"))
 			if (!windup_interruptable)
 				REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Pounce"))
-				xeno.anchored = FALSE
+				xeno.set_anchored(FALSE)
 			post_windup_effects(interrupted = TRUE)
 			return
 
 		if (!windup_interruptable)
 			REMOVE_TRAIT(xeno, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Pounce"))
-			xeno.anchored = FALSE
+			xeno.set_anchored(FALSE)
 		post_windup_effects()
 
 	xeno.visible_message(SPAN_XENOWARNING("[xeno] [action_text][findtext(action_text, "e", -1) || findtext(action_text, "p", -1) ? "s" : "es"] at [target]!"), SPAN_XENOWARNING("We [action_text] at [target]!"))

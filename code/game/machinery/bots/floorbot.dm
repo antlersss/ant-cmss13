@@ -238,7 +238,7 @@
 		return
 	if(src.amount <= 0)
 		return
-	src.anchored = TRUE
+	src.set_anchored(TRUE)
 	src.icon_state = "floorbot-c"
 	if(istype(target, /turf/open/space/))
 		visible_message(SPAN_DANGER("[src] begins to repair the hole."))
@@ -249,7 +249,7 @@
 			src.repairing = 0
 			src.amount--
 			src.updateicon()
-			src.anchored = FALSE
+			src.set_anchored(FALSE)
 			src.target = null
 	else
 		visible_message(SPAN_DANGER("[src] begins to improve the floor."))
@@ -259,7 +259,7 @@
 			src.repairing = 0
 			src.amount--
 			src.updateicon()
-			src.anchored = FALSE
+			src.set_anchored(FALSE)
 			src.target = null
 
 /obj/structure/machinery/bot/floorbot/proc/eattile(obj/item/stack/tile/plasteel/T)

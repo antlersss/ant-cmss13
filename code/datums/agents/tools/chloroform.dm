@@ -48,7 +48,7 @@
 	return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 
 /obj/item/weapon/chloroform/proc/grab_stun(mob/living/M, mob/living/user)
-	M.anchored = TRUE
+	M.set_anchored(TRUE)
 	ADD_TRAIT(M, TRAIT_IMMOBILIZED, CHLOROFORM_TRAIT)
 	ADD_TRAIT(M, TRAIT_UNDENSE, CHLOROFORM_TRAIT)
 	M.able_to_speak = FALSE
@@ -79,7 +79,7 @@
 
 /obj/item/weapon/chloroform/proc/remove_stun(mob/living/M)
 	animate(M, pixel_x = 0, pixel_y = 0, time = 0.2 SECONDS, easing = QUAD_EASING)
-	M.anchored = FALSE
+	M.set_anchored(FALSE)
 	M.able_to_speak = TRUE
 	M.layer = MOB_LAYER
 	REMOVE_TRAIT(M, TRAIT_IMMOBILIZED, CHLOROFORM_TRAIT)

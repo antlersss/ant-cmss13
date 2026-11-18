@@ -178,7 +178,7 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 		visible_message(SPAN_WARNING("[src] begins beeping like crazy. Something is wrong!"))
 		return
 
-	attached_atom.anchored = TRUE
+	attached_atom.set_anchored(TRUE)
 	attached_atom.forceMove(space_tile)
 	attached_atom.pixel_y = 0
 
@@ -202,7 +202,7 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 		return
 
 	attached_atom.forceMove(return_turf)
-	attached_atom.anchored = FALSE
+	attached_atom.set_anchored(FALSE)
 	playsound(attached_atom.loc,'sound/effects/bamf.ogg', 50, 1)
 
 	if(GLOB.intel_system)

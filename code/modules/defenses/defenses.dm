@@ -310,7 +310,7 @@
 				return
 			user.visible_message(SPAN_NOTICE("[user] unanchors [src] from the ground."),
 			SPAN_NOTICE("You unanchor [src] from the ground."))
-			anchored = FALSE
+			set_anchored(FALSE)
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			return
 		else
@@ -329,7 +329,7 @@
 				return
 			user.visible_message(SPAN_NOTICE("[user] secures [src] to the ground."),
 			SPAN_NOTICE("You secure [src] to the ground."))
-			anchored = TRUE
+			set_anchored(TRUE)
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 			return
 

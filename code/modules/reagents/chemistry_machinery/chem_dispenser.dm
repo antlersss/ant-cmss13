@@ -293,7 +293,7 @@
 			return
 
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-		anchored = !anchored
+		set_anchored(!anchored)
 		if(anchored)
 			user.visible_message("[user] tightens the bolts securing [src] to the surface.", "You tighten the bolts securing [src] to the surface.")
 			return

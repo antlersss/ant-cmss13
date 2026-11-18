@@ -7,7 +7,7 @@
 		drop_inv_item_on_ground(W)
 	regenerate_icons()
 	monkeyizing = 1
-	anchored = TRUE
+	set_anchored(TRUE)
 	ADD_TRAIT(src, TRAIT_INCAPACITATED, "Terminal Monkeyziation")
 	icon = null
 	invisibility = 101
