@@ -357,9 +357,6 @@
 			move_cost = INFINITY
 
 	for (var/obj/thing in dest_turf)
-		if (!thing.can_block_movement)
-			continue
-
 		// Can't block movement, ignore
 		if (!thing.can_block_movement)
 			continue
