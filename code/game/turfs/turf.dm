@@ -551,6 +551,7 @@
 
 	var/list/old_baseturfs = baseturfs
 	var/old_ref = weak_reference
+	var/old_path = path
 	//static lighting
 	var/old_lighting_object = static_lighting_object
 	var/old_lighting_corner_NE = lighting_corner_NE
@@ -606,6 +607,8 @@
 
 	if(new_self.directional_opacity != old_directional_opacity)
 		new_self.reconsider_lights()
+
+	SSnavigation.turf_replaced(new_self, old_path)
 
 	new_self.levelupdate()
 	return new_self

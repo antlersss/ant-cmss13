@@ -60,6 +60,8 @@
 
 #define COMSIG_STRUCTURE_WRENCHED "structure_wrenched"
 #define COMSIG_STRUCTURE_UNWRENCHED "structure_unwrenched"
+#define COMSIG_STRUCTURE_DESTROYED "structure_destroyed"
+
 /// from /obj/structure/Collided() if not overriden for /datum/component/shimmy_around
 #define COMSIG_STRUCTURE_COLLIDED "structure_collided"
 

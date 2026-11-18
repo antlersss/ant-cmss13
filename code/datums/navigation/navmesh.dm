@@ -122,6 +122,17 @@
 		// Recalculate the link's costs.
 		link.calculate_costs()
 
+/datum/navmesh/proc/turf_replaced(turf/new_turf, old_path)
+	// If its outside the bounds of the navmesh, we don't care
+	if (!turf_within_bounds(new_turf) || z_levels.Find(new_turf.z) == 0)
+		return
+
+	// Call the relevant procs for a turf opening or closing
+	if (ispath(old_path, /turf/open) && istype(new_turf, /turf/closed))
+		turf_closed(new_turf)
+	else if (ispath(old_path, /turf/closed) && istype(new_turf, /turf/open))
+		turf_opened(new_turf)
+
 /// Called when a turf is converted to a closed turf.
 ///
 /// If the turf is outside of the navmesh or the turf does not already have an associated nav node, nothing

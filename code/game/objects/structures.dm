@@ -26,6 +26,9 @@
 	SSnavigation.register_structure(src)
 
 /obj/structure/Destroy()
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src, COMSIG_STRUCTURE_DESTROYED)
+
 	//before ..() because the parent does loc = null
 	for(var/atom/movable/A in contents_recursive())
 		var/obj/O = A
